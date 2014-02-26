@@ -39,6 +39,7 @@ class TypeFactory
         'CMXKND'        => 'Customer',
         'CMXINV'        => 'Invoice',
         'CMXABO'        => 'Subscription',
+        'CMXUMS'        => 'Revenue',
     );
 
     /**

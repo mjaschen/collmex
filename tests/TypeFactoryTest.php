@@ -35,7 +35,6 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf("\\MarcusJaschen\\Collmex\\Type\\Customer", $type);
     }
 
-
     public function testCreateSubscriptionTypeSuccessful()
     {
         $data = array(
@@ -54,6 +53,31 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
         $type = $this->typeFactory->getType($data);
 
         $this->assertInstanceOf("\\MarcusJaschen\\Collmex\\Type\\Subscription", $type);
+    }
+
+    public function testCreateRevenueTypeWorksAsExpected()
+    {
+        $data = array(
+            'CMXUMS',
+            10001,
+            1,
+            '20110101',
+            4712,
+            100,
+            19,
+            10,
+            '0,7',
+            null,
+            null,
+            null,
+            null,
+            null,
+            'EUR',
+        );
+
+        $type = $this->typeFactory->getType($data);
+
+        $this->assertInstanceOf("\\MarcusJaschen\\Collmex\\Type\\Revenue", $type);
     }
 
     /**
