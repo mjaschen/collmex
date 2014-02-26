@@ -1,5 +1,7 @@
 ## Collmex API PHP SDK
 
+[![Build Status](https://travis-ci.org/mjaschen/collmex.png?branch=master)](https://travis-ci.org/mjaschen/collmex) [![Latest Stable Version](https://poser.pugx.org/mjaschen/collmex/v/stable.png)](https://packagist.org/packages/mjaschen/collmex)
+
 This library provides a wrapper for the Collmex API. It's not complete yet, some record types (and maybe
 some features) are missing.
 
