@@ -7,11 +7,11 @@
         {
             "name": "Marcus Jaschen",
             "email": "mail@marcusjaschen.de",
-            "homepage": "http://marcusjaschen.de/",
+            "homepage": "https://marcusjaschen.de/",
             "role": "developer"
         }
     ],
-    "version": "1.0.0",
+    "version": "0.1.2",
     "require": {
         "php": ">=5.3.0",
         "straube/utf8-encoding": "dev-master",
