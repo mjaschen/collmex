@@ -1,0 +1,74 @@
+<?php
+class SimpleParserTest extends PHPUnit_Framework_TestCase
+{
+    /**
+     * @var \MarcusJaschen\Collmex\Csv\SimpleParser
+     */
+    protected $parser;
+
+    public function setUp()
+    {
+        $this->parser = new \MarcusJaschen\Collmex\Csv\SimpleParser(';', '"');
+    }
+
+    public function tearDown()
+    {
+        unset($this->parser);
+    }
+
+    public function testParseOneLine()
+    {
+        $csv = 'Typkennung;Rechnung Nr;Pos';
+
+        $data = $this->parser->parse($csv);
+
+        $expected = array(
+            array(
+                'Typkennung',
+                'Rechnung Nr',
+                'Pos',
+            )
+        );
+
+        $this->assertEquals($expected, $data);
+    }
+
+    public function testParseOneLineWithNewline()
+    {
+        $csv = "Typkennung;Rechnung Nr;Pos\n";
+
+        $data = $this->parser->parse($csv);
+
+        $expected = array(
+            array(
+                'Typkennung',
+                'Rechnung Nr',
+                'Pos',
+            )
+        );
+
+        $this->assertEquals($expected, $data);
+    }
+
+    public function testParseMultipleLines()
+    {
+        $csv = "Typkennung;Rechnung Nr;Pos\nCMXINV;100;1";
+
+        $data = $this->parser->parse($csv);
+
+        $expected = array(
+            array(
+                'Typkennung',
+                'Rechnung Nr',
+                'Pos',
+            ),
+            array(
+                'CMXINV',
+                100,
+                1,
+            ),
+        );
+
+        $this->assertEquals($expected, $data);
+    }
+}
