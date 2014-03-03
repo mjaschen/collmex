@@ -5,7 +5,8 @@
  * Used by CollmexServiceProvider when running under Laravel 4.
  */
 return array(
-    'user'     => '',
-    'password' => '',
-    'customer' => '',
+    'client_id' => '',
+    'user'      => '',
+    'password'  => '',
+    'customer'  => '',
 );
