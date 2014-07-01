@@ -14,7 +14,7 @@
 
 namespace MarcusJaschen\Collmex\Filter;
 
-use Straube\UTF8\Encoding;
+use ForceUTF8\Encoding;
 
 /**
  * Filter to convert Windows 1252 to UTF-8 encoding
