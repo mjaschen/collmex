@@ -18,7 +18,7 @@ Add the dependency to your `composer.json`:
 ```javascript
 {
     "require" : {
-        "mjaschen/collmex" : "~0.1.0"
+        "mjaschen/collmex" : "~0.2.0"
     }
 }
 ```
@@ -103,7 +103,7 @@ $collmexResponse = $collmexRequest->send($customer->getCsv());
 
 if ($collmexResponse->isError()) {
 
-    "Collmex error: " . $collmexResponse->getErrorMessage() . "; Code=" . $collmexResponse->getErrorCode() . PHP_EOL;
+    echo "Collmex error: " . $collmexResponse->getErrorMessage() . "; Code=" . $collmexResponse->getErrorCode() . PHP_EOL;
 
 } else {
 
@@ -137,4 +137,4 @@ the API.
 
 ### Contributions
 
-* [String Encoding Converter/Fixer](https://github.com/straube/utf8-encoding) by [Gustavo Straube](https://github.com/straube)
+* [String Encoding Converter/Fixer](https://github.com/neitanod/forceutf8) by [Sebastián Grignoli](https://github.com/neitanod)
