@@ -13,9 +13,9 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "straube/utf8-encoding": "dev-master",
-        "symfony/finder": "~2.3",
-        "symfony/http-foundation": "~2.3"
+        "neitanod/forceutf8": "dev-master",
+        "symfony/finder": "~2.5.0",
+        "symfony/http-foundation": "~2.5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~3.7.0",
@@ -25,6 +25,5 @@
         "psr-4": {
             "MarcusJaschen\\Collmex\\": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
