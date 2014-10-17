@@ -13,7 +13,13 @@ are implemented.
 
 ### Installation
 
-Add the dependency to your `composer.json`:
+Using Composer, just add it to your `composer.json` by running (preferred method):
+
+```
+composer require mjaschen/collmex
+```
+
+Or add it manually to your `composer.json` (legacy method):
 
 ```javascript
 {
