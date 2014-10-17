@@ -21,7 +21,7 @@ composer require mjaschen/collmex
 
 Or add it manually to your `composer.json` (legacy method):
 
-```javascript
+```json
 {
     "require" : {
         "mjaschen/collmex" : "~0.2.0"
