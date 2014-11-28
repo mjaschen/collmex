@@ -32,15 +32,16 @@ class TypeFactory
      *
      * @var array
      */
-    protected $typeMap = array(
+    protected $typeMap = [
         'LOGIN'         => 'Login',
         'MESSAGE'       => 'Message',
         'NEW_OBJECT_ID' => 'NewObject',
-        'CMXKND'        => 'Customer',
-        'CMXINV'        => 'Invoice',
         'CMXABO'        => 'Subscription',
+        'CMXINV'        => 'Invoice',
+        'CMXKND'        => 'Customer',
+        'CMXORD-2'      => 'CustomerOrder',
         'CMXUMS'        => 'Revenue',
-    );
+    ];
 
     /**
      * Builds the type object for the given data.
@@ -49,7 +50,7 @@ class TypeFactory
      *
      * @throws InvalidTypeIdentifierException
      *
-     * @return AbstractType
+     * @return Type\AbstractType
      */
     public function getType($data)
     {
