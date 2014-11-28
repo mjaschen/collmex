@@ -135,8 +135,6 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'costs'                          => null,
         'gross_profit'                   => null, // 90
         'margin'                         => null,
-
-
     ];
 
     /**
