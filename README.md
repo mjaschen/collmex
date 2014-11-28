@@ -19,16 +19,6 @@ Using Composer, just add it to your `composer.json` by running (preferred method
 composer require mjaschen/collmex
 ```
 
-Or add it manually to your `composer.json` (legacy method):
-
-```json
-{
-    "require" : {
-        "mjaschen/collmex" : "~0.2.0"
-    }
-}
-```
-
 ### Usage/Examples
 
 #### Request information from Collmex API
