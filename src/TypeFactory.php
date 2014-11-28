@@ -32,7 +32,7 @@ class TypeFactory
      *
      * @var array
      */
-    protected $typeMap = [
+    protected $typeMap = array(
         'LOGIN'         => 'Login',
         'MESSAGE'       => 'Message',
         'NEW_OBJECT_ID' => 'NewObject',
@@ -41,7 +41,7 @@ class TypeFactory
         'CMXKND'        => 'Customer',
         'CMXORD-2'      => 'CustomerOrder',
         'CMXUMS'        => 'Revenue',
-    ];
+    );
 
     /**
      * Builds the type object for the given data.
