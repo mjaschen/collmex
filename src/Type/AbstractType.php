@@ -164,5 +164,4 @@ abstract class AbstractType
             $index++;
         }
     }
-
 }

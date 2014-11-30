@@ -113,7 +113,6 @@ class CsvResponse
 
         foreach ($this->data as $data) {
             if ($data[0] == "MESSAGE" && $data[1] == "E") {
-
                 $this->isError = true;
                 $this->errorCode = $data[2];
                 $this->errorMessage = $data[3];
@@ -123,7 +122,6 @@ class CsvResponse
                 }
 
                 return true;
-
             }
         }
 
