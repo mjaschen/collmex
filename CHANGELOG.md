@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.3.3
+-----
+
+ * Check if "line" field in error message is set
+
 0.3.1
 -----
 

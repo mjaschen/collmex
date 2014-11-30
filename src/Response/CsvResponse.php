@@ -117,7 +117,10 @@ class CsvResponse
                 $this->isError = true;
                 $this->errorCode = $data[2];
                 $this->errorMessage = $data[3];
-                $this->errorLine = $data[4];
+
+                if (isset($data[4])) {
+                    $this->errorLine = $data[4];
+                }
 
                 return true;
 
