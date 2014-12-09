@@ -1,6 +1,6 @@
 ## Collmex API PHP SDK
 
-[![Build Status](https://travis-ci.org/mjaschen/collmex.png?branch=master)](https://travis-ci.org/mjaschen/collmex) [![Latest Stable Version](https://poser.pugx.org/mjaschen/collmex/v/stable.png)](https://packagist.org/packages/mjaschen/collmex)
+[![Build Status](https://travis-ci.org/mjaschen/collmex.png?branch=master)](https://travis-ci.org/mjaschen/collmex) [![Latest Stable Version](https://poser.pugx.org/mjaschen/collmex/v/stable.png)](https://packagist.org/packages/mjaschen/collmex) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mjaschen/collmex/?branch=master)
 
 This library provides a wrapper for the Collmex API. It's not complete yet, some record types (and maybe
 some features) are missing.
@@ -13,7 +13,7 @@ are implemented.
 
 ### Installation
 
-Using Composer, just add it to your `composer.json` by running (preferred method):
+Using Composer, just add it to your `composer.json` by running:
 
 ```
 composer require mjaschen/collmex
