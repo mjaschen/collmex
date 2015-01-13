@@ -95,6 +95,16 @@ abstract class AbstractType
     }
 
     /**
+     * Returns the complete data as JSON
+     *
+     * @return string
+     */
+    public function getJSON()
+    {
+        return json_encode($this->data);
+    }
+
+    /**
      * Read record field
      *
      * @param string $name The field name

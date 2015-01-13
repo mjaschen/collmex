@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.3.5
+-----
+
+ * introduced `toJSON()` method for types
+
 0.3.4
 -----
 
