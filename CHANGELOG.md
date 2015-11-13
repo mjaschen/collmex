@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+0.4.1
+-----
+
+  * Bugfix: missing return statement in CsvResponse::isError()
+
+0.4.0
+-----
+
+ * PHP 5.4 as minimum required PHP version
+
 0.3.5
 -----
 

@@ -126,6 +126,8 @@ class CsvResponse
         }
 
         $this->isError = false;
+
+        return false;
     }
 
     /**

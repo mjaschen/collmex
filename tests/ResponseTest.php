@@ -12,7 +12,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
         m::close();
     }
 
-    public function testIsError()
+    public function testIsErrorWhenErrorWorksAsExpected()
     {
         $responseBody = 'MESSAGE;E;11111;Error Message;1';
 
@@ -21,15 +21,15 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
             ->shouldReceive('parse')
             ->once()
             ->andReturn(
-                array(
-                    array(
+                [
+                    [
                         'MESSAGE',
                         'E',
                         "11111",
                         'Error Message',
                         1,
-                    )
-                )
+                    ]
+                ]
             );
 
         $response = new CsvResponse($parser, $responseBody);
@@ -41,5 +41,31 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
 
         // check again (but don't parse again)
         $this->assertTrue($response->isError());
+    }
+
+    public function testIsErrorWhenNoErrorWorksAsExpected()
+    {
+        $responseBody = 'MESSAGE;S;204020;Datenübertragung erfolgreich. Es wurden 1 Datensätze verarbeitet.';
+
+        $parser = m::mock('\MarcusJaschen\Collmex\Csv\ParserInterface');
+        $parser
+            ->shouldReceive('parse')
+            ->once()
+            ->andReturn(
+                [
+                    [
+                        'MESSAGE',
+                        'S',
+                        '204020',
+                        'Datenübertragung erfolgreich. Es wurden 1 Datensätze verarbeitet.',
+                    ]
+                ]
+            );
+
+        $response = new CsvResponse($parser, $responseBody);
+
+        $this->assertFalse($response->isError());
+        $this->assertNull($response->getErrorMessage());
+        $this->assertNull($response->getErrorCode());
     }
 }
