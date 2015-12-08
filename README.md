@@ -19,6 +19,12 @@ Using Composer, just add it to your `composer.json` by running:
 composer require mjaschen/collmex
 ```
 
+### Compatibility
+
+The Collmex PHP SDK requires PHP 5.5.9. If you're still using older PHP versions, you can install the 0.4 branch
+for PHP 5.4 compatibility or the 0.3 branch for PHP 5.3 compatibility. New features will only go into the current
+branch.
+
 ### Usage/Examples
 
 #### Request information from Collmex API

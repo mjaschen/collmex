@@ -1,6 +1,16 @@
 CHANGELOG
 =========
 
+0.5.1
+-----
+
+  * Updated minimum required PHP version to 5.5.9 (minimum version for Symfony 3.x)
+
+0.5.0
+-----
+
+  * Updated to Symfony 3.x packages (use the 0.4 branch if you're using Symfony 2.x packages)
+
 0.4.1
 -----
 
