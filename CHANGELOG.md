@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.5.3
+-----
+
+  * Removed PHP 5.4 from Travis CI config
+
 0.5.1
 -----
 
