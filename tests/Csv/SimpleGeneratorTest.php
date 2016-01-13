@@ -73,4 +73,29 @@ class SimpleGeneratorTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals($expected, $this->generator->generate($data));
     }
+
+    /**
+     * Tests if CSV generation works in a special case: text contains a
+     * backslash followed by a double quote. There exists a PHP bug where
+     * fputcsv() creates an invalid CSV string in this case.
+     *
+     * @see https://bugs.php.net/bug.php?id=43225
+     *
+     *
+     */
+    public function testGenerateCsvWithSpecialCharactersWorksAsExpected()
+    {
+        $this->markTestSkipped('Skipping test for PHP bug 43225');
+        return;
+
+        $data = array(
+            'CMXINV',
+            '-1001338',
+            'Provision Bikemarkt-Verkauf 279679: "Endura MTR Baggy Short // SALE \\\\" an "bebetz" am 1.1.2016',
+        );
+
+        $expected = 'CMXINV;-1001338;"Provision Bikemarkt-Verkauf 279679: ""Endura MTR Baggy Short // SALE \\\\"" an ""bebetz"" am 1.1.2016"' . PHP_EOL;
+
+        $this->assertEquals($expected, $this->generator->generate($data));
+    }
 }
