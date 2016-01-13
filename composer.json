@@ -12,10 +12,10 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.9",
         "neitanod/forceutf8": "~1.4.0",
-        "symfony/finder": "~2.5.0",
-        "symfony/http-foundation": "~2.5.0",
+        "symfony/finder": "~3.0",
+        "symfony/http-foundation": "~3.0",
         "league/csv": "^8.0"
     },
     "require-dev": {
