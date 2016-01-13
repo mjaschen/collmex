@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.6.0
+-----
+
+  * Integrated *PHP League CSV*, can be used for CSV generation instead of `SimpleGenerator`
+
 0.5.3
 -----
 
