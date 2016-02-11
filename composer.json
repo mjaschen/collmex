@@ -19,7 +19,8 @@
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0",
-        "mockery/mockery": "dev-master"
+        "mockery/mockery": "dev-master",
+        "league/csv": "^8.0"
     },
     "suggest": {
         "league/csv": "Enable CSV generation via the 'Csv' library by The PHP League"

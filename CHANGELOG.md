@@ -4,6 +4,12 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.2] - 2016-02-11
+
+### Fixed
+
+* `league/csv` is installed via `require-dev` to be able to run the unit tests
+
 ## [0.6.1] - 2016-02-11
 
 ### Changed
