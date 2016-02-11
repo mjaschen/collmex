@@ -15,12 +15,14 @@
         "php": ">=5.5.9",
         "neitanod/forceutf8": "~1.4.0",
         "symfony/finder": "~3.0",
-        "symfony/http-foundation": "~3.0",
-        "league/csv": "^8.0"
+        "symfony/http-foundation": "~3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0",
         "mockery/mockery": "dev-master"
+    },
+    "suggest": {
+        "league/csv": "Enable CSV generation via the 'Csv' library by The PHP League"
     },
     "autoload": {
         "psr-4": {
