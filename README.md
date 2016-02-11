@@ -51,17 +51,13 @@ $getCustomerType = new CustomerGet(array('customer_id' => '12345'));
 $collmexResponse = $collmexRequest->send($getCustomerType->getCsv());
 
 if ($collmexResponse->isError()) {
-
     echo "Collmex error: " . $collmexResponse->getErrorMessage() . "; Code=" . $collmexResponse->getErrorCode() . PHP_EOL;
-
 } else {
-
     $records = $collmexResponse->getRecords();
 
     foreach ($records as $record) {
         var_dump($record->getData()); // contains one Customer object and the Message object(s)
     }
-
 }
 ```
 
@@ -104,11 +100,8 @@ $customer = new Customer(
 $collmexResponse = $collmexRequest->send($customer->getCsv());
 
 if ($collmexResponse->isError()) {
-
     echo "Collmex error: " . $collmexResponse->getErrorMessage() . "; Code=" . $collmexResponse->getErrorCode() . PHP_EOL;
-
 } else {
-
     $newObject = $collmexResponse->getFirstRecord();
     echo "New Collmex customer ID=" . $newObject->new_id . PHP_EOL;
 
@@ -117,7 +110,6 @@ if ($collmexResponse->isError()) {
     foreach ($records as $record) {
         var_dump($record->getData()); // contains one NewObject object and the Message object(s)
     }
-
 }
 ```
 

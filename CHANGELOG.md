@@ -1,68 +1,92 @@
-CHANGELOG
-=========
+# Change Log
 
-0.6.0
------
+All notable changes to `mjaschen/collmex` will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
+Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-  * Integrated *PHP League CSV*, can be used for CSV generation instead of `SimpleGenerator`
+## [0.6.1] - 2016-02-11
 
-0.5.3
------
+### Changed
 
-  * Removed PHP 5.4 from Travis CI config
+* the *require*-dependency on `league/csv` was changed to *suggest*, because it's not required
+  for using the Collmex library and I'm trying to reduce the dependencies which are pulled
+  in by default.
 
-0.5.1
------
+## [0.6.0] - 2016-01-13
 
-  * Updated minimum required PHP version to 5.5.9 (minimum version for Symfony 3.x)
+### Added
 
-0.5.0
------
+* Integrated *PHP League CSV*, can be used for CSV generation instead of `SimpleGenerator`
 
-  * Updated to Symfony 3.x packages (use the 0.4 branch if you're using Symfony 2.x packages)
+## [0.5.3] - 2015-12-08
 
-0.4.1
------
+### Removed
 
-  * Bugfix: missing return statement in CsvResponse::isError()
+* Removed PHP 5.4 from Travis CI config
 
-0.4.0
------
+## [0.5.1] - 2015-12-08
 
- * PHP 5.4 as minimum required PHP version
+### Changed
 
-0.3.5
------
+* Updated minimum required PHP version to 5.5.9 (minimum version for Symfony 3.x)
 
- * introduced `toJSON()` method for types
+## [0.5.0] - 2015-12-08
 
-0.3.4
------
+### Changed
 
- * PSR-2 fixes
+* Updated to Symfony 3.x packages (use the 0.4 branch if you're using Symfony 2.x packages)
 
-0.3.3
------
+## [0.4.1] - 2015-11-15
 
- * Check if "line" field in error message is set
+### Fixed
 
-0.3.1
------
+* Bugfix: missing return statement in CsvResponse::isError()
 
- * TypeFactory supports "CustomerOrder" type
+## [0.4.0] - 2015-05-12
 
-0.3.0
------
+### Removed
 
- * new record type "CustomerOrder" (CMXORD-2)
- * run Travis tests against PHP 5.6
+* removed support for PHP 5.3; PHP 5.4 is the minimum required PHP version now
 
-0.2.0
------
+## [0.3.5] - 2015-01-13
 
- * Updated dependencies (Symfony components 2.3 → 2.5; new UTF-8 encoding fixer)
+### Added
 
-0.1.0
------
+* introduced `toJSON()` method for types
 
- * initial Release
+## [0.3.4] - 2011-11-30
+
+### Changed
+
+* code style fixes to comply with PSR-2
+
+## [0.3.3] - 2014-11-30
+
+### Fixed
+
+* Check if "line" field in error message is set
+
+## [0.3.1] - 2014-11-28
+
+### Added
+
+* TypeFactory supports "CustomerOrder" type
+
+## [0.3.0] - 2014-11-28
+
+### Added
+
+* new record type "CustomerOrder" (CMXORD-2)
+* run Travis tests against PHP 5.6
+
+## [0.2.0] - 2014-07-01
+
+### Changed
+
+* Updated dependencies (Symfony components 2.3 → 2.5; new UTF-8 encoding fixer)
+
+## [0.1.0] - 2014-02-26
+
+### Added
+
+* initial Release
