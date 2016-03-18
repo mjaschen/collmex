@@ -93,10 +93,11 @@ class ZipResponse
      */
     protected function extractFiles()
     {
-        $tmpFilename = tempnam(sys_get_temp_dir(), 'billing_');
+        $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
         file_put_contents($tmpFilename, $this->reponseBody);
 
-        $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR . 'extracted_' . basename($tmpFilename);
+        $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR
+                                  . 'collmexphp_extracted_' . basename($tmpFilename);
 
         $zip = new \ZipArchive;
 

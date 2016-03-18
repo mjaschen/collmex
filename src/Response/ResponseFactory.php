@@ -51,7 +51,7 @@ class ResponseFactory
      */
     protected function getResponseMimeType()
     {
-        $tmpFilename = tempnam(sys_get_temp_dir(), 'billing_');
+        $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
         file_put_contents($tmpFilename, $this->responseBody);
 
         $file     = new File($tmpFilename);
