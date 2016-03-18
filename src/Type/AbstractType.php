@@ -9,6 +9,7 @@
 
 namespace MarcusJaschen\Collmex\Type;
 
+use JsonSerializable;
 use MarcusJaschen\Collmex\Csv\GeneratorInterface;
 use MarcusJaschen\Collmex\Csv\SimpleGenerator;
 use MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException;
@@ -20,7 +21,7 @@ use MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException;
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
  */
-abstract class AbstractType
+abstract class AbstractType implements JsonSerializable
 {
     /**
      * All data fields for the type, ordered.
@@ -97,6 +98,14 @@ abstract class AbstractType
     public function getJSON()
     {
         return json_encode($this->data);
+    }
+
+    /**
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return $this->data;
     }
 
     /**
