@@ -56,7 +56,7 @@ class SimpleGenerator implements GeneratorInterface
         }
 
         if (! is_array($data[0])) {
-            $data = array($data);
+            $data = [$data];
         }
 
         foreach ($data as $line) {

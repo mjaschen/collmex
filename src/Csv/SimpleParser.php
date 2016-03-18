@@ -50,7 +50,7 @@ class SimpleParser implements ParserInterface
         fwrite($tmpHandle, $csv);
         rewind($tmpHandle);
 
-        $data = array();
+        $data = [];
 
         while ($line = fgetcsv($tmpHandle, 0, $this->delimiter, $this->enclosure)) {
             $data[] = $line;

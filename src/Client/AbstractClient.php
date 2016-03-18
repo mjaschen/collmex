@@ -79,6 +79,6 @@ abstract class AbstractClient
     {
         $csvGenerator = new SimpleGenerator();
 
-        return $csvGenerator->generate(array('LOGIN', $this->user, $this->password));
+        return $csvGenerator->generate(['LOGIN', $this->user, $this->password]);
     }
 }

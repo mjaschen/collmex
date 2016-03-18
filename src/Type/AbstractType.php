@@ -74,7 +74,7 @@ abstract class AbstractType
      */
     public function getCsv()
     {
-        return $this->csvGenerator->generate(array($this->data));
+        return $this->csvGenerator->generate([$this->data]);
     }
 
     /**
