@@ -48,7 +48,9 @@ abstract class AbstractType
 
     /**
      * @param array $data type data
-     * @param \MarcusJaschen\Collmex\Csv\GeneratorInterface $generator optional, the SimpleGenerator is used if argument is omitted
+     * @param \MarcusJaschen\Collmex\Csv\GeneratorInterface $generator This
+     * argument is optional, the SimpleGenerator is used if argument is
+     * omitted
      */
     public function __construct($data, GeneratorInterface $generator = null)
     {
@@ -129,6 +131,7 @@ abstract class AbstractType
 
         if (array_key_exists($name, $this->template)) {
             $this->data[$name] = $value;
+
             return;
         }
 
@@ -155,6 +158,7 @@ abstract class AbstractType
     {
         if (! isset($data[0])) {
             $this->data = array_merge($this->template, $data);
+
             return;
         }
 

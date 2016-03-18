@@ -10,7 +10,9 @@
 namespace MarcusJaschen\Collmex\Response;
 
 use MarcusJaschen\Collmex\Csv\ParserInterface;
+use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
 use Symfony\Component\Finder\Finder;
+use ZipArchive;
 
 /**
  * Collmex ZIP Response Class
@@ -42,7 +44,7 @@ class ZipResponse
      */
     public function __construct(ParserInterface $responseParser, $reponseBody)
     {
-        $this->reponseBody = $reponseBody;
+        $this->reponseBody    = $reponseBody;
         $this->responseParser = $responseParser;
 
         $this->extractFiles();
@@ -52,6 +54,7 @@ class ZipResponse
      * Returns an iterator of files matching the given file extension filter
      *
      * @param string $type
+     *
      * @return Finder
      */
     public function getFilesByType($type = "pdf")
@@ -84,6 +87,7 @@ class ZipResponse
 
         foreach ($iterator as $file) {
             $csv = file_get_contents($file);
+
             return new CsvResponse($this->responseParser, $csv);
         }
     }
@@ -99,10 +103,10 @@ class ZipResponse
         $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR
                                   . 'collmexphp_extracted_' . basename($tmpFilename);
 
-        $zip = new \ZipArchive;
+        $zip = new ZipArchive;
 
         if (! $zip->open($tmpFilename)) {
-            throw new Exception\InvalidZipFileException("Cannot open ZIP archive " . $tmpFilename);
+            throw new InvalidZipFileException("Cannot open ZIP archive " . $tmpFilename);
         }
 
         $zip->extractTo($this->extractDirectory);
