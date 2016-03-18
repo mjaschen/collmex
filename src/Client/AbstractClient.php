@@ -52,7 +52,7 @@ abstract class AbstractClient
     {
         $this->user        = $user;
         $this->password    = $password;
-        $this->exchangeUrl = sprintf(self::EXCHANGE_URL, $customer);
+        $this->exchangeUrl = sprintf(static::EXCHANGE_URL, $customer);
     }
 
     /**
