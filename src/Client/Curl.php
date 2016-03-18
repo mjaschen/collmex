@@ -2,14 +2,9 @@
 /**
  * curl Client Class
  *
- * PHP version 5.3
- *
- * @category  Collmex
- * @package   Client
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @copyright 2013 Marcus Jaschen
  * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      http://github.com/mjaschen/collmex
+ * @link      https://github.com/mjaschen/collmex
  */
 
 namespace MarcusJaschen\Collmex\Client;
@@ -19,11 +14,9 @@ use MarcusJaschen\Collmex\Client\Exception\RequestFailedException;
 /**
  * curl Client Class
  *
- * @category Collmex
- * @package  Client
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     http://github.com/mjaschen/collmex
+ * @link     https://github.com/mjaschen/collmex
  */
 class Curl extends AbstractClient implements ClientInterface
 {

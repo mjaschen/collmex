@@ -2,11 +2,9 @@
 /**
  * CSV Generator Class
  *
- * @category  Collmex
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @copyright 2013 Marcus Jaschen
  * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      http://github.com/mjaschen/collmex
+ * @link      https://github.com/mjaschen/collmex
  */
 
 namespace MarcusJaschen\Collmex\Csv;
@@ -16,10 +14,9 @@ use League\Csv\Writer;
 /**
  * CSV Generator Class
  *
- * @category Collmex
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     http://github.com/mjaschen/collmex
+ * @link     https://github.com/mjaschen/collmex
  */
 class LeagueCsvGenerator implements GeneratorInterface
 {

@@ -2,14 +2,9 @@
 /**
  * Collmex Customer Type
  *
- * PHP version 5.3
- *
- * @category  Collmex
- * @package   Type
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @copyright 2013 Marcus Jaschen
  * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      http://github.com/mjaschen/collmex
+ * @link      https://github.com/mjaschen/collmex
  */
 
 namespace MarcusJaschen\Collmex\Type;
@@ -17,11 +12,9 @@ namespace MarcusJaschen\Collmex\Type;
 /**
  * Collmex Customer Type
  *
- * @category Collmex
- * @package  Type
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     http://github.com/mjaschen/collmex
+ * @link     https://github.com/mjaschen/collmex
  */
 class Customer extends AbstractType implements TypeInterface
 {

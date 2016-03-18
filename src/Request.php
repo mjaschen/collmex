@@ -2,14 +2,9 @@
 /**
  * Collmex API Request
  *
- * PHP version 5.3
- *
- * @category  Collmex
- * @package   Request
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @copyright 2013 Marcus Jaschen
  * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      http://github.com/mjaschen/collmex
+ * @link      https://github.com/mjaschen/collmex
  */
 
 namespace MarcusJaschen\Collmex;
@@ -22,11 +17,9 @@ use MarcusJaschen\Collmex\Response\ResponseFactory;
 /**
  * Collmex API Request
  *
- * @category Collmex
- * @package  Request
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     http://github.com/mjaschen/collmex
+ * @link     https://github.com/mjaschen/collmex
  */
 class Request
 {

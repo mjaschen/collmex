@@ -2,14 +2,9 @@
 /**
  * Collmex API Response
  *
- * PHP version 5.3
- *
- * @category  Collmex
- * @package   Response
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @copyright 2013 Marcus Jaschen
  * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      http://github.com/mjaschen/collmex
+ * @link      https://github.com/mjaschen/collmex
  */
 
 namespace MarcusJaschen\Collmex\Response;
@@ -21,11 +16,9 @@ use MarcusJaschen\Collmex\TypeFactory;
 /**
  * Collmex API Response
  *
- * @category Collmex
- * @package  Response
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     http://github.com/mjaschen/collmex
+ * @link     https://github.com/mjaschen/collmex
  */
 class CsvResponse
 {

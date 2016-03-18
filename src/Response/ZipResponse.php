@@ -2,14 +2,9 @@
 /**
  * Collmex ZIP Response Class
  *
- * PHP version 5.3
- *
- * @category  Collmex
- * @package   Response
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @copyright 1999-2013 MTB-News.de
  * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      http://www.mtb-news.de/
+ * @link      https://github.com/mjaschen/collmex
  */
 
 namespace MarcusJaschen\Collmex\Response;
@@ -20,11 +15,9 @@ use Symfony\Component\Finder\Finder;
 /**
  * Collmex ZIP Response Class
  *
- * @category Collmex
- * @package  Response
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     http://www.mtb-news.de/
+ * @link     https://github.com/mjaschen/collmex
  */
 class ZipResponse
 {

@@ -2,13 +2,9 @@
 /**
  * Laravel 4 Service Provider for Collmex PHP SDK
  *
- * PHP version 5.3
- *
- * @category  Collmex
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @copyright 2013 Marcus Jaschen
  * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      http://github.com/mjaschen/collmex
+ * @link      https://github.com/mjaschen/collmex
  */
 
 namespace MarcusJaschen\Collmex;
@@ -16,10 +12,9 @@ namespace MarcusJaschen\Collmex;
 /**
  * Laravel 4 Service Provider for Collmex PHP SDK
  *
- * @category Collmex
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     http://github.com/mjaschen/collmex
+ * @link     https://github.com/mjaschen/collmex
  */
 class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 {

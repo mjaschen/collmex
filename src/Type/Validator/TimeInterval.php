@@ -2,14 +2,9 @@
 /**
  * Time Interval Validator
  *
- * PHP version 5.3
- *
- * @category  Collmex
- * @package   Validator
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @copyright 2013 Marcus Jaschen
  * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      http://github.com/mjaschen/collmex
+ * @link      https://github.com/mjaschen/collmex
  */
 
 namespace MarcusJaschen\Collmex\Type\Validator;
@@ -17,11 +12,9 @@ namespace MarcusJaschen\Collmex\Type\Validator;
 /**
  * Time Interval Validator
  *
- * @category Collmex
- * @package  Validator
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     http://github.com/mjaschen/collmex
+ * @link     https://github.com/mjaschen/collmex
  */
 class TimeInterval implements ValidatorInterface
 {

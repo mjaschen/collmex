@@ -2,14 +2,9 @@
 /**
  * Type Factory for Collmex Response Data
  *
- * PHP version 5.3
- *
- * @category  Collmex
- * @package
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @copyright 2013 Marcus Jaschen
  * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      http://github.com/mjaschen/collmex
+ * @link      https://github.com/mjaschen/collmex
  */
 
 namespace MarcusJaschen\Collmex;
@@ -19,11 +14,9 @@ use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 /**
  * Type Factory for Collmex Response Data
  *
- * @category Collmex
- * @package
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     http://github.com/mjaschen/collmex
+ * @link     https://github.com/mjaschen/collmex
  */
 class TypeFactory
 {
