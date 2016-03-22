@@ -1,0 +1,94 @@
+= Collmex PHP SDK
+Marcus Jaschen <mail@marcusjaschen.de>
+v0.6.2, 2016-03-22
+:toc: left
+:toclevels: 3
+:source-highlighter: coderay
+:icons: font
+:stem: latexmath
+
+== Introduction
+
+This library provides a wrapper for the Collmex API. Collmex is an online
+accounting service which provides an API.
+
+This library is not complete yet, some record types (and maybe some
+features) are missing.
+
+Please create a Pull Request if you've implemented a new type/feature
+or create https://github.com/mjaschen/collmex/issues[Issues] for
+bugs/feature requests.
+
+There is (or least should be …) a *Type* class for every Collmex
+record type ("Satzart"). Currently only the base types (`MESSAGE`,
+`LOGIN`, `NEW_OBJECT_ID`) and a few normal record types (e. g. `CMXKND`,
+`CMXINV`, `CMXABO`, `CMXUMS`) are implemented.
+
+== Requirements
+
+The Collmex PHP SDK requires PHP 5.5.9. If you're still using older
+PHP versions, you can install the 0.4 branch for PHP 5.4 compatibility
+or the 0.3 branch for PHP 5.3 compatibility. New features will only go
+into the current branch. Bug fixes _may_ be merged back into the old
+branches, but don't pin me down on that.
+
+== Installation
+
+Using Composer, just add it to your `composer.json` by running:
+
+```
+php composer.phar require mjaschen/collmex
+```
+
+== Example
+
+Let's dive in with an example, as this is the easiest way to understand
+how the Collmex PHP SDK works. The follwing code loads a customer record
+from the Collmex API:
+
+[source,php]
+----
+<?php
+
+use \MarcusJaschen\Collmex\Client\Curl as CurlClient;
+use \MarcusJaschen\Collmex\Request;
+use \MarcusJaschen\Collmex\Type\CustomerGet;
+
+// initialize HTTP client
+$collmexClient = new CurlClient("USER", "PASSWORD", "CUSTOMER_ID"); <1>
+
+// create request object
+$collmexRequest = new Request($collmexClient); <2>
+
+// create a record type; we're querying the API for customer with ID=12345
+$getCustomerType = new CustomerGet(['customer_id' => '12345']); <3>
+
+// send HTTP request and get response object
+$collmexResponse = $collmexRequest->send($getCustomerType->getCsv()); <4>
+
+if ($collmexResponse->isError()) { <5>
+    echo "Collmex error: " . $collmexResponse->getErrorMessage()
+         . "; Code=" . $collmexResponse->getErrorCode() . PHP_EOL;
+} else {
+    // contains one Customer object and the Message object(s)
+    $records = $collmexResponse->getRecords(); <6>
+
+    foreach ($records as $record) {
+        var_dump($record->getData()); <7>
+    }
+}
+----
+
+<1> The HTTP layer is handled by a `Client` instance; currently we provide
+an implementation which uses PHP's `curl` functions. The `Client` expects
+_Login Handle_, _Password_, and the _Customer ID_ as constructor arguments.
+<2> The `Request` class gets a `Client` as constructor argument
+<3> The Collmex API expects and sends so called _Types_ (german: _Satzart_);
+in this example we create a _Type_ which queries Collmex for a customer record
+<4> the `send()` method of the `Request` instance sends a HTTP request to
+the Collmex API and returns an instance of the `Response` class
+<5> the `Response` has a method which checks if Collmex answered with
+an error
+<6> here we extract all records from the response, they are returned as an
+array of `Type` instances
+<7> the `getData()` method returns an array with all record fields
