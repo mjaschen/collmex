@@ -40,7 +40,9 @@ Using Composer, just add it to your `composer.json` by running:
 php composer.phar require mjaschen/collmex
 ```
 
-== Example
+== Examples
+
+=== Load data from Collmex
 
 Let's dive in with an example, as this is the easiest way to understand
 how the Collmex PHP SDK works. The follwing code loads a customer record
@@ -92,3 +94,57 @@ an error
 <6> here we extract all records from the response, they are returned as an
 array of `Type` instances
 <7> the `getData()` method returns an array with all record fields
+
+=== Create a new Collmex customer record
+
+Create a new Collmex *Customer* record and get the Collmex Customer-ID from the
+response data:
+
+[source,php]
+----
+<?php
+
+use \MarcusJaschen\Collmex\Client\Curl as CurlClient;
+use \MarcusJaschen\Collmex\Request;
+use \MarcusJaschen\Collmex\Type\Customer;
+
+// initialize HTTP client
+$collmexClient = new CurlClient("USER", "PASSWORD", "CUSTOMER_ID");
+
+// create request object
+$collmexRequest = new Request($collmexClient);
+
+// create a record type; we create a customer with some basic fields
+$customer = new Customer(
+    array(
+        'client_id'                      => "2",
+        'salutation'                     => "Herr",
+        'forename'                       => "Charly",
+        'lastname'                       => "Cash",
+        'street'                         => "Hauptstraße 12",
+        'zipcode'                        => "12222",
+        'city'                           => "Berlin",
+        'inactive'                       => Customer::STATUS_ACTIVE,
+        'country'                        => "DE",
+        'phone'                          => "+49300000000",
+        'email'                          => "cash@example.org",
+        'output_medium'                  => Customer::OUTPUT_MEDIUM_EMAIL,
+    )
+);
+
+// send HTTP request and get response object
+$collmexResponse = $collmexRequest->send($customer->getCsv());
+
+if ($collmexResponse->isError()) {
+    echo "Collmex error: " . $collmexResponse->getErrorMessage() . "; Code=" . $collmexResponse->getErrorCode() . PHP_EOL;
+} else {
+    $newObject = $collmexResponse->getFirstRecord();
+    echo "New Collmex customer ID=" . $newObject->new_id . PHP_EOL;
+
+    $records = $collmexResponse->getRecords();
+
+    foreach ($records as $record) {
+        var_dump($record->getData()); // contains one NewObject object and the Message object(s)
+    }
+}
+----
