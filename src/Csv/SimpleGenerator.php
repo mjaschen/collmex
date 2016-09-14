@@ -59,13 +59,27 @@ class SimpleGenerator implements GeneratorInterface
             $data = [$data];
         }
 
+        $tmpPlaceholder = 'MJASCHEN_COLLMEX_WORKAROUND_PHP_BUG_43225_' . time();
         foreach ($data as $line) {
+            // workaround for PHP bug 43225: temporarily insert a placeholder
+            // between a backslash directly followed by a double-quote (for
+            // string field values only)
+            array_walk($line, function (&$item) use ($tmpPlaceholder) {
+                if (! is_string($item)) {
+                    return;
+                }
+                $item = preg_replace('/(\\\\+)"/m', '$1' . $tmpPlaceholder . '"', $item);
+            });
+
             fputcsv($fileHandle, $line, $this->delimiter, $this->enclosure);
         }
 
         rewind($fileHandle);
         $csv = stream_get_contents($fileHandle);
         fclose($fileHandle);
+
+        // remove the temporary placeholder from the final CSV string
+        $csv = str_replace($tmpPlaceholder, '', $csv);
 
         return $csv;
     }

@@ -4,6 +4,12 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.4] - 2016-09-14
+
+### Fixed
+
+* #2: Invalid CSV is no longer generated if a CSV field contains a backslash directly followed by a double-quote (fixed only in the `SimpleGenerator` class, `LeagueCsvGenerator` still produces invalid CSV)
+
 ## [0.6.3] - 2016-09-14
 
 ### Changed

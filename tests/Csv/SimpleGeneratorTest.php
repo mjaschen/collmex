@@ -85,9 +85,6 @@ class SimpleGeneratorTest extends \PHPUnit_Framework_TestCase
      */
     public function testGenerateCsvWithSpecialCharactersWorksAsExpected()
     {
-        $this->markTestSkipped('Skipping test for PHP bug 43225');
-        return;
-
         $data = array(
             'CMXINV',
             '-1001338',
