@@ -4,6 +4,13 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.3] - 2016-09-14
+
+### Changed
+
+* the minimum required version of Symfony components is now 2.5.0 (before: 3.0)
+* removed meaningless badges from README
+
 ## [0.6.2] - 2016-02-11
 
 ### Fixed
