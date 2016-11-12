@@ -49,6 +49,10 @@ class SimpleGenerator implements GeneratorInterface
      */
     public function generate(array $data)
     {
+        if ( isset($data[0]) && isset($data[0][0]) && $data[0]!='LOGIN' ) {
+            $data = $data[0];
+        }
+
         $fileHandle = fopen('php://temp', 'w');
 
         if (! $fileHandle) {
@@ -56,7 +60,9 @@ class SimpleGenerator implements GeneratorInterface
         }
 
         if (! is_array($data[0])) {
-            $data = [$data];
+            //$data = [$data];
+            $tmp[] = $data;
+            $data = $tmp;
         }
 
         $tmpPlaceholder = 'MJASCHEN_COLLMEX_WORKAROUND_PHP_BUG_43225_' . time();
@@ -80,6 +86,8 @@ class SimpleGenerator implements GeneratorInterface
 
         // remove the temporary placeholder from the final CSV string
         $csv = str_replace($tmpPlaceholder, '', $csv);
+
+        
 
         return $csv;
     }

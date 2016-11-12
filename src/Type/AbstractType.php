@@ -167,7 +167,6 @@ abstract class AbstractType implements JsonSerializable
     {
         if (! isset($data[0])) {
             $this->data = array_merge($this->template, $data);
-
             return;
         }
 
@@ -175,7 +174,11 @@ abstract class AbstractType implements JsonSerializable
 
         foreach ($this->template as $key => $value) {
             if (isset($data[$index])) {
-                $this->data[$key] = $data[$index];
+                if ( is_array($data[$index]) ) {
+                    $this->data[$index] = array_merge($this->template, $data[$index]);
+                } else {
+                    $this->data[$key] = $data[$index];
+                }
             }
             $index++;
         }
