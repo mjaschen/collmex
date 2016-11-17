@@ -4,6 +4,12 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.5] - 2016-11-17
+
+### Added
+
+* new types: `Product` and `ProductGet`. Thanks @tojibon!
+
 ## [0.6.4] - 2016-09-14
 
 ### Fixed
