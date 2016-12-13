@@ -4,6 +4,12 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.6] - 2016-12-13
+
+### Added
+
+* new type: `SubscriptionGet` (`ABO_GET`). Thanks @karameloso!
+
 ## [0.6.5] - 2016-11-17
 
 ### Added
