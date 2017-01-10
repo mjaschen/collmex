@@ -21,7 +21,7 @@ use ZipArchive;
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
  */
-class ZipResponse
+class ZipResponse implements ResponseInterface
 {
     /**
      * @var string

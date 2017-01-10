@@ -20,7 +20,7 @@ use MarcusJaschen\Collmex\TypeFactory;
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
  */
-class CsvResponse
+class CsvResponse implements ResponseInterface
 {
     /**
      * @var \MarcusJaschen\Collmex\Csv\ParserInterface
