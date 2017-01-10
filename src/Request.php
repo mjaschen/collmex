@@ -13,6 +13,7 @@ use MarcusJaschen\Collmex\Client\ClientInterface;
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Csv\SimpleParser;
 use MarcusJaschen\Collmex\Response\ResponseFactory;
+use MarcusJaschen\Collmex\Response\ResponseInterface;
 
 /**
  * Collmex API Request
@@ -41,7 +42,7 @@ class Request
     {
         $this->client = $client;
 
-        if (is_null($responseParser)) {
+        if (null === $responseParser) {
             $this->responseParser = new SimpleParser();
         } else {
             $this->responseParser = $responseParser;
@@ -53,7 +54,9 @@ class Request
      *
      * @param string $body The request body
      *
-     * @return Response
+     * @return ResponseInterface
+     * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
+     * @throws \MarcusJaschen\Collmex\Client\Exception\RequestFailedException
      */
     public function send($body)
     {

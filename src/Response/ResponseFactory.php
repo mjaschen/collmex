@@ -3,6 +3,7 @@
 namespace MarcusJaschen\Collmex\Response;
 
 use MarcusJaschen\Collmex\Csv\ParserInterface;
+use MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException;
 use Symfony\Component\HttpFoundation\File\File;
 
 class ResponseFactory
@@ -31,15 +32,14 @@ class ResponseFactory
      * Returns the class name which handles the response ('CsvResponse' or 'ZipResponse')
      *
      * @return ResponseInterface
-     *
-     * @throws \RuntimeException
+     * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
      */
     public function getResponseInstance()
     {
         try {
             $mimeType = $this->getResponseMimeType();
         } catch (\Exception $e) {
-            throw new \RuntimeException('Cannot determine MIME type for response');
+            throw new InvalidResponseMimeTypeException('Cannot determine MIME type for response');
         }
 
         switch ($mimeType) {
