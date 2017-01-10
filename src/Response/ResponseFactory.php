@@ -30,11 +30,17 @@ class ResponseFactory
     /**
      * Returns the class name which handles the response ('CsvResponse' or 'ZipResponse')
      *
-     * @return string Class name
+     * @return ResponseInterface
+     *
+     * @throws \RuntimeException
      */
     public function getResponseInstance()
     {
-        $mimeType = $this->getResponseMimeType();
+        try {
+            $mimeType = $this->getResponseMimeType();
+        } catch (\Exception $e) {
+            throw new \RuntimeException('Cannot determine MIME type for response');
+        }
 
         switch ($mimeType) {
             case 'application/zip':
@@ -48,6 +54,8 @@ class ResponseFactory
      * Determines MIME type of response body.
      *
      * @return null|string
+     *
+     * @throws \Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException
      */
     protected function getResponseMimeType()
     {
