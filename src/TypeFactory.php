@@ -34,6 +34,7 @@ class TypeFactory
         'CMXKND'        => 'Customer',
         'CMXORD-2'      => 'CustomerOrder',
         'CMXUMS'        => 'Revenue',
+        'CMXPRD'        => 'Product'
     );
 
     /**
