@@ -4,6 +4,25 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.9] - 2017-02-17
+
+### Added
+
+* new type: `SalesOrderGet` (`SALES_ORDER_GET`). Thanks @cryshell!
+
+## [0.6.8] - 2017-01-10
+
+### Changed
+
+* Throw `InvalidResponseMimeTypeException` instead of `\RuntimeException`.
+
+## [0.6.7] - 2017-01-10
+
+### Added
+
+* `ResponseInterface`
+* The ResponseFactory throws an exception if the MIME type can't be determined.
+
 ## [0.6.6] - 2016-12-13
 
 ### Added

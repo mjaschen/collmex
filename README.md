@@ -5,7 +5,7 @@ some features) are missing.
 
 Please create a Pull Request if you've implemented a new type/feature or create Issues for bugs/feature requests.
 
-There is (or least should be…) a *Type* class for every Collmex record type ("Satzart"). Currently only the base types (`MESSAGE`, `LOGIN`, `NEW_OBJECT_ID`) and a few normal record types (`CMXKND`, `CMXINV`, `CMXABO`, `CMXUMS`, `CMXPRD`, `PRODUCT_GET`, `ABO_GET`) are implemented.
+There is (or least should be…) a *Type* class for every Collmex record type ("Satzart"). Currently only the base types (`MESSAGE`, `LOGIN`, `NEW_OBJECT_ID`) and a few normal record types (`CMXKND`, `CMXINV`, `CMXABO`, `CMXUMS`, `CMXPRD`, `PRODUCT_GET`, `ABO_GET`, `SALES_ORDER_GET`) are implemented.
 
 ### Installation
 
