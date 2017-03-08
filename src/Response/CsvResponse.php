@@ -72,10 +72,12 @@ class CsvResponse implements ResponseInterface
     /**
      * @param \MarcusJaschen\Collmex\Csv\ParserInterface $parser
      * @param string $responseBody
+     *
+     * @throws \MarcusJaschen\Collmex\Exception\RequestErrorException
      */
     public function __construct(ParserInterface $parser, $responseBody)
     {
-        $this->parser = $parser;
+        $this->parser   = $parser;
         $this->response = $this->parseCsv($responseBody);
     }
 
@@ -100,14 +102,16 @@ class CsvResponse implements ResponseInterface
      */
     public function isError()
     {
-        if (! is_null($this->isError)) {
+        // do not process the response data (again) if an error was
+        // already detected
+        if (null !== $this->isError) {
             return $this->isError;
         }
 
         foreach ($this->data as $data) {
-            if ($data[0] == "MESSAGE" && $data[1] == "E") {
-                $this->isError = true;
-                $this->errorCode = $data[2];
+            if ($data[0] === 'MESSAGE' && $data[1] === 'E') {
+                $this->isError      = true;
+                $this->errorCode    = $data[2];
                 $this->errorMessage = $data[3];
 
                 if (isset($data[4])) {
@@ -151,6 +155,8 @@ class CsvResponse implements ResponseInterface
      * Returns an array of all response records as Type objects.
      *
      * @return array|null
+     *
+     * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */
     public function getRecords()
     {
@@ -162,7 +168,7 @@ class CsvResponse implements ResponseInterface
             return null;
         }
 
-        if (is_null($this->records)) {
+        if (null === $this->records) {
             $this->createTypeRecords();
         }
 
@@ -191,6 +197,8 @@ class CsvResponse implements ResponseInterface
      * from $data attribute.
      *
      * @return void
+     *
+     * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */
     protected function createTypeRecords()
     {
