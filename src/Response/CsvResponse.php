@@ -80,7 +80,7 @@ class CsvResponse implements ResponseInterface
     }
 
     /**
-     * @param $responseBody
+     * @param string $responseBody
      *
      * @throws \MarcusJaschen\Collmex\Exception\RequestErrorException
      *
