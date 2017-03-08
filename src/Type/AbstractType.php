@@ -162,10 +162,14 @@ abstract class AbstractType implements JsonSerializable
      *
      * @param array $data if the array is indexed by numeric keys (first key
      * is checked), we'll merge the data by index order.
+     *
+     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      */
     protected function populateData($data)
     {
+
         if (! isset($data[0])) {
+            $this->assertValidFieldNames($data);
             $this->data = array_merge($this->template, $data);
 
             return;
@@ -179,5 +183,26 @@ abstract class AbstractType implements JsonSerializable
             }
             $index++;
         }
+    }
+
+    /**
+     * Checks if all provided field names are valid: each given field name
+     * must exist in $this->template.
+     *
+     * @param array $data
+     *
+     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
+     */
+    private function assertValidFieldNames($data)
+    {
+        $fieldNamesDiff = array_diff_key($data, $this->template);
+
+        if (count($fieldNamesDiff) === 0) {
+            return;
+        }
+
+        throw new InvalidFieldNameException(
+            'Cannot populate data: invalid field name(s) detected: ' . implode(', ', array_keys($fieldNamesDiff))
+        );
     }
 }
