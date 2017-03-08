@@ -4,6 +4,12 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.11] - 2017-03-08
+
+### Fixed
+
+* Verifying field names in mass-assignment (`populateData()`)
+
 ## [0.6.10] - 2017-02-17
 
 ### Changed
