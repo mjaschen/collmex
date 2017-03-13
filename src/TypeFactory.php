@@ -26,15 +26,16 @@ class TypeFactory
      * @var array
      */
     protected $typeMap = array(
-        'LOGIN'         => 'Login',
-        'MESSAGE'       => 'Message',
-        'NEW_OBJECT_ID' => 'NewObject',
-        'CMXABO'        => 'Subscription',
-        'CMXINV'        => 'Invoice',
-        'CMXKND'        => 'Customer',
-        'CMXORD-2'      => 'CustomerOrder',
-        'CMXUMS'        => 'Revenue',
-        'CMXPRD'        => 'Product'
+        'LOGIN'           => 'Login',
+        'MESSAGE'         => 'Message',
+        'NEW_OBJECT_ID'   => 'NewObject',
+        'CMXABO'          => 'Subscription',
+        'CMXINV'          => 'Invoice',
+        'CMXKND'          => 'Customer',
+        'CMXORD-2'        => 'CustomerOrder',
+        'CMXUMS'          => 'Revenue',
+        'CMXPRD'          => 'Product',
+        'CMXPRI'          => 'ProductPrice'
     );
 
     /**
