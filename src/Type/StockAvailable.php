@@ -1,6 +1,6 @@
 <?php 
 /**
- * Collmex ProductPriceGet Type
+ * Collmex StockAvailable Type
  *
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
  * @author    René Galle <renegalle.webdevelopment@gmail.com>
@@ -11,23 +11,25 @@
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex ProductPriceGet Type
+ * Collmex StockAvailable Type
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @author   René Galle <renegalle.webdevelopment@gmail.com>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
  */
-class ProductPriceGet extends AbstractType implements TypeInterface
+class StockAvailable extends AbstractType implements TypeInterface
 {
     /**
      * @var array
      */
     protected $template = array(
-        'type_identifier'  => 'PRODUCT_PRICE_GET',
-        'client_id'        => null,
+        'type_identifier'  => 'STOCK_AVAILABLE',
         'product_id'       => null,
-        'inactive'         => null
+        'client_id'        => null,
+        'stock'            => null,
+        'unit'             => null,
+        'reorder_time'     => null
     );
 
     /**

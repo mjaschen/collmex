@@ -15,7 +15,7 @@ namespace MarcusJaschen\Collmex\Type;
  * Collmex ProductPrice Type
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @author    René Galle <renegalle.webdevelopment@gmail.com>
+ * @author   René Galle <renegalle.webdevelopment@gmail.com>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
  */
