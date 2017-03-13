@@ -36,7 +36,8 @@ class TypeFactory
         'CMXUMS'            => 'Revenue',
         'CMXPRD'            => 'Product',
         'CMXPRI'            => 'ProductPrice',
-        'STOCK_AVAILABLE'   => 'StockAvailable'
+        'STOCK_AVAILABLE'   => 'StockAvailable',
+        'CMXSTK'            => 'Stock'
     );
 
     /**
