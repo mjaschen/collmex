@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 /**
  * Collmex ProductPrice Type
  *
@@ -21,22 +20,21 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class ProductPrice extends AbstractType implements TypeInterface
 {
-
     /**
      * Type data template
      *
      * @var array
      */
-    protected $template = array(
-        'type_identifier'                => 'CMXPRI',
-        'product_id'                     => null,
-        'client_id'                      => null,
-        'price_group_id'                 => null,
-        'valid_from'                     => null,
-        'valid_to'                       => null,
-        'price'                          => null
-    
-    );
+    protected $template = [
+        'type_identifier' => 'CMXPRI',
+        'product_id'      => null,
+        'client_id'       => null,
+        'price_group_id'  => null,
+        'valid_from'      => null,
+        'valid_to'        => null,
+        'price'           => null,
+
+    ];
 
     /**
      * Formally validates the type data in $data attribute.
@@ -48,6 +46,3 @@ class ProductPrice extends AbstractType implements TypeInterface
         // TODO: Implement validate() method.
     }
 }
-
-
-?>

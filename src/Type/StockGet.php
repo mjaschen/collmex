@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Collmex StockGet Type
  *
@@ -23,14 +23,14 @@ class StockGet extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
-        'type_identifier'  => 'STOCK_GET',
-        'client_id'        => null,
-        'product_id'       => null,
-        'product_group'    => null,
-        'text'             => null,
-        'type'             => null
-    );
+    protected $template = [
+        'type_identifier' => 'STOCK_GET',
+        'client_id'       => null,
+        'product_id'      => null,
+        'product_group'   => null,
+        'text'            => null,
+        'type'            => null,
+    ];
 
     /**
      * Formally validates the type data in $data attribute.
@@ -42,6 +42,3 @@ class StockGet extends AbstractType implements TypeInterface
         return true;
     }
 }
-
-
- ?>

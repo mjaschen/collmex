@@ -25,20 +25,20 @@ class TypeFactory
      *
      * @var array
      */
-    protected $typeMap = array(
-        'LOGIN'             => 'Login',
-        'MESSAGE'           => 'Message',
-        'NEW_OBJECT_ID'     => 'NewObject',
-        'CMXABO'            => 'Subscription',
-        'CMXINV'            => 'Invoice',
-        'CMXKND'            => 'Customer',
-        'CMXORD-2'          => 'CustomerOrder',
-        'CMXUMS'            => 'Revenue',
-        'CMXPRD'            => 'Product',
-        'CMXPRI'            => 'ProductPrice',
-        'STOCK_AVAILABLE'   => 'StockAvailable',
-        'CMXSTK'            => 'Stock'
-    );
+    protected $typeMap = [
+        'LOGIN'           => 'Login',
+        'MESSAGE'         => 'Message',
+        'NEW_OBJECT_ID'   => 'NewObject',
+        'CMXABO'          => 'Subscription',
+        'CMXINV'          => 'Invoice',
+        'CMXKND'          => 'Customer',
+        'CMXORD-2'        => 'CustomerOrder',
+        'CMXUMS'          => 'Revenue',
+        'CMXPRD'          => 'Product',
+        'CMXPRI'          => 'ProductPrice',
+        'STOCK_AVAILABLE' => 'StockAvailable',
+        'CMXSTK'          => 'Stock',
+    ];
 
     /**
      * Builds the type object for the given data.

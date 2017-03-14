@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Collmex ProductPriceGet Type
  *
@@ -23,12 +23,12 @@ class ProductPriceGet extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
-        'type_identifier'  => 'PRODUCT_PRICE_GET',
-        'client_id'        => null,
-        'product_id'       => null,
-        'inactive'         => null
-    );
+    protected $template = [
+        'type_identifier' => 'PRODUCT_PRICE_GET',
+        'client_id'       => null,
+        'product_id'      => null,
+        'inactive'        => null,
+    ];
 
     /**
      * Formally validates the type data in $data attribute.
@@ -40,6 +40,3 @@ class ProductPriceGet extends AbstractType implements TypeInterface
         return true;
     }
 }
-
-
- ?>

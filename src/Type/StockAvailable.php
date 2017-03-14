@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Collmex StockAvailable Type
  *
@@ -23,14 +23,14 @@ class StockAvailable extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
-        'type_identifier'  => 'STOCK_AVAILABLE',
-        'product_id'       => null,
-        'client_id'        => null,
-        'stock'            => null,
-        'unit'             => null,
-        'reorder_time'     => null
-    );
+    protected $template = [
+        'type_identifier' => 'STOCK_AVAILABLE',
+        'product_id'      => null,
+        'client_id'       => null,
+        'stock'           => null,
+        'unit'            => null,
+        'reorder_time'    => null,
+    ];
 
     /**
      * Formally validates the type data in $data attribute.
@@ -42,6 +42,3 @@ class StockAvailable extends AbstractType implements TypeInterface
         return true;
     }
 }
-
-
- ?>
