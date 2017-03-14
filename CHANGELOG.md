@@ -4,6 +4,12 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.12] - 2017-03-14
+
+### Added
+
+* new types: `ProductPrice` (`CMXPRI`), `ProductPriceGet` (`PRODUCT_PRICE_GET`), `Stock` (`CMXSTK`), `StockAvailable` (`STOCK_AVAILABLE`), `StockAvailableGet` (`STOCK_AVAILABLE_GET`), `StockGet (`STOCK_GET`)`. Thanks @Argee88! 
+
 ## [0.6.11] - 2017-03-08
 
 ### Fixed
