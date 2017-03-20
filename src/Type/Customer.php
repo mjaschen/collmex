@@ -88,6 +88,11 @@ class Customer extends AbstractType implements TypeInterface
         'mandate_reference'              => null,       // 45
         'mandate_reference_sign_date'    => null,       //
         'dunning_block'                  => null,       //
+        'no_mailings'                    => null,       //
+        'private_person'                 => null,       //
+        'url'                            => null,       // 50
+        'partial_delivery_allowed'       => null,       //
+        'partial_invoice_allowed'        => null,       // 52
     );
 
     /**
