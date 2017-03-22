@@ -38,6 +38,7 @@ class TypeFactory
         'CMXPRI'          => 'ProductPrice',
         'STOCK_AVAILABLE' => 'StockAvailable',
         'CMXSTK'          => 'Stock',
+        'CMXDLV'          => 'Delivery',
     ];
 
     /**
