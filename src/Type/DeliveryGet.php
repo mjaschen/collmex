@@ -24,18 +24,18 @@ class DeliveryGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'       => 'DELIVERY_GET',
-        'delivery_id'           => null,
-        'client_id'             => null,
-        'customer_id'           => null,
-        'delivery_date_from'    => null,
-        'delivery_date_to'      => null,
-        'issued_only'           => null,
-        'returned_format'       => null,
-        'changed_only'          => null,
-        'system_name'           => null,
-        'no_writing_paper'      => null,
-        'order_id'              => null,
+        'type_identifier'    => 'DELIVERY_GET',
+        'delivery_id'        => null,
+        'client_id'          => null,
+        'customer_id'        => null,
+        'delivery_date_from' => null,
+        'delivery_date_to'   => null,
+        'issued_only'        => null,
+        'returned_format'    => null,
+        'changed_only'       => null,
+        'system_name'        => null,
+        'no_writing_paper'   => null,
+        'order_id'           => null,
     ];
 
     /**
