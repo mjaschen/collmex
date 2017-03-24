@@ -4,6 +4,13 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.13] - 2017-03-24
+
+### Added
+
+* new types: `Delivery` (`CMXDLV`), `DeliveryGet` (`DELIVERY_GET`), `DifferentShippingAddress` (`CMXEPF`). Thanks @Argee88!
+* new fields in `Customer` type. Thanks @Argee88!
+
 ## [0.6.12] - 2017-03-14
 
 ### Added
