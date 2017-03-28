@@ -21,6 +21,7 @@ There is (or least should be…) a *Type* class for every Collmex record type ("
 - `CUSTOMER_GET`
 - `DELIVERY_GET`
 - `INVOICE_GET`
+- `PAYMENT_CONFIRMATION`
 - `PRODUCT_GET`
 - `PRODUCT_PRICE_GET`
 - `SALES_ORDER_GET`
