@@ -32,14 +32,15 @@ class ResponseFactory
      * Returns the class name which handles the response ('CsvResponse' or 'ZipResponse')
      *
      * @return ResponseInterface
+     * @throws \MarcusJaschen\Collmex\Exception\RequestErrorException
      * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
      */
     public function getResponseInstance()
     {
         try {
             $mimeType = $this->getResponseMimeType();
-        } catch (\Exception $e) {
-            throw new InvalidResponseMimeTypeException('Cannot determine MIME type for response');
+        } catch (\Exception $exception) {
+            throw new InvalidResponseMimeTypeException('Cannot determine MIME type for response', 0, $exception);
         }
 
         switch ($mimeType) {
