@@ -16,6 +16,7 @@ There is (or least should be…) a *Type* class for every Collmex record type ("
 - `CMXORD-2`
 - `CMXPRD`
 - `CMXPRI`
+- `CMXPRI_CHANGE`
 - `CMXSTK`
 - `CMXUMS`
 - `CUSTOMER_GET`
