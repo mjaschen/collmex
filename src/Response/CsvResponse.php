@@ -28,6 +28,13 @@ class CsvResponse implements ResponseInterface
     protected $parser;
 
     /**
+     * The response CSV string
+     *
+     * @var string
+     */
+    protected $rawData;
+
+    /**
      * The response CSV parsed into an array (each CSV line an array element)
      *
      * @var array
@@ -78,6 +85,7 @@ class CsvResponse implements ResponseInterface
     public function __construct(ParserInterface $parser, $responseBody)
     {
         $this->parser   = $parser;
+        $this->rawData  = $responseBody;
         $this->response = $this->parseCsv($responseBody);
     }
 
@@ -149,6 +157,20 @@ class CsvResponse implements ResponseInterface
     public function getErrorLine()
     {
         return $this->errorLine;
+    }
+
+    /**
+     * Returns the original csv-string from the collmex request.
+     *
+     * @return string|null
+     */
+    public function getRawData()
+    {
+        if (empty($this->rawData)) {
+            return null;
+        }
+
+        return $this->rawData;
     }
 
     /**
