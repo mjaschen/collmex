@@ -4,6 +4,12 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+[0.6.16] - 2017-09-14
+
+### Added
+
+* The unparsed contents of the Collmex response can be accessed with `CsvResponse::getResponseRaw()`.
+
 ## [0.6.15] - 2017-09-11
 
 ### Added

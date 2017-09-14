@@ -78,6 +78,9 @@ if ($collmexResponse->isError()) {
         var_dump($record->getData()); // contains one Customer object and the Message object(s)
     }
 }
+
+// show unparsed reponse contents:
+var_dump($collmexResponse->getResponseRaw());
 ```
 
 #### Create a new Collmex customer record
