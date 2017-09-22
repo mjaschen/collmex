@@ -29,6 +29,7 @@ There is (or least should be…) a *Type* class for every Collmex record type ("
 - `STOCK_AVAILABLE`
 - `STOCK_AVAILABLE_GET`
 - `STOCK_GET`
+- `TRACKING_NUMBER`
 
 ### Installation
 
