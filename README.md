@@ -13,6 +13,7 @@ There is (or least should be…) a *Type* class for every Collmex record type ("
 - `CMXEPF`
 - `CMXINV`
 - `CMXKND`
+- `CMXMGD`
 - `CMXORD-2`
 - `CMXPRD`
 - `CMXPRI`
@@ -22,6 +23,7 @@ There is (or least should be…) a *Type* class for every Collmex record type ("
 - `CUSTOMER_GET`
 - `DELIVERY_GET`
 - `INVOICE_GET`
+- `MEMBER_GET`
 - `PAYMENT_CONFIRMATION`
 - `PRODUCT_GET`
 - `PRODUCT_PRICE_GET`

@@ -31,6 +31,7 @@ class TypeFactory
         'NEW_OBJECT_ID'   => 'NewObject',
         'CMXABO'          => 'Subscription',
         'CMXINV'          => 'Invoice',
+        'CMXMGD'          => 'Member',
         'CMXKND'          => 'Customer',
         'CMXORD-2'        => 'CustomerOrder',
         'CMXUMS'          => 'Revenue',

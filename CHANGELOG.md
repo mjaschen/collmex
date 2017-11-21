@@ -4,6 +4,12 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+[0.6.18] - 2017-11-21
+
+### Added
+
+* new types: `Member` (`CMXMGD`), `MemberGet` (`MEMBER_GET`). Thanks to Sebastian Gunreben!
+
 [0.6.17] - 2017-09-22
 
 ### Added
