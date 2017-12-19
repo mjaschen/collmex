@@ -29,7 +29,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/config.php' => config_path('collmex.php'),
+            __DIR__.'/../config/collmex.php' => config_path('collmex.php'),
         ], 'config');
     }
 
@@ -40,7 +40,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'collmex');
+        $this->mergeConfigFrom(__DIR__.'/../config/collmex.php', 'collmex');
 
         $this->registerClient();
         $this->registerRequest();
