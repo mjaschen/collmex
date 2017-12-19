@@ -28,7 +28,9 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function boot()
     {
-        $this->package('mjaschen/collmex');
+        $this->publishes([
+            __DIR__.'/../config/config.php' => config_path('collmex.php'),
+        ], 'config');
     }
 
     /**
@@ -38,6 +40,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'collmex');
+
         $this->registerClient();
         $this->registerRequest();
     }
@@ -47,12 +51,11 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     protected function registerClient()
     {
-        $this->app['collmex.client'] = $this->app->share(
-            function ($app) {
+        $this->app->singleton('collmex.client', function () {
                 return new \MarcusJaschen\Collmex\Client\Curl(
-                    $app['config']['collmex::user'],
-                    $app['config']['collmex::password'],
-                    $app['config']['collmex::customer']
+                    config('collmex.user'),
+                    config('collmex.password'),
+                    config('collmex.customer')
                 );
             }
         );
@@ -63,9 +66,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     protected function registerRequest()
     {
-        $this->app['collmex.request'] = $this->app->share(
-            function ($app) {
-                return new Request($app['collmex.client']);
+        $this->app->singleton('collmex.request', function ($app) {
+                return new Request($app->make('collmex.client'));
             }
         );
     }
