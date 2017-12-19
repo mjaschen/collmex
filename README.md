@@ -41,6 +41,13 @@ Using Composer, just add it to your `composer.json` by running:
 composer require mjaschen/collmex
 ```
 
+Add Service Provider to `config/app` providers array.
+```
+//..
+MarcusJaschen\Collmex\CollmexServiceProvider::class,
+//..
+```
+
 ### Compatibility
 
 The Collmex PHP SDK requires PHP 5.5.9. If you're still using older PHP versions, you can install the 0.4 branch
