@@ -1,6 +1,6 @@
 <?php
 /**
- * Laravel 4 Service Provider for Collmex PHP SDK
+ * Laravel 5 Service Provider for Collmex PHP SDK
  *
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
  * @license   http://www.opensource.org/licenses/mit-license MIT License
@@ -10,7 +10,7 @@
 namespace MarcusJaschen\Collmex;
 
 /**
- * Laravel 4 Service Provider for Collmex PHP SDK
+ * Laravel 5 Service Provider for Collmex PHP SDK
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
