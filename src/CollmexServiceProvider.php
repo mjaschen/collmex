@@ -1,19 +1,20 @@
 <?php
 /**
- * Laravel 4 Service Provider for Collmex PHP SDK
+ * Laravel 5 Service Provider for Collmex PHP SDK.
  *
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
  * @license   http://www.opensource.org/licenses/mit-license MIT License
+ *
  * @link      https://github.com/mjaschen/collmex
  */
-
 namespace MarcusJaschen\Collmex;
 
 /**
- * Laravel 4 Service Provider for Collmex PHP SDK
+ * Laravel 5 Service Provider for Collmex PHP SDK.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
+ *
  * @link     https://github.com/mjaschen/collmex
  */
 class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
@@ -24,48 +25,55 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
     protected $defer = true;
 
     /**
-     * Registers the package
+     * Registers the package.
      */
     public function boot()
     {
-        $this->package('mjaschen/collmex');
+        $this->publishes(
+            [
+                __DIR__ . '/../config/collmex.php' => config_path('collmex.php'),
+            ],
+            'config'
+        );
     }
 
     /**
      * Register the service provider.
-     *
-     * @return void
      */
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__ . '/../config/collmex.php', 'collmex');
+
         $this->registerClient();
         $this->registerRequest();
     }
 
     /**
-     * Registers the HTTP client
+     * Registers the HTTP client.
      */
     protected function registerClient()
     {
-        $this->app['collmex.client'] = $this->app->share(
-            function ($app) {
+        $this->app->singleton(
+            'collmex.client',
+            function () {
                 return new \MarcusJaschen\Collmex\Client\Curl(
-                    $app['config']['collmex::user'],
-                    $app['config']['collmex::password'],
-                    $app['config']['collmex::customer']
+                    config('collmex.user'),
+                    config('collmex.password'),
+                    config('collmex.customer')
                 );
             }
         );
     }
 
     /**
-     * Registers the Collmex Request object
+     * Registers the Collmex Request object.
      */
     protected function registerRequest()
     {
-        $this->app['collmex.request'] = $this->app->share(
+        $this->app->singleton(
+            'collmex.request',
             function ($app) {
-                return new Request($app['collmex.client']);
+                return new Request($app->make('collmex.client'));
             }
         );
     }
