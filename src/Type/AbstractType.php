@@ -73,7 +73,7 @@ abstract class AbstractType implements JsonSerializable
     /**
      * Builds the CSV representation of the Collmex type.
      *
-     * @return array of CSV lines
+     * @return string CSV lines
      */
     public function getCsv()
     {
