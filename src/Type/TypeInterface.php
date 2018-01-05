@@ -1,6 +1,6 @@
 <?php
 /**
- * Collex Type Interface
+ * Collmex Type Interface
  *
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
  * @license   http://www.opensource.org/licenses/mit-license MIT License
@@ -10,7 +10,7 @@
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collex Type Interface
+ * Collmex Type Interface
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
