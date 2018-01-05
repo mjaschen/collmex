@@ -7,6 +7,7 @@
  *
  * @link      https://github.com/mjaschen/collmex
  */
+
 namespace MarcusJaschen\Collmex;
 
 /**

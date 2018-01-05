@@ -26,20 +26,20 @@ class TypeFactory
      * @var array
      */
     protected $typeMap = [
-        'LOGIN'           => 'Login',
-        'MESSAGE'         => 'Message',
-        'NEW_OBJECT_ID'   => 'NewObject',
-        'CMXABO'          => 'Subscription',
-        'CMXINV'          => 'Invoice',
-        'CMXMGD'          => 'Member',
-        'CMXKND'          => 'Customer',
-        'CMXORD-2'        => 'CustomerOrder',
-        'CMXUMS'          => 'Revenue',
-        'CMXPRD'          => 'Product',
-        'CMXPRI'          => 'ProductPrice',
+        'LOGIN' => 'Login',
+        'MESSAGE' => 'Message',
+        'NEW_OBJECT_ID' => 'NewObject',
+        'CMXABO' => 'Subscription',
+        'CMXINV' => 'Invoice',
+        'CMXMGD' => 'Member',
+        'CMXKND' => 'Customer',
+        'CMXORD-2' => 'CustomerOrder',
+        'CMXUMS' => 'Revenue',
+        'CMXPRD' => 'Product',
+        'CMXPRI' => 'ProductPrice',
         'STOCK_AVAILABLE' => 'StockAvailable',
-        'CMXSTK'          => 'Stock',
-        'CMXDLV'          => 'Delivery',
+        'CMXSTK' => 'Stock',
+        'CMXDLV' => 'Delivery',
         'TRACKING_NUMBER' => 'TrackingNumber',
     ];
 
@@ -54,12 +54,12 @@ class TypeFactory
      */
     public function getType($data)
     {
-        if (! array_key_exists($data[0], $this->typeMap)) {
+        if (!array_key_exists($data[0], $this->typeMap)) {
             throw new InvalidTypeIdentifierException("Invalid Type Identifier: {$data[0]}");
         }
 
         $className = $this->typeMap[$data[0]];
-        $class     = "\\MarcusJaschen\\Collmex\\Type\\{$className}";
+        $class = "\\MarcusJaschen\\Collmex\\Type\\{$className}";
 
         return new $class($data);
     }

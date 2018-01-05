@@ -27,12 +27,12 @@ class ProductPriceChange extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'CMXPRI_CHANGE',
-        'product_id'      => null,
-        'client_id'       => null,
-        'price_group_id'  => null,
-        'valid_from'      => null,
-        'valid_to'        => null,
-        'price'           => null,
+        'product_id' => null,
+        'client_id' => null,
+        'price_group_id' => null,
+        'valid_from' => null,
+        'valid_to' => null,
+        'price' => null,
 
     ];
 

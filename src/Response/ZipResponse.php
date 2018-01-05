@@ -44,7 +44,7 @@ class ZipResponse implements ResponseInterface
      */
     public function __construct(ParserInterface $responseParser, $reponseBody)
     {
-        $this->reponseBody    = $reponseBody;
+        $this->reponseBody = $reponseBody;
         $this->responseParser = $responseParser;
 
         $this->extractFiles();
@@ -101,11 +101,11 @@ class ZipResponse implements ResponseInterface
         file_put_contents($tmpFilename, $this->reponseBody);
 
         $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR
-                                  . 'collmexphp_extracted_' . basename($tmpFilename);
+            . 'collmexphp_extracted_' . basename($tmpFilename);
 
         $zip = new ZipArchive;
 
-        if (! $zip->open($tmpFilename)) {
+        if (!$zip->open($tmpFilename)) {
             throw new InvalidZipFileException("Cannot open ZIP archive " . $tmpFilename);
         }
 

@@ -25,11 +25,11 @@ class StockGet extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'STOCK_GET',
-        'client_id'       => null,
-        'product_id'      => null,
-        'product_group'   => null,
-        'text'            => null,
-        'type'            => null,
+        'client_id' => null,
+        'product_id' => null,
+        'product_group' => null,
+        'text' => null,
+        'type' => null,
     ];
 
     /**

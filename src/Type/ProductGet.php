@@ -20,7 +20,7 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class ProductGet extends AbstractType implements TypeInterface
 {
-    const ONLY_WITH_PRICE    = 1;
+    const ONLY_WITH_PRICE = 1;
     const NOTONLY_WITH_PRICE = 0;
 
     /**
@@ -28,13 +28,13 @@ class ProductGet extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'PRODUCT_GET',
-        'client_id'       => null,
-        'product_id'      => null,
-        'product_group'   => null,
-        'price_group'     => null,
-        'changed_only'    => null,
-        'system_name'     => null,
-        'website_id'      => null,
+        'client_id' => null,
+        'product_id' => null,
+        'product_group' => null,
+        'price_group' => null,
+        'changed_only' => null,
+        'system_name' => null,
+        'website_id' => null,
         'with_price_only' => null,
     ];
 

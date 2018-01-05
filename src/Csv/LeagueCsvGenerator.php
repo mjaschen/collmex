@@ -55,7 +55,7 @@ class LeagueCsvGenerator implements GeneratorInterface
         $writer->setDelimiter($this->delimiter);
         $writer->setEnclosure($this->enclosure);
 
-        if (! is_array($data[0])) {
+        if (!is_array($data[0])) {
             $data = [$data];
         }
 
