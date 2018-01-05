@@ -1,5 +1,5 @@
-/vendor/
-/composer.lock
-/.idea/
-/docs/collmex.html
 .DS_Store
+/.idea/
+/composer.lock
+/docs/collmex.html
+/vendor/
