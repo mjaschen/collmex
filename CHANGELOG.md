@@ -4,6 +4,16 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.20] - 2018-01-05
+
+### Added
+
+* new methods `toArray()` and `toJSON()` for types.
+
+### Fixed
+
+* return type hint for `getCSV()` in doc block.
+
 ## [0.6.19] - 2017-12-20
 
 ### Changed
