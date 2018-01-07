@@ -1,77 +1,77 @@
 {
-    "name": "mjaschen/collmex",
-    "description": "Collmex PHP SDK",
-    "keywords": [
-        "collmex",
-        "api"
-    ],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Marcus Jaschen",
-            "email": "mail@marcusjaschen.de",
-            "homepage": "https://marcusjaschen.de/",
-            "role": "developer"
-        }
-    ],
-    "support": {
-        "source": "https://github.com/mjaschen/collmex",
-        "issues": "https://github.com/mjaschen/collmex/issues"
-    },
-    "require": {
-        "php": "~7.0 || ~7.1 || ~7.2 || ~7.3",
-        "ext-curl": "*",
-        "ext-json": "*",
-        "ext-zip": "*",
-        "neitanod/forceutf8": "^1.4.0 || ^2.0.0",
-        "symfony/finder": "^2.5.0 || ^3.0.0 || ^4.0.0",
-        "symfony/http-foundation": "^2.5.0 || ^3.0.0 || ^4.0.0"
-    },
-    "require-dev": {
-        "laravel/framework": "^5.4",
-        "league/csv": "^9.1",
-        "mockery/mockery": "^1.0",
-        "phpunit/phpunit": "^5.7.26",
-        "vimeo/psalm": "^2.0",
-        "squizlabs/php_codesniffer": "~3.0",
-        "roave/security-advisories": "dev-master"
-    },
-    "suggest": {
-        "league/csv": "Enable CSV generation via the 'Csv' library by The PHP League"
-    },
-    "autoload": {
-        "psr-4": {
-            "MarcusJaschen\\Collmex\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "MarcusJaschen\\Collmex\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
-        "ci:sniff": "./vendor/bin/phpcs --standard=PSR1,PSR2,PSR12 src/ tests/",
-        "ci:psalm": "./vendor/bin/psalm",
-        "ci:tests": "./vendor/bin/phpunit tests/",
-        "ci:static": [
-            "@ci:lint",
-            "@ci:sniff",
-            "@ci:psalm"
-        ],
-        "ci:dynamic": [
-            "@ci:tests"
-        ],
-        "ci": [
-            "@ci:static",
-            "@ci:dynamic"
-        ]
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "MarcusJaschen\\Collmex\\CollmexServiceProvider"
-            ]
-        }
+  "name": "mjaschen/collmex",
+  "description": "Collmex PHP SDK",
+  "keywords": [
+    "collmex",
+    "api"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marcus Jaschen",
+      "email": "mail@marcusjaschen.de",
+      "homepage": "https://marcusjaschen.de/",
+      "role": "developer"
     }
+  ],
+  "support": {
+    "source": "https://github.com/mjaschen/collmex",
+    "issues": "https://github.com/mjaschen/collmex/issues"
+  },
+  "require": {
+    "php": "~7.0 || ~7.1 || ~7.2 || ~7.3",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-zip": "*",
+    "neitanod/forceutf8": "^1.4.0 || ^2.0.0",
+    "symfony/finder": "^2.5.0 || ^3.0.0 || ^4.0.0",
+    "symfony/http-foundation": "^2.5.0 || ^3.0.0 || ^4.0.0"
+  },
+  "require-dev": {
+    "laravel/framework": "^5.4",
+    "league/csv": "^9.1",
+    "mockery/mockery": "^1.0",
+    "phpunit/phpunit": "^5.7.26",
+    "vimeo/psalm": "^2.0",
+    "squizlabs/php_codesniffer": "~3.0",
+    "roave/security-advisories": "dev-master"
+  },
+  "suggest": {
+    "league/csv": "Enable CSV generation via the 'Csv' library by The PHP League"
+  },
+  "autoload": {
+    "psr-4": {
+      "MarcusJaschen\\Collmex\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MarcusJaschen\\Collmex\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
+    "ci:sniff": "./vendor/bin/phpcs --standard=PSR2,PSR12 config/ src/ tests/",
+    "ci:psalm": "./vendor/bin/psalm",
+    "ci:tests": "./vendor/bin/phpunit tests/",
+    "ci:static": [
+      "@ci:lint",
+      "@ci:sniff",
+      "@ci:psalm"
+    ],
+    "ci:dynamic": [
+      "@ci:tests"
+    ],
+    "ci": [
+      "@ci:static",
+      "@ci:dynamic"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MarcusJaschen\\Collmex\\CollmexServiceProvider"
+      ]
+    }
+  }
 }
