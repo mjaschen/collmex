@@ -41,6 +41,7 @@ class TypeFactory
         'CMXSTK'          => 'Stock',
         'CMXDLV'          => 'Delivery',
         'TRACKING_NUMBER' => 'TrackingNumber',
+        'CMXPOD'          => 'PurchaseOrder',
     ];
 
     /**
