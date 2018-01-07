@@ -67,22 +67,22 @@
       "issues": "https://github.com/mjaschen/collmex/issues"
     },
     "require": {
-        "php": "~7.1 || ~7.2 || ~7.3",
-        "ext-curl": "*",
-        "ext-json": "*",
-        "ext-zip": "*",
-        "neitanod/forceutf8": "^2.0",
-        "symfony/finder": "^4.0",
-        "symfony/http-foundation": "^4.0"
+      "php": "~7.1 || ~7.2 || ~7.3",
+      "ext-curl": "*",
+      "ext-json": "*",
+      "ext-zip": "*",
+      "neitanod/forceutf8": "^2.0",
+      "symfony/finder": "^4.0",
+      "symfony/http-foundation": "^4.0"
     },
     "require-dev": {
-        "laravel/framework": "^5.8",
-        "league/csv": "^9.1",
-        "mockery/mockery": "^1.2",
-        "phpunit/phpunit": "^5.7.26",
-        "vimeo/psalm": "^3.1",
-        "squizlabs/php_codesniffer": "^3.4",
-        "roave/security-advisories": "dev-master"
+      "laravel/framework": "^5.8",
+      "league/csv": "^9.1",
+      "mockery/mockery": "^1.2",
+      "phpunit/phpunit": "^5.7.26",
+      "vimeo/psalm": "^3.1",
+      "squizlabs/php_codesniffer": "^3.4",
+      "roave/security-advisories": "dev-master"
     },
     "suggest": {
       "league/csv": "Enable CSV generation via the 'Csv' library by The PHP League"
@@ -99,13 +99,13 @@
     },
     "prefer-stable": true,
     "config": {
-        "preferred-install": {
-            "*": "dist"
-        }
+      "preferred-install": {
+        "*": "dist"
+      }
     },
     "scripts": {
       "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
-      "ci:sniff": "./vendor/bin/phpcs --standard=PSR2,PSR12 config/ src/ tests/",
+      "ci:sniff": "./vendor/bin/phpcs config/ src/ tests/",
       "ci:psalm": "./vendor/bin/psalm",
       "ci:tests": "./vendor/bin/phpunit tests/",
       "ci:static": [
@@ -128,8 +128,5 @@
         ]
       }
     }
-<<<<<<< HEAD
   }
-=======
->>>>>>> update Psalm to version 3
 }
