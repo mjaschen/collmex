@@ -65,9 +65,14 @@ return [
 
 ## Compatibility
 
-The Collmex PHP SDK requires PHP >= 5.5.9. If you're still using an older PHP
-version, you can install the 0.4 branch for PHP 5.4 compatibility or the 0.3
-branch for PHP 5.3 compatibility. New features will only go into the master.
+The Collmex PHP SDK requires PHP >= 5.6. If you're still using an ancient PHP
+version, you can install older versions of the Collmex PHP SDK:
+
+- for PHP 5.5 compatibility: use the 0.6.x branch (`composer require mjaschen/collmex:~0.6.0`)
+- for PHP 5.4 compatibility: use the 0.4.x branch (`composer require mjaschen/collmex:~0.4.0`)
+- for PHP 5.3 compatibility: use the 0.3.x branch (`composer require mjaschen/collmex:~0.3.0`)
+
+New features will only go into the master.
 
 ## Usage/Examples
 
