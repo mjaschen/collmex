@@ -1,7 +1,10 @@
 {
     "name": "mjaschen/collmex",
     "description": "Collmex PHP SDK",
-    "keywords": ["collmex", "api"],
+    "keywords": [
+        "collmex",
+        "api"
+    ],
     "license": "MIT",
     "authors": [
         {
