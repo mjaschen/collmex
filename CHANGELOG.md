@@ -1,14 +1,16 @@
 # Change Log
 
 All notable changes to `mjaschen/collmex` will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
-Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
+This project adheres to [Semantic Versioning](https://semver.org/).
+Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
+principles.
 
 ## [0.6.21] - 2018-01-07
 
 ### Added
 
-* new types: `PurchaseOrder` (`CMXPOD`) and `PurchaseOrderGet` (`PURCHASE_ORDER_GET`). Thanks to @Argee88!
+* new types: `PurchaseOrder` (`CMXPOD`) and `PurchaseOrderGet`
+  (`PURCHASE_ORDER_GET`). Thanks to @Argee88!
 
 ## [0.6.20] - 2018-01-05
 
@@ -24,13 +26,15 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Changed
 
-* updated the included Laravel service provider for compatibility with Laravel 5.x. Thanks to Naoray!
+* updated the included Laravel service provider for compatibility with
+  Laravel 5.x. Thanks to Naoray!
 
 ## [0.6.18] - 2017-11-21
 
 ### Added
 
-* new types: `Member` (`CMXMGD`), `MemberGet` (`MEMBER_GET`). Thanks to Sebastian Gunreben!
+* new types: `Member` (`CMXMGD`), `MemberGet` (`MEMBER_GET`). Thanks to
+  Sebastian Gunreben!
 
 ## [0.6.17] - 2017-09-22
 
@@ -42,7 +46,8 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Added
 
-* The unparsed contents of the Collmex response can be accessed with `CsvResponse::getResponseRaw()`.
+* The unparsed contents of the Collmex response can be accessed with
+  `CsvResponse::getResponseRaw()`.
 
 ## [0.6.15] - 2017-09-11
 
@@ -60,14 +65,18 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Added
 
-* new types: `Delivery` (`CMXDLV`), `DeliveryGet` (`DELIVERY_GET`), `DifferentShippingAddress` (`CMXEPF`). Thanks @Argee88!
+* new types: `Delivery` (`CMXDLV`), `DeliveryGet` (`DELIVERY_GET`),
+  `DifferentShippingAddress` (`CMXEPF`). Thanks @Argee88!
 * new fields in `Customer` type. Thanks @Argee88!
 
 ## [0.6.12] - 2017-03-14
 
 ### Added
 
-* new types: `ProductPrice` (`CMXPRI`), `ProductPriceGet` (`PRODUCT_PRICE_GET`), `Stock` (`CMXSTK`), `StockAvailable` (`STOCK_AVAILABLE`), `StockAvailableGet` (`STOCK_AVAILABLE_GET`), `StockGet (`STOCK_GET`)`. Thanks @Argee88!
+* new types: `ProductPrice` (`CMXPRI`), `ProductPriceGet`
+  (`PRODUCT_PRICE_GET`), `Stock` (`CMXSTK`), `StockAvailable`
+  (`STOCK_AVAILABLE`), `StockAvailableGet` (`STOCK_AVAILABLE_GET`),
+  `StockGet (`STOCK_GET`)`. Thanks @Argee88!
 
 ## [0.6.11] - 2017-03-08
 
@@ -116,7 +125,9 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Fixed
 
-* #2: Invalid CSV is no longer generated if a CSV field contains a backslash directly followed by a double-quote (fixed only in the `SimpleGenerator` class, `LeagueCsvGenerator` still produces invalid CSV)
+* #2: Invalid CSV is no longer generated if a CSV field contains a backslash
+  directly followed by a double-quote (fixed only in the `SimpleGenerator`
+  class, `LeagueCsvGenerator` still produces invalid CSV)
 
 ## [0.6.3] - 2016-09-14
 
@@ -135,15 +146,16 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Changed
 
-* the *require*-dependency on `league/csv` was changed to *suggest*, because it's not required
-  for using the Collmex library and I'm trying to reduce the dependencies which are pulled
-  in by default.
+* the *require*-dependency on `league/csv` was changed to *suggest*, because
+  it's not required for using the Collmex library and I'm trying to reduce the
+  dependencies which are pulled in by default.
 
 ## [0.6.0] - 2016-01-13
 
 ### Added
 
-* Integrated *PHP League CSV*, can be used for CSV generation instead of `SimpleGenerator`
+* Integrated *PHP League CSV*, can be used for CSV generation instead of
+  `SimpleGenerator`
 
 ## [0.5.3] - 2015-12-08
 
@@ -155,13 +167,15 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Changed
 
-* Updated minimum required PHP version to 5.5.9 (minimum version for Symfony 3.x)
+* Updated minimum required PHP version to 5.5.9 (minimum version for
+  Symfony 3.x)
 
 ## [0.5.0] - 2015-12-08
 
 ### Changed
 
-* Updated to Symfony 3.x packages (use the 0.4 branch if you're using Symfony 2.x packages)
+* Updated to Symfony 3.x packages (use the 0.4 branch if you're using
+  Symfony 2.x packages)
 
 ## [0.4.1] - 2015-11-15
 
@@ -191,19 +205,19 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Fixed
 
-* Check if "line" field in error message is set
+* Check if `line` field in error message is set
 
 ## [0.3.1] - 2014-11-28
 
 ### Added
 
-* TypeFactory supports "CustomerOrder" type
+* TypeFactory supports `CustomerOrder` type
 
 ## [0.3.0] - 2014-11-28
 
 ### Added
 
-* new record type "CustomerOrder" (CMXORD-2)
+* new record type `CustomerOrder` (CMXORD-2)
 * run Travis tests against PHP 5.6
 
 ## [0.2.0] - 2014-07-01
