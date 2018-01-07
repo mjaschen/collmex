@@ -57,7 +57,7 @@
     },
     "scripts": {
         "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
-        "ci:sniff": "./vendor/bin/phpcs --standard=PSR2,PSR12 config/ src/ tests/",
+        "ci:sniff": "./vendor/bin/phpcs config/ src/ tests/",
         "ci:psalm": "./vendor/bin/psalm",
         "ci:tests": "./vendor/bin/phpunit tests/",
         "ci:static": [
