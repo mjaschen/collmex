@@ -230,8 +230,12 @@ request to the Collmex API and after receiving the response from the API.
 To run checks and tests, it's the easiest to use the provided Composer scripts:
 
 - lint PHP files for syntax errors: `composer ci:lint`
-- run static analysis with [Psalm][] and report errors: `composer ci:psalm`
+- run static analysis with [Psalm](https://github.com/vimeo/psalm) and report
+  errors: `composer ci:psalm`
 - run unit tests with PHPUnit: `composer ci:tests`
+- check the code style with
+  [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer):
+  `composer ci:sniff`
 
 To run all checks and tests at once, just use `composer ci`.
 

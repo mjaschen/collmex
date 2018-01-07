@@ -34,7 +34,7 @@
         "phpunit/phpunit": "^5.7.26",
         "roave/security-advisories": "dev-master",
         "vimeo/psalm": "^2.0",
-        "squizlabs/php_codesniffer": "~3.0"
+        "squizlabs/php_codesniffer": "~3.4"
     },
     "suggest": {
         "league/csv": "Enable CSV generation via the 'Csv' library by The PHP League"
@@ -51,7 +51,7 @@
     },
     "scripts": {
         "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
-        "ci:sniff": "./vendor/bin/phpcs --standard=PSR1,PSR2,PSR12 src/ tests/",
+        "ci:sniff": "./vendor/bin/phpcs --standard=PSR2,PSR12 config/ src/ tests/",
         "ci:psalm": "./vendor/bin/psalm",
         "ci:tests": "./vendor/bin/phpunit tests/",
         "ci:static": [
