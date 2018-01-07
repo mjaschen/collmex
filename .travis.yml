@@ -23,4 +23,18 @@ install:
   fi;
   composer show;
 
+sudo: false
+
+cache:
+  directories:
+  - vendor
+  - "$HOME/.composer/cache"
+
+before_install:
+- phpenv config-rm xdebug.ini
+
+before_script:
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar install --dev
+
 script: phpunit
