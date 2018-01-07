@@ -4,6 +4,12 @@ All notable changes to `mjaschen/collmex` will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [0.6.21] - 2018-01-07
+
+### Added
+
+* new types: `PurchaseOrder` (`CMXPOD`) and `PurchaseOrderGet` (`PURCHASE_ORDER_GET`). Thanks to @Argee88!
+
 ## [0.6.20] - 2018-01-05
 
 ### Added
