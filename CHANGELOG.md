@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.7.0] - 2018-01-07
+
+### Changed
+
+* As of version 0.7.0 the Collmex SDK requires at least PHP 5.6.
+
 ## [0.6.21] - 2018-01-07
 
 ### Added

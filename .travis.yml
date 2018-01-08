@@ -1,13 +1,49 @@
 language: php
 
 php:
-  - 5.5
-  - 5.6
-  - 7.0
-  - 7.1
+- 5.6
+- 7.0
+- 7.1
+- 7.2
+
+env:
+  matrix:
+  - DEPENDENCIES=latest
+  - DEPENDENCIES=oldest
+
+install:
+- >
+  echo;
+  if [ "$DEPENDENCIES" = "latest" ]; then
+    echo "Installing the latest dependencies";
+    composer update --with-dependencies --prefer-stable --prefer-dist
+  else
+    echo "Installing the lowest dependencies";
+    composer update --with-dependencies --prefer-stable --prefer-dist --prefer-lowest
+  fi;
+  composer show;
+
+sudo: false
+
+cache:
+  directories:
+  - vendor
+  - "$HOME/.composer/cache"
+
+before_install:
+- phpenv config-rm xdebug.ini
 
 before_script:
   - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install --dev
+  - php composer.phar install
 
-script: phpunit
+script:
+- >
+  echo;
+  echo "Linting all PHP files";
+  find config/ src/ tests/ -name ''*.php'' -print0 | xargs -0 -n 1 -P 4 php -l;
+
+- >
+  echo;
+  echo "Running the unit tests";
+  vendor/bin/phpunit tests/;
