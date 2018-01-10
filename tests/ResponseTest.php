@@ -1,6 +1,6 @@
 <?php
 
-namespace MarcusJaschen\Collmex;
+namespace MarcusJaschen\Collmex\Tests;
 
 use MarcusJaschen\Collmex\Response\CsvResponse;
 use Mockery as m;

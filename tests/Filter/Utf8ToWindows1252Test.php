@@ -1,6 +1,6 @@
 <?php
 
-namespace MarcusJaschen\Collmex\Filter;
+namespace MarcusJaschen\Collmex\Tests\Filter;
 
 class Utf8ToWindows1252Test extends \PHPUnit_Framework_TestCase
 {

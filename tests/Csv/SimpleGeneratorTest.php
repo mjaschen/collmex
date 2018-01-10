@@ -1,6 +1,8 @@
 <?php
 
-namespace MarcusJaschen\Collmex\Csv;
+namespace MarcusJaschen\Collmex\Tests\Csv;
+
+use MarcusJaschen\Collmex\Csv\SimpleGenerator;
 
 class SimpleGeneratorTest extends \PHPUnit_Framework_TestCase
 {

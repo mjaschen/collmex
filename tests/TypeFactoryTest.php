@@ -1,6 +1,8 @@
 <?php
 
-namespace MarcusJaschen\Collmex;
+namespace MarcusJaschen\Collmex\Tests;
+
+use MarcusJaschen\Collmex\TypeFactory;
 
 class TypeFactoryTest extends \PHPUnit_Framework_TestCase
 {

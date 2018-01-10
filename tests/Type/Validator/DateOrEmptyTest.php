@@ -1,4 +1,7 @@
 <?php
+
+namespace MarcusJaschen\Collmex\Tests\Type\Validator;
+
 class DateOrEmptyTest extends \PHPUnit_Framework_TestCase
 {
     /**

@@ -37,6 +37,11 @@
             "MarcusJaschen\\Collmex\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "MarcusJaschen\\Collmex\\Tests\\": "tests/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [

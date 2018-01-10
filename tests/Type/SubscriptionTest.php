@@ -1,6 +1,8 @@
 <?php
 
-namespace MarcusJaschen\Collmex\Type;
+namespace MarcusJaschen\Collmex\Tests\Type;
+
+use MarcusJaschen\Collmex\Type\Subscription;
 
 class SubscriptionTest extends \PHPUnit_Framework_TestCase
 {
