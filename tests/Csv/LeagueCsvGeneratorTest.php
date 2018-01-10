@@ -1,11 +1,13 @@
 <?php
 
-namespace MarcusJaschen\Collmex\Csv;
+namespace MarcusJaschen\Collmex\Tests\Csv;
+
+use MarcusJaschen\Collmex\Csv\LeagueCsvGenerator;
 
 class LeagueCsvGeneratorTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var SimpleGenerator
+     * @var LeagueCsvGenerator
      */
     protected $generator;
 

@@ -1,5 +1,8 @@
 <?php
-class SimpleParserTest extends PHPUnit_Framework_TestCase
+
+namespace MarcusJaschen\Collmex\Tests\Csv;
+
+class SimpleParserTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var \MarcusJaschen\Collmex\Csv\SimpleParser

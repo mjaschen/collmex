@@ -1,8 +1,9 @@
 <?php
 
-namespace MarcusJaschen\Collmex\Type\Validator;
+namespace MarcusJaschen\Collmex\Tests\Type\Validator;
 
 use MarcusJaschen\Collmex\Type\Subscription;
+use MarcusJaschen\Collmex\Type\Validator\TimeInterval;
 
 class TimeIntervalTest extends \PHPUnit_Framework_TestCase
 {
