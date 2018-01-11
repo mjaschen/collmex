@@ -5,6 +5,17 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [x.y.z] - not released yet
+
+### Added
+
+* support auto-discovery
+
+### Changed
+
+* make the runtime dependencies more lenient
+* announce PHP compatibility only up to 7.2.x
+
 ## [0.7.0] - 2018-01-07
 
 ### Changed
