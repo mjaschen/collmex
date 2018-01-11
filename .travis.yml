@@ -1,3 +1,5 @@
+sudo: false
+
 language: php
 
 php:
@@ -6,10 +8,18 @@ php:
 - 7.1
 - 7.2
 
+cache:
+  directories:
+  - vendor
+  - $HOME/.composer/cache
+
 env:
   matrix:
   - DEPENDENCIES=latest
   - DEPENDENCIES=oldest
+
+before_install:
+- phpenv config-rm xdebug.ini
 
 install:
 - >
@@ -22,16 +32,6 @@ install:
     composer update --with-dependencies --prefer-stable --prefer-dist --prefer-lowest
   fi;
   composer show;
-
-sudo: false
-
-cache:
-  directories:
-  - vendor
-  - "$HOME/.composer/cache"
-
-before_install:
-- phpenv config-rm xdebug.ini
 
 before_script:
   - curl -s http://getcomposer.org/installer | php
