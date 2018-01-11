@@ -14,6 +14,10 @@
             "role": "developer"
         }
     ],
+    "support": {
+        "source": "https://github.com/mjaschen/collmex",
+        "issues": "https://github.com/mjaschen/collmex/issues"
+    },
     "require": {
         "php": ">=5.6",
         "neitanod/forceutf8": "~1.4.0",
