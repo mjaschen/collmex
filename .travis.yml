@@ -33,10 +33,6 @@ install:
   fi;
   composer show;
 
-before_script:
-  - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install
-
 script:
 - >
   echo;
