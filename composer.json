@@ -19,7 +19,7 @@
         "issues": "https://github.com/mjaschen/collmex/issues"
     },
     "require": {
-        "php": ">=5.6",
+        "php": "^5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0",
         "neitanod/forceutf8": "~1.4.0",
         "symfony/finder": ">2.5.0,<4.0",
         "symfony/http-foundation": ">2.5.0,<4.0"
