@@ -2,8 +2,8 @@
 
 namespace MarcusJaschen\Collmex;
 
-use \Mockery as m;
-use \MarcusJaschen\Collmex\Response\CsvResponse;
+use MarcusJaschen\Collmex\Response\CsvResponse;
+use Mockery as m;
 
 class ResponseTest extends \PHPUnit_Framework_TestCase
 {

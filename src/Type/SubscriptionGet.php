@@ -12,9 +12,9 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class SubscriptionGet extends AbstractType implements TypeInterface
 {
-    const FILTER_ALL             = 0;
+    const FILTER_ALL = 0;
     const FILTER_CURRENTLY_VALID = 1;
-    const FILTER_CHANGED_ONLY    = 1;
+    const FILTER_CHANGED_ONLY = 1;
 
     /**
      * Type data template
@@ -22,15 +22,15 @@ class SubscriptionGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = array(
-        'type_identifier'        => 'ABO_GET',
-        'customer_id'            => null,
-        'client_id'              => null,
-        'product_id'             => null,
-        'next_invoice_from'      => null,
-        'next_invoice_to'        => null,
-        'currently_valid_only'   => null,
-        'changed_only'           => null,
-        'system_name'            => null,
+        'type_identifier' => 'ABO_GET',
+        'customer_id' => null,
+        'client_id' => null,
+        'product_id' => null,
+        'next_invoice_from' => null,
+        'next_invoice_to' => null,
+        'currently_valid_only' => null,
+        'changed_only' => null,
+        'system_name' => null,
     );
 
     /**

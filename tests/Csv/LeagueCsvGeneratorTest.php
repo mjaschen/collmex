@@ -54,7 +54,7 @@ class LeagueCsvGeneratorTest extends \PHPUnit_Framework_TestCase
         ];
 
         $expected = 'TEST;1;a' . "\n"
-                    . 'MESSAGE;E;11111;"Error Message";123' . "\n";
+            . 'MESSAGE;E;11111;"Error Message";123' . "\n";
 
         $this->assertEquals($expected, $this->generator->generate($data));
     }

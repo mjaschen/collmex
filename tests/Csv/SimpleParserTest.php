@@ -1,4 +1,5 @@
 <?php
+
 class SimpleParserTest extends PHPUnit_Framework_TestCase
 {
     /**

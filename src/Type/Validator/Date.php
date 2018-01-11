@@ -35,7 +35,7 @@ class Date implements ValidatorInterface
         }
 
         // 1900-01-01 to 2099-12-31 should be enough for everyone!
-        if (! preg_match('/(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])/', $value)) {
+        if (!preg_match('/(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])/', $value)) {
             return false;
         }
 

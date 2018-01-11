@@ -1,4 +1,5 @@
 <?php
+
 class DateOrEmptyTest extends \PHPUnit_Framework_TestCase
 {
     /**

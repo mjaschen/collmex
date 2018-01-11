@@ -25,8 +25,8 @@ class TrackingNumber extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'TRACKING_NUMBER',
-        'delivery_id'     => null,
-        'tracking_code'   => null,
+        'delivery_id' => null,
+        'tracking_code' => null,
     ];
 
     /**

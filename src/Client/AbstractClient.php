@@ -50,8 +50,8 @@ abstract class AbstractClient
      */
     public function __construct($user, $password, $customer)
     {
-        $this->user        = $user;
-        $this->password    = $password;
+        $this->user = $user;
+        $this->password = $password;
         $this->exchangeUrl = sprintf(static::EXCHANGE_URL, $customer);
     }
 
