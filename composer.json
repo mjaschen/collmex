@@ -36,5 +36,12 @@
         "psr-4": {
             "MarcusJaschen\\Collmex\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MarcusJaschen\\Collmex\\CollmexServiceProvider"
+            ]
+        }
     }
 }
