@@ -50,7 +50,7 @@ class Curl extends AbstractClient implements ClientInterface
 
         if ($response === false) {
             throw new RequestFailedException(
-                "Curl request failed: " . curl_error($this->curl) . " (" . curl_errno($this->curl) ." )"
+                "Curl request failed: " . curl_error($this->curl) . " (" . curl_errno($this->curl) . " )"
             );
         }
 

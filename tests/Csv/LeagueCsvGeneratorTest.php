@@ -74,7 +74,6 @@ class LeagueCsvGeneratorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $this->generator->generate($data));
     }
 
-
     /**
      * Tests if CSV generation works in a special case: text contains a
      * backslash followed by a double quote. There exists a PHP bug where
