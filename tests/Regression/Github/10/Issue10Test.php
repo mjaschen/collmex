@@ -22,10 +22,10 @@ class Issue10Test extends \PHPUnit_Framework_TestCase
     public function testIfInvalidFieldNamesThrowException()
     {
         $customerGet = new \MarcusJaschen\Collmex\Type\CustomerGet(
-            array(
+            [
                 'customer_id' => '12345',
                 'foo'         => 'bar',
-            )
+            ]
         );
     }
 }

@@ -32,15 +32,15 @@ class Windows1252ToUtf8Test extends \PHPUnit_Framework_TestCase
         $source = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
         $target = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
 
-        $input = array(
+        $input = [
             $source,
             $source,
-        );
+        ];
 
-        $expected = array(
+        $expected = [
             $target,
             $target,
-        );
+        ];
 
         $this->assertEquals($expected, $this->filter->filter($input));
     }
@@ -50,19 +50,19 @@ class Windows1252ToUtf8Test extends \PHPUnit_Framework_TestCase
         $source = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
         $target = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
 
-        $input = array(
-            array(
+        $input = [
+            [
                 $source,
-            ),
+            ],
             $source,
-        );
+        ];
 
-        $expected = array(
-            array(
+        $expected = [
+            [
                 $target,
-            ),
+            ],
             $target,
-        );
+        ];
 
         $this->assertEquals($expected, $this->filter->filter($input));
     }

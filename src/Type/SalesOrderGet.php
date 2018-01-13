@@ -30,7 +30,7 @@ class SalesOrderGet extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier'           => 'SALES_ORDER_GET',
         'order_id'                  => null,
         'client_id'                 => null,
@@ -43,7 +43,7 @@ class SalesOrderGet extends AbstractType implements TypeInterface
         'system_name'               => null,    // 10
         'only_created_by_system'    => null,
         'letter_paper'              => null,
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

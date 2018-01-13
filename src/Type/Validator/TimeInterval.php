@@ -28,7 +28,7 @@ class TimeInterval implements ValidatorInterface
      *
      * @return bool Validation success
      */
-    public function validate($value, $options = array())
+    public function validate($value, $options = [])
     {
         return is_int($value) && $value >= 0 && $value <= 7;
     }

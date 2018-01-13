@@ -32,7 +32,7 @@ class Subscription extends AbstractType implements TypeInterface
      *
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier'     => 'CMXABO',
         'customer_id'         => null,
         'client_id'           => null,
@@ -43,7 +43,7 @@ class Subscription extends AbstractType implements TypeInterface
         'price'               => null,
         'interval'            => null,
         'next_invoice'        => null,
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

@@ -21,7 +21,7 @@ class SubscriptionGet extends AbstractType implements TypeInterface
      *
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier'        => 'ABO_GET',
         'customer_id'            => null,
         'client_id'              => null,
@@ -31,7 +31,7 @@ class SubscriptionGet extends AbstractType implements TypeInterface
         'currently_valid_only'   => null,
         'changed_only'           => null,
         'system_name'            => null,
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

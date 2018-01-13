@@ -66,7 +66,7 @@ class Curl extends AbstractClient implements ClientInterface
     {
         $this->curl = curl_init($this->exchangeUrl);
         curl_setopt($this->curl, CURLOPT_POST, true);
-        curl_setopt($this->curl, CURLOPT_HTTPHEADER, array("Content-Type: text/csv"));
+        curl_setopt($this->curl, CURLOPT_HTTPHEADER, ["Content-Type: text/csv"]);
         curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
     }

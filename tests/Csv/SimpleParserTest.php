@@ -22,13 +22,13 @@ class SimpleParserTest extends PHPUnit_Framework_TestCase
 
         $data = $this->parser->parse($csv);
 
-        $expected = array(
-            array(
+        $expected = [
+            [
                 'Typkennung',
                 'Rechnung Nr',
                 'Pos',
-            )
-        );
+            ]
+        ];
 
         $this->assertEquals($expected, $data);
     }
@@ -39,13 +39,13 @@ class SimpleParserTest extends PHPUnit_Framework_TestCase
 
         $data = $this->parser->parse($csv);
 
-        $expected = array(
-            array(
+        $expected = [
+            [
                 'Typkennung',
                 'Rechnung Nr',
                 'Pos',
-            )
-        );
+            ]
+        ];
 
         $this->assertEquals($expected, $data);
     }
@@ -56,18 +56,18 @@ class SimpleParserTest extends PHPUnit_Framework_TestCase
 
         $data = $this->parser->parse($csv);
 
-        $expected = array(
-            array(
+        $expected = [
+            [
                 'Typkennung',
                 'Rechnung Nr',
                 'Pos',
-            ),
-            array(
+            ],
+            [
                 'CMXINV',
                 100,
                 1,
-            ),
-        );
+            ],
+        ];
 
         $this->assertEquals($expected, $data);
     }
