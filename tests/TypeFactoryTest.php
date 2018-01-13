@@ -21,14 +21,14 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testCreateCustomerTypeSuccessful()
     {
-        $data = array(
+        $data = [
             'CMXKND',
             "12345",
             "1",
             "Herr",
             "Marcus",
             "Jaschen",
-        );
+        ];
 
         $type = $this->typeFactory->getType($data);
 
@@ -37,7 +37,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testCreateSubscriptionTypeSuccessful()
     {
-        $data = array(
+        $data = [
             'CMXABO',
             "12345",
             "1",
@@ -48,7 +48,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
             null,
             7,
             "20131101",
-        );
+        ];
 
         $type = $this->typeFactory->getType($data);
 
@@ -57,7 +57,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testCreateRevenueTypeWorksAsExpected()
     {
-        $data = array(
+        $data = [
             'CMXUMS',
             10001,
             1,
@@ -73,7 +73,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
             null,
             null,
             'EUR',
-        );
+        ];
 
         $type = $this->typeFactory->getType($data);
 
@@ -85,12 +85,12 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testInvalidType()
     {
-        $data = array(
+        $data = [
             'INVALID_TYPE',
             'data',
             'foo',
             'bar',
-        );
+        ];
 
         $this->typeFactory->getType($data);
     }

@@ -12,7 +12,7 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->type = new Subscription(
-            array(
+            [
                 'customer_id'         => '12345',
                 'client_id'           => '1',
                 'valid_from'          => '20130901',
@@ -22,7 +22,7 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
                 'price'               => null,
                 'interval'            => Subscription::INTERVAL_MONTH,
                 'next_invoice'        => null,
-            )
+            ]
         );
     }
 

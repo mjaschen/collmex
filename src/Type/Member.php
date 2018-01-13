@@ -42,7 +42,7 @@ class Member extends AbstractType implements TypeInterface
      *
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier'             => 'CMXMGD',   // 1
         'customer_id'                 => null,       //
         'salutation'                  => null,       //
@@ -80,7 +80,7 @@ class Member extends AbstractType implements TypeInterface
         'payment_via'                 => null,       // 35
         'printout_language'           => null,       //
         'cost_center'                 => null,       //
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

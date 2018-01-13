@@ -28,12 +28,12 @@ class Issue2Test extends \PHPUnit_Framework_TestCase
      */
     public function testGenerateCsvWithSpecialCharactersWorksAsExpected()
     {
-        $data = array(
+        $data = [
             'CMXINV',
             '-1001338',
             'Some string data here: "quoted text // highlight string \\\\" and "foo" bar',
             'baz'
-        );
+        ];
 
         $expected = 'CMXINV;-1001338;"Some string data here: ""quoted text // highlight string \\\\"" and ""foo"" bar";baz' . PHP_EOL;
 

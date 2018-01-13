@@ -27,7 +27,7 @@ class InvoiceGet extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier'        => 'INVOICE_GET',
         'invoice_id'             => null,
         'client_id'              => null,
@@ -40,7 +40,7 @@ class InvoiceGet extends AbstractType implements TypeInterface
         'system_name'            => null,
         'created_by_system_only' => null,
         'stationary_exclude'     => null,
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

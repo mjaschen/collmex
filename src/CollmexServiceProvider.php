@@ -83,9 +83,9 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function provides()
     {
-        return array(
+        return [
             'collmex.client',
             'collmex.request',
-        );
+        ];
     }
 }

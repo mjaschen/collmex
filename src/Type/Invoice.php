@@ -52,7 +52,7 @@ class Invoice extends AbstractType implements TypeInterface
      *
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier'                => 'CMXINV',
         'invoice_id'                     => null,
         'position'                       => null,
@@ -140,7 +140,7 @@ class Invoice extends AbstractType implements TypeInterface
         'costs'                          => null,
         'gross_profit'                   => null,
         'margin'                         => null,
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

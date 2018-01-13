@@ -28,7 +28,7 @@ class Date implements ValidatorInterface
      *
      * @return bool Validation success
      */
-    public function validate($value, $options = array())
+    public function validate($value, $options = [])
     {
         if (strlen($value) != 8) {
             return false;

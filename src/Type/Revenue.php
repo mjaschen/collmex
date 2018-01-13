@@ -21,7 +21,7 @@ class Revenue extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier'                => 'CMXUMS',
         'customer_id'                    => null,
         'client_id'                      => null,
@@ -50,7 +50,7 @@ class Revenue extends AbstractType implements TypeInterface
         'system_name'                    => null,
         'compensation_invoice_id'        => null,
         'cost_center'                    => null, // 28
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

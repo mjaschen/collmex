@@ -28,7 +28,7 @@ class DateOrEmpty extends Date implements ValidatorInterface
      *
      * @return bool Validation success
      */
-    public function validate($value, $options = array())
+    public function validate($value, $options = [])
     {
         if (empty($value)) {
             return true;

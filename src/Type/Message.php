@@ -21,13 +21,13 @@ class Message extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier' => 'MESSAGE',
         'message_type'    => null,
         'message_id'      => null,
         'message_text'    => null,
         'line'            => null,
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

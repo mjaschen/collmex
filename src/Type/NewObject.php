@@ -18,12 +18,12 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class NewObject extends AbstractType implements TypeInterface
 {
-    protected $template = array(
+    protected $template = [
         'type_identifier' => 'NEW_OBJECT_ID',
         'new_id'          => null,
         'temporary_id'    => null,
         'line'            => null,
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

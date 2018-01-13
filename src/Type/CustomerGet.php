@@ -21,7 +21,7 @@ class CustomerGet extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier'  => 'CUSTOMER_GET',
         'customer_id'      => null,
         'client_id'        => null,
@@ -36,7 +36,7 @@ class CustomerGet extends AbstractType implements TypeInterface
         'system_name'      => null,
         'inactive'         => null,
 
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

@@ -40,7 +40,7 @@ class Customer extends AbstractType implements TypeInterface
      *
      * @var array
      */
-    protected $template = array(
+    protected $template = [
         'type_identifier'                => 'CMXKND',   // 1
         'customer_id'                    => null,       //
         'client_id'                      => null,       //
@@ -93,7 +93,7 @@ class Customer extends AbstractType implements TypeInterface
         'url'                            => null,       // 50
         'partial_delivery_allowed'       => null,       //
         'partial_invoice_allowed'        => null,       // 52
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

@@ -85,11 +85,11 @@ class SimpleGeneratorTest extends \PHPUnit_Framework_TestCase
      */
     public function testGenerateCsvWithSpecialCharactersWorksAsExpected()
     {
-        $data = array(
+        $data = [
             'CMXINV',
             '-1001338',
             'Provision Bikemarkt-Verkauf 279679: "Endura MTR Baggy Short // SALE \\\\" an "bebetz" am 1.1.2016',
-        );
+        ];
 
         $expected = 'CMXINV;-1001338;"Provision Bikemarkt-Verkauf 279679: ""Endura MTR Baggy Short // SALE \\\\"" an ""bebetz"" am 1.1.2016"' . PHP_EOL;
 

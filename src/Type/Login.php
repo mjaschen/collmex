@@ -18,11 +18,11 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Login extends AbstractType implements TypeInterface
 {
-    protected $template = array(
+    protected $template = [
         'type_identifier' => 'LOGIN',
         'user'            => null,
         'password'        => null,
-    );
+    ];
 
     /**
      * Formally validates the type data in $data attribute.
