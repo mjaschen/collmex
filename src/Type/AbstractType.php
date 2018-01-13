@@ -183,7 +183,6 @@ abstract class AbstractType implements JsonSerializable
      */
     protected function populateData($data)
     {
-
         if (! isset($data[0])) {
             $this->assertValidFieldNames($data);
             $this->data = array_merge($this->template, $data);
