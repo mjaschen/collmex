@@ -103,7 +103,7 @@ class ZipResponse implements ResponseInterface
         $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR
                                   . 'collmexphp_extracted_' . basename($tmpFilename);
 
-        $zip = new ZipArchive;
+        $zip = new ZipArchive();
 
         if (! $zip->open($tmpFilename)) {
             throw new InvalidZipFileException("Cannot open ZIP archive " . $tmpFilename);
