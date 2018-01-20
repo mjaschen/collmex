@@ -57,7 +57,7 @@ abstract class AbstractType implements JsonSerializable
     {
         $this->populateData($data);
 
-        if (is_null($generator)) {
+        if (null === $generator) {
             $this->csvGenerator = new SimpleGenerator();
         }
     }

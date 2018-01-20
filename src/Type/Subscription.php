@@ -67,6 +67,6 @@ class Subscription extends AbstractType implements TypeInterface
             $this->validationErrors['interval'] = true;
         }
 
-        return is_null($this->validationErrors);
+        return null === $this->validationErrors;
     }
 }
