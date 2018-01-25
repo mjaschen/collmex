@@ -5,16 +5,17 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
-## [x.y.z] - not released yet
+## [0.7.1] - 2018-01-25
 
 ### Added
 
-* support auto-discovery
+* Support for Laravel package auto-discovery. Thanks to @Naoray!
+* Links to Packagist and Travis CI in the README. Thanks to @oliverklee!
 
 ### Changed
 
-* make the runtime dependencies more lenient
-* announce PHP compatibility only up to 7.2.x
+* Make the runtime dependencies more lenient. Thanks to @oliverklee!
+* Announce PHP compatibility only up to 7.2.x. Thanks to @oliverklee!
 
 ## [0.7.0] - 2018-01-07
 
