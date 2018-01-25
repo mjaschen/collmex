@@ -2,6 +2,7 @@
 
 namespace MarcusJaschen\Collmex\Tests;
 
+use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Response\CsvResponse;
 use Mockery as m;
 
@@ -16,7 +17,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     {
         $responseBody = 'MESSAGE;E;11111;Error Message;1';
 
-        $parser = m::mock('\MarcusJaschen\Collmex\Csv\ParserInterface');
+        $parser = m::mock(ParserInterface::class);
         $parser
             ->shouldReceive('parse')
             ->once()
@@ -47,7 +48,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     {
         $responseBody = 'MESSAGE;S;204020;Datenübertragung erfolgreich. Es wurden 1 Datensätze verarbeitet.';
 
-        $parser = m::mock('\MarcusJaschen\Collmex\Csv\ParserInterface');
+        $parser = m::mock(ParserInterface::class);
         $parser
             ->shouldReceive('parse')
             ->once()
