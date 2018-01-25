@@ -2,6 +2,9 @@
 
 namespace MarcusJaschen\Collmex\Tests;
 
+use MarcusJaschen\Collmex\Type\Customer;
+use MarcusJaschen\Collmex\Type\Revenue;
+use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\TypeFactory;
 
 class TypeFactoryTest extends \PHPUnit_Framework_TestCase
@@ -34,7 +37,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
 
         $type = $this->typeFactory->getType($data);
 
-        $this->assertInstanceOf("\\MarcusJaschen\\Collmex\\Type\\Customer", $type);
+        $this->assertInstanceOf(Customer::class, $type);
     }
 
     public function testCreateSubscriptionTypeSuccessful()
@@ -54,7 +57,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
 
         $type = $this->typeFactory->getType($data);
 
-        $this->assertInstanceOf("\\MarcusJaschen\\Collmex\\Type\\Subscription", $type);
+        $this->assertInstanceOf(Subscription::class, $type);
     }
 
     public function testCreateRevenueTypeWorksAsExpected()
@@ -79,7 +82,7 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
 
         $type = $this->typeFactory->getType($data);
 
-        $this->assertInstanceOf("\\MarcusJaschen\\Collmex\\Type\\Revenue", $type);
+        $this->assertInstanceOf(Revenue::class, $type);
     }
 
     /**
