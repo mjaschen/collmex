@@ -86,9 +86,9 @@ Load a Collmex *Customer* record:
 ```php
 <?php
 
-use \MarcusJaschen\Collmex\Client\Curl as CurlClient;
-use \MarcusJaschen\Collmex\Request;
-use \MarcusJaschen\Collmex\Type\CustomerGet;
+use MarcusJaschen\Collmex\Client\Curl as CurlClient;
+use MarcusJaschen\Collmex\Request;
+use MarcusJaschen\Collmex\Type\CustomerGet;
 
 // initialize HTTP client
 $collmexClient = new CurlClient('USER', 'PASSWORD', 'CUSTOMER_ID');
@@ -125,9 +125,9 @@ response data:
 ```php
 <?php
 
-use \MarcusJaschen\Collmex\Client\Curl as CurlClient;
-use \MarcusJaschen\Collmex\Request;
-use \MarcusJaschen\Collmex\Type\Customer;
+use MarcusJaschen\Collmex\Client\Curl as CurlClient;
+use MarcusJaschen\Collmex\Request;
+use MarcusJaschen\Collmex\Type\Customer;
 
 // initialize HTTP client
 $collmexClient = new CurlClient('USER', 'PASSWORD', 'CUSTOMER_ID');
@@ -137,7 +137,7 @@ $collmexRequest = new Request($collmexClient);
 
 // create a record type; we create a customer with some basic fields
 $customer = new Customer(
-    array(
+    [
         'client_id'                      => '2',
         'salutation'                     => 'Herr',
         'forename'                       => 'Charly',
@@ -150,7 +150,7 @@ $customer = new Customer(
         'phone'                          => '+49300000000',
         'email'                          => 'cash@example.org',
         'output_medium'                  => Customer::OUTPUT_MEDIUM_EMAIL,
-    )
+    ]
 );
 
 // send HTTP request and get response object
