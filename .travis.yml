@@ -42,9 +42,9 @@ script:
 - >
   echo;
   echo "Linting all PHP files";
-  find config/ src/ tests/ -name ''*.php'' -print0 | xargs -0 -n 1 -P 4 php -l;
+  composer ci:php:lint;
 
 - >
   echo;
   echo "Running the unit tests";
-  vendor/bin/phpunit tests/;
+  composer ci:tests;

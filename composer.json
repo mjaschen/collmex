@@ -42,6 +42,20 @@
             "MarcusJaschen\\Collmex\\Tests\\": "tests/"
         }
     },
+    "scripts": {
+        "ci:php:lint": "find config/ src/ tests/ -name ''*.php'' -print0 | xargs -0 -n 1 -P 4 php -l",
+        "ci:tests": "phpunit tests/",
+        "ci:static": [
+            "@ci:php:lint"
+        ],
+        "ci:dynamic": [
+            "@ci:tests"
+        ],
+        "ci": [
+            "@ci:static",
+            "@ci:dynamic"
+        ]
+    },
     "extra": {
         "laravel": {
             "providers": [
