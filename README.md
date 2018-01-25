@@ -1,7 +1,7 @@
 # Collmex API PHP SDK
 
-* [Collmex on TravisCI](https://travis-ci.org/mjaschen/collmex)
-* [Collmex on Packagist](https://packagist.org/packages/mjaschen/collmex)
+- [Collmex on TravisCI](https://travis-ci.org/mjaschen/collmex)
+- [Collmex on Packagist](https://packagist.org/packages/mjaschen/collmex)
 
 This library provides a wrapper for the Collmex API. It's not complete yet,
 some record types (and maybe some features) are missing.
