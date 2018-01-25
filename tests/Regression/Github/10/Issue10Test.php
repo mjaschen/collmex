@@ -1,7 +1,5 @@
 <?php
 
-use MarcusJaschen\Collmex\Csv\SimpleGenerator;
-
 class Issue10Test extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
