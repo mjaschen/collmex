@@ -32,7 +32,7 @@ class Issue2Test extends \PHPUnit_Framework_TestCase
             'CMXINV',
             '-1001338',
             'Some string data here: "quoted text // highlight string \\\\" and "foo" bar',
-            'baz'
+            'baz',
         ];
 
         $expected = 'CMXINV;-1001338;"Some string data here: ""quoted text // highlight string \\\\"" and ""foo"" bar";baz' . PHP_EOL;

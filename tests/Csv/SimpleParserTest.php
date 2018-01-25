@@ -30,7 +30,7 @@ class SimpleParserTest extends \PHPUnit_Framework_TestCase
                 'Typkennung',
                 'Rechnung Nr',
                 'Pos',
-            ]
+            ],
         ];
 
         $this->assertEquals($expected, $data);
@@ -47,7 +47,7 @@ class SimpleParserTest extends \PHPUnit_Framework_TestCase
                 'Typkennung',
                 'Rechnung Nr',
                 'Pos',
-            ]
+            ],
         ];
 
         $this->assertEquals($expected, $data);
