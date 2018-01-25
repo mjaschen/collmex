@@ -28,7 +28,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
                         "11111",
                         'Error Message',
                         1,
-                    ]
+                    ],
                 ]
             );
 
@@ -58,7 +58,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
                         'S',
                         '204020',
                         'Datenübertragung erfolgreich. Es wurden 1 Datensätze verarbeitet.',
-                    ]
+                    ],
                 ]
             );
 
