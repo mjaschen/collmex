@@ -14,6 +14,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 `NEW_OBJECT_ID`) and a few normal record types are implemented:
 
 - `ABO_GET`
+- `ACCBAL_GET`
 - `CMXABO`
 - `CMXDLV`
 - `CMXEPF`
