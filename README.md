@@ -140,7 +140,7 @@ $collmexRequest = new Request($collmexClient);
 // create a record type; we create a customer with some basic fields
 $customer = new Customer(
     [
-        'client_id'                      => '2',
+        'client_id'                      => '1',
         'salutation'                     => 'Herr',
         'forename'                       => 'Charly',
         'lastname'                       => 'Cash',
