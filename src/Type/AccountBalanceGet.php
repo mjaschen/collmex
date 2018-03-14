@@ -2,7 +2,7 @@
 
 namespace MarcusJaschen\Collmex\Type;
 
-class BalanceGet extends AbstractType implements TypeInterface
+class AccountBalanceGet extends AbstractType implements TypeInterface
 {
     /**
      * @var array
