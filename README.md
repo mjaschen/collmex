@@ -14,6 +14,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 `NEW_OBJECT_ID`) and a few normal record types are implemented:
 
 - `ABO_GET`
+- `ACCBAL_GET`
 - `CMXABO`
 - `CMXDLV`
 - `CMXEPF`
@@ -95,6 +96,9 @@ $collmexClient = new CurlClient('USER', 'PASSWORD', 'CUSTOMER_ID');
 
 // create request object
 $collmexRequest = new Request($collmexClient);
+
+// as an alternative to the above two steps
+$collmexRequest = app()->make('collmex.request');
 
 // create a record type; we're querying the API for customer with ID=12345
 $getCustomerType = new CustomerGet(array('customer_id' => '12345'));
