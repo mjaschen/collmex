@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.7.3] - 2018-03-21
+
+### Added
+
+- new parser class using the [CSV library](http://csv.thephpleague.com/) from *The PHP League*.
+
 ## [0.7.2] - 2018-03-14
 
 ### Added
