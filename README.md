@@ -14,6 +14,8 @@ There is (or least should be…) a *Type* class for every Collmex record type
 `NEW_OBJECT_ID`) and a few normal record types are implemented:
 
 - `ABO_GET`
+- `ACCBAL`
+- `ACCBAL_GET`
 - `CMXABO`
 - `CMXDLV`
 - `CMXEPF`
@@ -138,7 +140,7 @@ $collmexRequest = new Request($collmexClient);
 // create a record type; we create a customer with some basic fields
 $customer = new Customer(
     [
-        'client_id'                      => '2',
+        'client_id'                      => '1',
         'salutation'                     => 'Herr',
         'forename'                       => 'Charly',
         'lastname'                       => 'Cash',

@@ -29,6 +29,7 @@ class TypeFactory
         'LOGIN'           => 'Login',
         'MESSAGE'         => 'Message',
         'NEW_OBJECT_ID'   => 'NewObject',
+        'ACCBAL'          => 'AccountBalance',
         'CMXABO'          => 'Subscription',
         'CMXINV'          => 'Invoice',
         'CMXMGD'          => 'Member',
