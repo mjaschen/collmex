@@ -135,7 +135,8 @@ class Product extends AbstractType implements TypeInterface
         'amazon_asin'                   => null,
         'ebay_item_number'              => null,
         'direct_delivery'               => null,
-        'hs_code'                       => null, // 64
+        'hs_code'                       => null,
+        'storage_bin'                   => null, // 65
     ];
 
     /**
