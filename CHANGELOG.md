@@ -5,11 +5,11 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
-## [unreleased]
+## [0.7.5] - 2018-03-23
 
 ### Added
 
-- Composer script for PHP linting
+- Composer scripts for PHP linting and running tests. Thanks to @oliverklee!
 
 ## [0.7.4] - 2018-03-23
 
