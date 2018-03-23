@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.7.4] - 2018-03-23
+
+### Added
+
+- @property tags in all `Type` doc blocks for better support in IDEs.
+
 ## [0.7.3] - 2018-03-21
 
 ### Added
