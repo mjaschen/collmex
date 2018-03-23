@@ -52,6 +52,8 @@ abstract class AbstractType implements JsonSerializable
      * @param \MarcusJaschen\Collmex\Csv\GeneratorInterface $generator This
      * argument is optional, the SimpleGenerator is used if argument is
      * omitted
+     *
+     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      */
     public function __construct($data, GeneratorInterface $generator = null)
     {
@@ -64,6 +66,8 @@ abstract class AbstractType implements JsonSerializable
 
     /**
      * @param GeneratorInterface $generator
+     *
+     * @return void
      */
     public function setCsvGenerator(GeneratorInterface $generator)
     {
@@ -179,6 +183,8 @@ abstract class AbstractType implements JsonSerializable
      * @param array $data if the array is indexed by numeric keys (first key
      * is checked), we'll merge the data by index order.
      *
+     * @return void;
+     *
      * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      */
     protected function populateData($data)
@@ -206,18 +212,18 @@ abstract class AbstractType implements JsonSerializable
      *
      * @param array $data
      *
+     * @return void
+     *
      * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      */
     private function assertValidFieldNames($data)
     {
         $fieldNamesDiff = array_diff_key($data, $this->template);
 
-        if (count($fieldNamesDiff) === 0) {
-            return;
+        if (count($fieldNamesDiff) !== 0) {
+            throw new InvalidFieldNameException(
+                'Cannot populate data: invalid field name(s) detected: ' . implode(', ', array_keys($fieldNamesDiff))
+            );
         }
-
-        throw new InvalidFieldNameException(
-            'Cannot populate data: invalid field name(s) detected: ' . implode(', ', array_keys($fieldNamesDiff))
-        );
     }
 }
