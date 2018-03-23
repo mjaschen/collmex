@@ -15,6 +15,19 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   Jörg Wolfgram <joerg.wolfgram@spectrattack.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $order_id
+ * @property $client_id
+ * @property $customer_id
+ * @property $order_date_start
+ * @property $order_date_end
+ * @property $customer_order_id
+ * @property $format
+ * @property $only_changed
+ * @property $system_name
+ * @property $only_created_by_system
+ * @property $letter_paper
  */
 class SalesOrderGet extends AbstractType implements TypeInterface
 {

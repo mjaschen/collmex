@@ -9,6 +9,16 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   Jesus Ortiz <ortizko@gmail.com>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $customer_id
+ * @property $client_id
+ * @property $product_id
+ * @property $next_invoice_from
+ * @property $next_invoice_to
+ * @property $currently_valid_only
+ * @property $changed_only
+ * @property $system_name
  */
 class SubscriptionGet extends AbstractType implements TypeInterface
 {

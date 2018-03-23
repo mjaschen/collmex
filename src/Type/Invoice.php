@@ -15,6 +15,96 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $invoice_id
+ * @property $position
+ * @property $invoice_type
+ * @property $client_id
+ * @property $order_id
+ * @property $customer_id
+ * @property $customer_salutation
+ * @property $customer_title
+ * @property $customer_forename
+ * @property $customer_lastname
+ * @property $customer_firm
+ * @property $customer_department
+ * @property $customer_street
+ * @property $customer_zipcode
+ * @property $customer_city
+ * @property $customer_country
+ * @property $customer_phone
+ * @property $customer_phone_2
+ * @property $customer_fax
+ * @property $customer_email
+ * @property $customer_bank_account
+ * @property $customer_bank_code
+ * @property $customer_bank_account_owner
+ * @property $customer_bank_iban
+ * @property $customer_bank_bic
+ * @property $customer_bank_name
+ * @property $customer_vat_id
+ * @property $reserved
+ * @property $invoice_date
+ * @property $price_date
+ * @property $terms_of_payment
+ * @property $currency
+ * @property $price_group
+ * @property $discount_id
+ * @property $discount_final
+ * @property $discount_reason
+ * @property $invoice_text
+ * @property $final_text
+ * @property $annotation
+ * @property $deleted
+ * @property $language
+ * @property $employee_id
+ * @property $agent_id
+ * @property $system_name
+ * @property $status
+ * @property $discount_final_2
+ * @property $discount_final_2_reason
+ * @property $shipping_id
+ * @property $shipping_costs
+ * @property $cod_costs
+ * @property $time_of_delivery
+ * @property $delivery_conditions
+ * @property $delivery_conditions_additional
+ * @property $delivery_salutation
+ * @property $delivery_title
+ * @property $delivery_forename
+ * @property $delivery_lastname
+ * @property $delivery_firm
+ * @property $delivery_department
+ * @property $delivery_street
+ * @property $delivery_zipcode
+ * @property $delivery_city
+ * @property $delivery_country
+ * @property $delivery_phone
+ * @property $delivery_phone_2
+ * @property $delivery_fax
+ * @property $delivery_email
+ * @property $position_type
+ * @property $product_id
+ * @property $product_description
+ * @property $quantity_unit
+ * @property $quantity
+ * @property $price
+ * @property $price_quantity
+ * @property $position_discount
+ * @property $position_value
+ * @property $product_type
+ * @property $tax_rate
+ * @property $foreign_tax
+ * @property $customer_order_position
+ * @property $revenue_type
+ * @property $sum_over_positions
+ * @property $revenue
+ * @property $costs
+ * @property $gross_profit
+ * @property $margin
+ * @property $costs_manually
+ * @property $ean
  */
 class Invoice extends AbstractType implements TypeInterface
 {
@@ -151,6 +241,6 @@ class Invoice extends AbstractType implements TypeInterface
      */
     public function validate()
     {
-        // TODO: Implement validate() method.
+        return true;
     }
 }

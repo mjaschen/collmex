@@ -17,6 +17,74 @@ namespace MarcusJaschen\Collmex\Type;
  * @author  René Galle <renegalle.webdevelopment@gmail.com>
  * @license http://www.opensource.org/licenses/mit-license MIT License
  * @link    https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $delivery_id
+ * @property $position
+ * @property $kind_of_delivery
+ * @property $client_id
+ * @property $customer_id
+ * @property $order_id
+ * @property $customer_salutation
+ * @property $customer_title
+ * @property $customer_firstname
+ * @property $customer_lastname
+ * @property $customer_company
+ * @property $customer_department
+ * @property $customer_street
+ * @property $customer_zip
+ * @property $customer_city
+ * @property $customer_country
+ * @property $customer_tel
+ * @property $customer_tel2
+ * @property $customer_telefax
+ * @property $customer_email
+ * @property $customer_account_number
+ * @property $customer_bank_routing_number
+ * @property $customer_different_dipositor
+ * @property $customer_IBAN
+ * @property $customer_BIC
+ * @property $customer_bank
+ * @property $customer_business_tax_id
+ * @property $customer_private_person
+ * @property $order_id_at_customer
+ * @property $delivery_date
+ * @property $delivery_note
+ * @property $closing_note
+ * @property $internal_note
+ * @property $deleted
+ * @property $completed
+ * @property $status
+ * @property $lang
+ * @property $issuer_id
+ * @property $weight
+ * @property $amount_to_be_collected
+ * @property $currency
+ * @property $tracking_code
+ * @property $mode_of_shipment
+ * @property $delivery_specifications
+ * @property $delivery_additions
+ * @property $delivery_address_salutation
+ * @property $delivery_address_title
+ * @property $delivery_address_firstname
+ * @property $delivery_address_lastname
+ * @property $delivery_address_company
+ * @property $delivery_address_department
+ * @property $delivery_address_street
+ * @property $delivery_address_zip
+ * @property $delivery_address_city
+ * @property $delivery_address_country
+ * @property $delivery_address_tel
+ * @property $delivery_address_tel2
+ * @property $delivery_address_telefax
+ * @property $delivery_address_email
+ * @property $position_type
+ * @property $product_id
+ * @property $product_description
+ * @property $unit
+ * @property $quantitiy
+ * @property $customer_order_position
+ * @property $ean
  */
 class Delivery extends AbstractType implements TypeInterface
 {

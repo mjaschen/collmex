@@ -17,6 +17,16 @@ namespace MarcusJaschen\Collmex\Type;
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
  * @license   http://www.opensource.org/licenses/mit-license MIT License
  * @link      https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $customer_id
+ * @property $client_id
+ * @property $query
+ * @property $zipcode
+ * @property $address_group_id
+ * @property $exited_too
+ * @property $only_changed
+ * @property $system_name
  */
 class MemberGet extends AbstractType implements TypeInterface
 {

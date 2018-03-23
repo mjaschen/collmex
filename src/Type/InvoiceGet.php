@@ -15,6 +15,19 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $invoice_id
+ * @property $client_id
+ * @property $customer_id
+ * @property $invoice_date_from
+ * @property $invoice_date_to
+ * @property $sent_only
+ * @property $format
+ * @property $changed_only
+ * @property $system_name
+ * @property $created_by_system_only
+ * @property $stationary_exclude
  */
 class InvoiceGet extends AbstractType implements TypeInterface
 {

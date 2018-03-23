@@ -17,6 +17,17 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   René Galle <renegalle.webdevelopment@gmail.com>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $purchase_order_id
+ * @property $client_id
+ * @property $supplier_id
+ * @property $product_id
+ * @property $sent_only
+ * @property $return_format
+ * @property $changed_only
+ * @property $system_name
+ * @property $do_not_use_letter
  */
 class PurchaseOrderGet extends AbstractType implements TypeInterface
 {

@@ -15,9 +15,16 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $user
+ * @property $password
  */
 class Login extends AbstractType implements TypeInterface
 {
+    /**
+     * @var array
+     */
     protected $template = [
         'type_identifier' => 'LOGIN',
         'user'            => null,

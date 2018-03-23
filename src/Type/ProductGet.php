@@ -17,6 +17,16 @@ namespace MarcusJaschen\Collmex\Type;
  * @author  Marcus Jaschen <mjaschen@gmail.com>
  * @license http://www.opensource.org/licenses/mit-license MIT License
  * @link    https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $client_id
+ * @property $product_id
+ * @property $product_group
+ * @property $price_group
+ * @property $changed_only
+ * @property $system_name
+ * @property $website_id
+ * @property $with_price_only
  */
 class ProductGet extends AbstractType implements TypeInterface
 {

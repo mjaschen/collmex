@@ -15,6 +15,20 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $customer_id
+ * @property $client_id
+ * @property $query
+ * @property $follow
+ * @property $zipcode
+ * @property $address_group_id
+ * @property $price_group_id
+ * @property $discount_id
+ * @property $agent_id
+ * @property $only_changed
+ * @property $system_name
+ * @property $inactive
  */
 class CustomerGet extends AbstractType implements TypeInterface
 {
@@ -35,7 +49,6 @@ class CustomerGet extends AbstractType implements TypeInterface
         'only_changed'     => null,
         'system_name'      => null,
         'inactive'         => null,
-
     ];
 
     /**

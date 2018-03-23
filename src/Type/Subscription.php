@@ -15,6 +15,17 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $customer_id
+ * @property $client_id
+ * @property $valid_from
+ * @property $valid_to
+ * @property $product_id
+ * @property $product_description
+ * @property $price
+ * @property $interval
+ * @property $next_invoice
  */
 class Subscription extends AbstractType implements TypeInterface
 {

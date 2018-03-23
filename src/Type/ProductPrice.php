@@ -17,6 +17,14 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   René Galle <renegalle.webdevelopment@gmail.com>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $product_id
+ * @property $client_id
+ * @property $price_group_id
+ * @property $valid_from
+ * @property $valid_to
+ * @property $price
  */
 class ProductPrice extends AbstractType implements TypeInterface
 {
@@ -33,7 +41,6 @@ class ProductPrice extends AbstractType implements TypeInterface
         'valid_from'      => null,
         'valid_to'        => null,
         'price'           => null,
-
     ];
 
     /**

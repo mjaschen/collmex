@@ -2,6 +2,18 @@
 
 namespace MarcusJaschen\Collmex\Type;
 
+/**
+ * Class AccountBalance
+ *
+ * @author  Marcus Jaschen <mjaschen@gmail.com>
+ * @license http://www.opensource.org/licenses/mit-license MIT License
+ * @link    https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $account_id
+ * @property $account_name
+ * @property $balance
+ */
 class AccountBalance extends AbstractType implements TypeInterface
 {
     /**

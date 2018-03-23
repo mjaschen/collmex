@@ -17,6 +17,44 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $customer_id
+ * @property $salutation
+ * @property $title
+ * @property $forename
+ * @property $lastname
+ * @property $firm
+ * @property $department
+ * @property $street
+ * @property $zipcode
+ * @property $city
+ * @property $delete
+ * @property $url
+ * @property $country
+ * @property $phone
+ * @property $fax
+ * @property $email
+ * @property $bank_account
+ * @property $bank_code
+ * @property $iban
+ * @property $bic
+ * @property $bank_name
+ * @property $mandate_reference
+ * @property $mandate_reference_sign_date
+ * @property $birthday
+ * @property $entrance_date
+ * @property $exit_date
+ * @property $annotation
+ * @property $phone2
+ * @property $skype
+ * @property $bankaccount_owner
+ * @property $printout_medium
+ * @property $address_group
+ * @property $payment_agreement
+ * @property $payment_via
+ * @property $printout_language
+ * @property $cost_center
  */
 class Member extends AbstractType implements TypeInterface
 {

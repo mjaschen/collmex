@@ -17,6 +17,31 @@ namespace MarcusJaschen\Collmex\Type;
  * @author  René Galle <renegalle.webdevelopment@gmail.com>
  * @license http://www.opensource.org/licenses/mit-license MIT License
  * @link    https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $customer_id
+ * @property $client_id
+ * @property $document_type
+ * @property $output_medium
+ * @property $salutation
+ * @property $title
+ * @property $firstname
+ * @property $lastname
+ * @property $firm
+ * @property $department
+ * @property $street
+ * @property $zipcode
+ * @property $city
+ * @property $country
+ * @property $phone
+ * @property $phone2
+ * @property $fax
+ * @property $skype_voip
+ * @property $email
+ * @property $annotation
+ * @property $url
+ * @property $no_mailings
+ * @property $address_group
  */
 class DifferentShippingAddress extends AbstractType implements TypeInterface
 {

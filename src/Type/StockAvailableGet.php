@@ -27,6 +27,12 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   René Galle <renegalle.webdevelopment@gmail.com>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $client_id
+ * @property $product_id
+ * @property $changed_only
+ * @property $system_name
  */
 class StockAvailableGet extends AbstractType implements TypeInterface
 {

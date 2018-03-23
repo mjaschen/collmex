@@ -17,6 +17,16 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   René Galle <renegalle.webdevelopment@gmail.com>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $order_id
+ * @property $date_of_payment
+ * @property $amount
+ * @property $fee
+ * @property $currency
+ * @property $paypal_email
+ * @property $paypal_transactionnumber
+ * @property $cost_center
  */
 class PaymentConfirmation extends AbstractType implements TypeInterface
 {

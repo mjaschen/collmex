@@ -15,6 +15,12 @@ namespace MarcusJaschen\Collmex\Type;
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $message_type
+ * @property $message_id
+ * @property $message_text
+ * @property $line
  */
 class Message extends AbstractType implements TypeInterface
 {

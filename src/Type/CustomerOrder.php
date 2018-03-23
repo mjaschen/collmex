@@ -2,6 +2,105 @@
 
 namespace MarcusJaschen\Collmex\Type;
 
+/**
+ * Class CustomerOrder
+ *
+ * @author  Marcus Jaschen <mjaschen@gmail.com>
+ * @license http://www.opensource.org/licenses/mit-license MIT License
+ * @link    https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $order_id
+ * @property $position
+ * @property $order_type
+ * @property $client_id
+ * @property $customer_id
+ * @property $customer_salutation
+ * @property $customer_title
+ * @property $customer_forename
+ * @property $customer_lastname
+ * @property $customer_firm
+ * @property $customer_department
+ * @property $customer_street
+ * @property $customer_zipcode
+ * @property $customer_city
+ * @property $customer_country
+ * @property $customer_phone
+ * @property $customer_phone_2
+ * @property $customer_fax
+ * @property $customer_email
+ * @property $customer_bank_account
+ * @property $customer_bank_code
+ * @property $customer_bank_account_owner
+ * @property $customer_bank_iban
+ * @property $customer_bank_bic
+ * @property $customer_bank_name
+ * @property $customer_vat_id
+ * @property $reserved
+ * @property $customer_order_id
+ * @property $order_date
+ * @property $price_date
+ * @property $terms_of_payment
+ * @property $currency
+ * @property $price_group
+ * @property $discount_id
+ * @property $discount_final
+ * @property $discount_reason
+ * @property $confirmation_text
+ * @property $final_text
+ * @property $internal_memo
+ * @property $partial_invoices
+ * @property $partial_shipping
+ * @property $deleted
+ * @property $status
+ * @property $language
+ * @property $employee_id
+ * @property $agent_id
+ * @property $system_name
+ * @property $discount_final_2
+ * @property $discount_final_2_reason
+ * @property $reserved_2
+ * @property $canceled_at
+ * @property $shipping_type
+ * @property $shipping_costs
+ * @property $cod_costs
+ * @property $delivery_conditions
+ * @property $delivery_conditions_additional
+ * @property $delivery_salutation
+ * @property $delivery_title
+ * @property $delivery_forename
+ * @property $delivery_lastname
+ * @property $delivery_firm
+ * @property $delivery_department
+ * @property $delivery_street
+ * @property $delivery_zipcode
+ * @property $delivery_city
+ * @property $delivery_country
+ * @property $delivery_phone
+ * @property $delivery_phone_2
+ * @property $delivery_fax
+ * @property $delivery_email
+ * @property $position_type
+ * @property $product_id
+ * @property $product_description
+ * @property $quantity_unit
+ * @property $quantity
+ * @property $price
+ * @property $delivery_date
+ * @property $price_quantity
+ * @property $position_discount
+ * @property $position_value
+ * @property $product_type
+ * @property $tax_rate
+ * @property $foreign_tax
+ * @property $revenue_type
+ * @property $shipped_final
+ * @property $billed_final
+ * @property $revenue
+ * @property $costs
+ * @property $gross_profit
+ * @property $margin
+ */
 class CustomerOrder extends AbstractType implements TypeInterface
 {
     const PARTIAL_INVOICES_ALLOWED     = 1;

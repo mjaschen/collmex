@@ -2,6 +2,23 @@
 
 namespace MarcusJaschen\Collmex\Type;
 
+/**
+ * Class AccountBalanceGet
+ *
+ * @author  Marcus Jaschen <mjaschen@gmail.com>
+ * @license http://www.opensource.org/licenses/mit-license MIT License
+ * @link    https://github.com/mjaschen/collmex
+ *
+ * @property $type_identifier
+ * @property $client_id
+ * @property $business_year
+ * @property $date_to
+ * @property $account_id
+ * @property $account_group_id
+ * @property $customer_id
+ * @property $supplier_id
+ * @property $cost_center
+ */
 class AccountBalanceGet extends AbstractType implements TypeInterface
 {
     /**
