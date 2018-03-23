@@ -10,6 +10,23 @@
 namespace MarcusJaschen\Collmex;
 
 use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
+use MarcusJaschen\Collmex\Type\AccountBalance;
+use MarcusJaschen\Collmex\Type\Customer;
+use MarcusJaschen\Collmex\Type\CustomerOrder;
+use MarcusJaschen\Collmex\Type\Delivery;
+use MarcusJaschen\Collmex\Type\Invoice;
+use MarcusJaschen\Collmex\Type\Login;
+use MarcusJaschen\Collmex\Type\Member;
+use MarcusJaschen\Collmex\Type\Message;
+use MarcusJaschen\Collmex\Type\NewObject;
+use MarcusJaschen\Collmex\Type\Product;
+use MarcusJaschen\Collmex\Type\ProductPrice;
+use MarcusJaschen\Collmex\Type\PurchaseOrder;
+use MarcusJaschen\Collmex\Type\Revenue;
+use MarcusJaschen\Collmex\Type\Stock;
+use MarcusJaschen\Collmex\Type\StockAvailable;
+use MarcusJaschen\Collmex\Type\Subscription;
+use MarcusJaschen\Collmex\Type\TrackingNumber;
 
 /**
  * Type Factory for Collmex Response Data
@@ -21,48 +38,54 @@ use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 class TypeFactory
 {
     /**
-     * Mapping of Collmex type identifiers to Type classes
-     *
-     * @var array
-     */
-    protected $typeMap = [
-        'LOGIN'           => 'Login',
-        'MESSAGE'         => 'Message',
-        'NEW_OBJECT_ID'   => 'NewObject',
-        'ACCBAL'          => 'AccountBalance',
-        'CMXABO'          => 'Subscription',
-        'CMXINV'          => 'Invoice',
-        'CMXMGD'          => 'Member',
-        'CMXKND'          => 'Customer',
-        'CMXORD-2'        => 'CustomerOrder',
-        'CMXUMS'          => 'Revenue',
-        'CMXPRD'          => 'Product',
-        'CMXPRI'          => 'ProductPrice',
-        'STOCK_AVAILABLE' => 'StockAvailable',
-        'CMXSTK'          => 'Stock',
-        'CMXDLV'          => 'Delivery',
-        'TRACKING_NUMBER' => 'TrackingNumber',
-        'CMXPOD'          => 'PurchaseOrder',
-    ];
-
-    /**
      * Builds the type object for the given data.
      *
      * @param array $data
      *
+     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      * @throws InvalidTypeIdentifierException
      *
      * @return Type\AbstractType
      */
     public function getType($data)
     {
-        if (! array_key_exists($data[0], $this->typeMap)) {
-            throw new InvalidTypeIdentifierException("Invalid Type Identifier: {$data[0]}");
+        switch ($data[0]) {
+            case 'LOGIN':
+                return new Login($data);
+            case 'MESSAGE':
+                return new Message($data);
+            case 'NEW_OBJECT_ID':
+                return new NewObject($data);
+            case 'ACCBAL':
+                return new AccountBalance($data);
+            case 'CMXABO':
+                return new Subscription($data);
+            case 'CMXINV':
+                return new Invoice($data);
+            case 'CMXMGD':
+                return new Member($data);
+            case 'CMXKND':
+                return new Customer($data);
+            case 'CMXORD-2':
+                return new CustomerOrder($data);
+            case 'CMXUMS':
+                return new Revenue($data);
+            case 'CMXPRD':
+                return new Product($data);
+            case 'CMXPRI':
+                return new ProductPrice($data);
+            case 'STOCK_AVAILABLE':
+                return new StockAvailable($data);
+            case 'CMXSTK':
+                return new Stock($data);
+            case 'CMXDLV':
+                return new Delivery($data);
+            case 'TRACKING_NUMBER':
+                return new TrackingNumber($data);
+            case 'CMXPOD':
+                return new PurchaseOrder($data);
         }
 
-        $className = $this->typeMap[$data[0]];
-        $class     = "\\MarcusJaschen\\Collmex\\Type\\{$className}";
-
-        return new $class($data);
+        throw new InvalidTypeIdentifierException("Invalid Type Identifier: {$data[0]}");
     }
 }
