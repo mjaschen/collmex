@@ -258,7 +258,7 @@ principles.
 
 ### Added
 
-- TypeFactory supports `CustomerOrder` type
+- `TypeFactory` supports `CustomerOrder` type
 
 ## [0.3.0] - 2014-11-28
 
@@ -277,4 +277,4 @@ principles.
 
 ### Added
 
-- initial Release
+- initial release
