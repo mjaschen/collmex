@@ -50,6 +50,6 @@ class ProductPrice extends AbstractType implements TypeInterface
      */
     public function validate()
     {
-        // TODO: Implement validate() method.
+        return true;
     }
 }
