@@ -82,6 +82,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $ebay_item_number
  * @property $direct_delivery
  * @property $hs_code
+ * @property $storage_bin
  */
 class Product extends AbstractType implements TypeInterface
 {
