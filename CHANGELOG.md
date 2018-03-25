@@ -5,7 +5,11 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
-## [unreleased]
+## [0.7.6]
+
+### Added
+
+- new field `storage_bin` in `Product`. Thanks to @Argee88!
 
 ### Changed
 
