@@ -56,7 +56,7 @@ class TypeFactory
                 return new Message($data);
             case 'NEW_OBJECT_ID':
                 return new NewObject($data);
-            case 'ACCBAL':
+            case 'ACC_BAL':
                 return new AccountBalance($data);
             case 'CMXABO':
                 return new Subscription($data);
