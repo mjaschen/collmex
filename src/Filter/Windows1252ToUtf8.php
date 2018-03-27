@@ -21,15 +21,37 @@ use ForceUTF8\Encoding;
 class Windows1252ToUtf8 implements FilterInterface
 {
     /**
-     * @param mixed $input string or array
+     * @param string $input string or array
      *
-     * @return mixed
+     * @return string
+     *
+     * @deprecated
      */
     public function filter($input)
+    {
+        return Encoding::toUTF8($input);
+    }
+
+    /**
+     * @param string $text
+     *
+     * @return string
+     */
+    public function filterString($text)
+    {
+        return Encoding::toUTF8($text);
+    }
+
+    /**
+     * @param array $input
+     *
+     * @return array
+     */
+    public function filterArray(array $input)
     {
         // The Encoding methods are array-aware so we can just drop our input
         // into the conversion method.
 
-        return Encoding::toUTF8($input);
+        return (array)Encoding::toUTF8($input);
     }
 }

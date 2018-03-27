@@ -2,16 +2,18 @@
 
 namespace MarcusJaschen\Collmex\Tests\Filter;
 
+use MarcusJaschen\Collmex\Filter\Utf8ToWindows1252;
+
 class Utf8ToWindows1252Test extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var \MarcusJaschen\Collmex\Filter\Utf8ToWindows1252
+     * @var Utf8ToWindows1252
      */
     protected $filter;
 
     public function setUp()
     {
-        $this->filter = new \MarcusJaschen\Collmex\Filter\Utf8ToWindows1252();
+        $this->filter = new Utf8ToWindows1252();
     }
 
     public function tearDown()
@@ -24,7 +26,7 @@ class Utf8ToWindows1252Test extends \PHPUnit_Framework_TestCase
         $input = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
         $expected = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
 
-        $this->assertEquals($expected, $this->filter->filter($input));
+        $this->assertEquals($expected, $this->filter->filterString($input));
     }
 
     public function testEncodeArray()
@@ -42,7 +44,7 @@ class Utf8ToWindows1252Test extends \PHPUnit_Framework_TestCase
             $target,
         ];
 
-        $this->assertEquals($expected, $this->filter->filter($input));
+        $this->assertEquals($expected, $this->filter->filterArray($input));
     }
 
     public function testEncodeArrayRecursive()
@@ -64,6 +66,6 @@ class Utf8ToWindows1252Test extends \PHPUnit_Framework_TestCase
             $target,
         ];
 
-        $this->assertEquals($expected, $this->filter->filter($input));
+        $this->assertEquals($expected, $this->filter->filterArray($input));
     }
 }

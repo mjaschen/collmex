@@ -21,15 +21,32 @@ use ForceUTF8\Encoding;
 class Utf8ToWindows1252 implements FilterInterface
 {
     /**
-     * @param mixed $input string or array
+     * @param string $input string or array
      *
-     * @return mixed
+     * @return string
      */
     public function filter($input)
     {
-        // The Encoding methods are array-aware so we can just drop our input
-        // into the conversion method.
-
         return Encoding::toWin1252($input);
+    }
+
+    /**
+     * @param string $text
+     *
+     * @return string
+     */
+    public function filterString($text)
+    {
+        return Encoding::toWin1252($text);
+    }
+
+    /**
+     * @param array $input
+     *
+     * @return array
+     */
+    public function filterArray(array $input)
+    {
+        return (array)Encoding::toWin1252($input);
     }
 }

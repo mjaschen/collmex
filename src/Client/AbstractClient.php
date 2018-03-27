@@ -66,7 +66,7 @@ abstract class AbstractClient
     {
         $filter = new Utf8ToWindows1252();
 
-        return $filter->filter($text);
+        return $filter->filterString($text);
     }
 
     /**

@@ -19,9 +19,21 @@ namespace MarcusJaschen\Collmex\Filter;
 interface FilterInterface
 {
     /**
-     * @param mixed $input
+     * @param string $input
      *
-     * @return mixed
+     * @return string
      */
     public function filter($input);
+
+    /**
+     * @param string $text
+     * @return string
+     */
+    public function filterString($text);
+
+    /**
+     * @param array $input
+     * @return array
+     */
+    public function filterArray(array $input);
 }

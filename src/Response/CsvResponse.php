@@ -230,14 +230,14 @@ class CsvResponse implements ResponseInterface
     /**
      * Converts response from Collmex API to UTF-8
      *
-     * @param string $text
+     * @param array $data
      *
-     * @return string
+     * @return array
      */
-    protected function convertEncodingFromCollmex($text)
+    protected function convertEncodingFromCollmex($data)
     {
         $filter = new Windows1252ToUtf8();
 
-        return $filter->filter($text);
+        return $filter->filterArray($data);
     }
 }
