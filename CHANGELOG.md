@@ -5,11 +5,17 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
-## [0.7.6]
+## [0.7.7] - 2018-03-27
+
+### Fixed
+
+- Typo in type identifier. Thanks to @Naoray!
+
+## [0.7.6] - 2018-03-25
 
 ### Added
 
-- new field `storage_bin` in `Product`. Thanks to @Argee88!
+- New field `storage_bin` in `Product`. Thanks to @Argee88!
 
 ### Changed
 
