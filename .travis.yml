@@ -42,14 +42,14 @@ script:
 - >
   echo;
   echo "Linting all PHP files";
-  composer ci:php:lint;
+  composer ci:lint;
 
 - >
   echo;
-  echo "Running static analyzer";
-  composer ci:static:psalm;
+  echo "Running the Psalm static analyzer";
+  composer ci:psalm;
 
 - >
   echo;
-  echo "Running the unit tests";
+  echo "Running the PHPUnit tests";
   composer ci:tests;

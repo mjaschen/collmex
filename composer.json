@@ -44,12 +44,12 @@
         }
     },
     "scripts": {
-        "ci:php:lint": "find config/ src/ tests/ -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
-        "ci:static:psalm": "./vendor/bin/psalm",
-        "ci:tests": "phpunit tests/",
+        "ci:lint": "find config/ src/ tests/ -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
+        "ci:psalm": "./vendor/bin/psalm",
+        "ci:tests": "./vendor/bin/phpunit tests/",
         "ci:static": [
-            "@ci:php:lint",
-            "@ci:static:psalm"
+            "@ci:lint",
+            "@ci:psalm"
         ],
         "ci:dynamic": [
             "@ci:tests"
