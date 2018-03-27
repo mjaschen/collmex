@@ -5,6 +5,23 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.0] - 2018-03-27
+
+### Added
+
+- [Psalm][] static analyzer to dev requirements.
+- Composer scripts for running static analyzer.
+
+### Changed
+
+- Updated some internals after running a static analysis
+    - splitted filter method into separate methods for filtering strings and arrays
+    - removed code duplication
+    - removed setting attribute with the result of a method which returns void
+    - replaced switch statement with a simple if
+- Updated some PHPDoc blocks after running a static analysis.
+- Replaced double quotes with single quotes.
+
 ## [0.7.7] - 2018-03-27
 
 ### Fixed
@@ -294,3 +311,6 @@ principles.
 ### Added
 
 - initial release
+
+
+[Psalm]: https://github.com/vimeo/psalm
