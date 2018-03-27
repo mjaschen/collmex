@@ -1,7 +1,7 @@
 # Collmex API PHP SDK
 
-- [Collmex on TravisCI](https://travis-ci.org/mjaschen/collmex)
-- [Collmex on Packagist](https://packagist.org/packages/mjaschen/collmex)
+- [Collmex on TravisCI][]
+- [Collmex on Packagist][]
 
 This library provides a wrapper for the Collmex API. It's not complete yet,
 some record types (and maybe some features) are missing.
@@ -180,10 +180,28 @@ Collmex PHP SDK expects all inputs as UTF-8 and outputs everything as UTF-8.
 The conversion of string encodings is done transparently before sending a
 request to the Collmex API and after receiving the response from the API.
 
-## Run Tests
+## Development
+
+### Run Tests
+
+To run checks and tests, it's the easiest to use the provided Composer scripts:
+
+- lint PHP files for syntax errors: `composer ci:lint`
+- run static analysis with [Psalm][] and report errors: `composer ci:psalm`
+- run unit tests with PHPUnit: `composer ci:tests`
+
+To run all checks and tests at once, just use `composer ci`.
+
+Of course, it's possible to use the test runners directly, e. g. for PHPUnit:
 
 ```shell
 ./vendor/bin/phpunit
+```
+
+Psalm:
+
+```shell
+./vendor/bin/psalm
 ```
 
 ## Collmex API Documentation
@@ -193,3 +211,7 @@ https://www.collmex.de/cgi-bin/cgi.exe?1005,1,help,api
 ## Contributions
 
 - [String Encoding Converter/Fixer](https://github.com/neitanod/forceutf8) by [Sebastián Grignoli](https://github.com/neitanod)
+
+[Collmex on TravisCI]: https://travis-ci.org/mjaschen/collmex
+[Collmex on Packagist]: https://packagist.org/packages/mjaschen/collmex
+[Psalm]: https://github.com/vimeo/psalm
