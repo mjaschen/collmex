@@ -44,12 +44,11 @@ class ResponseFactory
             throw new InvalidResponseMimeTypeException('Cannot determine MIME type for response', 0, $exception);
         }
 
-        switch ($mimeType) {
-            case 'application/zip':
+        if ($mimeType === 'application/zip') {
                 return new ZipResponse($this->responseParser, $this->responseBody);
-            default:
-                return new CsvResponse($this->responseParser, $this->responseBody);
         }
+
+        return new CsvResponse($this->responseParser, $this->responseBody);
     }
 
     /**
