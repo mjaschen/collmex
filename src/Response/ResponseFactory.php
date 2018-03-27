@@ -45,7 +45,7 @@ class ResponseFactory
         }
 
         if ($mimeType === 'application/zip') {
-                return new ZipResponse($this->responseParser, $this->responseBody);
+            return new ZipResponse($this->responseParser, $this->responseBody);
         }
 
         return new CsvResponse($this->responseParser, $this->responseBody);
