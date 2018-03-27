@@ -56,11 +56,13 @@ class Curl extends AbstractClient implements ClientInterface
 
         $this->destroyCurl();
 
-        return $response;
+        return (string)$response;
     }
 
     /**
      * Creates curl ressource.
+     *
+     * @return void
      */
     protected function initCurl()
     {
@@ -73,6 +75,8 @@ class Curl extends AbstractClient implements ClientInterface
 
     /**
      * Closes curl ressource.
+     *
+     * @return void
      */
     protected function destroyCurl()
     {

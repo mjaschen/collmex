@@ -41,6 +41,8 @@ class ZipResponse implements ResponseInterface
     /**
      * @param \MarcusJaschen\Collmex\Csv\ParserInterface $responseParser
      * @param string $reponseBody
+     *
+     * @throws \MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException
      */
     public function __construct(ParserInterface $responseParser, $reponseBody)
     {
@@ -56,6 +58,8 @@ class ZipResponse implements ResponseInterface
      * @param string $type
      *
      * @return Finder
+     *
+     * @throws \InvalidArgumentException
      */
     public function getFilesByType($type = 'pdf')
     {
@@ -74,6 +78,8 @@ class ZipResponse implements ResponseInterface
      * Returns the CsvResponse instance for the (first) included CSV file
      *
      * @return CsvResponse
+     *
+     * @throws \InvalidArgumentException
      */
     public function getCsvResponse()
     {
@@ -93,7 +99,9 @@ class ZipResponse implements ResponseInterface
     }
 
     /**
+     * @throws \MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException
      *
+     * @return void
      */
     protected function extractFiles()
     {

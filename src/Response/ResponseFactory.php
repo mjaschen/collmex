@@ -32,7 +32,8 @@ class ResponseFactory
      * Returns the class name which handles the response ('CsvResponse' or 'ZipResponse')
      *
      * @return ResponseInterface
-     * @throws \MarcusJaschen\Collmex\Exception\RequestErrorException
+     *
+     * @throws \MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException
      * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
      */
     public function getResponseInstance()

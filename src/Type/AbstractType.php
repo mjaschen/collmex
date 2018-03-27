@@ -183,7 +183,7 @@ abstract class AbstractType implements JsonSerializable
      * @param array $data if the array is indexed by numeric keys (first key
      * is checked), we'll merge the data by index order.
      *
-     * @return void;
+     * @return void
      *
      * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      */

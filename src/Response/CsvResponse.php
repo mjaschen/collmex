@@ -79,8 +79,6 @@ class CsvResponse implements ResponseInterface
     /**
      * @param \MarcusJaschen\Collmex\Csv\ParserInterface $parser
      * @param string $responseBody
-     *
-     * @throws \MarcusJaschen\Collmex\Exception\RequestErrorException
      */
     public function __construct(ParserInterface $parser, $responseBody)
     {
@@ -92,9 +90,7 @@ class CsvResponse implements ResponseInterface
     /**
      * @param string $responseBody
      *
-     * @throws \MarcusJaschen\Collmex\Exception\RequestErrorException
-     *
-     * @return array
+     * @return void
      */
     public function parseCsv($responseBody)
     {
@@ -107,6 +103,8 @@ class CsvResponse implements ResponseInterface
 
     /**
      * Checks if the API request returned an error
+     *
+     * @return bool
      */
     public function isError()
     {
@@ -198,6 +196,8 @@ class CsvResponse implements ResponseInterface
      * contains no records).
      *
      * @return array|null
+     *
+     * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */
     public function getFirstRecord()
     {
