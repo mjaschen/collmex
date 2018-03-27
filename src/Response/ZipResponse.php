@@ -83,13 +83,7 @@ class ZipResponse implements ResponseInterface
      */
     public function getCsvResponse()
     {
-        $finder = new Finder();
-
-        $iterator = $finder
-            ->files()
-            ->name('*.csv')
-            ->depth(0)
-            ->in($this->extractDirectory);
+        $iterator = $this->getFilesByType('csv');
 
         foreach ($iterator as $file) {
             $csv = file_get_contents($file);
