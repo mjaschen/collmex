@@ -33,6 +33,8 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `DELIVERY_GET`
 - `INVOICE_GET`
 - `MEMBER_GET`
+- `OPEN_ITEM`
+- `OPEN_ITEMS_GET`
 - `PAYMENT_CONFIRMATION`
 - `PRODUCT_GET`
 - `PRODUCT_PRICE_GET`

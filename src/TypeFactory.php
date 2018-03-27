@@ -27,6 +27,7 @@ use MarcusJaschen\Collmex\Type\Stock;
 use MarcusJaschen\Collmex\Type\StockAvailable;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
+use MarcusJaschen\Collmex\Type\OpenItem;
 
 /**
  * Type Factory for Collmex Response Data
@@ -84,6 +85,8 @@ class TypeFactory
                 return new TrackingNumber($data);
             case 'CMXPOD':
                 return new PurchaseOrder($data);
+            case 'OPEN_ITEM':
+                return new OpenItem($data);
         }
 
         throw new InvalidTypeIdentifierException("Invalid Type Identifier: {$data[0]}");
