@@ -50,7 +50,7 @@ class Curl extends AbstractClient implements ClientInterface
 
         if ($response === false) {
             throw new RequestFailedException(
-                "Curl request failed: " . curl_error($this->curl) . " (" . curl_errno($this->curl) . " )"
+                'Curl request failed: ' . curl_error($this->curl) . ' (' . curl_errno($this->curl) . ' )'
             );
         }
 
@@ -66,7 +66,7 @@ class Curl extends AbstractClient implements ClientInterface
     {
         $this->curl = curl_init($this->exchangeUrl);
         curl_setopt($this->curl, CURLOPT_POST, true);
-        curl_setopt($this->curl, CURLOPT_HTTPHEADER, ["Content-Type: text/csv"]);
+        curl_setopt($this->curl, CURLOPT_HTTPHEADER, ['Content-Type: text/csv']);
         curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
     }

@@ -57,7 +57,7 @@ class ZipResponse implements ResponseInterface
      *
      * @return Finder
      */
-    public function getFilesByType($type = "pdf")
+    public function getFilesByType($type = 'pdf')
     {
         $finder = new Finder();
 
@@ -106,7 +106,7 @@ class ZipResponse implements ResponseInterface
         $zip = new ZipArchive();
 
         if (! $zip->open($tmpFilename)) {
-            throw new InvalidZipFileException("Cannot open ZIP archive " . $tmpFilename);
+            throw new InvalidZipFileException('Cannot open ZIP archive ' . $tmpFilename);
         }
 
         $zip->extractTo($this->extractDirectory);
