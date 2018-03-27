@@ -46,5 +46,10 @@ script:
 
 - >
   echo;
+  echo "Running static analyzer";
+  composer ci:static:psalm;
+
+- >
+  echo;
   echo "Running the unit tests";
   composer ci:tests;
