@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.1] - 2018-03-27
+
+### Added
+
+- Types `OPEN_ITEM` and `OPEN_ITEMS_GET`. Thanks to @Argee88!
+
 ## [0.8.0] - 2018-03-27
 
 ### Added
