@@ -80,6 +80,8 @@ class ZipResponse implements ResponseInterface
      * @return CsvResponse
      *
      * @throws \InvalidArgumentException
+     *
+     * @psalm-suppress InvalidNullableReturnType
      */
     public function getCsvResponse()
     {
