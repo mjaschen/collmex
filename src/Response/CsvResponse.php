@@ -84,7 +84,8 @@ class CsvResponse implements ResponseInterface
     {
         $this->parser      = $parser;
         $this->responseRaw = $responseBody;
-        $this->response    = $this->parseCsv($responseBody);
+
+        $this->parseCsv($responseBody);
     }
 
     /**
