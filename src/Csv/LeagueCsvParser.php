@@ -1,6 +1,7 @@
 <?php
 
 namespace MarcusJaschen\Collmex\Csv;
+
 use League\Csv\Reader;
 
 /**
