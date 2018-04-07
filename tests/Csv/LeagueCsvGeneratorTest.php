@@ -3,8 +3,9 @@
 namespace MarcusJaschen\Collmex\Tests\Csv;
 
 use MarcusJaschen\Collmex\Csv\LeagueCsvGenerator;
+use PHPUnit\Framework\TestCase;
 
-class LeagueCsvGeneratorTest extends \PHPUnit_Framework_TestCase
+class LeagueCsvGeneratorTest extends TestCase
 {
     /**
      * @var LeagueCsvGenerator

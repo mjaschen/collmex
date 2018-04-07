@@ -2,7 +2,9 @@
 
 namespace MarcusJaschen\Collmex\Tests\Type\Validator;
 
-class DateTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class DateTest extends TestCase
 {
     /**
      * @var \MarcusJaschen\Collmex\Type\Validator\Date

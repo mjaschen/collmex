@@ -4,8 +4,9 @@ namespace MarcusJaschen\Collmex\Tests\Type\Validator;
 
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\Validator\TimeInterval;
+use PHPUnit\Framework\TestCase;
 
-class TimeIntervalTest extends \PHPUnit_Framework_TestCase
+class TimeIntervalTest extends TestCase
 {
     /**
      * @var TimeInterval

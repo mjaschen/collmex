@@ -1,6 +1,10 @@
 <?php
 
-class Issue10Test extends \PHPUnit_Framework_TestCase
+namespace MarcusJaschen\Collmex\Tests;
+
+use PHPUnit\Framework\TestCase;
+
+class Issue10Test extends TestCase
 {
     public function setUp()
     {

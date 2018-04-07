@@ -2,7 +2,9 @@
 
 namespace MarcusJaschen\Collmex\Tests\Csv;
 
-class SimpleParserTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class SimpleParserTest extends TestCase
 {
     /**
      * @var \MarcusJaschen\Collmex\Csv\SimpleParser

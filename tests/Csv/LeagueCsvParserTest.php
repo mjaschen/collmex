@@ -3,8 +3,9 @@
 namespace MarcusJaschen\Collmex\Tests\Csv;
 
 use MarcusJaschen\Collmex\Csv\LeagueCsvParser;
+use PHPUnit\Framework\TestCase;
 
-class LeagueCsvParserTest extends \PHPUnit_Framework_TestCase
+class LeagueCsvParserTest extends TestCase
 {
     /**
      * @var \MarcusJaschen\Collmex\Csv\SimpleParser

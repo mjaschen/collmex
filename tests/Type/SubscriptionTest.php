@@ -3,8 +3,9 @@
 namespace MarcusJaschen\Collmex\Tests\Type;
 
 use MarcusJaschen\Collmex\Type\Subscription;
+use PHPUnit\Framework\TestCase;
 
-class SubscriptionTest extends \PHPUnit_Framework_TestCase
+class SubscriptionTest extends TestCase
 {
     /**
      * @var Subscription

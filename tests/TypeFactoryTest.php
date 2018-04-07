@@ -6,8 +6,9 @@ use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\Revenue;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\TypeFactory;
+use PHPUnit\Framework\TestCase;
 
-class TypeFactoryTest extends \PHPUnit_Framework_TestCase
+class TypeFactoryTest extends TestCase
 {
     /**
      * @var \MarcusJaschen\Collmex\TypeFactory

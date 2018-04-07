@@ -1,8 +1,9 @@
 <?php
 
 use MarcusJaschen\Collmex\Csv\SimpleGenerator;
+use PHPUnit\Framework\TestCase;
 
-class Issue2Test extends \PHPUnit_Framework_TestCase
+class Issue2Test extends TestCase
 {
     /**
      * @var SimpleGenerator
