@@ -20,7 +20,7 @@ class AccountBalance extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier' => 'ACCBAL',
+        'type_identifier' => 'ACC_BAL',
         'account_id'      => null,
         'account_name'    => null,
         'balance'         => null,
