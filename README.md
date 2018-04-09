@@ -16,6 +16,8 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `ABO_GET`
 - `ACC_BAL`
 - `ACCBAL_GET`
+- `ACCDOC`
+- `ACCDOC_GET`
 - `CMXABO`
 - `CMXDLV`
 - `CMXEPF`
