@@ -11,6 +11,7 @@ namespace MarcusJaschen\Collmex;
 
 use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 use MarcusJaschen\Collmex\Type\AccountBalance;
+use MarcusJaschen\Collmex\Type\AccountDocument;
 use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
 use MarcusJaschen\Collmex\Type\Delivery;
@@ -59,6 +60,8 @@ class TypeFactory
                 return new NewObject($data);
             case 'ACC_BAL':
                 return new AccountBalance($data);
+            case 'ACCDOC':
+                return new AccountDocument($data);
             case 'CMXABO':
                 return new Subscription($data);
             case 'CMXINV':
