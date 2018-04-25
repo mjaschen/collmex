@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.4] - 2018-04-25
+
+### Added
+
+- new types `ProjectStaff` (`PROJECT_STAFF`) and `ProjectStaffGet` (`PROJECT_STAFF_GET`). Thanks to @Naoray!
+
 ## [0.8.3] - 2018-04-11
 
 ### Added

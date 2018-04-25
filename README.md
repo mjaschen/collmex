@@ -40,6 +40,8 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `PAYMENT_CONFIRMATION`
 - `PRODUCT_GET`
 - `PRODUCT_PRICE_GET`
+- `PROJECT_STAFF`
+- `PROJECT_STAFF_GET`
 - `PURCHASE_ORDER_GET`
 - `SALES_ORDER_GET`
 - `STOCK_AVAILABLE`
