@@ -12,6 +12,7 @@ namespace MarcusJaschen\Collmex;
 use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 use MarcusJaschen\Collmex\Type\AccountBalance;
 use MarcusJaschen\Collmex\Type\AccountDocument;
+use MarcusJaschen\Collmex\Type\BillOfMaterial;
 use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
 use MarcusJaschen\Collmex\Type\Delivery;
@@ -93,6 +94,8 @@ class TypeFactory
                 return new PurchaseOrder($data);
             case 'OPEN_ITEM':
                 return new OpenItem($data);
+            case 'CMXBOM':
+                return new BillOfMaterial($data);
         }
 
         throw new InvalidTypeIdentifierException("Invalid Type Identifier: {$data[0]}");
