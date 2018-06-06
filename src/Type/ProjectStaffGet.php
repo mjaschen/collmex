@@ -3,27 +3,23 @@
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Class AccountBalance
+ * Collmex Project Staff Type
  *
  * @author  Marcus Jaschen <mjaschen@gmail.com>
  * @license http://www.opensource.org/licenses/mit-license MIT License
- * @link    https://github.com/mjaschen/collmex
+ * @link    https://www.marcusjaschen.de/
  *
- * @property $type_identifier
- * @property $account_id
- * @property $account_name
- * @property $balance
+ * @property string $type_identifier
+ * @property int $project_id
  */
-class AccountBalance extends AbstractType implements TypeInterface
+class ProjectStaffGet extends AbstractType implements TypeInterface
 {
     /**
      * @var array
      */
     protected $template = [
-        'type_identifier' => 'ACC_BAL',
-        'account_id'      => null,
-        'account_name'    => null,
-        'balance'         => null,
+        'type_identifier' => 'PROJECT_STAFF_GET',
+        'project_id'      => null,
     ];
 
     /**

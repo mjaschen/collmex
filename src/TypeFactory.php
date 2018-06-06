@@ -11,6 +11,7 @@ namespace MarcusJaschen\Collmex;
 
 use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 use MarcusJaschen\Collmex\Type\AccountBalance;
+use MarcusJaschen\Collmex\Type\AccountDocument;
 use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
 use MarcusJaschen\Collmex\Type\Delivery;
@@ -28,6 +29,7 @@ use MarcusJaschen\Collmex\Type\StockAvailable;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
 use MarcusJaschen\Collmex\Type\OpenItem;
+use MarcusJaschen\Collmex\Type\ProjectStaff;
 
 /**
  * Type Factory for Collmex Response Data
@@ -59,6 +61,8 @@ class TypeFactory
                 return new NewObject($data);
             case 'ACC_BAL':
                 return new AccountBalance($data);
+            case 'ACCDOC':
+                return new AccountDocument($data);
             case 'CMXABO':
                 return new Subscription($data);
             case 'CMXINV':
@@ -75,6 +79,8 @@ class TypeFactory
                 return new Product($data);
             case 'CMXPRI':
                 return new ProductPrice($data);
+            case 'PROJECT_STAFF':
+                return new ProjectStaff($data);
             case 'STOCK_AVAILABLE':
                 return new StockAvailable($data);
             case 'CMXSTK':

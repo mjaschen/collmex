@@ -5,6 +5,30 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.4] - 2018-04-25
+
+### Added
+
+- new types `ProjectStaff` (`PROJECT_STAFF`) and `ProjectStaffGet` (`PROJECT_STAFF_GET`). Thanks to @Naoray!
+
+## [0.8.3] - 2018-04-11
+
+### Added
+
+- new `AccountDocument` (`ACCDOC`), `AccountDocumentGet` (`ACCDOC_GET`). Thanks to @Naoray!
+
+## [0.8.2] - 2018-04-09
+
+### Fixed
+
+- Typo in type identifier (`ACCBAL` → `ACC_BAL`). Thanks to @Naoray!
+
+## [0.8.1] - 2018-03-27
+
+### Added
+
+- Types `OPEN_ITEM` and `OPEN_ITEMS_GET`. Thanks to @Argee88!
+
 ## [0.8.0] - 2018-03-27
 
 ### Added
