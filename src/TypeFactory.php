@@ -66,6 +66,8 @@ class TypeFactory
                 return new AccountDocument($data);
             case 'CMXABO':
                 return new Subscription($data);
+            case 'CMXBOM':
+                return new BillOfMaterial($data);
             case 'CMXINV':
                 return new Invoice($data);
             case 'CMXMGD':
@@ -94,8 +96,6 @@ class TypeFactory
                 return new PurchaseOrder($data);
             case 'OPEN_ITEM':
                 return new OpenItem($data);
-            case 'CMXBOM':
-                return new BillOfMaterial($data);
         }
 
         throw new InvalidTypeIdentifierException("Invalid Type Identifier: {$data[0]}");

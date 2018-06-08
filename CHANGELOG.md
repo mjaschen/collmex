@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.5] - 2018-06-08
+
+### Added
+
+- new types `BillOfMaterial` (`CMXBOM`) and `BillOfMaterialGet` (`BILL_OF_MATERIAL_GET`). Thanks to @Argee88!
+
 ## [0.8.4] - 2018-04-25
 
 ### Added
