@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.6] - 2018-06-26
+
+### Added
+
+- new type `InvoiceOutputSet` (`INVOICE_OUTPUT_SET`)
+
 ## [0.8.5] - 2018-06-08
 
 ### Added
