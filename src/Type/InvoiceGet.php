@@ -16,18 +16,19 @@ namespace MarcusJaschen\Collmex\Type;
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
  *
- * @property $type_identifier
- * @property $invoice_id
- * @property $client_id
- * @property $customer_id
- * @property $invoice_date_from
- * @property $invoice_date_to
- * @property $sent_only
- * @property $format
- * @property $changed_only
- * @property $system_name
- * @property $created_by_system_only
- * @property $stationary_exclude
+ * @property mixed $type_identifier
+ * @property mixed $invoice_id
+ * @property mixed $client_id
+ * @property mixed $customer_id
+ * @property mixed $invoice_date_from
+ * @property mixed $invoice_date_to
+ * @property mixed $sent_only
+ * @property mixed $format
+ * @property mixed $changed_only
+ * @property mixed $system_name
+ * @property mixed $created_by_system_only
+ * @property mixed $stationary_exclude
+ * @property mixed $output_required
  */
 class InvoiceGet extends AbstractType implements TypeInterface
 {
@@ -53,6 +54,7 @@ class InvoiceGet extends AbstractType implements TypeInterface
         'system_name'            => null,
         'created_by_system_only' => null,
         'stationary_exclude'     => null,
+        'output_required'        => null,
     ];
 
     /**

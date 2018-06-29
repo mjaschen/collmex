@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.8] - 2018-06-29
+
+### Added
+
+- new field `output_required` in `InvoiceGet` type
+
 ## [0.8.7] - 2018-06-26
 
 ### Added
