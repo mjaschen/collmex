@@ -39,7 +39,7 @@ class SendShipmentNotification extends AbstractType implements TypeInterface
         'customer_id'              => null,
         'mode_of_shipment'         => null,
         'sent_to_shipment_company' => null,
-        'tracking_code'            => null,
+        'use_tracking_code'        => null,
         'delivery_date_from'       => null,
     ];
 
