@@ -18,14 +18,14 @@ namespace MarcusJaschen\Collmex\Type;
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
  *
- * @property $type_identifier
- * @property $delivery_id
- * @property $client_id
- * @property $customer_id
- * @property $mode_of_shipment
- * @property $sent_to_shipment_company
- * @property $tracking_code
- * @property $delivery_date_from
+ * @property string $type_identifier
+ * @property int $delivery_id
+ * @property int $client_id
+ * @property int $customer_id
+ * @property int $mode_of_shipment
+ * @property int $sent_to_shipment_company
+ * @property string $tracking_code
+ * @property string $delivery_date_from
  */
 class SendShipmentNotification extends AbstractType implements TypeInterface
 {
