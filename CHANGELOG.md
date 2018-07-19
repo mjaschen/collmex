@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.9] - 2018-07-19
+
+### Added
+
+- new type `SendShipmentNotification` (`SHIPMENT_NOTIFICATION_SEND`). Thanks to @Argee88!
+
 ## [0.8.8] - 2018-06-29
 
 ### Added
