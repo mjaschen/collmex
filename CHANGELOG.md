@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.10] - 2018-08-14
+
+### Added
+
+- new type `ShipmentConfirm` (`SHIPMENT_CONFIRM`). Thanks to @Argee88!
+
 ## [0.8.9] - 2018-07-19
 
 ### Added
@@ -119,7 +125,7 @@ principles.
 
 ### Changed
 
-- Updated Invoice type fields to match API. Thanks to @Argee88! 
+- Updated Invoice type fields to match API. Thanks to @Argee88!
 
 ## [0.7.1] - 2018-01-25
 
