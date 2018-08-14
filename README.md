@@ -90,6 +90,8 @@ version, you can install older versions of the Collmex PHP SDK:
 
 New features will only go into the master.
 
+Starting 2019-01-01, the Collmex PHP SDK will require at least PHP 7.0.
+
 ## Usage/Examples
 
 ### Request information from Collmex API
