@@ -51,6 +51,7 @@ class DeliveryGet extends AbstractType implements TypeInterface
         'no_writing_paper'   => null,
         'order_id'           => null,
         'shipment_type'      => null,
+        'mark_as_issued'     => null,
     ];
 
     /**
