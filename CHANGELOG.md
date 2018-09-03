@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.11] - 2018-09-03
+
+### Changed
+
+- update `DeliveryGet` to match fields with the documentation
+- update README with an example on how to use a custom CSV parser for API responses
+
 ## [0.8.10] - 2018-08-14
 
 ### Added
