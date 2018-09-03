@@ -1,11 +1,4 @@
 <?php
-/**
- * Collmex API Request
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
 
 namespace MarcusJaschen\Collmex;
 
@@ -40,12 +33,11 @@ class Request
      */
     public function __construct(ClientInterface $client, ParserInterface $responseParser = null)
     {
-        $this->client = $client;
+        $this->client         = $client;
+        $this->responseParser = $responseParser;
 
-        if (null === $responseParser) {
+        if (null === $this->responseParser) {
             $this->responseParser = new SimpleParser();
-        } else {
-            $this->responseParser = $responseParser;
         }
     }
 
