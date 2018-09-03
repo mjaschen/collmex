@@ -30,6 +30,8 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $system_name
  * @property $no_writing_paper
  * @property $order_id
+ * @property $shipment_type
+ * @property $mark_as_issued
  */
 class DeliveryGet extends AbstractType implements TypeInterface
 {
@@ -49,6 +51,8 @@ class DeliveryGet extends AbstractType implements TypeInterface
         'system_name'        => null,
         'no_writing_paper'   => null,
         'order_id'           => null,
+        'shipment_type'      => null,
+        'mark_as_issued'     => null,
     ];
 
     /**
