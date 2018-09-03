@@ -25,9 +25,10 @@
         "symfony/http-foundation": "^2.5.0 || ^3.0.0 || ^4.0.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.7.26",
-        "mockery/mockery": "^1.0",
         "league/csv": "^8.2.0",
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^5.7.26",
+        "roave/security-advisories": "dev-master",
         "vimeo/psalm": "^1.0"
     },
     "suggest": {
