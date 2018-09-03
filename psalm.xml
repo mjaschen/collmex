@@ -2,7 +2,7 @@
 <psalm
     totallyTyped="false"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="/Users/mjaschen/Code/MarcusJaschen/collmex/vendor/vimeo/psalm/src/config.xsd"
+    xsi:schemaLocation="./vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
         <directory name="src" />
@@ -28,9 +28,10 @@
 
         <PropertyNotSetInConstructor errorLevel="suppress" />
         <MissingConstructor errorLevel="info" />
+
         <!-- Don't report MissingClosureParamType until we've dropped PHP 5.6 -->
         <MissingClosureParamType errorLevel="suppress" />
-        <MissingParamType errorLevel="info" />
+        <MissingParamType errorLevel="suppress" />
 
         <DocblockTypeContradiction errorLevel="info" />
         <RedundantConditionGivenDocblockType errorLevel="info" />

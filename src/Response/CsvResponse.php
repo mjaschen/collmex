@@ -54,7 +54,7 @@ class CsvResponse implements ResponseInterface
     /**
      * Whether the response contains an error message or not
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isError;
 
