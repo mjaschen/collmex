@@ -34,11 +34,14 @@ class Request
     public function __construct(ClientInterface $client, ParserInterface $responseParser = null)
     {
         $this->client         = $client;
-        $this->responseParser = $responseParser;
 
-        if (null === $this->responseParser) {
-            $this->responseParser = new SimpleParser();
+        if ($responseParser instanceof ParserInterface) {
+            $this->responseParser = $responseParser;
+
+            return;
         }
+
+        $this->responseParser = new SimpleParser();
     }
 
     /**

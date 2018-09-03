@@ -186,6 +186,31 @@ if ($collmexResponse->isError()) {
 }
 ```
 
+### Use a different CSV parser for the response data
+
+The Collmex PHP SDK uses PHP's built-in CSV-parsing capabilities. We've had at 
+least one case when `fgetcsv()` didn't work as expected. Fortunately it's
+possible to use any CSV parser which implements 
+`MarcusJaschen\Collmex\Csv\ParserInterface` (Collmex PHP SDK ships with
+`SimpleParser` (default) and `LeagueCsvParser`). To use a different parser, just
+inject it when creating the `Request` instance:
+
+```php
+<?php
+
+use MarcusJaschen\Collmex\Client\Curl as CurlClient;
+use MarcusJaschen\Collmex\Csv\LeagueCsvParser;
+use MarcusJaschen\Collmex\Request;
+
+// initialize HTTP client
+$collmexClient = new CurlClient('USER', 'PASSWORD', 'CUSTOMER_ID');
+
+// create request object with a custom CSV parser
+$collmexRequest = new Request($collmexClient, new LeagueCsvParser());
+
+// ...
+```
+
 ## Notes
 
 Collmex expects all strings encoded in code page 1252 (Windows) while the
