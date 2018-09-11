@@ -82,7 +82,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $product_id
  * @property $product_description
  * @property $unit
- * @property $quantitiy
+ * @property $quantity
  * @property $customer_order_position
  * @property $ean
  */
@@ -156,7 +156,7 @@ class Delivery extends AbstractType implements TypeInterface
         'product_id'                   => null,
         'product_description'          => null,
         'unit'                         => null,
-        'quantitiy'                    => null, // 65
+        'quantity'                    => null, // 65
         'customer_order_position'      => null,
         'ean'                          => null, // 67
     ];
