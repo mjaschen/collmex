@@ -42,11 +42,16 @@ class LeagueCsvParser implements ParserInterface
      */
     public function parse($csv)
     {
-        $input = Reader::createFromString($csv);
+        $reader = Reader::createFromString($csv);
 
-        $input->setDelimiter($this->delimiter);
-        $input->setEnclosure($this->enclosure);
+        $reader->setDelimiter($this->delimiter)
+               ->setEnclosure($this->enclosure);
 
-        return $input->fetchAll();
+        $result = [];
+        foreach ($reader as $key => $record) {
+            $result[$key] = $record;
+        }
+
+        return $result;
     }
 }

@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.8.12] - 2018-09-17
+
+### Added
+
+- support for League CSV 9.x alongside 8.x
+
 ## [0.8.11] - 2018-09-03
 
 ### Changed
