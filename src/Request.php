@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex;
 use MarcusJaschen\Collmex\Client\ClientInterface;
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Csv\SimpleParser;
+use MarcusJaschen\Collmex\Response\CsvResponse;
 use MarcusJaschen\Collmex\Response\ResponseFactory;
-use MarcusJaschen\Collmex\Response\ResponseInterface;
+use MarcusJaschen\Collmex\Response\ZipResponse;
 
 /**
  * Collmex API Request
@@ -49,7 +50,7 @@ class Request
      *
      * @param string $body The request body
      *
-     * @return ResponseInterface
+     * @return ZipResponse|CsvResponse
      * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
      * @throws \MarcusJaschen\Collmex\Client\Exception\RequestFailedException
      */

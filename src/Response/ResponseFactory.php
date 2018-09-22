@@ -19,19 +19,19 @@ class ResponseFactory
     protected $responseParser;
 
     /**
-     * @param string $reponseBody
+     * @param string $responseBody
      * @param \MarcusJaschen\Collmex\Csv\ParserInterface $responseParser
      */
-    public function __construct($reponseBody, ParserInterface $responseParser)
+    public function __construct($responseBody, ParserInterface $responseParser)
     {
-        $this->responseBody   = $reponseBody;
+        $this->responseBody   = $responseBody;
         $this->responseParser = $responseParser;
     }
 
     /**
      * Returns the class name which handles the response ('CsvResponse' or 'ZipResponse')
      *
-     * @return ResponseInterface
+     * @return ZipResponse|CsvResponse
      *
      * @throws \MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException
      * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
