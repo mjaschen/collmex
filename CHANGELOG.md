@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [unreleased]
+
+### Changed
+
+- code cleanup with PHP-CS-Fixer. Thanks to @oliverklee!
+
 ## [0.8.12] - 2018-09-17
 
 ### Added
