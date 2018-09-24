@@ -7,6 +7,10 @@ principles.
 
 ## [unreleased]
 
+### Fixed
+
+- add missing required PHP extensions to the `composer.json`. Thanks to @oliverklee!
+
 ### Changed
 
 - code cleanup with PHP-CS-Fixer. Thanks to @oliverklee!
