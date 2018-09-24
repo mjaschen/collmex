@@ -9,8 +9,6 @@
 
 namespace MarcusJaschen\Collmex\Response;
 
-use MarcusJaschen\Collmex\Csv\ParserInterface;
-
 /**
  * Interface for Response class
  *

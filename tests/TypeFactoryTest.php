@@ -28,11 +28,11 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
     {
         $data = [
             'CMXKND',
-            "12345",
-            "1",
-            "Herr",
-            "Marcus",
-            "Jaschen",
+            '12345',
+            '1',
+            'Herr',
+            'Marcus',
+            'Jaschen',
         ];
 
         $type = $this->typeFactory->getType($data);
@@ -44,15 +44,15 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
     {
         $data = [
             'CMXABO',
-            "12345",
-            "1",
-            "20131001",
-            "20141031",
-            "PRODUCT_1",
-            "Product Description",
+            '12345',
+            '1',
+            '20131001',
+            '20141031',
+            'PRODUCT_1',
+            'Product Description',
             null,
             7,
-            "20131101",
+            '20131101',
         ];
 
         $type = $this->typeFactory->getType($data);

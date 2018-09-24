@@ -40,14 +40,14 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
 
     public function testValidateFailInvalidFromDate()
     {
-        $this->type->valid_from = "21250101";
+        $this->type->valid_from = '21250101';
 
         $this->assertFalse($this->type->validate());
     }
 
     public function testValidateFailInvalidToDate()
     {
-        $this->type->valid_to = "21250101";
+        $this->type->valid_to = '21250101';
 
         $this->assertFalse($this->type->validate());
     }

@@ -52,7 +52,7 @@ class SimpleGenerator implements GeneratorInterface
         $fileHandle = fopen('php://temp', 'w');
 
         if (! $fileHandle) {
-            throw new \RuntimeException("Cannot open temp file handle (php://temp)");
+            throw new \RuntimeException('Cannot open temp file handle (php://temp)');
         }
 
         if (! is_array($data[0])) {

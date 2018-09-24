@@ -26,7 +26,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
                     [
                         'MESSAGE',
                         'E',
-                        "11111",
+                        '11111',
                         'Error Message',
                         1,
                     ],
@@ -36,8 +36,8 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
         $response = new CsvResponse($parser, $responseBody);
 
         $this->assertTrue($response->isError());
-        $this->assertEquals("Error Message", $response->getErrorMessage());
-        $this->assertEquals("11111", $response->getErrorCode());
+        $this->assertEquals('Error Message', $response->getErrorMessage());
+        $this->assertEquals('11111', $response->getErrorCode());
         $this->assertEquals(1, $response->getErrorLine());
 
         // check again (but don't parse again)
