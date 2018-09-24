@@ -12,7 +12,6 @@ namespace MarcusJaschen\Collmex\Response;
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
 use Symfony\Component\Finder\Finder;
-use ZipArchive;
 
 /**
  * Collmex ZIP Response Class
@@ -26,10 +25,10 @@ class ZipResponse implements ResponseInterface
     /**
      * @var string
      */
-    protected $reponseBody;
+    protected $responseBody;
 
     /**
-     * @var \MarcusJaschen\Collmex\Csv\ParserInterface
+     * @var ParserInterface
      */
     protected $responseParser;
 
@@ -39,14 +38,14 @@ class ZipResponse implements ResponseInterface
     protected $extractDirectory;
 
     /**
-     * @param \MarcusJaschen\Collmex\Csv\ParserInterface $responseParser
-     * @param string $reponseBody
+     * @param ParserInterface $responseParser
+     * @param string $responseBody
      *
      * @throws \MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException
      */
-    public function __construct(ParserInterface $responseParser, $reponseBody)
+    public function __construct(ParserInterface $responseParser, $responseBody)
     {
-        $this->reponseBody    = $reponseBody;
+        $this->responseBody   = $responseBody;
         $this->responseParser = $responseParser;
 
         $this->extractFiles();
@@ -102,14 +101,14 @@ class ZipResponse implements ResponseInterface
     protected function extractFiles()
     {
         $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
-        file_put_contents($tmpFilename, $this->reponseBody);
+        file_put_contents($tmpFilename, $this->responseBody);
 
         $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR
                                   . 'collmexphp_extracted_' . basename($tmpFilename);
 
-        $zip = new ZipArchive();
+        $zip = new \ZipArchive();
 
-        if (! $zip->open($tmpFilename)) {
+        if (!$zip->open($tmpFilename)) {
             throw new InvalidZipFileException('Cannot open ZIP archive ' . $tmpFilename);
         }
 
