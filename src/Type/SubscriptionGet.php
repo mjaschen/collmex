@@ -1,5 +1,4 @@
 <?php
-
 namespace MarcusJaschen\Collmex\Type;
 
 /**

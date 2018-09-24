@@ -1,5 +1,4 @@
 <?php
-
 namespace MarcusJaschen\Collmex\Response;
 
 use MarcusJaschen\Collmex\Csv\ParserInterface;
