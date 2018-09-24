@@ -10,6 +10,7 @@ principles.
 ### Changed
 
 - code cleanup with PHP-CS-Fixer. Thanks to @oliverklee!
+- code cleanup, use interfaces where possible, better type annotations in doc blocks, fix typo in attribute name. Thanks to @oliverklee!
 
 ## [0.8.12] - 2018-09-17
 
