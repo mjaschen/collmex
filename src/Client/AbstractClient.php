@@ -1,12 +1,4 @@
 <?php
-/**
- * Abstract Client Class
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
-
 namespace MarcusJaschen\Collmex\Client;
 
 use MarcusJaschen\Collmex\Csv\SimpleGenerator;
