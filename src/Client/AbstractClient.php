@@ -1,4 +1,5 @@
 <?php
+
 namespace MarcusJaschen\Collmex\Client;
 
 use MarcusJaschen\Collmex\Csv\SimpleGenerator;

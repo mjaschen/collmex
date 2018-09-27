@@ -1,4 +1,5 @@
 <?php
+
 namespace MarcusJaschen\Collmex\Filter;
 
 use ForceUTF8\Encoding;
