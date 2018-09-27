@@ -9,6 +9,7 @@ principles.
 
 ### Fixed
 
+- fix Psalm type warnings. Thanks to @oliverklee!
 - add missing required PHP extensions to the `composer.json`. Thanks to @oliverklee!
 
 ### Changed

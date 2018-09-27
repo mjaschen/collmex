@@ -30,7 +30,7 @@ abstract class AbstractType implements JsonSerializable
     protected $data;
 
     /**
-     * @var array
+     * @var bool[]|null
      */
     protected $validationErrors;
 
