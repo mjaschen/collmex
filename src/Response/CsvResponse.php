@@ -41,7 +41,7 @@ class CsvResponse implements ResponseInterface
     protected $data;
 
     /**
-     * @var AbstractType[]
+     * @var AbstractType[]|null
      */
     protected $records;
 
