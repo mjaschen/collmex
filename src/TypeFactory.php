@@ -1,4 +1,5 @@
 <?php
+
 namespace MarcusJaschen\Collmex;
 
 use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
