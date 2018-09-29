@@ -136,7 +136,9 @@ abstract class AbstractType implements JsonSerializable
             return $this->data[$name];
         }
 
-        throw new InvalidFieldNameException("Cannot read field value; field '{$name}' does not exist in class " . get_class($this));
+        throw new InvalidFieldNameException(
+            "Cannot read field value; field '{$name}' does not exist in class " . get_class($this)
+        );
     }
 
     /**
@@ -157,7 +159,9 @@ abstract class AbstractType implements JsonSerializable
             return;
         }
 
-        throw new InvalidFieldNameException("Cannot set field value; field '{$name}' does not exist in class " . get_class($this));
+        throw new InvalidFieldNameException(
+            "Cannot set field value; field '{$name}' does not exist in class " . get_class($this)
+        );
     }
 
     /**
@@ -182,7 +186,7 @@ abstract class AbstractType implements JsonSerializable
      */
     protected function populateData($data)
     {
-        if (! isset($data[0])) {
+        if (!isset($data[0])) {
             $this->assertValidFieldNames($data);
             $this->data = array_merge($this->template, $data);
 

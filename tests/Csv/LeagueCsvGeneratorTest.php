@@ -56,7 +56,7 @@ class LeagueCsvGeneratorTest extends \PHPUnit_Framework_TestCase
         ];
 
         $expected = 'TEST;1;a' . "\n"
-                    . 'MESSAGE;E;11111;"Error Message";123' . "\n";
+            . 'MESSAGE;E;11111;"Error Message";123' . "\n";
 
         $this->assertEquals($expected, $this->generator->generate($data));
     }
@@ -94,7 +94,8 @@ class LeagueCsvGeneratorTest extends \PHPUnit_Framework_TestCase
             'Provision Bikemarkt-Verkauf 279679: "Endura MTR Baggy Short // SALE \\\\" an "bebetz" am 1.1.2016',
         ];
 
-        $expected = 'CMXINV;-1001338;"Provision Bikemarkt-Verkauf 279679: ""Endura MTR Baggy Short // SALE \\\\"" an ""bebetz"" am 1.1.2016"' . PHP_EOL;
+        $expected = 'CMXINV;-1001338;"Provision Bikemarkt-Verkauf 279679: ' .
+            '""Endura MTR Baggy Short // SALE \\\\"" an ""bebetz"" am 1.1.2016"' . PHP_EOL;
 
         $this->assertEquals($expected, $this->generator->generate($data));
     }
