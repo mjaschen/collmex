@@ -126,7 +126,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @param string $name The field name
      *
-     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
+     * @throws InvalidFieldNameException
      *
      * @return mixed
      */
@@ -145,7 +145,7 @@ abstract class AbstractType implements JsonSerializable
      * @param string $name The field name
      * @param mixed $value The new field value
      *
-     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
+     * @throws InvalidFieldNameException
      */
     public function __set($name, $value)
     {
@@ -211,7 +211,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @return void
      *
-     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
+     * @throws InvalidFieldNameException
      */
     private function assertValidFieldNames($data)
     {

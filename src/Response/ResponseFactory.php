@@ -33,8 +33,7 @@ class ResponseFactory
      *
      * @return ZipResponse|CsvResponse
      *
-     * @throws \MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException
-     * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
+     * @throws InvalidResponseMimeTypeException
      */
     public function getResponseInstance()
     {
