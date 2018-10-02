@@ -86,7 +86,6 @@ class LeagueCsvGeneratorTest extends \PHPUnit_Framework_TestCase
     public function testGenerateCsvWithSpecialCharactersWorksAsExpected()
     {
         $this->markTestSkipped('Skipping test for PHP bug 43225');
-        return;
 
         $data = [
             'CMXINV',
