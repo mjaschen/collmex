@@ -25,7 +25,7 @@ class Curl extends AbstractClient implements ClientInterface
      *
      * @return string The response body
      *
-     * @throws Exception\RequestFailedException
+     * @throws RequestFailedException
      */
     public function request($body)
     {

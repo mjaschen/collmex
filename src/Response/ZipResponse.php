@@ -87,9 +87,9 @@ class ZipResponse implements ResponseInterface
     }
 
     /**
-     * @throws \MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException
-     *
      * @return void
+     *
+     * @throws InvalidZipFileException
      */
     protected function extractFiles()
     {
