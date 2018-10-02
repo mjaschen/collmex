@@ -19,6 +19,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 
     /**
      * Registers the package.
+     *
+     * @return void
      */
     public function boot()
     {
@@ -32,6 +34,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 
     /**
      * Register the service provider.
+     *
+     * @return void
      */
     public function register()
     {
@@ -43,6 +47,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 
     /**
      * Registers the HTTP client.
+     *
+     * @return void
      */
     protected function registerClient()
     {
@@ -60,6 +66,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 
     /**
      * Registers the Collmex Request object.
+     *
+     * @return void
      */
     protected function registerRequest()
     {
