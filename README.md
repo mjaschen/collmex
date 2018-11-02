@@ -49,8 +49,11 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `SALES_ORDER_GET`
 - `SHIPMENT_CONFIRM`
 - `SHIPMENT_NOTIFICATION_SEND`
+- `SHIPMENT_ORDERS_GET`
 - `STOCK_AVAILABLE`
 - `STOCK_AVAILABLE_GET`
+- `STOCK_CHANGE`
+- `STOCK_CHANGE_GET`
 - `STOCK_GET`
 - `TRACKING_NUMBER`
 
