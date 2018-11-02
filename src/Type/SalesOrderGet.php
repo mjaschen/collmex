@@ -17,7 +17,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $order_date_end
  * @property $customer_order_id
  * @property $format
- * @property $changed_only
+ * @property $only_changed
  * @property $system_name
  * @property $only_created_by_system
  * @property $letter_paper
@@ -27,8 +27,8 @@ class SalesOrderGet extends AbstractType implements TypeInterface
     const FORMAT_CSV = 0;
     const FORMAT_ZIP = 1;
 
-    const FILTER_ON     = 1;    // useable for 'changed_only' and 'only_created_by_system'
-    const FILTER_OFF    = 0;    // useable for 'changed_only' and 'only_created_by_system'
+    const FILTER_ON     = 1;    // useable for 'only_changed' and 'only_created_by_system'
+    const FILTER_OFF    = 0;    // useable for 'only_changed' and 'only_created_by_system'
 
     const WITH_LETTER_PAPER = 0;
     const NO_LETTER_PAPER   = 1;
@@ -45,7 +45,7 @@ class SalesOrderGet extends AbstractType implements TypeInterface
         'order_date_end'            => null,
         'customer_order_id'         => null,
         'format'                    => null,
-        'changed_only'              => null,
+        'only_changed'              => null,
         'system_name'               => null,    // 10
         'only_created_by_system'    => null,
         'letter_paper'              => null,

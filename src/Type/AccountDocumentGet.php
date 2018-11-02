@@ -22,7 +22,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property string $receipt_date_from
  * @property string $receipt_date_to
  * @property string $include_canceled
- * @property string $changed_only
+ * @property string $only_changed
  * @property string $system_name
  */
 class AccountDocumentGet extends AbstractType implements TypeInterface
@@ -46,7 +46,7 @@ class AccountDocumentGet extends AbstractType implements TypeInterface
         'receipt_date_from' => null,
         'receipt_date_to'   => null,
         'include_canceled'  => null, // 15
-        'changed_only'      => null,
+        'only_changed'      => null,
         'system_name'       => null,
     ];
 
