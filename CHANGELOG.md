@@ -5,12 +5,21 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
-## [unreleased]
+## [0.9.0]
+
+**Warning: Backwards Compatibility Breaking Changes**
+
+### Added
+
+- new type `StockChange` (`STOCK_CHANGE`). Thanks to @Argee88!
+- new type `StockChangeGet` (`STOCK_CHANGE_GET`). Thanks to @Argee88!
+- new type `ShipmentOrdersGet` (`SHIPMENT_ORDERS_GET`). Thanks to @Argee88!
 
 ### Fixed
 
 - fix Psalm type warnings. Thanks to @oliverklee!
 - add missing required PHP extensions to the `composer.json`. Thanks to @oliverklee!
+- field name `quantitiy` → `quantity` in `Delivery` type – **Warning: breaks backwards compatibility!** 
 
 ### Changed
 
