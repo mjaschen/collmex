@@ -1,43 +1,43 @@
 <?xml version="1.0"?>
 <psalm
-    totallyTyped="false"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="/Users/mjaschen/Code/MarcusJaschen/collmex/vendor/vimeo/psalm/src/config.xsd"
+        totallyTyped="false"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="./vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
-        <directory name="src" />
+        <directory name="src"/>
         <ignoreFiles>
-            <file name="src/CollmexServiceProvider.php" />
+            <file name="src/CollmexServiceProvider.php"/>
         </ignoreFiles>
     </projectFiles>
 
     <issueHandlers>
-        <LessSpecificReturnType errorLevel="info" />
+        <LessSpecificReturnType errorLevel="error"/>
 
         <!-- level 3 issues - slightly lazy code writing, but provably low false-negatives -->
-        <DeprecatedMethod errorLevel="info" />
-        <DeprecatedProperty errorLevel="info" />
-        <DeprecatedClass errorLevel="info" />
+        <DeprecatedMethod errorLevel="error"/>
+        <DeprecatedProperty errorLevel="error"/>
+        <DeprecatedClass errorLevel="error"/>
 
         <!-- Don't report MissingClosureReturnType until we've dropped PHP 5.6 -->
-        <MissingClosureReturnType errorLevel="suppress" />
-        <MissingReturnType errorLevel="info" />
-        <MissingPropertyType errorLevel="info" />
-        <InvalidDocblock errorLevel="info" />
-        <MisplacedRequiredParam errorLevel="info" />
+        <MissingClosureReturnType errorLevel="suppress"/>
+        <MissingReturnType errorLevel="error"/>
+        <MissingPropertyType errorLevel="error"/>
+        <InvalidDocblock errorLevel="error"/>
+        <MisplacedRequiredParam errorLevel="error"/>
 
-        <PropertyNotSetInConstructor errorLevel="suppress" />
-        <MissingConstructor errorLevel="info" />
+        <PropertyNotSetInConstructor errorLevel="suppress"/>
+        <MissingConstructor errorLevel="error"/>
+
         <!-- Don't report MissingClosureParamType until we've dropped PHP 5.6 -->
-        <MissingClosureParamType errorLevel="suppress" />
-        <MissingParamType errorLevel="info" />
+        <MissingClosureParamType errorLevel="suppress"/>
+        <MissingParamType errorLevel="suppress"/>
 
-        <DocblockTypeContradiction errorLevel="info" />
-        <RedundantConditionGivenDocblockType errorLevel="info" />
+        <DocblockTypeContradiction errorLevel="error"/>
+        <RedundantConditionGivenDocblockType errorLevel="error"/>
 
-        <UnresolvableInclude errorLevel="info" />
+        <UnresolvableInclude errorLevel="error"/>
 
-        <RawObjectIteration errorLevel="info" />
-
+        <RawObjectIteration errorLevel="error"/>
     </issueHandlers>
 </psalm>

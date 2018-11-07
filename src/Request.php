@@ -1,19 +1,13 @@
 <?php
-/**
- * Collmex API Request
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
 
 namespace MarcusJaschen\Collmex;
 
 use MarcusJaschen\Collmex\Client\ClientInterface;
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Csv\SimpleParser;
+use MarcusJaschen\Collmex\Response\CsvResponse;
 use MarcusJaschen\Collmex\Response\ResponseFactory;
-use MarcusJaschen\Collmex\Response\ResponseInterface;
+use MarcusJaschen\Collmex\Response\ZipResponse;
 
 /**
  * Collmex API Request
@@ -40,13 +34,15 @@ class Request
      */
     public function __construct(ClientInterface $client, ParserInterface $responseParser = null)
     {
-        $this->client = $client;
+        $this->client         = $client;
 
-        if (null === $responseParser) {
-            $this->responseParser = new SimpleParser();
-        } else {
+        if ($responseParser instanceof ParserInterface) {
             $this->responseParser = $responseParser;
+
+            return;
         }
+
+        $this->responseParser = new SimpleParser();
     }
 
     /**
@@ -54,7 +50,7 @@ class Request
      *
      * @param string $body The request body
      *
-     * @return ResponseInterface
+     * @return ZipResponse|CsvResponse
      * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
      * @throws \MarcusJaschen\Collmex\Client\Exception\RequestFailedException
      */

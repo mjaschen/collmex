@@ -3,7 +3,7 @@
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex PurchaseOrderGet Type
+ * Collmex StockChangeGet Type
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @author   René Galle <renegalle.webdevelopment@gmail.com>
@@ -11,32 +11,32 @@ namespace MarcusJaschen\Collmex\Type;
  * @link     https://github.com/mjaschen/collmex
  *
  * @property $type_identifier
- * @property $purchase_order_id
  * @property $client_id
- * @property $supplier_id
  * @property $product_id
- * @property $sent_only
- * @property $return_format
+ * @property $date_from
+ * @property $date_to
+ * @property $customer_id
+ * @property $supplier_id
+ * @property $include_canceled
  * @property $changed_only
  * @property $system_name
- * @property $do_not_use_letter
  */
-class PurchaseOrderGet extends AbstractType implements TypeInterface
+class StockChangeGet extends AbstractType implements TypeInterface
 {
     /**
      * @var array
      */
     protected $template = [
-        'type_identifier'   => 'PURCHASE_ORDER_GET',
-        'purchase_order_id' => null,
-        'client_id'         => null,
-        'supplier_id'       => null,
-        'product_id'        => null,
-        'sent_only'         => null,
-        'return_format'     => null,
-        'changed_only'      => null,
-        'system_name'       => null,
-        'do_not_use_letter' => null,
+        'type_identifier'  => 'STOCK_CHANGE_GET', // 1
+        'client_id'        => null,
+        'product_id'       => null,
+        'date_from'        => null,
+        'date_to'          => null, // 5
+        'customer_id'      => null,
+        'supplier_id'      => null,
+        'include_canceled' => null,
+        'changed_only'     => null,
+        'system_name'      => null, // 10
     ];
 
     /**

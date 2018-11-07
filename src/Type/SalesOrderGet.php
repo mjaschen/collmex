@@ -1,11 +1,4 @@
 <?php
-/**
- * Collmex Customer Order Get Type
- *
- * @author    Jörg Wolfgram <joerg.wolfgram@spectrattack.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
 
 namespace MarcusJaschen\Collmex\Type;
 

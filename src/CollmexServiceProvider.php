@@ -1,12 +1,5 @@
 <?php
-/**
- * Laravel 5 Service Provider for Collmex PHP SDK.
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- *
- * @link      https://github.com/mjaschen/collmex
- */
+
 namespace MarcusJaschen\Collmex;
 
 /**
@@ -26,6 +19,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 
     /**
      * Registers the package.
+     *
+     * @return void
      */
     public function boot()
     {
@@ -39,6 +34,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 
     /**
      * Register the service provider.
+     *
+     * @return void
      */
     public function register()
     {
@@ -50,6 +47,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 
     /**
      * Registers the HTTP client.
+     *
+     * @return void
      */
     protected function registerClient()
     {
@@ -67,6 +66,8 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 
     /**
      * Registers the Collmex Request object.
+     *
+     * @return void
      */
     protected function registerRequest()
     {

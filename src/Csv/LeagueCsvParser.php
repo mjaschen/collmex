@@ -1,15 +1,16 @@
 <?php
 
 namespace MarcusJaschen\Collmex\Csv;
+
 use League\Csv\Reader;
 
 /**
- * CSV Parser Implementation using Keboola CSV Reader
+ * CSV Parser Implementation using the CSV library from The PHP League.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @license  http://www.opensource.org/licenses/mit-license MIT License
  * @link     https://github.com/mjaschen/collmex
- * @link     https://github.com/keboola/php-csv
+ * @link     http://csv.thephpleague.com/
  */
 class LeagueCsvParser implements ParserInterface
 {
@@ -42,11 +43,16 @@ class LeagueCsvParser implements ParserInterface
      */
     public function parse($csv)
     {
-        $input = Reader::createFromString($csv);
+        $reader = Reader::createFromString($csv);
 
-        $input->setDelimiter($this->delimiter);
-        $input->setEnclosure($this->enclosure);
+        $reader->setDelimiter($this->delimiter)
+               ->setEnclosure($this->enclosure);
 
-        return $input->fetchAll();
+        $result = [];
+        foreach ($reader as $key => $record) {
+            $result[$key] = $record;
+        }
+
+        return $result;
     }
 }

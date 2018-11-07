@@ -38,7 +38,7 @@ class TimeIntervalTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertFalse($this->validator->validate(-1));
         $this->assertFalse($this->validator->validate(8));
-        $this->assertFalse($this->validator->validate("Foo"));
+        $this->assertFalse($this->validator->validate('Foo'));
         $this->assertFalse($this->validator->validate(false));
         $this->assertFalse($this->validator->validate(null));
     }

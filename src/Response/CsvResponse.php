@@ -1,16 +1,10 @@
 <?php
-/**
- * Collmex API Response
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
 
 namespace MarcusJaschen\Collmex\Response;
 
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Filter\Windows1252ToUtf8;
+use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\TypeFactory;
 
 /**
@@ -23,7 +17,7 @@ use MarcusJaschen\Collmex\TypeFactory;
 class CsvResponse implements ResponseInterface
 {
     /**
-     * @var \MarcusJaschen\Collmex\Csv\ParserInterface
+     * @var ParserInterface
      */
     protected $parser;
 
@@ -47,14 +41,14 @@ class CsvResponse implements ResponseInterface
     protected $data;
 
     /**
-     * @var array of Type records
+     * @var AbstractType[]|null
      */
     protected $records;
 
     /**
      * Whether the response contains an error message or not
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isError;
 
@@ -77,7 +71,7 @@ class CsvResponse implements ResponseInterface
     protected $errorLine;
 
     /**
-     * @param \MarcusJaschen\Collmex\Csv\ParserInterface $parser
+     * @param ParserInterface $parser
      * @param string $responseBody
      */
     public function __construct(ParserInterface $parser, $responseBody)
@@ -171,7 +165,7 @@ class CsvResponse implements ResponseInterface
     /**
      * Returns an array of all response records as Type objects.
      *
-     * @return array|null
+     * @return AbstractType[]|null
      *
      * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */
@@ -196,7 +190,7 @@ class CsvResponse implements ResponseInterface
      * Returns the Type object of the first record (or null if response
      * contains no records).
      *
-     * @return array|null
+     * @return AbstractType|null
      *
      * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */

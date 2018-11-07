@@ -5,6 +5,69 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.9.0]
+
+**Warning: Backwards Compatibility Breaking Changes**
+
+### Added
+
+- new type `StockChange` (`STOCK_CHANGE`). Thanks to @Argee88!
+- new type `StockChangeGet` (`STOCK_CHANGE_GET`). Thanks to @Argee88!
+- new type `ShipmentOrdersGet` (`SHIPMENT_ORDERS_GET`). Thanks to @Argee88!
+
+### Fixed
+
+- fix Psalm type warnings. Thanks to @oliverklee!
+- add missing required PHP extensions to the `composer.json`. Thanks to @oliverklee!
+- field name `quantitiy` → `quantity` in `Delivery` type – **Warning: breaks backwards compatibility!** 
+
+### Changed
+
+- misc. code cleanups. Thanks to @oliverklee!
+
+## [0.8.12] - 2018-09-17
+
+### Added
+
+- support for League CSV 9.x alongside 8.x
+
+## [0.8.11] - 2018-09-03
+
+### Changed
+
+- update `DeliveryGet` to match fields with the documentation
+- update README with an example on how to use a custom CSV parser for API responses
+
+## [0.8.10] - 2018-08-14
+
+### Added
+
+- new type `ShipmentConfirm` (`SHIPMENT_CONFIRM`). Thanks to @Argee88!
+
+## [0.8.9] - 2018-07-19
+
+### Added
+
+- new type `SendShipmentNotification` (`SHIPMENT_NOTIFICATION_SEND`). Thanks to @Argee88!
+
+## [0.8.8] - 2018-06-29
+
+### Added
+
+- new field `output_required` in `InvoiceGet` type
+
+## [0.8.7] - 2018-06-26
+
+### Added
+
+- class constants for output media (type `InvoiceOutputSet`)
+
+## [0.8.6] - 2018-06-26
+
+### Added
+
+- new type `InvoiceOutputSet` (`INVOICE_OUTPUT_SET`)
+
 ## [0.8.5] - 2018-06-08
 
 ### Added
@@ -95,7 +158,7 @@ principles.
 
 ### Changed
 
-- Updated Invoice type fields to match API. Thanks to @Argee88! 
+- Updated Invoice type fields to match API. Thanks to @Argee88!
 
 ## [0.7.1] - 2018-01-25
 

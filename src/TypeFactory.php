@@ -1,11 +1,4 @@
 <?php
-/**
- * Type Factory for Collmex Response Data
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
 
 namespace MarcusJaschen\Collmex;
 
@@ -21,16 +14,16 @@ use MarcusJaschen\Collmex\Type\Login;
 use MarcusJaschen\Collmex\Type\Member;
 use MarcusJaschen\Collmex\Type\Message;
 use MarcusJaschen\Collmex\Type\NewObject;
+use MarcusJaschen\Collmex\Type\OpenItem;
 use MarcusJaschen\Collmex\Type\Product;
 use MarcusJaschen\Collmex\Type\ProductPrice;
+use MarcusJaschen\Collmex\Type\ProjectStaff;
 use MarcusJaschen\Collmex\Type\PurchaseOrder;
 use MarcusJaschen\Collmex\Type\Revenue;
 use MarcusJaschen\Collmex\Type\Stock;
 use MarcusJaschen\Collmex\Type\StockAvailable;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
-use MarcusJaschen\Collmex\Type\OpenItem;
-use MarcusJaschen\Collmex\Type\ProjectStaff;
 
 /**
  * Type Factory for Collmex Response Data

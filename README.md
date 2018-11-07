@@ -36,6 +36,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `CUSTOMER_GET`
 - `DELIVERY_GET`
 - `INVOICE_GET`
+- `INVOICE_OUTPUT_SET`
 - `MEMBER_GET`
 - `OPEN_ITEM`
 - `OPEN_ITEMS_GET`
@@ -46,8 +47,13 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `PROJECT_STAFF_GET`
 - `PURCHASE_ORDER_GET`
 - `SALES_ORDER_GET`
+- `SHIPMENT_CONFIRM`
+- `SHIPMENT_NOTIFICATION_SEND`
+- `SHIPMENT_ORDERS_GET`
 - `STOCK_AVAILABLE`
 - `STOCK_AVAILABLE_GET`
+- `STOCK_CHANGE`
+- `STOCK_CHANGE_GET`
 - `STOCK_GET`
 - `TRACKING_NUMBER`
 
@@ -86,6 +92,8 @@ version, you can install older versions of the Collmex PHP SDK:
 - for PHP 5.3 compatibility: use the 0.3.x branch (`composer require mjaschen/collmex:~0.3.0`)
 
 New features will only go into the master.
+
+Starting 2019-01-01, the Collmex PHP SDK will require at least PHP 7.0.
 
 ## Usage/Examples
 
@@ -179,6 +187,31 @@ if ($collmexResponse->isError()) {
         var_dump($record->getData());
     }
 }
+```
+
+### Use a different CSV parser for the response data
+
+The Collmex PHP SDK uses PHP's built-in CSV-parsing capabilities. We've had at 
+least one case when `fgetcsv()` didn't work as expected. Fortunately it's
+possible to use any CSV parser which implements 
+`MarcusJaschen\Collmex\Csv\ParserInterface` (Collmex PHP SDK ships with
+`SimpleParser` (default) and `LeagueCsvParser`). To use a different parser, just
+inject it when creating the `Request` instance:
+
+```php
+<?php
+
+use MarcusJaschen\Collmex\Client\Curl as CurlClient;
+use MarcusJaschen\Collmex\Csv\LeagueCsvParser;
+use MarcusJaschen\Collmex\Request;
+
+// initialize HTTP client
+$collmexClient = new CurlClient('USER', 'PASSWORD', 'CUSTOMER_ID');
+
+// create request object with a custom CSV parser
+$collmexRequest = new Request($collmexClient, new LeagueCsvParser());
+
+// ...
 ```
 
 ## Notes

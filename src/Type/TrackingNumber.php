@@ -1,12 +1,4 @@
 <?php
-/**
- * Collmex TrackingNumber Type
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @author    René Galle <renegalle.webdevelopment@gmail.com>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
 
 namespace MarcusJaschen\Collmex\Type;
 

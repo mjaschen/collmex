@@ -1,11 +1,4 @@
 <?php
-/**
- * Abstract Collmex Type Class
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
 
 namespace MarcusJaschen\Collmex\Type;
 
@@ -38,7 +31,7 @@ abstract class AbstractType implements JsonSerializable
     protected $data;
 
     /**
-     * @var array
+     * @var bool[]|null
      */
     protected $validationErrors;
 
@@ -133,7 +126,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @param string $name The field name
      *
-     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
+     * @throws InvalidFieldNameException
      *
      * @return mixed
      */
@@ -143,19 +136,21 @@ abstract class AbstractType implements JsonSerializable
             return $this->data[$name];
         }
 
-        throw new InvalidFieldNameException("Cannot read field value; field '{$name}' does not exist in class " . get_class($this));
+        throw new InvalidFieldNameException(
+            "Cannot read field value; field '{$name}' does not exist in class " . get_class($this)
+        );
     }
 
     /**
      * @param string $name The field name
      * @param mixed $value The new field value
      *
-     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
+     * @throws InvalidFieldNameException
      */
     public function __set($name, $value)
     {
         if ($name == 'type_identifier') {
-            throw new InvalidFieldNameException("Cannot overwrite type identifier");
+            throw new InvalidFieldNameException('Cannot overwrite type identifier');
         }
 
         if (array_key_exists($name, $this->template)) {
@@ -164,7 +159,9 @@ abstract class AbstractType implements JsonSerializable
             return;
         }
 
-        throw new InvalidFieldNameException("Cannot set field value; field '{$name}' does not exist in class " . get_class($this));
+        throw new InvalidFieldNameException(
+            "Cannot set field value; field '{$name}' does not exist in class " . get_class($this)
+        );
     }
 
     /**
@@ -189,7 +186,7 @@ abstract class AbstractType implements JsonSerializable
      */
     protected function populateData($data)
     {
-        if (! isset($data[0])) {
+        if (!isset($data[0])) {
             $this->assertValidFieldNames($data);
             $this->data = array_merge($this->template, $data);
 
@@ -214,7 +211,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @return void
      *
-     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
+     * @throws InvalidFieldNameException
      */
     private function assertValidFieldNames($data)
     {

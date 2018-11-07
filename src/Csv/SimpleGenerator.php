@@ -1,11 +1,4 @@
 <?php
-/**
- * CSV Generator Class
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
 
 namespace MarcusJaschen\Collmex\Csv;
 
@@ -52,7 +45,7 @@ class SimpleGenerator implements GeneratorInterface
         $fileHandle = fopen('php://temp', 'w');
 
         if (! $fileHandle) {
-            throw new \RuntimeException("Cannot open temp file handle (php://temp)");
+            throw new \RuntimeException('Cannot open temp file handle (php://temp)');
         }
 
         if (! is_array($data[0])) {

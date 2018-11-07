@@ -1,11 +1,4 @@
 <?php
-/**
- * curl Client Class
- *
- * @author    Marcus Jaschen <mail@marcusjaschen.de>
- * @license   http://www.opensource.org/licenses/mit-license MIT License
- * @link      https://github.com/mjaschen/collmex
- */
 
 namespace MarcusJaschen\Collmex\Client;
 
@@ -32,7 +25,7 @@ class Curl extends AbstractClient implements ClientInterface
      *
      * @return string The response body
      *
-     * @throws Exception\RequestFailedException
+     * @throws RequestFailedException
      */
     public function request($body)
     {
