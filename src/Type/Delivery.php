@@ -77,6 +77,8 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $quantity
  * @property $customer_order_position
  * @property $ean
+ * @property $handover_required
+ * @property $last_handover
  */
 class Delivery extends AbstractType implements TypeInterface
 {
@@ -148,9 +150,11 @@ class Delivery extends AbstractType implements TypeInterface
         'product_id'                   => null,
         'product_description'          => null,
         'unit'                         => null,
-        'quantity'                    => null, // 65
+        'quantity'                     => null, // 65
         'customer_order_position'      => null,
-        'ean'                          => null, // 67
+        'ean'                          => null,
+        'handover_required'            => null,
+        'last_handover'                => null, // 69
     ];
 
     /**
