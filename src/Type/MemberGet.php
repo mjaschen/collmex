@@ -17,7 +17,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $zipcode
  * @property $address_group_id
  * @property $exited_too
- * @property $changed_only
+ * @property $only_changed
  * @property $system_name
  */
 class MemberGet extends AbstractType implements TypeInterface
@@ -33,7 +33,7 @@ class MemberGet extends AbstractType implements TypeInterface
         'zipcode'          => null,
         'address_group_id' => null,
         'exited_too'       => null,
-        'changed_only'     => null,
+        'only_changed'     => null,
         'system_name'      => null,
     ];
 
