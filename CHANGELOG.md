@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.10.0]
+
+### Added
+
+- add PHP 7.3 to the list of supported versions in Composer config 
+
 ## [0.9.2]
 
 ### Fixed
