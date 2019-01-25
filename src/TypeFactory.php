@@ -89,6 +89,8 @@ class TypeFactory
                 return new PurchaseOrder($data);
             case 'OPEN_ITEM':
                 return new OpenItem($data);
+            case 'PRICE_GROUP':
+                return new PriceGroup($data);
         }
 
         throw new InvalidTypeIdentifierException("Invalid Type Identifier: {$data[0]}");
