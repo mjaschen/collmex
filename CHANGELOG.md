@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.10.1]
+
+### Added
+
+- new type `PriceGroupsGet` (`PRICE_GROUPS_GET`). Thanks to @Argee88!
+- new type `PriceGroup` (`PRICE_GROUP`). Thanks to @Argee88!
+
 ## [0.10.0]
 
 ### Added

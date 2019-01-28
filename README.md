@@ -41,6 +41,8 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `OPEN_ITEM`
 - `OPEN_ITEMS_GET`
 - `PAYMENT_CONFIRMATION`
+- `PRICE_GROUP`
+- `PRICE_GROUPS_GET`
 - `PRODUCT_GET`
 - `PRODUCT_PRICE_GET`
 - `PROJECT_STAFF`
