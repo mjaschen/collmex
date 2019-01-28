@@ -15,6 +15,7 @@ use MarcusJaschen\Collmex\Type\Member;
 use MarcusJaschen\Collmex\Type\Message;
 use MarcusJaschen\Collmex\Type\NewObject;
 use MarcusJaschen\Collmex\Type\OpenItem;
+use MarcusJaschen\Collmex\Type\PriceGroup;
 use MarcusJaschen\Collmex\Type\Product;
 use MarcusJaschen\Collmex\Type\ProductPrice;
 use MarcusJaschen\Collmex\Type\ProjectStaff;
