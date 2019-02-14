@@ -18,6 +18,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property int $sent_to_shipment_company
  * @property string $tracking_code
  * @property string $delivery_date_from
+ * @property string $not_confirmed
  */
 class ShipmentConfirm extends AbstractType implements TypeInterface
 {
@@ -33,6 +34,7 @@ class ShipmentConfirm extends AbstractType implements TypeInterface
         'sent_to_shipment_company' => null,
         'use_tracking_code'        => null,
         'delivery_date_from'       => null,
+        'not_confirmed'            => null,
     ];
 
     /**
