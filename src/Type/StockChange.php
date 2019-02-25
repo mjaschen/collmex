@@ -76,8 +76,8 @@ class StockChange extends AbstractType implements TypeInterface
         'reserved_3'                  => null,
         'reserved_4'                  => null,
         'reserved_5'                  => null,
-        'supplier_order_id'           => null,
-        'supplier_order_position'     => null, // 20
+        'purchase_order_id'           => null,
+        'purchase_order_position'     => null, // 20
         'delivery_id'                 => null,
         'delivery_position'           => null,
         'production_order_id'         => null,
