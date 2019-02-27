@@ -23,6 +23,7 @@ use MarcusJaschen\Collmex\Type\PurchaseOrder;
 use MarcusJaschen\Collmex\Type\Revenue;
 use MarcusJaschen\Collmex\Type\Stock;
 use MarcusJaschen\Collmex\Type\StockAvailable;
+use MarcusJaschen\Collmex\Type\StockChange;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
 
@@ -92,6 +93,8 @@ class TypeFactory
                 return new OpenItem($data);
             case 'PRICE_GROUP':
                 return new PriceGroup($data);
+            case 'STOCK_CHANGE':
+                return new StockChange($data);
         }
 
         throw new InvalidTypeIdentifierException("Invalid Type Identifier: {$data[0]}");
