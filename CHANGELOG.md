@@ -5,6 +5,21 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.11.0]
+
+**Warning: Backwards Compatibility Breaking Changes**
+
+### Added
+
+- support for `StockChange` in `TypeFactory`. Thanks to @Argee88!
+- new field `not_confirmed` in `ShipmentConfirm`
+
+### Changed
+
+- field names renamed in `StockChange`:
+  - `supplier_order_id` → `purchase_order_id`
+  - `supplier_order_position` → `purchase_order_position`
+
 ## [0.10.1]
 
 ### Added
