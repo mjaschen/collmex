@@ -19,5 +19,5 @@ interface ValidatorInterface
      *
      * @return bool Validation success
      */
-    public function validate($value, $options = []);
+    public function validate($value, array $options = []): bool;
 }

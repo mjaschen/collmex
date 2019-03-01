@@ -48,7 +48,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      */
-    public function __construct($data, GeneratorInterface $generator = null)
+    public function __construct(array $data, GeneratorInterface $generator = null)
     {
         $this->populateData($data);
 
@@ -72,7 +72,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @return string CSV lines
      */
-    public function getCsv()
+    public function getCsv(): string
     {
         return $this->csvGenerator->generate([$this->data]);
     }
@@ -82,7 +82,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @return array
      */
-    public function getData()
+    public function getData(): array
     {
         return $this->toArray();
     }
@@ -90,7 +90,7 @@ abstract class AbstractType implements JsonSerializable
     /**
      * @return array
      */
-    public function toArray()
+    public function toArray(): array
     {
         return $this->data;
     }
@@ -98,7 +98,7 @@ abstract class AbstractType implements JsonSerializable
     /**
      * @return string
      */
-    public function getJSON()
+    public function getJSON(): string
     {
         return $this->toJSON();
     }
@@ -108,7 +108,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @return string
      */
-    public function toJSON()
+    public function toJSON(): string
     {
         return json_encode($this->data);
     }
@@ -116,7 +116,7 @@ abstract class AbstractType implements JsonSerializable
     /**
      * @return array
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return $this->data;
     }
@@ -130,7 +130,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @return mixed
      */
-    public function __get($name)
+    public function __get(string $name)
     {
         if (isset($this->data[$name])) {
             return $this->data[$name];
@@ -147,7 +147,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @throws InvalidFieldNameException
      */
-    public function __set($name, $value)
+    public function __set(string $name, $value)
     {
         if ($name == 'type_identifier') {
             throw new InvalidFieldNameException('Cannot overwrite type identifier');
@@ -169,7 +169,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @return bool
      */
-    public function __isset($name)
+    public function __isset(string $name)
     {
         return isset($this->data[$name]);
     }
@@ -184,7 +184,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      */
-    protected function populateData($data)
+    protected function populateData(array $data)
     {
         if (!isset($data[0])) {
             $this->assertValidFieldNames($data);
@@ -213,7 +213,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @throws InvalidFieldNameException
      */
-    private function assertValidFieldNames($data)
+    private function assertValidFieldNames(array $data)
     {
         $fieldNamesDiff = array_diff_key($data, $this->template);
 

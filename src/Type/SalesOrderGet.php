@@ -56,7 +56,7 @@ class SalesOrderGet extends AbstractType implements TypeInterface
      *
      * @return bool Validation success
      */
-    public function validate()
+    public function validate(): bool
     {
         return true;
     }

@@ -26,7 +26,7 @@ class SimpleParser implements ParserInterface
      * @param string $delimiter
      * @param string $enclosure
      */
-    public function __construct($delimiter = ';', $enclosure = '"')
+    public function __construct(string $delimiter = ';',string  $enclosure = '"')
     {
         $this->delimiter = $delimiter;
         $this->enclosure = $enclosure;
@@ -37,7 +37,7 @@ class SimpleParser implements ParserInterface
      *
      * @return array
      */
-    public function parse($csv)
+    public function parse(string $csv): array
     {
         $tmpHandle = tmpfile();
         fwrite($tmpHandle, $csv);

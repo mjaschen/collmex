@@ -25,7 +25,7 @@ class SimpleGenerator implements GeneratorInterface
      * @param string $delimiter
      * @param string $enclosure
      */
-    public function __construct($delimiter = ';', $enclosure = '"')
+    public function __construct(string $delimiter = ';', string $enclosure = '"')
     {
         $this->delimiter = $delimiter;
         $this->enclosure = $enclosure;
@@ -36,11 +36,10 @@ class SimpleGenerator implements GeneratorInterface
      *
      * @param array $data
      *
-     * @throws \RuntimeException
-     *
      * @return string
+     * @throws \RuntimeException
      */
-    public function generate(array $data)
+    public function generate(array $data): string
     {
         $fileHandle = fopen('php://temp', 'w');
 

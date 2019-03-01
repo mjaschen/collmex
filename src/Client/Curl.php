@@ -27,7 +27,7 @@ class Curl extends AbstractClient implements ClientInterface
      *
      * @throws RequestFailedException
      */
-    public function request($body)
+    public function request(string $body): string
     {
         $this->initCurl();
 
@@ -81,11 +81,11 @@ class Curl extends AbstractClient implements ClientInterface
     /**
      * Prepend the login credentials to the request body.
      *
-     * @param $body
+     * @param string $body
      *
      * @return string
      */
-    protected function buildRequestBody($body)
+    protected function buildRequestBody(string $body): string
     {
         return $this->getLoginLine() . $body;
     }

@@ -22,7 +22,7 @@ class ResponseFactory
      * @param string $responseBody
      * @param \MarcusJaschen\Collmex\Csv\ParserInterface $responseParser
      */
-    public function __construct($responseBody, ParserInterface $responseParser)
+    public function __construct(string $responseBody, ParserInterface $responseParser)
     {
         $this->responseBody   = $responseBody;
         $this->responseParser = $responseParser;
@@ -35,7 +35,7 @@ class ResponseFactory
      *
      * @throws InvalidResponseMimeTypeException
      */
-    public function getResponseInstance()
+    public function getResponseInstance(): ResponseInterface
     {
         try {
             $mimeType = $this->getResponseMimeType();
@@ -53,7 +53,7 @@ class ResponseFactory
     /**
      * Determines MIME type of response body.
      *
-     * @return null|string
+     * @return string|null
      *
      * @throws \Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException
      */

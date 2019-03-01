@@ -54,12 +54,12 @@ class CsvResponse implements ResponseInterface
 
     /**
      * Collmex error-code
-     * @var string
+     * @var string|null
      */
     protected $errorCode;
 
     /**
-     * @var string
+     * @var string|null
      */
     protected $errorMessage;
 
@@ -74,7 +74,7 @@ class CsvResponse implements ResponseInterface
      * @param ParserInterface $parser
      * @param string $responseBody
      */
-    public function __construct(ParserInterface $parser, $responseBody)
+    public function __construct(ParserInterface $parser, string $responseBody)
     {
         $this->parser      = $parser;
         $this->responseRaw = $responseBody;
@@ -101,7 +101,7 @@ class CsvResponse implements ResponseInterface
      *
      * @return bool
      */
-    public function isError()
+    public function isError(): bool
     {
         // do not process the response data (again) if an error was
         // already detected
@@ -129,7 +129,7 @@ class CsvResponse implements ResponseInterface
     }
 
     /**
-     * @return string
+     * @return string|null
      */
     public function getErrorMessage()
     {
@@ -137,7 +137,7 @@ class CsvResponse implements ResponseInterface
     }
 
     /**
-     * @return string
+     * @return string|null
      */
     public function getErrorCode()
     {
@@ -147,7 +147,7 @@ class CsvResponse implements ResponseInterface
     /**
      * @return int
      */
-    public function getErrorLine()
+    public function getErrorLine(): int
     {
         return $this->errorLine;
     }
@@ -157,7 +157,7 @@ class CsvResponse implements ResponseInterface
      *
      * @return string
      */
-    public function getResponseRaw()
+    public function getResponseRaw(): string
     {
         return $this->responseRaw;
     }
@@ -229,7 +229,7 @@ class CsvResponse implements ResponseInterface
      *
      * @return array
      */
-    protected function convertEncodingFromCollmex($data)
+    protected function convertEncodingFromCollmex(array $data): array
     {
         $filter = new Windows1252ToUtf8();
 

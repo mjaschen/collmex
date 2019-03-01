@@ -29,7 +29,7 @@ class Login extends AbstractType implements TypeInterface
      *
      * @return bool Validation success
      */
-    public function validate()
+    public function validate(): bool
     {
         return ! empty($this->data['user']) && ! empty($this->data['password']);
     }
