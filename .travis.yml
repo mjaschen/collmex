@@ -43,10 +43,10 @@ script:
   echo "Linting all PHP files";
   composer ci:lint;
 
-#- >
-#  echo;
-#  echo "Running the Psalm static analyzer";
-#  composer ci:psalm;
+- >
+  echo;
+  echo "Running the Psalm static analyzer";
+  composer ci:psalm;
 
 - >
   echo;
