@@ -24,13 +24,13 @@ class Request
     protected $client;
 
     /**
-     * @var Csv\ParserInterface
+     * @var ParserInterface
      */
     protected $responseParser;
 
     /**
      * @param ClientInterface $client
-     * @param Csv\ParserInterface $responseParser
+     * @param ParserInterface $responseParser
      */
     public function __construct(ClientInterface $client, ParserInterface $responseParser = null)
     {
@@ -54,7 +54,7 @@ class Request
      * @throws \MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException
      * @throws \MarcusJaschen\Collmex\Client\Exception\RequestFailedException
      */
-    public function send($body)
+    public function send(string $body)
     {
         $response = $this->client->request($body);
 

@@ -54,7 +54,7 @@ class Subscription extends AbstractType implements TypeInterface
      *
      * @return bool Validation success
      */
-    public function validate()
+    public function validate(): bool
     {
         $dateOrEmptyValidator = new \MarcusJaschen\Collmex\Type\Validator\DateOrEmpty();
 

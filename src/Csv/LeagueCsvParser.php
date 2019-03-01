@@ -28,7 +28,7 @@ class LeagueCsvParser implements ParserInterface
      * @param string $delimiter
      * @param string $enclosure
      */
-    public function __construct($delimiter = ';', $enclosure = '"')
+    public function __construct(string $delimiter = ';',string  $enclosure = '"')
     {
         $this->delimiter = $delimiter;
         $this->enclosure = $enclosure;
@@ -41,7 +41,7 @@ class LeagueCsvParser implements ParserInterface
      *
      * @throws \InvalidArgumentException
      */
-    public function parse($csv)
+    public function parse(string $csv): array
     {
         $reader = Reader::createFromString($csv);
 

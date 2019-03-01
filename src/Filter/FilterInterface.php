@@ -16,17 +16,19 @@ interface FilterInterface
      *
      * @return string
      */
-    public function filter($input);
+    public function filter(string $input): string;
 
     /**
      * @param string $text
+     *
      * @return string
      */
-    public function filterString($text);
+    public function filterString(string $text): string;
 
     /**
      * @param array $input
+     *
      * @return array
      */
-    public function filterArray(array $input);
+    public function filterArray(array $input): array;
 }

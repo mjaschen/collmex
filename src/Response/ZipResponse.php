@@ -4,6 +4,7 @@ namespace MarcusJaschen\Collmex\Response;
 
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
+use PHP_CodeSniffer\Reports\Csv;
 use Symfony\Component\Finder\Finder;
 
 /**
@@ -36,7 +37,7 @@ class ZipResponse implements ResponseInterface
      *
      * @throws \MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException
      */
-    public function __construct(ParserInterface $responseParser, $responseBody)
+    public function __construct(ParserInterface $responseParser, string $responseBody)
     {
         $this->responseBody   = $responseBody;
         $this->responseParser = $responseParser;
@@ -53,7 +54,7 @@ class ZipResponse implements ResponseInterface
      *
      * @throws \InvalidArgumentException
      */
-    public function getFilesByType($type = 'pdf')
+    public function getFilesByType(string $type = 'pdf'): Finder
     {
         $finder = new Finder();
 

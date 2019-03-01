@@ -202,7 +202,7 @@ class Product extends AbstractType implements TypeInterface
      *
      * @return bool Validation success
      */
-    public function validate()
+    public function validate(): bool
     {
         // TODO: Implement validate() method.
         return true;

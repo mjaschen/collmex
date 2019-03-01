@@ -41,7 +41,7 @@ abstract class AbstractClient
      * @param string $password
      * @param string $customer
      */
-    public function __construct($user, $password, $customer)
+    public function __construct(string $user,string  $password, string $customer)
     {
         $this->user        = $user;
         $this->password    = $password;
@@ -55,7 +55,7 @@ abstract class AbstractClient
      *
      * @return string
      */
-    protected function convertEncodingForCollmex($text)
+    protected function convertEncodingForCollmex(string $text): string
     {
         $filter = new Utf8ToWindows1252();
 
@@ -68,7 +68,7 @@ abstract class AbstractClient
      *
      * @return string
      */
-    protected function getLoginLine()
+    protected function getLoginLine(): string
     {
         $csvGenerator = new SimpleGenerator();
 

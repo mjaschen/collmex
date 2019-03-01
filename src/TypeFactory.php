@@ -46,7 +46,7 @@ class TypeFactory
      *
      * @return Type\AbstractType
      */
-    public function getType($data)
+    public function getType(array $data): Type\AbstractType
     {
         switch ($data[0]) {
             case 'LOGIN':

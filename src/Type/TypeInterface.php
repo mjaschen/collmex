@@ -16,5 +16,5 @@ interface TypeInterface
      *
      * @return bool Validation success
      */
-    public function validate();
+    public function validate(): bool;
 }

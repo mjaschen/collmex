@@ -18,5 +18,5 @@ interface GeneratorInterface
      *
      * @return string
      */
-    public function generate(array $data);
+    public function generate(array $data): string;
 }
