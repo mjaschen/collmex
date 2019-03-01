@@ -19,7 +19,7 @@
         "issues": "https://github.com/mjaschen/collmex/issues"
     },
     "require": {
-        "php": "^5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0",
+        "php": "~7.0 || ~7.1 || ~7.2 || ~7.3",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-zip": "*",
@@ -29,7 +29,7 @@
     },
     "require-dev": {
         "laravel/framework": "^5.4",
-        "league/csv": "^8.0 || ^9.0",
+        "league/csv": "^9.1",
         "mockery/mockery": "^1.0",
         "phpunit/phpunit": "^5.7.26",
         "roave/security-advisories": "dev-master",
