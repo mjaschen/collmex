@@ -49,6 +49,12 @@
             "MarcusJaschen\\Collmex\\Tests\\": "tests/"
         }
     },
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        }
+    },
     "scripts": {
         "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
         "ci:sniff": "./vendor/bin/phpcs --standard=PSR2,PSR12 config/ src/ tests/",
