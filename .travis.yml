@@ -3,7 +3,6 @@ sudo: false
 language: php
 
 php:
-- 5.6
 - 7.0
 - 7.1
 - 7.2
@@ -26,10 +25,10 @@ install:
   echo;
   if [ "$DEPENDENCIES" = "latest" ]; then
     echo "Installing the latest dependencies";
-    composer update --with-dependencies --prefer-stable --prefer-dist
+    composer update --with-dependencies
   else
     echo "Installing the lowest dependencies";
-    composer update --with-dependencies --prefer-stable --prefer-dist --prefer-lowest
+    composer update --with-dependencies --prefer-lowest
   fi;
   composer show;
 
