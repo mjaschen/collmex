@@ -2,7 +2,9 @@
 
 namespace MarcusJaschen\Collmex\Tests\Type;
 
+use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\Subscription;
+use MarcusJaschen\Collmex\Type\TypeInterface;
 
 class SubscriptionTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,17 +17,42 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
     {
         $this->type = new Subscription(
             [
-                'customer_id'         => '12345',
-                'client_id'           => '1',
-                'valid_from'          => '20130901',
-                'valid_to'            => '20140831',
-                'product_id'          => '1',
+                'customer_id' => '12345',
+                'client_id' => '1',
+                'valid_from' => '20130901',
+                'valid_to' => '20140831',
+                'product_id' => '1',
                 'product_description' => null,
-                'price'               => null,
-                'interval'            => Subscription::INTERVAL_MONTH,
-                'next_invoice'        => null,
+                'price' => null,
+                'interval' => Subscription::INTERVAL_MONTH,
+                'next_invoice' => null,
             ]
         );
+    }
+
+    public function tearDown()
+    {
+        unset($this->type);
+    }
+
+    /**
+     * @test
+     */
+    public function isAbstractType()
+    {
+        $subject = new Subscription([]);
+
+        self::assertInstanceOf(AbstractType::class, $subject);
+    }
+
+    /**
+     * @test
+     */
+    public function implementsTypeInterface()
+    {
+        $subject = new Subscription([]);
+
+        self::assertInstanceOf(TypeInterface::class, $subject);
     }
 
     public function testValidateSuccess()
