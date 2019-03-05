@@ -1,7 +1,7 @@
 # Collmex API PHP SDK
 
-- [Collmex on TravisCI][]
-- [Collmex on Packagist][]
+- [Collmex on TravisCI]
+- [Collmex on Packagist]
 
 This library provides a wrapper for the Collmex API. It's not complete yet,
 some record types (and maybe some features) are missing.
@@ -71,6 +71,7 @@ If you want to use the included Laravel service provider
 `CollmexServiceProvider`, add it to the `config/app.php` providers array:
 
 ```php
+<?php
 return [
 
     // ...
@@ -219,8 +220,9 @@ $collmexRequest = new Request($collmexClient, new LeagueCsvParser());
 
 Collmex expects all strings encoded in code page 1252 (Windows) while the
 Collmex PHP SDK expects all inputs as UTF-8 and outputs everything as UTF-8.
-The conversion of string encodings is done transparently before sending a
-request to the Collmex API and after receiving the response from the API.
+The conversion of string encodings is done transparently with the [forceutf8]
+library before sending a request to the Collmex API and after receiving the
+response from the API.
 
 ## Development
 
@@ -229,11 +231,11 @@ request to the Collmex API and after receiving the response from the API.
 To run checks and tests, it's the easiest to use the provided Composer scripts:
 
 - lint PHP files for syntax errors: `composer ci:lint`
-- run static analysis with [Psalm](https://github.com/vimeo/psalm) and report
+- run static analysis with [Psalm] and report
   errors: `composer ci:psalm`
 - run unit tests with PHPUnit: `composer ci:tests`
 - check the code style with
-  [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer):
+  [PHP_CodeSniffer]:
   `composer ci:sniff`
 
 To run all checks and tests at once, just use `composer ci`.
@@ -252,12 +254,10 @@ Psalm:
 
 ## Collmex API Documentation
 
-https://www.collmex.de/cgi-bin/cgi.exe?1005,1,help,api
-
-## Contributions
-
-- [String Encoding Converter/Fixer](https://github.com/neitanod/forceutf8) by [Sebastián Grignoli](https://github.com/neitanod)
+<https://www.collmex.de/cgi-bin/cgi.exe?1005,1,help,api>
 
 [Collmex on TravisCI]: https://travis-ci.org/mjaschen/collmex
 [Collmex on Packagist]: https://packagist.org/packages/mjaschen/collmex
+[forceutf8]: https://github.com/neitanod/forceutf8
+[PHP_CodeSniffer]: https://github.com/squizlabs/PHP_CodeSniffer
 [Psalm]: https://github.com/vimeo/psalm
