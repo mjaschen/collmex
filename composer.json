@@ -19,7 +19,7 @@
         "issues": "https://github.com/mjaschen/collmex/issues"
     },
     "require": {
-        "php": "~7.0 || ~7.1 || ~7.2 || ~7.3",
+        "php": "~7.1 || ~7.2 || ~7.3",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-zip": "*",
