@@ -11,14 +11,9 @@ class SimpleGeneratorTest extends \PHPUnit_Framework_TestCase
      */
     protected $generator;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->generator = new SimpleGenerator(';', '"');
-    }
-
-    public function tearDown()
-    {
-        unset($this->generator);
     }
 
     public function testGenerateCsvOneLine()

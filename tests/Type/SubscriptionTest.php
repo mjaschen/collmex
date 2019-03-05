@@ -11,7 +11,7 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
      */
     protected $type;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->type = new Subscription(
             [
@@ -26,11 +26,6 @@ class SubscriptionTest extends \PHPUnit_Framework_TestCase
                 'next_invoice'        => null,
             ]
         );
-    }
-
-    public function tearDown()
-    {
-        unset($this->type);
     }
 
     public function testValidateSuccess()

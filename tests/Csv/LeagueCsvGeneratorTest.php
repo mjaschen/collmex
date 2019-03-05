@@ -11,14 +11,9 @@ class LeagueCsvGeneratorTest extends \PHPUnit_Framework_TestCase
      */
     protected $generator;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->generator = new LeagueCsvGenerator(';', '"');
-    }
-
-    public function tearDown()
-    {
-        unset($this->generator);
     }
 
     public function testGenerateCsvOneLine()

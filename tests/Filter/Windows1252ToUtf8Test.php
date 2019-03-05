@@ -11,14 +11,9 @@ class Windows1252ToUtf8Test extends \PHPUnit_Framework_TestCase
      */
     protected $filter;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->filter = new Windows1252ToUtf8();
-    }
-
-    public function tearDown()
-    {
-        unset($this->filter);
     }
 
     public function testEncodeString()
