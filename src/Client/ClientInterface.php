@@ -20,5 +20,5 @@ interface ClientInterface
      *
      * @throws Exception\RequestFailedException
      */
-    public function request($body);
+    public function request(string $body): string;
 }

@@ -18,7 +18,7 @@ class Utf8ToWindows1252 implements FilterInterface
      *
      * @return string
      */
-    public function filter($input)
+    public function filter(string $input): string
     {
         return Encoding::toWin1252($input);
     }
@@ -28,7 +28,7 @@ class Utf8ToWindows1252 implements FilterInterface
      *
      * @return string
      */
-    public function filterString($text)
+    public function filterString(string $text): string
     {
         return Encoding::toWin1252($text);
     }
@@ -38,7 +38,7 @@ class Utf8ToWindows1252 implements FilterInterface
      *
      * @return array
      */
-    public function filterArray(array $input)
+    public function filterArray(array $input): array
     {
         return (array)Encoding::toWin1252($input);
     }
