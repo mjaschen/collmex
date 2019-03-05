@@ -7,7 +7,7 @@ principles.
 
 ## [0.12.0]
 
-**Warning: Backwards Compatibility Breaking Changes**
+**Warning: Backwards-compatibility-breaking changes**
 
 ### Changed
 
@@ -15,12 +15,12 @@ principles.
 - added support for PHP 7.3 for Composer and Travis-CI
 - re-enabled Psalm static analysis in Travis-CI runs
 - updated Psalm to version 3
-- CodeSniffer runs agains PSR-2 and PSR-12 rules now
+- CodeSniffer runs against PSR-2 and PSR-12 rules now
 - simplified composer install for Travis-CI; settings moved to `composer.json`
 
 ## [0.11.0]
 
-**Warning: Backwards Compatibility Breaking Changes**
+**Warning: Backwards-compatibility-breaking changes**
 
 ### Added
 
@@ -54,7 +54,7 @@ principles.
 
 ## [0.9.0]
 
-**Warning: Backwards Compatibility Breaking Changes**
+**Warning: Backwards-compatibility-breaking changes**
 
 ### Added
 
