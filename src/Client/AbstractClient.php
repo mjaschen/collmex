@@ -41,7 +41,7 @@ abstract class AbstractClient
      * @param string $password
      * @param string $customer
      */
-    public function __construct(string $user,string  $password, string $customer)
+    public function __construct(string $user, string $password, string $customer)
     {
         $this->user        = $user;
         $this->password    = $password;

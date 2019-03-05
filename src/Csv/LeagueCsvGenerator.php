@@ -27,7 +27,7 @@ class LeagueCsvGenerator implements GeneratorInterface
      * @param string $delimiter
      * @param string $enclosure
      */
-    public function __construct(string $delimiter = ';',string  $enclosure = '"')
+    public function __construct(string $delimiter = ';', string $enclosure = '"')
     {
         $this->delimiter = $delimiter;
         $this->enclosure = $enclosure;
@@ -40,6 +40,7 @@ class LeagueCsvGenerator implements GeneratorInterface
      *
      * @return string
      * @throws \RuntimeException
+     * @throws \League\Csv\Exception
      */
     public function generate(array $data): string
     {
@@ -47,7 +48,7 @@ class LeagueCsvGenerator implements GeneratorInterface
         $writer->setDelimiter($this->delimiter);
         $writer->setEnclosure($this->enclosure);
 
-        if (! is_array($data[0])) {
+        if (!is_array($data[0])) {
             $data = [$data];
         }
 

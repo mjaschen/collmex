@@ -26,7 +26,7 @@ class SimpleParser implements ParserInterface
      * @param string $delimiter
      * @param string $enclosure
      */
-    public function __construct(string $delimiter = ';',string  $enclosure = '"')
+    public function __construct(string $delimiter = ';', string $enclosure = '"')
     {
         $this->delimiter = $delimiter;
         $this->enclosure = $enclosure;
