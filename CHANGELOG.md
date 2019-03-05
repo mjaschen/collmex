@@ -12,6 +12,11 @@ principles.
 ### Changed
 
 - support for PHP 5.6 was dropped, PHP 7.0 is the minimum required version now
+- added support for PHP 7.3 for Composer and Travis-CI
+- re-enabled Psalm static analysis in Travis-CI runs
+- updated Psalm to version 3
+- CodeSniffer runs agains PSR-2 and PSR-12 rules now
+- simplified composer install for Travis-CI; settings moved to `composer.json`
 
 ## [0.11.0]
 
