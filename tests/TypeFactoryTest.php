@@ -14,14 +14,9 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
      */
     protected $typeFactory;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->typeFactory = new TypeFactory();
-    }
-
-    public function tearDown()
-    {
-        unset($this->typeFactory);
     }
 
     public function testCreateCustomerTypeSuccessful()

@@ -9,14 +9,9 @@ class DateTest extends \PHPUnit_Framework_TestCase
      */
     protected $validator;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->validator = new \MarcusJaschen\Collmex\Type\Validator\Date();
-    }
-
-    public function tearDown()
-    {
-        unset($this->validator);
     }
 
     public function testValidDate()

@@ -9,14 +9,9 @@ class SimpleParserTest extends \PHPUnit_Framework_TestCase
      */
     protected $parser;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->parser = new \MarcusJaschen\Collmex\Csv\SimpleParser(';', '"');
-    }
-
-    public function tearDown()
-    {
-        unset($this->parser);
     }
 
     public function testParseOneLine()

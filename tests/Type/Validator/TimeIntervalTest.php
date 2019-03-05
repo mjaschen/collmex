@@ -12,14 +12,9 @@ class TimeIntervalTest extends \PHPUnit_Framework_TestCase
      */
     protected $validator;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->validator = new TimeInterval();
-    }
-
-    public function tearDown()
-    {
-        unset($this->validator);
     }
 
     public function testValidTimeInterval()
