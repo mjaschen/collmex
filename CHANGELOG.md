@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [0.12.0]
+
+**Warning: Backwards Compatibility Breaking Changes**
+
+### Changed
+
+- support for PHP 5.6 was dropped, PHP 7.0 is the minimum required version now
+
 ## [0.11.0]
 
 **Warning: Backwards Compatibility Breaking Changes**
