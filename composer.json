@@ -67,13 +67,13 @@
       "issues": "https://github.com/mjaschen/collmex/issues"
     },
     "require": {
-      "php": "~7.0 || ~7.1 || ~7.2 || ~7.3",
-      "ext-curl": "*",
-      "ext-json": "*",
-      "ext-zip": "*",
-      "neitanod/forceutf8": "^1.4.0 || ^2.0.0",
-      "symfony/finder": "^2.5.0 || ^3.0.0 || ^4.0.0",
-      "symfony/http-foundation": "^2.5.0 || ^3.0.0 || ^4.0.0"
+        "php": "~7.1 || ~7.2 || ~7.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-zip": "*",
+        "neitanod/forceutf8": "^1.4.0 || ^2.0.0",
+        "symfony/finder": "^2.5.0 || ^3.0.0 || ^4.0.0",
+        "symfony/http-foundation": "^2.5.0 || ^3.0.0 || ^4.0.0"
     },
     "require-dev": {
         "laravel/framework": "^5.4",
