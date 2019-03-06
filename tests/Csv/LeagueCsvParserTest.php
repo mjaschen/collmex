@@ -11,14 +11,9 @@ class LeagueCsvParserTest extends \PHPUnit_Framework_TestCase
      */
     protected $parser;
 
-    public function setUp()
+    protected function setUp()
     {
         $this->parser = new LeagueCsvParser(';', '"');
-    }
-
-    public function tearDown()
-    {
-        unset($this->parser);
     }
 
     public function testParseOneLine()
