@@ -4,7 +4,6 @@ namespace MarcusJaschen\Collmex\Response;
 
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
-use PHP_CodeSniffer\Reports\Csv;
 use Symfony\Component\Finder\Finder;
 
 /**
