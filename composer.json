@@ -34,6 +34,7 @@
         "phpunit/phpunit": "^5.7.26",
         "vimeo/psalm": "^3.1",
         "squizlabs/php_codesniffer": "^3.4",
+        "friendsofphp/php-cs-fixer": "2.14",
         "roave/security-advisories": "dev-master"
     },
     "suggest": {
@@ -71,7 +72,8 @@
         "ci": [
             "@ci:static",
             "@ci:dynamic"
-        ]
+        ],
+        "fix:php-cs": "./vendor/bin/php-cs-fixer fix"
     },
     "extra": {
         "laravel": {
