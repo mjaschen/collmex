@@ -227,7 +227,7 @@ response from the API.
 
 ## Development
 
-### Run Tests
+### Run code checks
 
 To run checks and tests, it's the easiest to use the provided Composer scripts:
 
@@ -251,6 +251,14 @@ Psalm:
 
 ```shell
 ./vendor/bin/psalm
+```
+
+### Autoformat the code
+
+You can use a Composer script to autoformat the code:
+
+```shell
+composer fix:php-cs
 ```
 
 ## Collmex API Documentation
