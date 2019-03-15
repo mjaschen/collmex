@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\PaymentConfirmation;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class PaymentConfirmationTest extends \PHPUnit_Framework_TestCase
+class PaymentConfirmationTest extends TestCase
 {
     /**
      * @test

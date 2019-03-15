@@ -3,8 +3,9 @@
 namespace MarcusJaschen\Collmex\Tests\Filter;
 
 use MarcusJaschen\Collmex\Filter\Utf8ToWindows1252;
+use PHPUnit\Framework\TestCase;
 
-class Utf8ToWindows1252Test extends \PHPUnit_Framework_TestCase
+class Utf8ToWindows1252Test extends TestCase
 {
     /**
      * @var Utf8ToWindows1252

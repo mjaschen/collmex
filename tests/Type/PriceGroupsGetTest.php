@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\PriceGroupsGet;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class PriceGroupsGetTest extends \PHPUnit_Framework_TestCase
+class PriceGroupsGetTest extends TestCase
 {
     /**
      * @test

@@ -4,9 +4,11 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\CustomerGet;
+use MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class CustomerGetTest extends \PHPUnit_Framework_TestCase
+class CustomerGetTest extends TestCase
 {
     /**
      * @test
@@ -32,11 +34,11 @@ class CustomerGetTest extends \PHPUnit_Framework_TestCase
      * @test
      *
      * @see https://github.com/mjaschen/collmex/issues/10
-     *
-     * @expectedException \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      */
     public function invalidFieldNamesThrowException()
     {
+        $this->expectException(InvalidFieldNameException::class);
+
         new CustomerGet(
             [
                 'customer_id' => '12345',

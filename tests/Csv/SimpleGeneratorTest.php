@@ -3,8 +3,9 @@
 namespace MarcusJaschen\Collmex\Tests\Csv;
 
 use MarcusJaschen\Collmex\Csv\SimpleGenerator;
+use PHPUnit\Framework\TestCase;
 
-class SimpleGeneratorTest extends \PHPUnit_Framework_TestCase
+class SimpleGeneratorTest extends TestCase
 {
     /**
      * @var SimpleGenerator

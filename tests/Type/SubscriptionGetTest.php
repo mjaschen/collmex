@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\SubscriptionGet;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class SubscriptionGetTest extends \PHPUnit_Framework_TestCase
+class SubscriptionGetTest extends TestCase
 {
     /**
      * @test
