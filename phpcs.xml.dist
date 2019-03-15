@@ -109,7 +109,7 @@
     <!--<rule ref="Squiz.Strings.DoubleQuoteUsage"/>-->
 
     <!-- Whitespace -->
-    <!--<rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>-->
+    <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>
     <rule ref="PEAR.WhiteSpace.ScopeClosingBrace"/>
     <rule ref="Squiz.WhiteSpace.CastSpacing"/>
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
