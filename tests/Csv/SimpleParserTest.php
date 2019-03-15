@@ -30,7 +30,7 @@ class SimpleParserTest extends TestCase
             ],
         ];
 
-        $this->assertEquals($expected, $data);
+        $this->assertSame($expected, $data);
     }
 
     public function testParseOneLineWithNewline()
@@ -47,7 +47,7 @@ class SimpleParserTest extends TestCase
             ],
         ];
 
-        $this->assertEquals($expected, $data);
+        $this->assertSame($expected, $data);
     }
 
     public function testParseMultipleLines()
@@ -64,11 +64,11 @@ class SimpleParserTest extends TestCase
             ],
             [
                 'CMXINV',
-                100,
-                1,
+                '100',
+                '1',
             ],
         ];
 
-        $this->assertEquals($expected, $data);
+        $this->assertSame($expected, $data);
     }
 }

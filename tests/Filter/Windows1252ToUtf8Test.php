@@ -22,7 +22,7 @@ class Windows1252ToUtf8Test extends TestCase
         $input    = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
         $expected = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
 
-        $this->assertEquals($expected, $this->filter->filterString($input));
+        $this->assertSame($expected, $this->filter->filterString($input));
     }
 
     public function testEncodeArray()
@@ -40,7 +40,7 @@ class Windows1252ToUtf8Test extends TestCase
             $target,
         ];
 
-        $this->assertEquals($expected, $this->filter->filterArray($input));
+        $this->assertSame($expected, $this->filter->filterArray($input));
     }
 
     public function testEncodeArrayRecursive()
@@ -62,6 +62,6 @@ class Windows1252ToUtf8Test extends TestCase
             $target,
         ];
 
-        $this->assertEquals($expected, $this->filter->filterArray($input));
+        $this->assertSame($expected, $this->filter->filterArray($input));
     }
 }
