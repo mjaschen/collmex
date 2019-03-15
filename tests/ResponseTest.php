@@ -37,9 +37,9 @@ class ResponseTest extends TestCase
         $response = new CsvResponse($parser, $responseBody);
 
         $this->assertTrue($response->isError());
-        $this->assertEquals('Error Message', $response->getErrorMessage());
-        $this->assertEquals('11111', $response->getErrorCode());
-        $this->assertEquals(1, $response->getErrorLine());
+        $this->assertSame('Error Message', $response->getErrorMessage());
+        $this->assertSame('11111', $response->getErrorCode());
+        $this->assertSame(1, $response->getErrorLine());
 
         // check again (but don't parse again)
         $this->assertTrue($response->isError());
