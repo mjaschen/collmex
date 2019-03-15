@@ -149,7 +149,7 @@ abstract class AbstractType implements JsonSerializable
      */
     public function __set(string $name, $value)
     {
-        if ($name == 'type_identifier') {
+        if ($name === 'type_identifier') {
             throw new InvalidFieldNameException('Cannot overwrite type identifier');
         }
 
