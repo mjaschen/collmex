@@ -98,9 +98,9 @@ abstract class AbstractType implements JsonSerializable
     /**
      * @return string
      */
-    public function getJSON(): string
+    public function getJson(): string
     {
-        return $this->toJSON();
+        return $this->toJson();
     }
 
     /**
@@ -108,7 +108,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @return string
      */
-    public function toJSON(): string
+    public function toJson(): string
     {
         return json_encode($this->data);
     }
