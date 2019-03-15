@@ -164,7 +164,7 @@ $rules = [
         'remove_in_empty_for_expressions' => true,
     ],
     'standardize_not_equals' => true,
-//    'strict_comparison' => true,
+    'strict_comparison' => true,
     'strict_param' => true,
     'string_line_ending' => true,
     'standardize_increment' => true,
