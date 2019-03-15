@@ -2,12 +2,14 @@
 
 namespace MarcusJaschen\Collmex\Tests;
 
+use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\Revenue;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\TypeFactory;
+use PHPUnit\Framework\TestCase;
 
-class TypeFactoryTest extends \PHPUnit_Framework_TestCase
+class TypeFactoryTest extends TestCase
 {
     /**
      * @var \MarcusJaschen\Collmex\TypeFactory
@@ -80,11 +82,10 @@ class TypeFactoryTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Revenue::class, $type);
     }
 
-    /**
-     * @expectedException \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
-     */
     public function testInvalidType()
     {
+        $this->expectException(InvalidTypeIdentifierException::class);
+
         $data = [
             'INVALID_TYPE',
             'data',

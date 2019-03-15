@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\ProductPriceChange;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class ProductPriceChangeTest extends \PHPUnit_Framework_TestCase
+class ProductPriceChangeTest extends TestCase
 {
     /**
      * @test

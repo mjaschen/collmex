@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\Member;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class MemberTest extends \PHPUnit_Framework_TestCase
+class MemberTest extends TestCase
 {
     /**
      * @test

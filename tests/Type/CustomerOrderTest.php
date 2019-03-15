@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class CustomerOrderTest extends \PHPUnit_Framework_TestCase
+class CustomerOrderTest extends TestCase
 {
     /**
      * @test

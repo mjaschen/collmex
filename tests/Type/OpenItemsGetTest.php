@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\OpenItemsGet;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class OpenItemsGetTest extends \PHPUnit_Framework_TestCase
+class OpenItemsGetTest extends TestCase
 {
     /**
      * @test

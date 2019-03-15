@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\DifferentShippingAddress;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class DifferentShippingAddressTest extends \PHPUnit_Framework_TestCase
+class DifferentShippingAddressTest extends TestCase
 {
     /**
      * @test

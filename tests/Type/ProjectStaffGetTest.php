@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\ProjectStaffGet;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class ProjectStaffGetTest extends \PHPUnit_Framework_TestCase
+class ProjectStaffGetTest extends TestCase
 {
     /**
      * @test

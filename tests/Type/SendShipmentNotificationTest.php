@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\SendShipmentNotification;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class SendShipmentNotificationTest extends \PHPUnit_Framework_TestCase
+class SendShipmentNotificationTest extends TestCase
 {
     /**
      * @test

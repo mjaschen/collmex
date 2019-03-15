@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\BillOfMaterial;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class BillOfMaterialTest extends \PHPUnit_Framework_TestCase
+class BillOfMaterialTest extends TestCase
 {
     /**
      * @test

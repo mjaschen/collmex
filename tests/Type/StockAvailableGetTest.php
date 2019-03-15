@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\StockAvailableGet;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class StockAvailableGetTest extends \PHPUnit_Framework_TestCase
+class StockAvailableGetTest extends TestCase
 {
     /**
      * @test

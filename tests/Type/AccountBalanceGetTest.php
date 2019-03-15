@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests\Type;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\Type\AccountBalanceGet;
 use MarcusJaschen\Collmex\Type\TypeInterface;
+use PHPUnit\Framework\TestCase;
 
-class AccountBalanceGetTest extends \PHPUnit_Framework_TestCase
+class AccountBalanceGetTest extends TestCase
 {
     /**
      * @test

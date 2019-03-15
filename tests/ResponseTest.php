@@ -5,8 +5,9 @@ namespace MarcusJaschen\Collmex\Tests;
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Response\CsvResponse;
 use Mockery as m;
+use PHPUnit\Framework\TestCase;
 
-class ResponseTest extends \PHPUnit_Framework_TestCase
+class ResponseTest extends TestCase
 {
     protected function tearDown()
     {
