@@ -69,13 +69,11 @@ class ZipResponse implements ResponseInterface
     /**
      * Returns the CsvResponse instance for the (first) included CSV file
      *
-     * @return CsvResponse
+     * @return CsvResponse|null
      *
      * @throws \InvalidArgumentException
-     *
-     * @psalm-suppress InvalidNullableReturnType
      */
-    public function getCsvResponse()
+    public function getCsvResponse(): ?CsvResponse
     {
         $iterator = $this->getFilesByType('csv');
 
@@ -84,6 +82,8 @@ class ZipResponse implements ResponseInterface
 
             return new CsvResponse($this->responseParser, $csv);
         }
+
+        return null;
     }
 
     /**
@@ -91,7 +91,7 @@ class ZipResponse implements ResponseInterface
      *
      * @throws InvalidZipFileException
      */
-    protected function extractFiles()
+    protected function extractFiles(): void
     {
         $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
         file_put_contents($tmpFilename, $this->responseBody);

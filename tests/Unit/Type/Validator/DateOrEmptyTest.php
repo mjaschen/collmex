@@ -11,44 +11,44 @@ class DateOrEmptyTest extends TestCase
      */
     protected $validator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->validator = new \MarcusJaschen\Collmex\Type\Validator\DateOrEmpty();
     }
 
-    public function testValidDate()
+    public function testValidDate(): void
     {
         $this->assertTrue($this->validator->validate('20130916'));
     }
 
-    public function testEmptyValue()
+    public function testEmptyValue(): void
     {
         $this->assertTrue($this->validator->validate(''));
     }
 
-    public function testInvalidDateTooShort()
+    public function testInvalidDateTooShort(): void
     {
         $this->assertFalse($this->validator->validate('2013'));
     }
 
-    public function testInvalidDateTooLong()
+    public function testInvalidDateTooLong(): void
     {
         $this->assertFalse($this->validator->validate('20130916100000'));
     }
 
-    public function testInvalidYear()
+    public function testInvalidYear(): void
     {
         $this->assertFalse($this->validator->validate('18230901'));
         $this->assertFalse($this->validator->validate('21250901'));
     }
 
-    public function testInvalidMonth()
+    public function testInvalidMonth(): void
     {
         $this->assertFalse($this->validator->validate('20130001'));
         $this->assertFalse($this->validator->validate('20131301'));
     }
 
-    public function testInvalidDay()
+    public function testInvalidDay(): void
     {
         $this->assertFalse($this->validator->validate('20130900'));
         $this->assertFalse($this->validator->validate('20130932'));

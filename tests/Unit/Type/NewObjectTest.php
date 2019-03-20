@@ -12,7 +12,7 @@ class NewObjectTest extends TestCase
     /**
      * @test
      */
-    public function isAbstractType()
+    public function isAbstractType(): void
     {
         $subject = new NewObject([]);
 
@@ -22,7 +22,7 @@ class NewObjectTest extends TestCase
     /**
      * @test
      */
-    public function implementsTypeInterface()
+    public function implementsTypeInterface(): void
     {
         $subject = new NewObject([]);
 

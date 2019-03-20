@@ -12,7 +12,7 @@ class StockGetTest extends TestCase
     /**
      * @test
      */
-    public function isAbstractType()
+    public function isAbstractType(): void
     {
         $subject = new StockGet([]);
 
@@ -22,7 +22,7 @@ class StockGetTest extends TestCase
     /**
      * @test
      */
-    public function implementsTypeInterface()
+    public function implementsTypeInterface(): void
     {
         $subject = new StockGet([]);
 

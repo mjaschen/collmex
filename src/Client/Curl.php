@@ -57,7 +57,7 @@ class Curl extends AbstractClient implements ClientInterface
      *
      * @return void
      */
-    protected function initCurl()
+    protected function initCurl(): void
     {
         $this->curl = curl_init($this->exchangeUrl);
         curl_setopt($this->curl, CURLOPT_POST, true);
@@ -71,7 +71,7 @@ class Curl extends AbstractClient implements ClientInterface
      *
      * @return void
      */
-    protected function destroyCurl()
+    protected function destroyCurl(): void
     {
         if (! empty($this->curl)) {
             curl_close($this->curl);

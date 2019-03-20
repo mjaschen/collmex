@@ -129,6 +129,7 @@ $rules = [
     'phpdoc_single_line_var_spacing' => true,
 //    'phpdoc_summary' => true,
     'phpdoc_to_comment' => true,
+    'phpdoc_to_return_type' => true,
 //    'phpdoc_trim' => true,
     'phpdoc_trim_consecutive_blank_line_separation' => true,
     'phpdoc_types' => true,
@@ -172,8 +173,8 @@ $rules = [
     'trailing_comma_in_multiline_array' => true,
     'trim_array_spaces' => true,
 //    'unary_operator_spaces' => true,
+    'void_return' => true,
     'whitespace_after_comma_in_array' => true,
-
 ];
 
 $config = \PhpCsFixer\Config::create()
