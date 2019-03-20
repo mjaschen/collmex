@@ -8,7 +8,7 @@ $rules = [
     '@PHP56Migration' => true,
     '@PHP56Migration:risky' => true,
     '@PHP70Migration' => true,
-//    '@PHP70Migration:risky' => true,
+    '@PHP70Migration:risky' => true,
 //    '@PHP71Migration' => true,
 //    '@PHP71Migration:risky' => true,
     '@PHPUnit57Migration:risky' => true,
@@ -18,7 +18,6 @@ $rules = [
     'array_indentation' => true,
     'array_syntax' => ['syntax' => 'short'],
 //    'binary_operator_spaces' => true,
-    'blank_line_after_opening_tag' => true,
     'blank_line_before_statement' => true,
     'braces' => [
         'allow_single_line_closure' => true,
