@@ -60,6 +60,7 @@
 
     <!-- Functions -->
     <rule ref="Generic.Functions.CallTimePassByReference"/>
+    <rule ref="PSR12.Functions.NullableTypeDeclaration"/>
     <rule ref="Squiz.Functions.FunctionDuplicateArgument"/>
     <rule ref="Squiz.Functions.GlobalFunction"/>
 

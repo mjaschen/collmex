@@ -13,7 +13,7 @@ class CustomerGetTest extends TestCase
     /**
      * @test
      */
-    public function isAbstractType()
+    public function isAbstractType(): void
     {
         $subject = new CustomerGet([]);
 
@@ -23,7 +23,7 @@ class CustomerGetTest extends TestCase
     /**
      * @test
      */
-    public function implementsTypeInterface()
+    public function implementsTypeInterface(): void
     {
         $subject = new CustomerGet([]);
 
@@ -35,7 +35,7 @@ class CustomerGetTest extends TestCase
      *
      * @see https://github.com/mjaschen/collmex/issues/10
      */
-    public function invalidFieldNamesThrowException()
+    public function invalidFieldNamesThrowException(): void
     {
         $this->expectException(InvalidFieldNameException::class);
 

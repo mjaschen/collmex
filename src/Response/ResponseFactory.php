@@ -57,7 +57,7 @@ class ResponseFactory
      *
      * @throws \Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException
      */
-    protected function getResponseMimeType()
+    protected function getResponseMimeType(): ?string
     {
         $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
         file_put_contents($tmpFilename, $this->responseBody);

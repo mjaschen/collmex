@@ -14,7 +14,7 @@ class SubscriptionTest extends TestCase
      */
     protected $type;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->type = new Subscription(
             [
@@ -34,7 +34,7 @@ class SubscriptionTest extends TestCase
     /**
      * @test
      */
-    public function isAbstractType()
+    public function isAbstractType(): void
     {
         $subject = new Subscription([]);
 
@@ -44,33 +44,33 @@ class SubscriptionTest extends TestCase
     /**
      * @test
      */
-    public function implementsTypeInterface()
+    public function implementsTypeInterface(): void
     {
         $subject = new Subscription([]);
 
         self::assertInstanceOf(TypeInterface::class, $subject);
     }
 
-    public function testValidateSuccess()
+    public function testValidateSuccess(): void
     {
         $this->assertTrue($this->type->validate());
     }
 
-    public function testValidateFailInvalidFromDate()
+    public function testValidateFailInvalidFromDate(): void
     {
         $this->type->valid_from = '21250101';
 
         $this->assertFalse($this->type->validate());
     }
 
-    public function testValidateFailInvalidToDate()
+    public function testValidateFailInvalidToDate(): void
     {
         $this->type->valid_to = '21250101';
 
         $this->assertFalse($this->type->validate());
     }
 
-    public function testValidateFailInvalidInterval()
+    public function testValidateFailInvalidInterval(): void
     {
         $this->type->interval = -1;
 
