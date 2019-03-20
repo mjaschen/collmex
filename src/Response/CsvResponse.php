@@ -87,7 +87,7 @@ class CsvResponse implements ResponseInterface
      *
      * @return void
      */
-    public function parseCsv($responseBody)
+    public function parseCsv($responseBody): void
     {
         $this->data = $this->convertEncodingFromCollmex(
             $this->parser->parse(
@@ -131,7 +131,7 @@ class CsvResponse implements ResponseInterface
     /**
      * @return string|null
      */
-    public function getErrorMessage()
+    public function getErrorMessage(): ?string
     {
         return $this->errorMessage;
     }
@@ -139,7 +139,7 @@ class CsvResponse implements ResponseInterface
     /**
      * @return string|null
      */
-    public function getErrorCode()
+    public function getErrorCode(): ?string
     {
         return $this->errorCode;
     }
@@ -169,7 +169,7 @@ class CsvResponse implements ResponseInterface
      *
      * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */
-    public function getRecords()
+    public function getRecords(): ?array
     {
         if ($this->isError()) {
             return null;
@@ -194,7 +194,7 @@ class CsvResponse implements ResponseInterface
      *
      * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */
-    public function getFirstRecord()
+    public function getFirstRecord(): ?AbstractType
     {
         $records = $this->getRecords();
 
@@ -213,7 +213,7 @@ class CsvResponse implements ResponseInterface
      *
      * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */
-    protected function createTypeRecords()
+    protected function createTypeRecords(): void
     {
         $typeFactory = new TypeFactory();
 

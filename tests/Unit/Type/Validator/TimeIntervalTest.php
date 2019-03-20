@@ -13,12 +13,12 @@ class TimeIntervalTest extends TestCase
      */
     protected $validator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->validator = new TimeInterval();
     }
 
-    public function testValidTimeInterval()
+    public function testValidTimeInterval(): void
     {
         $this->assertTrue($this->validator->validate(Subscription::INTERVAL_YEAR));
         $this->assertTrue($this->validator->validate(Subscription::INTERVAL_HALF_YEAR));
@@ -30,7 +30,7 @@ class TimeIntervalTest extends TestCase
         $this->assertTrue($this->validator->validate(Subscription::INTERVAL_MONTH_PREPAID));
     }
 
-    public function testInvalidTimeInterval()
+    public function testInvalidTimeInterval(): void
     {
         $this->assertFalse($this->validator->validate(-1));
         $this->assertFalse($this->validator->validate(8));

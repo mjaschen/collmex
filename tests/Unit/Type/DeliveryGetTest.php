@@ -12,7 +12,7 @@ class DeliveryGetTest extends TestCase
     /**
      * @test
      */
-    public function isAbstractType()
+    public function isAbstractType(): void
     {
         $subject = new DeliveryGet([]);
 
@@ -22,7 +22,7 @@ class DeliveryGetTest extends TestCase
     /**
      * @test
      */
-    public function implementsTypeInterface()
+    public function implementsTypeInterface(): void
     {
         $subject = new DeliveryGet([]);
 

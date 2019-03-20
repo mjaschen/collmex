@@ -12,12 +12,12 @@ class SimpleGeneratorTest extends TestCase
      */
     protected $generator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->generator = new SimpleGenerator(';', '"');
     }
 
-    public function testGenerateCsvOneLine()
+    public function testGenerateCsvOneLine(): void
     {
         $data = [
             [
@@ -34,7 +34,7 @@ class SimpleGeneratorTest extends TestCase
         $this->assertSame($expected, $this->generator->generate($data));
     }
 
-    public function testGenerateCsvMultipleLines()
+    public function testGenerateCsvMultipleLines(): void
     {
         $data = [
             [
@@ -57,7 +57,7 @@ class SimpleGeneratorTest extends TestCase
         $this->assertSame($expected, $this->generator->generate($data));
     }
 
-    public function testGenerateCsvOneLineWithoutOuterArray()
+    public function testGenerateCsvOneLineWithoutOuterArray(): void
     {
         $data = [
             'MESSAGE',
@@ -81,7 +81,7 @@ class SimpleGeneratorTest extends TestCase
      *
      *
      */
-    public function testGenerateCsvWithSpecialCharactersWorksAsExpected()
+    public function testGenerateCsvWithSpecialCharactersWorksAsExpected(): void
     {
         $data = [
             'CMXINV',

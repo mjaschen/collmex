@@ -56,7 +56,7 @@ class SimpleGenerator implements GeneratorInterface
             // workaround for PHP bug 43225: temporarily insert a placeholder
             // between a backslash directly followed by a double-quote (for
             // string field values only)
-            array_walk($line, function (&$item) use ($tmpPlaceholder) {
+            array_walk($line, function (&$item) use ($tmpPlaceholder): void {
                 if (! is_string($item)) {
                     return;
                 }

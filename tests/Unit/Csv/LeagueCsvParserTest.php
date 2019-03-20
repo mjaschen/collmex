@@ -12,12 +12,12 @@ class LeagueCsvParserTest extends TestCase
      */
     protected $parser;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->parser = new LeagueCsvParser(';', '"');
     }
 
-    public function testParseOneLine()
+    public function testParseOneLine(): void
     {
         $csv = 'Typkennung;Rechnung Nr;Pos';
 
@@ -34,7 +34,7 @@ class LeagueCsvParserTest extends TestCase
         $this->assertSame($expected, $data);
     }
 
-    public function testParseOneLineWithNewline()
+    public function testParseOneLineWithNewline(): void
     {
         $csv = "Typkennung;Rechnung Nr;Pos\n";
 
@@ -51,7 +51,7 @@ class LeagueCsvParserTest extends TestCase
         $this->assertSame($expected, $data);
     }
 
-    public function testParseMultipleLines()
+    public function testParseMultipleLines(): void
     {
         $csv = "Typkennung;Rechnung Nr;Pos\nCMXINV;100;1";
 

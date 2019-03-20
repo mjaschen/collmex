@@ -22,7 +22,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->publishes(
             [
@@ -37,7 +37,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/collmex.php', 'collmex');
 
@@ -50,7 +50,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      *
      * @return void
      */
-    protected function registerClient()
+    protected function registerClient(): void
     {
         $this->app->singleton(
             'collmex.client',
@@ -69,7 +69,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
      *
      * @return void
      */
-    protected function registerRequest()
+    protected function registerRequest(): void
     {
         $this->app->singleton(
             'collmex.request',

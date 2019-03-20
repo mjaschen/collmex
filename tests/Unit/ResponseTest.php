@@ -9,12 +9,12 @@ use PHPUnit\Framework\TestCase;
 
 class ResponseTest extends TestCase
 {
-    protected function tearDown()
+    protected function tearDown(): void
     {
         m::close();
     }
 
-    public function testIsErrorWhenErrorWorksAsExpected()
+    public function testIsErrorWhenErrorWorksAsExpected(): void
     {
         $responseBody = 'MESSAGE;E;11111;Error Message;1';
 
@@ -45,7 +45,7 @@ class ResponseTest extends TestCase
         $this->assertTrue($response->isError());
     }
 
-    public function testIsErrorWhenNoErrorWorksAsExpected()
+    public function testIsErrorWhenNoErrorWorksAsExpected(): void
     {
         $responseBody = 'MESSAGE;S;204020;Datenübertragung erfolgreich. Es wurden 1 Datensätze verarbeitet.';
 

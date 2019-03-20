@@ -12,12 +12,12 @@ class LeagueCsvGeneratorTest extends TestCase
      */
     protected $generator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->generator = new LeagueCsvGenerator(';', '"');
     }
 
-    public function testGenerateCsvOneLine()
+    public function testGenerateCsvOneLine(): void
     {
         $data = [
             [
@@ -34,7 +34,7 @@ class LeagueCsvGeneratorTest extends TestCase
         $this->assertSame($expected, $this->generator->generate($data));
     }
 
-    public function testGenerateCsvMultipleLines()
+    public function testGenerateCsvMultipleLines(): void
     {
         $data = [
             [
@@ -57,7 +57,7 @@ class LeagueCsvGeneratorTest extends TestCase
         $this->assertSame($expected, $this->generator->generate($data));
     }
 
-    public function testGenerateCsvOneLineWithoutOuterArray()
+    public function testGenerateCsvOneLineWithoutOuterArray(): void
     {
         $data = [
             'MESSAGE',
@@ -79,7 +79,7 @@ class LeagueCsvGeneratorTest extends TestCase
      *
      * @see https://bugs.php.net/bug.php?id=43225
      */
-    public function testGenerateCsvWithSpecialCharactersWorksAsExpected()
+    public function testGenerateCsvWithSpecialCharactersWorksAsExpected(): void
     {
         $this->markTestSkipped('Skipping test for PHP bug 43225');
 
