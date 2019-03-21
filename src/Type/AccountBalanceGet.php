@@ -26,15 +26,15 @@ class AccountBalanceGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'  => 'ACCBAL_GET',
-        'client_id'        => null,
-        'business_year'    => null,
-        'date_to'          => null,
-        'account_id'       => null,
+        'type_identifier' => 'ACCBAL_GET',
+        'client_id' => null,
+        'business_year' => null,
+        'date_to' => null,
+        'account_id' => null,
         'account_group_id' => null,
-        'customer_id'      => null,
-        'supplier_id'      => null,
-        'cost_center'      => null,
+        'customer_id' => null,
+        'supplier_id' => null,
+        'cost_center' => null,
     ];
 
     /**

@@ -57,39 +57,39 @@ class StockChange extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'             => 'STOCK_CHANGE', // 1
-        'stock_change_id'             => null,
-        'stock_change_position'       => null,
-        'product_id'                  => null,
-        'stock_change_type'           => null, // 5
-        'quantity'                    => null,
+        'type_identifier' => 'STOCK_CHANGE', // 1
+        'stock_change_id' => null,
+        'stock_change_position' => null,
+        'product_id' => null,
+        'stock_change_type' => null, // 5
+        'quantity' => null,
         // 7-12: only STOCK_CHANGE_TYPE_INPUT, STOCK_CHANGE_TYPE_TRANSFER, STOCK_CHANGE_TYPE_INVENTORY
-        'destination_location_id'     => null,
-        'destination_stock_type'      => null,
-        'destination_charge'          => null,
+        'destination_location_id' => null,
+        'destination_stock_type' => null,
+        'destination_charge' => null,
         'destination_charge_labeling' => null, // 10
-        'reserved_1'                  => null,
-        'reserved_2'                  => null,
+        'reserved_1' => null,
+        'reserved_2' => null,
         // 13-18: only STOCK_CHANGE_TYPE_WITHDRAWAL, STOCK_CHANGE_TYPE_TRANSFER
-        'source_location_id'          => null,
-        'source_stock_type'           => null,
-        'source_charge'               => null, // 15
-        'reserved_3'                  => null,
-        'reserved_4'                  => null,
-        'reserved_5'                  => null,
-        'purchase_order_id'           => null,
-        'purchase_order_position'     => null, // 20
-        'delivery_id'                 => null,
-        'delivery_position'           => null,
-        'production_order_id'         => null,
-        'production_order_position'   => null,
-        'invoice_id'                  => null, // 25
-        'invoice_position'            => null,
-        'cancel_stock_change_id'      => null,
-        'cancel_stock_change_pos'     => null,
-        'notice'                      => null,
-        'booked_date'                 => null, // 30
-        'booked_time'                 => null,
+        'source_location_id' => null,
+        'source_stock_type' => null,
+        'source_charge' => null, // 15
+        'reserved_3' => null,
+        'reserved_4' => null,
+        'reserved_5' => null,
+        'purchase_order_id' => null,
+        'purchase_order_position' => null, // 20
+        'delivery_id' => null,
+        'delivery_position' => null,
+        'production_order_id' => null,
+        'production_order_position' => null,
+        'invoice_id' => null, // 25
+        'invoice_position' => null,
+        'cancel_stock_change_id' => null,
+        'cancel_stock_change_pos' => null,
+        'notice' => null,
+        'booked_date' => null, // 30
+        'booked_time' => null,
     ];
 
     /**

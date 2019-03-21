@@ -77,7 +77,7 @@ class CsvResponse implements ResponseInterface
      */
     public function __construct(ParserInterface $parser, string $responseBody)
     {
-        $this->parser      = $parser;
+        $this->parser = $parser;
         $this->responseRaw = $responseBody;
 
         $this->parseCsv($responseBody);
@@ -112,8 +112,8 @@ class CsvResponse implements ResponseInterface
 
         foreach ($this->data as $data) {
             if ($data[0] === 'MESSAGE' && $data[1] === 'E') {
-                $this->isError      = true;
-                $this->errorCode    = $data[2];
+                $this->isError = true;
+                $this->errorCode = $data[2];
                 $this->errorMessage = $data[3];
 
                 if (isset($data[4])) {

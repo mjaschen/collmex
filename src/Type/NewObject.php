@@ -22,9 +22,9 @@ class NewObject extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'NEW_OBJECT_ID',
-        'new_id'          => null,
-        'temporary_id'    => null,
-        'line'            => null,
+        'new_id' => null,
+        'temporary_id' => null,
+        'line' => null,
     ];
 
     /**

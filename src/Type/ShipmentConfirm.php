@@ -27,15 +27,15 @@ class ShipmentConfirm extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'          => 'SHIPMENT_CONFIRM',
-        'delivery_id'              => null,
-        'client_id'                => null,
-        'customer_id'              => null,
-        'mode_of_shipment'         => null,
+        'type_identifier' => 'SHIPMENT_CONFIRM',
+        'delivery_id' => null,
+        'client_id' => null,
+        'customer_id' => null,
+        'mode_of_shipment' => null,
         'sent_to_shipment_company' => null,
-        'use_tracking_code'        => null,
-        'delivery_date_from'       => null,
-        'not_confirmed'            => null,
+        'use_tracking_code' => null,
+        'delivery_date_from' => null,
+        'not_confirmed' => null,
     ];
 
     /**

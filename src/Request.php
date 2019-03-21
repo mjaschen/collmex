@@ -35,7 +35,7 @@ class Request
      */
     public function __construct(ClientInterface $client, ParserInterface $responseParser = null)
     {
-        $this->client         = $client;
+        $this->client = $client;
 
         if ($responseParser instanceof ParserInterface) {
             $this->responseParser = $responseParser;

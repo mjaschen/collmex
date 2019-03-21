@@ -39,7 +39,7 @@ class ZipResponse implements ResponseInterface
      */
     public function __construct(ParserInterface $responseParser, string $responseBody)
     {
-        $this->responseBody   = $responseBody;
+        $this->responseBody = $responseBody;
         $this->responseParser = $responseParser;
 
         $this->extractFiles();

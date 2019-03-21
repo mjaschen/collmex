@@ -25,7 +25,7 @@ class ResponseFactory
      */
     public function __construct(string $responseBody, ParserInterface $responseParser)
     {
-        $this->responseBody   = $responseBody;
+        $this->responseBody = $responseBody;
         $this->responseParser = $responseParser;
     }
 
@@ -63,7 +63,7 @@ class ResponseFactory
         $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
         file_put_contents($tmpFilename, $this->responseBody);
 
-        $file     = new File($tmpFilename);
+        $file = new File($tmpFilename);
         $mimeType = $file->getMimeType();
 
         unlink($tmpFilename);

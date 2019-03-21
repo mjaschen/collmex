@@ -30,19 +30,19 @@ class CustomerGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'  => 'CUSTOMER_GET',
-        'customer_id'      => null,
-        'client_id'        => null,
-        'query'            => null,
-        'follow-up'        => null,
-        'zipcode'          => null,
+        'type_identifier' => 'CUSTOMER_GET',
+        'customer_id' => null,
+        'client_id' => null,
+        'query' => null,
+        'follow-up' => null,
+        'zipcode' => null,
         'address_group_id' => null,
-        'price_group_id'   => null,
-        'discount_id'      => null,
-        'agent_id'         => null,
-        'only_changed'     => null,
-        'system_name'      => null,
-        'inactive'         => null,
+        'price_group_id' => null,
+        'discount_id' => null,
+        'agent_id' => null,
+        'only_changed' => null,
+        'system_name' => null,
+        'inactive' => null,
     ];
 
     /**

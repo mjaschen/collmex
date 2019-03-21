@@ -21,7 +21,7 @@ class PriceGroupsGet extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'PRICE_GROUPS_GET',
-        'client_id'       => null,
+        'client_id' => null,
     ];
 
     /**

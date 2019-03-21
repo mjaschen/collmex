@@ -19,15 +19,15 @@ class SubscriptionTest extends TestCase
     {
         $this->type = new Subscription(
             [
-                'customer_id'         => '12345',
-                'client_id'           => '1',
-                'valid_from'          => '20130901',
-                'valid_to'            => '20140831',
-                'product_id'          => '1',
+                'customer_id' => '12345',
+                'client_id' => '1',
+                'valid_from' => '20130901',
+                'valid_to' => '20140831',
+                'product_id' => '1',
                 'product_description' => null,
-                'price'               => null,
-                'interval'            => Subscription::INTERVAL_MONTH,
-                'next_invoice'        => null,
+                'price' => null,
+                'interval' => Subscription::INTERVAL_MONTH,
+                'next_invoice' => null,
             ]
         );
     }

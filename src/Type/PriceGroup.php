@@ -25,11 +25,11 @@ class PriceGroup extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'PRICE_GROUP',
-        'client_id'       => null,
-        'price_group_id'  => null,
-        'name'            => null,
-        'gross'           => null,
-        'currency'        => null,
+        'client_id' => null,
+        'price_group_id' => null,
+        'name' => null,
+        'gross' => null,
+        'currency' => null,
     ];
 
     /**
