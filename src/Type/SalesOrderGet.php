@@ -28,28 +28,28 @@ class SalesOrderGet extends AbstractType implements TypeInterface
     const FORMAT_CSV = 0;
     const FORMAT_ZIP = 1;
 
-    const FILTER_ON     = 1;    // useable for 'only_changed' and 'only_created_by_system'
-    const FILTER_OFF    = 0;    // useable for 'only_changed' and 'only_created_by_system'
+    const FILTER_ON = 1;    // useable for 'only_changed' and 'only_created_by_system'
+    const FILTER_OFF = 0;    // useable for 'only_changed' and 'only_created_by_system'
 
     const WITH_LETTER_PAPER = 0;
-    const NO_LETTER_PAPER   = 1;
+    const NO_LETTER_PAPER = 1;
 
     /**
      * @var array
      */
     protected $template = [
-        'type_identifier'           => 'SALES_ORDER_GET',
-        'order_id'                  => null,
-        'client_id'                 => null,
-        'customer_id'               => null,
-        'order_date_start'          => null,
-        'order_date_end'            => null,
-        'customer_order_id'         => null,
-        'format'                    => null,
-        'only_changed'              => null,
-        'system_name'               => null,    // 10
-        'only_created_by_system'    => null,
-        'letter_paper'              => null,
+        'type_identifier' => 'SALES_ORDER_GET',
+        'order_id' => null,
+        'client_id' => null,
+        'customer_id' => null,
+        'order_date_start' => null,
+        'order_date_end' => null,
+        'customer_order_id' => null,
+        'format' => null,
+        'only_changed' => null,
+        'system_name' => null,    // 10
+        'only_created_by_system' => null,
+        'letter_paper' => null,
     ];
 
     /**

@@ -36,19 +36,19 @@ class InvoiceGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'        => 'INVOICE_GET',
-        'invoice_id'             => null,
-        'client_id'              => null,
-        'customer_id'            => null,
-        'invoice_date_from'      => null,
-        'invoice_date_to'        => null,
-        'sent_only'              => null,
-        'format'                 => null,
-        'changed_only'           => null,
-        'system_name'            => null,
+        'type_identifier' => 'INVOICE_GET',
+        'invoice_id' => null,
+        'client_id' => null,
+        'customer_id' => null,
+        'invoice_date_from' => null,
+        'invoice_date_to' => null,
+        'sent_only' => null,
+        'format' => null,
+        'changed_only' => null,
+        'system_name' => null,
         'created_by_system_only' => null,
-        'stationary_exclude'     => null,
-        'output_required'        => null,
+        'stationary_exclude' => null,
+        'output_required' => null,
     ];
 
     /**

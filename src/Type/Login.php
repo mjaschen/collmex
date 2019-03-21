@@ -21,8 +21,8 @@ class Login extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'LOGIN',
-        'user'            => null,
-        'password'        => null,
+        'user' => null,
+        'password' => null,
     ];
 
     /**
@@ -32,6 +32,6 @@ class Login extends AbstractType implements TypeInterface
      */
     public function validate(): bool
     {
-        return ! empty($this->data['user']) && ! empty($this->data['password']);
+        return !empty($this->data['user']) && !empty($this->data['password']);
     }
 }

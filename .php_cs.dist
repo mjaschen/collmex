@@ -17,7 +17,7 @@ $rules = [
     'align_multiline_comment' => true,
     'array_indentation' => true,
     'array_syntax' => ['syntax' => 'short'],
-//    'binary_operator_spaces' => true,
+    'binary_operator_spaces' => true,
     'blank_line_before_statement' => true,
     'braces' => [
         'allow_single_line_closure' => true,
@@ -171,7 +171,7 @@ $rules = [
     'ternary_operator_spaces' => true,
     'trailing_comma_in_multiline_array' => true,
     'trim_array_spaces' => true,
-//    'unary_operator_spaces' => true,
+    'unary_operator_spaces' => true,
     'void_return' => true,
     'whitespace_after_comma_in_array' => true,
 ];

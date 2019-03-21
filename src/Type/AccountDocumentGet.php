@@ -32,23 +32,23 @@ class AccountDocumentGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'   => 'ACCDOC_GET',
-        'client_id'         => null,
-        'business_year'     => null,
-        'entry_id'          => null,
-        'account_id'        => null, // 5
-        'cost_center'       => null,
-        'customer_id'       => null,
-        'supplier_id'       => null,
-        'equipment_id'      => null,
-        'invoice_id'        => null, // 10
-        'travel_id'         => null,
-        'text'              => null,
+        'type_identifier' => 'ACCDOC_GET',
+        'client_id' => null,
+        'business_year' => null,
+        'entry_id' => null,
+        'account_id' => null, // 5
+        'cost_center' => null,
+        'customer_id' => null,
+        'supplier_id' => null,
+        'equipment_id' => null,
+        'invoice_id' => null, // 10
+        'travel_id' => null,
+        'text' => null,
         'receipt_date_from' => null,
-        'receipt_date_to'   => null,
-        'include_canceled'  => null, // 15
-        'only_changed'      => null,
-        'system_name'       => null,
+        'receipt_date_to' => null,
+        'include_canceled' => null, // 15
+        'only_changed' => null,
+        'system_name' => null,
     ];
 
     /**

@@ -28,16 +28,16 @@ class StockChangeGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'  => 'STOCK_CHANGE_GET', // 1
-        'client_id'        => null,
-        'product_id'       => null,
-        'date_from'        => null,
-        'date_to'          => null, // 5
-        'customer_id'      => null,
-        'supplier_id'      => null,
+        'type_identifier' => 'STOCK_CHANGE_GET', // 1
+        'client_id' => null,
+        'product_id' => null,
+        'date_from' => null,
+        'date_to' => null, // 5
+        'customer_id' => null,
+        'supplier_id' => null,
         'include_canceled' => null,
-        'changed_only'     => null,
-        'system_name'      => null, // 10
+        'changed_only' => null,
+        'system_name' => null, // 10
     ];
 
     /**

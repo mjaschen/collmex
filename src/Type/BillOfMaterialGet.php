@@ -25,13 +25,13 @@ class BillOfMaterialGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'      => 'BILL_OF_MATERIAL_GET',
-        'client_id'            => null,
-        'product_id'           => null,
-        'assignment'           => null,
+        'type_identifier' => 'BILL_OF_MATERIAL_GET',
+        'client_id' => null,
+        'product_id' => null,
+        'assignment' => null,
         'component_product_id' => null,
-        'changed_only'         => null,
-        'system_name'          => null,
+        'changed_only' => null,
+        'system_name' => null,
     ];
 
     /**

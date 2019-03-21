@@ -34,22 +34,22 @@ class BillOfMaterial extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'      => 'CMXBOM',
-        'product_id'           => null,
-        'client_id'            => null,
-        'version'              => null,
-        'assignment'           => null,
-        'valid_from'           => null,
-        'text'                 => null,
-        'reserved_1'           => null,
-        'reserved_2'           => null,
-        'reserved_3'           => null,
-        'reserved_4'           => null,
-        'reserved_5'           => null,
-        'position'             => null,
+        'type_identifier' => 'CMXBOM',
+        'product_id' => null,
+        'client_id' => null,
+        'version' => null,
+        'assignment' => null,
+        'valid_from' => null,
+        'text' => null,
+        'reserved_1' => null,
+        'reserved_2' => null,
+        'reserved_3' => null,
+        'reserved_4' => null,
+        'reserved_5' => null,
+        'position' => null,
         'component_product_id' => null,
-        'quantity'             => null,
-        'allocation_base'      => null,
+        'quantity' => null,
+        'allocation_base' => null,
     ];
 
     /**
