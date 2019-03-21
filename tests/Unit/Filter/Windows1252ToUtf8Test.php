@@ -20,7 +20,7 @@ class Windows1252ToUtf8Test extends TestCase
 
     public function testEncodeString(): void
     {
-        $input    = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
+        $input = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
         $expected = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
 
         $this->assertSame($expected, $this->filter->filterString($input));

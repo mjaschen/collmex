@@ -27,15 +27,15 @@ class MemberGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'  => 'MEMBER_GET',
-        'customer_id'      => null,
-        'client_id'        => null,
-        'query'            => null,
-        'zipcode'          => null,
+        'type_identifier' => 'MEMBER_GET',
+        'customer_id' => null,
+        'client_id' => null,
+        'query' => null,
+        'zipcode' => null,
         'address_group_id' => null,
-        'exited_too'       => null,
-        'only_changed'     => null,
-        'system_name'      => null,
+        'exited_too' => null,
+        'only_changed' => null,
+        'system_name' => null,
     ];
 
     /**

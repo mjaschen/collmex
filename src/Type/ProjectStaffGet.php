@@ -20,7 +20,7 @@ class ProjectStaffGet extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'PROJECT_STAFF_GET',
-        'project_id'      => null,
+        'project_id' => null,
     ];
 
     /**

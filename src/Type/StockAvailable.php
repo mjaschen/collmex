@@ -25,11 +25,11 @@ class StockAvailable extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'STOCK_AVAILABLE',
-        'product_id'      => null,
-        'client_id'       => null,
-        'stock'           => null,
-        'unit'            => null,
-        'reorder_time'    => null,
+        'product_id' => null,
+        'client_id' => null,
+        'stock' => null,
+        'unit' => null,
+        'reorder_time' => null,
     ];
 
     /**

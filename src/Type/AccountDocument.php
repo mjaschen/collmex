@@ -45,36 +45,36 @@ class AccountDocument extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'        => 'ACCDOC',
-        'client_id'              => null,
-        'business_year'          => null,
-        'entry_id'               => null,
-        'document_date'          => null, // 5
-        'booked_on'              => null,
-        'entry_description'      => null,
-        'position'               => null,
-        'account_id'             => null,
-        'account_name'           => null, // 10
-        'debit_or_credit'        => null,
-        'amount'                 => null,
-        'customer_id'            => null,
-        'customer_name'          => null,
-        'supplier_id'            => null, // 15
-        'supplier_name'          => null,
-        'equipment_id'           => null,
-        'equipment_name'         => null,
-        'canceled_entry_id'      => null,
-        'cost_centre'            => null, // 20
-        'invoice_id'             => null,
-        'order_id'               => null,
-        'travel_id'              => null,
-        'assigned_id'            => null,
+        'type_identifier' => 'ACCDOC',
+        'client_id' => null,
+        'business_year' => null,
+        'entry_id' => null,
+        'document_date' => null, // 5
+        'booked_on' => null,
+        'entry_description' => null,
+        'position' => null,
+        'account_id' => null,
+        'account_name' => null, // 10
+        'debit_or_credit' => null,
+        'amount' => null,
+        'customer_id' => null,
+        'customer_name' => null,
+        'supplier_id' => null, // 15
+        'supplier_name' => null,
+        'equipment_id' => null,
+        'equipment_name' => null,
+        'canceled_entry_id' => null,
+        'cost_centre' => null, // 20
+        'invoice_id' => null,
+        'order_id' => null,
+        'travel_id' => null,
+        'assigned_id' => null,
         'assigned_business_year' => null, // 25
-        'assigned_position'      => null,
-        'document_id'            => null,
-        'receipt_date'           => null,
-        'entry_date'             => null,
-        'internal_memo'          => null, // 30
+        'assigned_position' => null,
+        'document_id' => null,
+        'receipt_date' => null,
+        'entry_date' => null,
+        'internal_memo' => null, // 30
     ];
 
     /**

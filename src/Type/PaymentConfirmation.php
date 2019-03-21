@@ -27,15 +27,15 @@ class PaymentConfirmation extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'          => 'PAYMENT_CONFIRMATION',
-        'order_id'                 => null,
-        'date_of_payment'          => null,
-        'amount'                   => null,
-        'fee'                      => null,
-        'currency'                 => null,
-        'paypal_email'             => null,
+        'type_identifier' => 'PAYMENT_CONFIRMATION',
+        'order_id' => null,
+        'date_of_payment' => null,
+        'amount' => null,
+        'fee' => null,
+        'currency' => null,
+        'paypal_email' => null,
         'paypal_transactionnumber' => null,
-        'cost_center'              => null,
+        'cost_center' => null,
     ];
 
     /**

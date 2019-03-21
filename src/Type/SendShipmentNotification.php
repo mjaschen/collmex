@@ -26,14 +26,14 @@ class SendShipmentNotification extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'          => 'SHIPMENT_NOTIFICATION_SEND',
-        'delivery_id'              => null,
-        'client_id'                => null,
-        'customer_id'              => null,
-        'mode_of_shipment'         => null,
+        'type_identifier' => 'SHIPMENT_NOTIFICATION_SEND',
+        'delivery_id' => null,
+        'client_id' => null,
+        'customer_id' => null,
+        'mode_of_shipment' => null,
         'sent_to_shipment_company' => null,
-        'use_tracking_code'        => null,
-        'delivery_date_from'       => null,
+        'use_tracking_code' => null,
+        'delivery_date_from' => null,
     ];
 
     /**

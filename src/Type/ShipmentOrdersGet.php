@@ -39,16 +39,16 @@ class ShipmentOrdersGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'      => 'SHIPMENT_ORDERS_GET',
-        'delivery_id'          => null,
-        'client_id'            => null,
-        'customer_id'          => null,
+        'type_identifier' => 'SHIPMENT_ORDERS_GET',
+        'delivery_id' => null,
+        'client_id' => null,
+        'customer_id' => null,
         'shipment_handover_id' => null,
-        'shipment_type'        => null,
-        'handover_required'    => null,
-        'delivery_date_from'   => null,
-        'delivery_date_to'     => null,
-        'shipment_date'        => null,
+        'shipment_type' => null,
+        'handover_required' => null,
+        'delivery_date_from' => null,
+        'delivery_date_to' => null,
+        'shipment_date' => null,
     ];
 
     /**

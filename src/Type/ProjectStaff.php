@@ -22,11 +22,11 @@ class ProjectStaff extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier'  => 'PROJECT_STAFF',
-        'project_id'       => null,
-        'staff_id'         => null,
+        'type_identifier' => 'PROJECT_STAFF',
+        'project_id' => null,
+        'staff_id' => null,
         'staff_company_id' => null,
-        'name'             => null,
+        'name' => null,
     ];
 
     /**

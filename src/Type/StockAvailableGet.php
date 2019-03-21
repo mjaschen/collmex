@@ -34,10 +34,10 @@ class StockAvailableGet extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'STOCK_AVAILABLE_GET',
-        'client_id'       => null,
-        'product_id'      => null,
-        'changed_only'    => null,
-        'system_name'     => null,
+        'client_id' => null,
+        'product_id' => null,
+        'changed_only' => null,
+        'system_name' => null,
     ];
 
     /**

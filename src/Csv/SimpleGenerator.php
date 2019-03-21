@@ -44,11 +44,11 @@ class SimpleGenerator implements GeneratorInterface
     {
         $fileHandle = fopen('php://temp', 'w');
 
-        if (! $fileHandle) {
+        if (!$fileHandle) {
             throw new \RuntimeException('Cannot open temp file handle (php://temp)');
         }
 
-        if (! is_array($data[0])) {
+        if (!is_array($data[0])) {
             $data = [$data];
         }
 
@@ -58,7 +58,7 @@ class SimpleGenerator implements GeneratorInterface
             // between a backslash directly followed by a double-quote (for
             // string field values only)
             array_walk($line, function (&$item) use ($tmpPlaceholder): void {
-                if (! is_string($item)) {
+                if (!is_string($item)) {
                     return;
                 }
                 $item = preg_replace('/(\\\\+)"/m', '$1' . $tmpPlaceholder . '"', $item);

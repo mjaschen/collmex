@@ -25,11 +25,11 @@ class OpenItemsGet extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'OPEN_ITEMS_GET',
-        'client_id'       => null,
-        'open_items'      => null, // if empty or 0 => customer, if 1 => supplier
-        'customer_id'     => null,
-        'supplier_id'     => null,
-        'agent_id'        => null,
+        'client_id' => null,
+        'open_items' => null, // if empty or 0 => customer, if 1 => supplier
+        'customer_id' => null,
+        'supplier_id' => null,
+        'agent_id' => null,
     ];
 
     /**

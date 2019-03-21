@@ -23,9 +23,9 @@ class ProductPriceGet extends AbstractType implements TypeInterface
      */
     protected $template = [
         'type_identifier' => 'PRODUCT_PRICE_GET',
-        'client_id'       => null,
-        'product_id'      => null,
-        'inactive'        => null,
+        'client_id' => null,
+        'product_id' => null,
+        'inactive' => null,
     ];
 
     /**
