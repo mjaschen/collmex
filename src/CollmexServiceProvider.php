@@ -7,9 +7,6 @@ namespace MarcusJaschen\Collmex;
  * Laravel 5 Service Provider for Collmex PHP SDK.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- *
- * @link     https://github.com/mjaschen/collmex
  */
 class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
 {

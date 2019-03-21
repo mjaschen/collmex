@@ -7,8 +7,6 @@ namespace MarcusJaschen\Collmex\Type;
  * Collmex New Object Type
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  *
  * @property $type_identifier
  * @property $new_id
