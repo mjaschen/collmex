@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Csv;
 
 /**
- * CSV Parser Implementation using Keboola CSV Reader
+ * CSV Parser Implementation using PHP's built-in CSV handling capabilities.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
