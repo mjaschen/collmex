@@ -100,34 +100,34 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Invoice extends AbstractType implements TypeInterface
 {
-    const INVOICE_TYPE_INVOICE = 0;
-    const INVOICE_TYPE_CREDIT_MEMO = 1;
-    const INVOICE_TYPE_DOWN_PAYMENT = 2;
-    const INVOICE_TYPE_CASH_SALE = 3;
-    const INVOICE_TYPE_CREDIT_FOR_RETURNS = 4;
-    const INVOICE_TYPE_PRO_FORMA_INVOICE = 5;
+    public const INVOICE_TYPE_INVOICE = 0;
+    public const INVOICE_TYPE_CREDIT_MEMO = 1;
+    public const INVOICE_TYPE_DOWN_PAYMENT = 2;
+    public const INVOICE_TYPE_CASH_SALE = 3;
+    public const INVOICE_TYPE_CREDIT_FOR_RETURNS = 4;
+    public const INVOICE_TYPE_PRO_FORMA_INVOICE = 5;
 
-    const NOT_DELETED = 0;
-    const DELETED = 1;
+    public const NOT_DELETED = 0;
+    public const DELETED = 1;
 
-    const LANGUAGE_GERMAN = 0;
-    const LANGUAGE_ENGLISH = 1;
+    public const LANGUAGE_GERMAN = 0;
+    public const LANGUAGE_ENGLISH = 1;
 
-    const STATUS_NEW = 0;
-    const STATUS_TO_BOOK = 10;
-    const STATUS_OPEN = 20;
-    const STATUS_REMINDED = 30;
-    const STATUS_DONE = 40;
-    const STATUS_DELETED = 100;
+    public const STATUS_NEW = 0;
+    public const STATUS_TO_BOOK = 10;
+    public const STATUS_OPEN = 20;
+    public const STATUS_REMINDED = 30;
+    public const STATUS_DONE = 40;
+    public const STATUS_DELETED = 100;
 
-    const POSITION_NORMAL = 0;
-    const POSITION_SUM = 1;
-    const POSITION_TEXT = 2;
-    const POSITION_FREE = 3;
+    public const POSITION_NORMAL = 0;
+    public const POSITION_SUM = 1;
+    public const POSITION_TEXT = 2;
+    public const POSITION_FREE = 3;
 
-    const TAX_RATE_FULL = 0;
-    const TAX_RATE_REDUCED = 1;
-    const TAX_RATE_TAXFREE = 2;
+    public const TAX_RATE_FULL = 0;
+    public const TAX_RATE_REDUCED = 1;
+    public const TAX_RATE_TAXFREE = 2;
 
     /**
      * Type data template

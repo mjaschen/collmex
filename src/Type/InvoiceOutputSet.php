@@ -14,12 +14,12 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class InvoiceOutputSet extends AbstractType implements TypeInterface
 {
-    const OUTPUT_MEDIUM_PRINT = 0;
-    const OUTPUT_MEDIUM_EMAIL = 1;
-    const OUTPUT_MEDIUM_FAX = 2;
-    const OUTPUT_MEDIUM_MAIL = 3;
-    const OUTPUT_MEDIUM_EMAIL_SIGNED = 4;
-    const OUTPUT_MEDIUM_NO_OUTPUT = 100;
+    public const OUTPUT_MEDIUM_PRINT = 0;
+    public const OUTPUT_MEDIUM_EMAIL = 1;
+    public const OUTPUT_MEDIUM_FAX = 2;
+    public const OUTPUT_MEDIUM_MAIL = 3;
+    public const OUTPUT_MEDIUM_EMAIL_SIGNED = 4;
+    public const OUTPUT_MEDIUM_NO_OUTPUT = 100;
 
     /**
      * @var array

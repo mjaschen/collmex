@@ -21,8 +21,8 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class ProductGet extends AbstractType implements TypeInterface
 {
-    const ONLY_WITH_PRICE = 1;
-    const NOTONLY_WITH_PRICE = 0;
+    public const ONLY_WITH_PRICE = 1;
+    public const NOTONLY_WITH_PRICE = 0;
 
     /**
      * @var array
