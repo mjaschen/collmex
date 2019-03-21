@@ -7,8 +7,6 @@ namespace MarcusJaschen\Collmex\Csv;
  * CSV Parser Interface
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  */
 interface ParserInterface
 {

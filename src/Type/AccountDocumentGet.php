@@ -5,8 +5,6 @@ namespace MarcusJaschen\Collmex\Type;
 
 /**
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  *
  * @property string $type_identifier
  * @property string $client_id

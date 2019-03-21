@@ -32,8 +32,6 @@ use MarcusJaschen\Collmex\Type\TrackingNumber;
  * Type Factory for Collmex Response Data
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  */
 class TypeFactory
 {

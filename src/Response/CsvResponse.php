@@ -12,8 +12,6 @@ use MarcusJaschen\Collmex\TypeFactory;
  * Collmex API Response
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  */
 class CsvResponse implements ResponseInterface
 {

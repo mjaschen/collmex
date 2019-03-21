@@ -11,8 +11,6 @@ use Symfony\Component\Finder\Finder;
  * Collmex ZIP Response Class
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  */
 class ZipResponse implements ResponseInterface
 {

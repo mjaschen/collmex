@@ -7,8 +7,6 @@ namespace MarcusJaschen\Collmex\Type;
  * Collmex Invoice Get Type
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  *
  * @property string $type_identifier
  * @property string $invoice_id

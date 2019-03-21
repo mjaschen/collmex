@@ -14,8 +14,6 @@ use MarcusJaschen\Collmex\Response\ZipResponse;
  * Collmex API Request
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  */
 class Request
 {

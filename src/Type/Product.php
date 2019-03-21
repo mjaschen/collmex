@@ -8,8 +8,6 @@ namespace MarcusJaschen\Collmex\Type;
  *
  * @author  Jewel Ahmed <tojibon@gmail.com>
  * @author  Marcus Jaschen <mjaschen@gmail.com>
- * @license http://www.opensource.org/licenses/mit-license MIT License
- * @link    https://github.com/mjaschen/collmex
  *
  * @property $type_identifier
  * @property $product_id

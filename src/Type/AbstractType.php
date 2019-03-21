@@ -12,8 +12,6 @@ use MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException;
  * Abstract Collmex Type Class
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  */
 abstract class AbstractType implements JsonSerializable
 {

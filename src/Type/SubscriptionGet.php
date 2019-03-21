@@ -8,8 +8,6 @@ namespace MarcusJaschen\Collmex\Type;
  *
  * @author   Marcus Jaschen <mjaschen@gmail.com>
  * @author   Jesus Ortiz <ortizko@gmail.com>
- * @license  http://www.opensource.org/licenses/mit-license MIT License
- * @link     https://github.com/mjaschen/collmex
  *
  * @property $type_identifier
  * @property $customer_id
