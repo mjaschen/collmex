@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Product Get Type
+ * Collmex Product Get Type.
  *
  * @author  Jewel Ahmed <tojibon@gmail.com>
  * @author  Marcus Jaschen <mjaschen@gmail.com>

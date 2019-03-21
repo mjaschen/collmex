@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Member Type
+ * Collmex Member Type.
  *
  * @author    Sebastian Gunreben
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
@@ -67,7 +67,7 @@ class Member extends AbstractType implements TypeInterface
     public const LANGUAGE_ENGLISH = 1;
 
     /**
-     * Type data template
+     * Type data template.
      *
      * @var array
      */

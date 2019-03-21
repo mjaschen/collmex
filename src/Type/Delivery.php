@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Delivery Type
+ * Collmex Delivery Type.
  *
  * @author  Marcus Jaschen <mjaschen@gmail.com>
  * @author  René Galle <renegalle.webdevelopment@gmail.com>

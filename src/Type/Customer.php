@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Customer Type
+ * Collmex Customer Type.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  *
@@ -81,7 +81,7 @@ class Customer extends AbstractType implements TypeInterface
     public const LANGUAGE_ENGLISH = 1;
 
     /**
-     * Type data template
+     * Type data template.
      *
      * @var array
      */

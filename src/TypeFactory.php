@@ -29,7 +29,7 @@ use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
 
 /**
- * Type Factory for Collmex Response Data
+ * Type Factory for Collmex Response Data.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */

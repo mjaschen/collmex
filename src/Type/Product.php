@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Product Type
+ * Collmex Product Type.
  *
  * @author  Jewel Ahmed <tojibon@gmail.com>
  * @author  Marcus Jaschen <mjaschen@gmail.com>
@@ -124,7 +124,7 @@ class Product extends AbstractType implements TypeInterface
     public const DIRECT_DELIVERY_YES = 1;
 
     /**
-     * Type data template
+     * Type data template.
      *
      * @var array
      */

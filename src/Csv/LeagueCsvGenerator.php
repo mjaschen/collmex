@@ -6,7 +6,7 @@ namespace MarcusJaschen\Collmex\Csv;
 use League\Csv\Writer;
 
 /**
- * CSV Generator Class
+ * CSV Generator Class.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
@@ -33,7 +33,7 @@ class LeagueCsvGenerator implements GeneratorInterface
     }
 
     /**
-     * Generates a CSV string from given array data
+     * Generates a CSV string from given array data.
      *
      * @param array $data
      *

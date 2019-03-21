@@ -9,7 +9,7 @@ use MarcusJaschen\Collmex\Csv\SimpleGenerator;
 use MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException;
 
 /**
- * Abstract Collmex Type Class
+ * Abstract Collmex Type Class.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
@@ -23,7 +23,7 @@ abstract class AbstractType implements JsonSerializable
     protected $template;
 
     /**
-     * The type data fields (ordered)
+     * The type data fields (ordered).
      *
      * @var array
      */
@@ -77,7 +77,7 @@ abstract class AbstractType implements JsonSerializable
     }
 
     /**
-     * Returns the complete data array
+     * Returns the complete data array.
      *
      * @return array
      */
@@ -103,7 +103,7 @@ abstract class AbstractType implements JsonSerializable
     }
 
     /**
-     * Returns the complete data as JSON
+     * Returns the complete data as JSON.
      *
      * @return string
      */
@@ -121,7 +121,7 @@ abstract class AbstractType implements JsonSerializable
     }
 
     /**
-     * Read record field
+     * Read record field.
      *
      * @param string $name The field name
      *
@@ -174,7 +174,7 @@ abstract class AbstractType implements JsonSerializable
     }
 
     /**
-     * Populates the $data attribute with the given array
+     * Populates the $data attribute with the given array.
      *
      * @param array $data if the array is indexed by numeric keys (first key
      * is checked), we'll merge the data by index order.

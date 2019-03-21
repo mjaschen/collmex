@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Invoice Get Type
+ * Collmex Invoice Get Type.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  *

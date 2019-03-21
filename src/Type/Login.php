@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Login Type
+ * Collmex Login Type.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  *

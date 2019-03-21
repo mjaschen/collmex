@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Csv;
 
 /**
- * CSV Generator Class
+ * CSV Generator Class.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
@@ -31,7 +31,7 @@ class SimpleGenerator implements GeneratorInterface
     }
 
     /**
-     * Generates a CSV string from given array data
+     * Generates a CSV string from given array data.
      *
      * @param array $data
      *

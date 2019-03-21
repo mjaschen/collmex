@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Type Interface
+ * Collmex Type Interface.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
