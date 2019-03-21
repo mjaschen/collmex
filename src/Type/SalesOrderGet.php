@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Customer Order Get Type
+ * Collmex Customer Order Get Type.
  *
  * @author   Jörg Wolfgram <joerg.wolfgram@spectrattack.de>
  *

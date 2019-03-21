@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Subscription Get Type
+ * Collmex Subscription Get Type.
  *
  * @author   Marcus Jaschen <mjaschen@gmail.com>
  * @author   Jesus Ortiz <ortizko@gmail.com>
@@ -26,7 +26,7 @@ class SubscriptionGet extends AbstractType implements TypeInterface
     public const FILTER_CHANGED_ONLY = 1;
 
     /**
-     * Type data template
+     * Type data template.
      *
      * @var array
      */

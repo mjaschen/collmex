@@ -9,7 +9,7 @@ use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\TypeFactory;
 
 /**
- * Collmex API Response
+ * Collmex API Response.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
@@ -21,14 +21,14 @@ class CsvResponse implements ResponseInterface
     protected $parser;
 
     /**
-     * The unparsed response CSV string
+     * The unparsed response CSV string.
      *
      * @var string
      */
     protected $responseRaw;
 
     /**
-     * The response CSV parsed into an array (each CSV line an array element)
+     * The response CSV parsed into an array (each CSV line an array element).
      *
      * @var array
      */
@@ -45,14 +45,14 @@ class CsvResponse implements ResponseInterface
     protected $records;
 
     /**
-     * Whether the response contains an error message or not
+     * Whether the response contains an error message or not.
      *
      * @var bool|null
      */
     protected $isError;
 
     /**
-     * Collmex error-code
+     * Collmex error-code.
      * @var string|null
      */
     protected $errorCode;
@@ -96,7 +96,7 @@ class CsvResponse implements ResponseInterface
     }
 
     /**
-     * Checks if the API request returned an error
+     * Checks if the API request returned an error.
      *
      * @return bool
      */
@@ -222,7 +222,7 @@ class CsvResponse implements ResponseInterface
     }
 
     /**
-     * Converts response from Collmex API to UTF-8
+     * Converts response from Collmex API to UTF-8.
      *
      * @param array $data
      *

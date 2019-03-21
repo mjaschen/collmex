@@ -6,7 +6,7 @@ namespace MarcusJaschen\Collmex\Filter;
 use ForceUTF8\Encoding;
 
 /**
- * Filter to convert UTF-8 to Windows 1252 encoding
+ * Filter to convert UTF-8 to Windows 1252 encoding.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */

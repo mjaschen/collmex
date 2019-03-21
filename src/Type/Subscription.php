@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Subscription Type
+ * Collmex Subscription Type.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  *
@@ -31,7 +31,7 @@ class Subscription extends AbstractType implements TypeInterface
     public const INTERVAL_MONTH_PREPAID = 7;
 
     /**
-     * Type data template
+     * Type data template.
      *
      * @var array
      */

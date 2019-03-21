@@ -4,14 +4,14 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type\Validator;
 
 /**
- * Time Interval Validator
+ * Time Interval Validator.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
 class TimeInterval implements ValidatorInterface
 {
     /**
-     * Validates a date value
+     * Validates a date value.
      *
      * Collmex date representation: `YYYYMMDD`
      *

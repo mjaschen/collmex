@@ -11,7 +11,7 @@ use MarcusJaschen\Collmex\Response\ResponseFactory;
 use MarcusJaschen\Collmex\Response\ZipResponse;
 
 /**
- * Collmex API Request
+ * Collmex API Request.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
@@ -45,7 +45,7 @@ class Request
     }
 
     /**
-     * Sends an API request and returns the response object
+     * Sends an API request and returns the response object.
      *
      * @param string $body The request body
      *

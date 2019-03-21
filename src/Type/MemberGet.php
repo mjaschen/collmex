@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Customer Get Type
+ * Collmex Customer Get Type.
  *
  * @author    Sebastian Gunreben
  * @author    Marcus Jaschen <mail@marcusjaschen.de>
