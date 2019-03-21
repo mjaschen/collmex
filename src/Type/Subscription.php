@@ -21,14 +21,14 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Subscription extends AbstractType implements TypeInterface
 {
-    const INTERVAL_YEAR = 0;
-    const INTERVAL_HALF_YEAR = 1;
-    const INTERVAL_QUARTER = 2;
-    const INTERVAL_MONTH = 3;
-    const INTERVAL_YEAR_PREPAID = 4;
-    const INTERVAL_HALF_YEAR_PREPAID = 5;
-    const INTERVAL_QUARTER_PREPAID = 6;
-    const INTERVAL_MONTH_PREPAID = 7;
+    public const INTERVAL_YEAR = 0;
+    public const INTERVAL_HALF_YEAR = 1;
+    public const INTERVAL_QUARTER = 2;
+    public const INTERVAL_MONTH = 3;
+    public const INTERVAL_YEAR_PREPAID = 4;
+    public const INTERVAL_HALF_YEAR_PREPAID = 5;
+    public const INTERVAL_QUARTER_PREPAID = 6;
+    public const INTERVAL_MONTH_PREPAID = 7;
 
     /**
      * Type data template

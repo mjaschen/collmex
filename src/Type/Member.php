@@ -49,22 +49,22 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Member extends AbstractType implements TypeInterface
 {
-    const STATUS_ACTIVE = 0;
-    const STATUS_INACTIVE = 1;
+    public const STATUS_ACTIVE = 0;
+    public const STATUS_INACTIVE = 1;
 
-    const OUTPUT_MEDIUM_PRINT = 0;
-    const OUTPUT_MEDIUM_EMAIL = 1;
-    const OUTPUT_MEDIUM_FAX = 2;
-    const OUTPUT_MEDIUM_MAIL = 3;
+    public const OUTPUT_MEDIUM_PRINT = 0;
+    public const OUTPUT_MEDIUM_EMAIL = 1;
+    public const OUTPUT_MEDIUM_FAX = 2;
+    public const OUTPUT_MEDIUM_MAIL = 3;
 
-    const NO_DELIVERY_BLOCK = 0;
-    const DELIVERY_BLOCK = 1;
+    public const NO_DELIVERY_BLOCK = 0;
+    public const DELIVERY_BLOCK = 1;
 
-    const NO_CONSTRUCTION_SERVICE_PROVIDER = 0;
-    const CONSTRUCTION_SERVICE_PROVIDER = 1;
+    public const NO_CONSTRUCTION_SERVICE_PROVIDER = 0;
+    public const CONSTRUCTION_SERVICE_PROVIDER = 1;
 
-    const LANGUAGE_GERMAN = 0;
-    const LANGUAGE_ENGLISH = 1;
+    public const LANGUAGE_GERMAN = 0;
+    public const LANGUAGE_ENGLISH = 1;
 
     /**
      * Type data template

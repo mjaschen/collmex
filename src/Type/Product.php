@@ -77,51 +77,51 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Product extends AbstractType implements TypeInterface
 {
-    const TAX_RATE_FULL = 0;
-    const TAX_RATE_REDUCED = 1;
-    const TAX_RATE_TAXFREE = 2;
+    public const TAX_RATE_FULL = 0;
+    public const TAX_RATE_REDUCED = 1;
+    public const TAX_RATE_TAXFREE = 2;
 
-    const BUY_TAX_RATE_FULL = 0;
-    const BUY_TAX_RATE_REDUCED = 1;
-    const BUY_TAX_RATE_TAXFREE = 2;
+    public const BUY_TAX_RATE_FULL = 0;
+    public const BUY_TAX_RATE_REDUCED = 1;
+    public const BUY_TAX_RATE_TAXFREE = 2;
 
-    const PRODUCT_TYPE_GOODS = 0;
-    const PRODUCT_TYPE_SERVICE = 1;
-    const PRODUCT_TYPE_MEMBERSHIP_FEE = 2;
-    const PRODUCT_TYPE_CONSTRUCTION_SERVICE = 3;
-    const PRODUCT_TYPE_GOODS_CUSTOMER_TAX = 4;
+    public const PRODUCT_TYPE_GOODS = 0;
+    public const PRODUCT_TYPE_SERVICE = 1;
+    public const PRODUCT_TYPE_MEMBERSHIP_FEE = 2;
+    public const PRODUCT_TYPE_CONSTRUCTION_SERVICE = 3;
+    public const PRODUCT_TYPE_GOODS_CUSTOMER_TAX = 4;
 
-    const INACTIVE_PRODUCT_ACTIVE = 0;
-    const INACTIVE_PRODUCT_INACTIVE = 1;
-    const INACTIVE_PRODUCT_DELETE = 2;
-    const INACTIVE_PRODUCT_DELETE_IF_INACTIVE = 3;
+    public const INACTIVE_PRODUCT_ACTIVE = 0;
+    public const INACTIVE_PRODUCT_INACTIVE = 1;
+    public const INACTIVE_PRODUCT_DELETE = 2;
+    public const INACTIVE_PRODUCT_DELETE_IF_INACTIVE = 3;
 
-    const LOT_MANDATORY = 0;
+    public const LOT_MANDATORY = 0;
 
-    const TEXT_PLAIN = 0;
-    const TEXT_HTML = 1;
+    public const TEXT_PLAIN = 0;
+    public const TEXT_HTML = 1;
 
-    const PROCUREMENT_SHOPPING = 0;
-    const PROCUREMENT_PRODUCTION = 10;
+    public const PROCUREMENT_SHOPPING = 0;
+    public const PROCUREMENT_PRODUCTION = 10;
 
-    const LABOR_COSTS_REFERENCE_AMOUNT = 1;
+    public const LABOR_COSTS_REFERENCE_AMOUNT = 1;
 
-    const COSTING_AUTOMATIC = 0;
-    const COSTING_MANUAL = 0;
+    public const COSTING_AUTOMATIC = 0;
+    public const COSTING_MANUAL = 0;
 
-    const BASIC_UNIT_NO_UNIT = 0;
-    const BASIC_UNIT_KILOGRAM = 1;
-    const BASIC_UNIT_LITER = 2;
-    const BASIC_UNIT_CUBIC_METER = 3;
-    const BASIC_UNIT_METER = 4;
-    const BASIC_UNIT_SQUARE_METER = 5;
-    const BASIC_UNIT_PIECE = 6;
+    public const BASIC_UNIT_NO_UNIT = 0;
+    public const BASIC_UNIT_KILOGRAM = 1;
+    public const BASIC_UNIT_LITER = 2;
+    public const BASIC_UNIT_CUBIC_METER = 3;
+    public const BASIC_UNIT_METER = 4;
+    public const BASIC_UNIT_SQUARE_METER = 5;
+    public const BASIC_UNIT_PIECE = 6;
 
-    const DELIVERY_RELEVANCE_NO = 0;
-    const DELIVERY_RELEVANCE_YES = 1;
+    public const DELIVERY_RELEVANCE_NO = 0;
+    public const DELIVERY_RELEVANCE_YES = 1;
 
-    const DIRECT_DELIVERY_NO = 0;
-    const DIRECT_DELIVERY_YES = 1;
+    public const DIRECT_DELIVERY_NO = 0;
+    public const DIRECT_DELIVERY_YES = 1;
 
     /**
      * Type data template
