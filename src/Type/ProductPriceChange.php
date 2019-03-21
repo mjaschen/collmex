@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex ProductPrice Type
+ * Collmex ProductPrice Type.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  * @author   René Galle <renegalle.webdevelopment@gmail.com>
@@ -20,7 +20,7 @@ namespace MarcusJaschen\Collmex\Type;
 class ProductPriceChange extends AbstractType implements TypeInterface
 {
     /**
-     * Type data template
+     * Type data template.
      *
      * @var array
      */

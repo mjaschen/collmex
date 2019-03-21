@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Project Staff Type
+ * Collmex Project Staff Type.
  *
  * @author  Marcus Jaschen <mjaschen@gmail.com>
  *

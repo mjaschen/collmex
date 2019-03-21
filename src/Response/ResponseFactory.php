@@ -30,7 +30,7 @@ class ResponseFactory
     }
 
     /**
-     * Returns the class name which handles the response ('CsvResponse' or 'ZipResponse')
+     * Returns the class name which handles the response ('CsvResponse' or 'ZipResponse').
      *
      * @return ZipResponse|CsvResponse
      *

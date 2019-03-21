@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Filter;
 
 /**
- * Filter Interface
+ * Filter Interface.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */

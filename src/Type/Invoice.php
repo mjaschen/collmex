@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex Invoice Type
+ * Collmex Invoice Type.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  *
@@ -130,7 +130,7 @@ class Invoice extends AbstractType implements TypeInterface
     public const TAX_RATE_TAXFREE = 2;
 
     /**
-     * Type data template
+     * Type data template.
      *
      * @var array
      */

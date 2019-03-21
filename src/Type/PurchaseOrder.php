@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex PurchaseOrder Type
+ * Collmex PurchaseOrder Type.
  *
  * @author  Marcus Jaschen <mjaschen@gmail.com>
  * @author  René Galle <renegalle.webdevelopment@gmail.com>

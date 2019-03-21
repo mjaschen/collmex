@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex New Object Type
+ * Collmex New Object Type.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  *

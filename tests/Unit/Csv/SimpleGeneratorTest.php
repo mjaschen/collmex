@@ -79,8 +79,6 @@ class SimpleGeneratorTest extends TestCase
      * fputcsv() creates an invalid CSV string in this case.
      *
      * @see https://bugs.php.net/bug.php?id=43225
-     *
-     *
      */
     public function testGenerateCsvWithSpecialCharactersWorksAsExpected(): void
     {

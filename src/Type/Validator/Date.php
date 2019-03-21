@@ -4,14 +4,14 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type\Validator;
 
 /**
- * Date Validator
+ * Date Validator.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
 class Date implements ValidatorInterface
 {
     /**
-     * Validates a date value
+     * Validates a date value.
      *
      * Collmex date representation: `YYYYMMDD`
      *

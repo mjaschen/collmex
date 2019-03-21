@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Csv;
 
 /**
- * CSV Parser Interface
+ * CSV Parser Interface.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */

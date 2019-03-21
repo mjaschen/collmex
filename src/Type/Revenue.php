@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Class Revenue
+ * Class Revenue.
  *
  * @author  Marcus Jaschen <mjaschen@gmail.com>
  *

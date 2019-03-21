@@ -6,7 +6,7 @@ namespace MarcusJaschen\Collmex\Client;
 use MarcusJaschen\Collmex\Client\Exception\RequestFailedException;
 
 /**
- * curl Client Class
+ * curl Client Class.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
@@ -18,7 +18,7 @@ class Curl extends AbstractClient implements ClientInterface
     protected $curl;
 
     /**
-     * Executes the actual HTTP request and creates the Response object
+     * Executes the actual HTTP request and creates the Response object.
      *
      * @param $body
      *

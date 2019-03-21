@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * Collmex StockAvailableGet Type
+ * Collmex StockAvailableGet Type.
  *
  * IMPORTANT NOTE:
  * Collmex is doing a lot of processing on this request. For example, it

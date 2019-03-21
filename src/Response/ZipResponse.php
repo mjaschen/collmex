@@ -8,7 +8,7 @@ use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
 use Symfony\Component\Finder\Finder;
 
 /**
- * Collmex ZIP Response Class
+ * Collmex ZIP Response Class.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
@@ -44,7 +44,7 @@ class ZipResponse implements ResponseInterface
     }
 
     /**
-     * Returns an iterator of files matching the given file extension filter
+     * Returns an iterator of files matching the given file extension filter.
      *
      * @param string $type
      *
@@ -66,7 +66,7 @@ class ZipResponse implements ResponseInterface
     }
 
     /**
-     * Returns the CsvResponse instance for the (first) included CSV file
+     * Returns the CsvResponse instance for the (first) included CSV file.
      *
      * @return CsvResponse|null
      *
