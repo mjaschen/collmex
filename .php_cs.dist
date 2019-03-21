@@ -148,7 +148,7 @@ $rules = [
     'php_unit_ordered_covers' => true,
     'php_unit_set_up_tear_down_visibility' => true,
     'php_unit_strict' => true,
-//    'php_unit_test_case_static_method_calls' => ['call_type' => 'self'],
+    'php_unit_test_case_static_method_calls' => ['call_type' => 'self'],
     'protected_to_private' => true,
     'psr4' => true,
     'return_type_declaration' => true,

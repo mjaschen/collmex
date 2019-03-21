@@ -37,13 +37,13 @@ class ResponseTest extends TestCase
 
         $response = new CsvResponse($parser, $responseBody);
 
-        $this->assertTrue($response->isError());
-        $this->assertSame('Error Message', $response->getErrorMessage());
-        $this->assertSame('11111', $response->getErrorCode());
-        $this->assertSame(1, $response->getErrorLine());
+        self::assertTrue($response->isError());
+        self::assertSame('Error Message', $response->getErrorMessage());
+        self::assertSame('11111', $response->getErrorCode());
+        self::assertSame(1, $response->getErrorLine());
 
         // check again (but don't parse again)
-        $this->assertTrue($response->isError());
+        self::assertTrue($response->isError());
     }
 
     public function testIsErrorWhenNoErrorWorksAsExpected(): void
@@ -67,8 +67,8 @@ class ResponseTest extends TestCase
 
         $response = new CsvResponse($parser, $responseBody);
 
-        $this->assertFalse($response->isError());
-        $this->assertNull($response->getErrorMessage());
-        $this->assertNull($response->getErrorCode());
+        self::assertFalse($response->isError());
+        self::assertNull($response->getErrorMessage());
+        self::assertNull($response->getErrorCode());
     }
 }
