@@ -7,7 +7,6 @@ namespace MarcusJaschen\Collmex\Csv;
  * CSV Parser Implementation using Keboola CSV Reader
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @see      https://github.com/keboola/php-csv
  */
 class SimpleParser implements ParserInterface
 {
