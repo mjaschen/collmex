@@ -32,7 +32,7 @@ class LeagueCsvGeneratorTest extends TestCase
 
         $expected = 'MESSAGE;E;11111;"Error Message";123' . "\n";
 
-        $this->assertSame($expected, $this->generator->generate($data));
+        self::assertSame($expected, $this->generator->generate($data));
     }
 
     public function testGenerateCsvMultipleLines(): void
@@ -55,7 +55,7 @@ class LeagueCsvGeneratorTest extends TestCase
         $expected = 'TEST;1;a' . "\n"
             . 'MESSAGE;E;11111;"Error Message";123' . "\n";
 
-        $this->assertSame($expected, $this->generator->generate($data));
+        self::assertSame($expected, $this->generator->generate($data));
     }
 
     public function testGenerateCsvOneLineWithoutOuterArray(): void
@@ -70,7 +70,7 @@ class LeagueCsvGeneratorTest extends TestCase
 
         $expected = 'MESSAGE;E;11111;"Error Message";123' . "\n";
 
-        $this->assertSame($expected, $this->generator->generate($data));
+        self::assertSame($expected, $this->generator->generate($data));
     }
 
     /**
@@ -82,7 +82,7 @@ class LeagueCsvGeneratorTest extends TestCase
      */
     public function testGenerateCsvWithSpecialCharactersWorksAsExpected(): void
     {
-        $this->markTestSkipped('Skipping test for PHP bug 43225');
+        self::markTestSkipped('Skipping test for PHP bug 43225');
 
         $data = [
             'CMXINV',
@@ -93,6 +93,6 @@ class LeagueCsvGeneratorTest extends TestCase
         $expected = 'CMXINV;-1001338;"Provision Bikemarkt-Verkauf 279679: ' .
             '""Endura MTR Baggy Short // SALE \\\\"" an ""bebetz"" am 1.1.2016"' . PHP_EOL;
 
-        $this->assertSame($expected, $this->generator->generate($data));
+        self::assertSame($expected, $this->generator->generate($data));
     }
 }

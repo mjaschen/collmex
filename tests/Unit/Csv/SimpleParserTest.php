@@ -31,7 +31,7 @@ class SimpleParserTest extends TestCase
             ],
         ];
 
-        $this->assertSame($expected, $data);
+        self::assertSame($expected, $data);
     }
 
     public function testParseOneLineWithNewline(): void
@@ -48,7 +48,7 @@ class SimpleParserTest extends TestCase
             ],
         ];
 
-        $this->assertSame($expected, $data);
+        self::assertSame($expected, $data);
     }
 
     public function testParseMultipleLines(): void
@@ -70,6 +70,6 @@ class SimpleParserTest extends TestCase
             ],
         ];
 
-        $this->assertSame($expected, $data);
+        self::assertSame($expected, $data);
     }
 }
