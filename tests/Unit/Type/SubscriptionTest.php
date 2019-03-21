@@ -59,27 +59,27 @@ class SubscriptionTest extends TestCase
 
     public function testValidateSuccess(): void
     {
-        $this->assertTrue($this->type->validate());
+        self::assertTrue($this->type->validate());
     }
 
     public function testValidateFailInvalidFromDate(): void
     {
         $this->type->valid_from = '21250101';
 
-        $this->assertFalse($this->type->validate());
+        self::assertFalse($this->type->validate());
     }
 
     public function testValidateFailInvalidToDate(): void
     {
         $this->type->valid_to = '21250101';
 
-        $this->assertFalse($this->type->validate());
+        self::assertFalse($this->type->validate());
     }
 
     public function testValidateFailInvalidInterval(): void
     {
         $this->type->interval = -1;
 
-        $this->assertFalse($this->type->validate());
+        self::assertFalse($this->type->validate());
     }
 }

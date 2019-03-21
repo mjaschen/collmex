@@ -35,7 +35,7 @@ class TypeFactoryTest extends TestCase
 
         $type = $this->typeFactory->getType($data);
 
-        $this->assertInstanceOf(Customer::class, $type);
+        self::assertInstanceOf(Customer::class, $type);
     }
 
     public function testCreateSubscriptionTypeSuccessful(): void
@@ -55,7 +55,7 @@ class TypeFactoryTest extends TestCase
 
         $type = $this->typeFactory->getType($data);
 
-        $this->assertInstanceOf(Subscription::class, $type);
+        self::assertInstanceOf(Subscription::class, $type);
     }
 
     public function testCreateRevenueTypeWorksAsExpected(): void
@@ -80,7 +80,7 @@ class TypeFactoryTest extends TestCase
 
         $type = $this->typeFactory->getType($data);
 
-        $this->assertInstanceOf(Revenue::class, $type);
+        self::assertInstanceOf(Revenue::class, $type);
     }
 
     public function testInvalidType(): void
