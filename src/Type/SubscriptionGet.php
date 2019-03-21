@@ -21,9 +21,9 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class SubscriptionGet extends AbstractType implements TypeInterface
 {
-    const FILTER_ALL = 0;
-    const FILTER_CURRENTLY_VALID = 1;
-    const FILTER_CHANGED_ONLY = 1;
+    public const FILTER_ALL = 0;
+    public const FILTER_CURRENTLY_VALID = 1;
+    public const FILTER_CHANGED_ONLY = 1;
 
     /**
      * Type data template

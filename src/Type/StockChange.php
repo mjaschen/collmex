@@ -43,13 +43,13 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class StockChange extends AbstractType implements TypeInterface
 {
-    const STOCK_CHANGE_TYPE_WITHDRAWAL = 0;
-    const STOCK_CHANGE_TYPE_INPUT = 1;
-    const STOCK_CHANGE_TYPE_TRANSFER = 2;
-    const STOCK_CHANGE_TYPE_INVENTORY = 3;
+    public const STOCK_CHANGE_TYPE_WITHDRAWAL = 0;
+    public const STOCK_CHANGE_TYPE_INPUT = 1;
+    public const STOCK_CHANGE_TYPE_TRANSFER = 2;
+    public const STOCK_CHANGE_TYPE_INVENTORY = 3;
 
-    const DESTINATION_STOCK_TYPE_FREE = 0;
-    const DESTINATION_STOCK_TYPE_LOCKED = 1;
+    public const DESTINATION_STOCK_TYPE_FREE = 0;
+    public const DESTINATION_STOCK_TYPE_LOCKED = 1;
 
     /**
      * @var array

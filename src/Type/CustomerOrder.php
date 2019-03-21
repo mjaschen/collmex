@@ -102,41 +102,41 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class CustomerOrder extends AbstractType implements TypeInterface
 {
-    const PARTIAL_INVOICES_ALLOWED = 1;
-    const PARTIAL_INVOICES_NOT_ALLOWED = 0;
+    public const PARTIAL_INVOICES_ALLOWED = 1;
+    public const PARTIAL_INVOICES_NOT_ALLOWED = 0;
 
-    const PARTIAL_SHIPPING_ALLOWED = 1;
-    const PARTIAL_SHIPPING_NOT_ALLOWED = 0;
+    public const PARTIAL_SHIPPING_ALLOWED = 1;
+    public const PARTIAL_SHIPPING_NOT_ALLOWED = 0;
 
-    const NOT_DELETED = 0;
-    const DELETED = 1;
+    public const NOT_DELETED = 0;
+    public const DELETED = 1;
 
-    const STATUS_NEW = 0;
-    const STATUS_CONFIRMED = 10;
-    const STATUS_PARTIALLY_PAYED = 20;
-    const STATUS_PAYMENT_CONFIRMED = 25;
-    const STATUS_PAYED = 30;
-    const STATUS_PARTIALLY_SHIPPED = 40;
-    const STATUS_SHIPPED = 50;
-    const STATUS_PARTIAL_DISCOUNT = 60;
-    const STATUS_DISCOUNT = 70;
-    const STATUS_PARTIALLY_BILLED = 80;
-    const STATUS_BILLED = 90;
-    const STATUS_DONE = 100;
-    const STATUS_CANCELED = 1000;
-    const STATUS_DELETED = 1010;
+    public const STATUS_NEW = 0;
+    public const STATUS_CONFIRMED = 10;
+    public const STATUS_PARTIALLY_PAYED = 20;
+    public const STATUS_PAYMENT_CONFIRMED = 25;
+    public const STATUS_PAYED = 30;
+    public const STATUS_PARTIALLY_SHIPPED = 40;
+    public const STATUS_SHIPPED = 50;
+    public const STATUS_PARTIAL_DISCOUNT = 60;
+    public const STATUS_DISCOUNT = 70;
+    public const STATUS_PARTIALLY_BILLED = 80;
+    public const STATUS_BILLED = 90;
+    public const STATUS_DONE = 100;
+    public const STATUS_CANCELED = 1000;
+    public const STATUS_DELETED = 1010;
 
-    const LANGUAGE_GERMAN = 0;
-    const LANGUAGE_ENGLISH = 1;
+    public const LANGUAGE_GERMAN = 0;
+    public const LANGUAGE_ENGLISH = 1;
 
-    const POSITION_NORMAL = 0;
-    const POSITION_SUM = 1;
-    const POSITION_TEXT = 2;
-    const POSITION_FREE = 3;
+    public const POSITION_NORMAL = 0;
+    public const POSITION_SUM = 1;
+    public const POSITION_TEXT = 2;
+    public const POSITION_FREE = 3;
 
-    const TAX_RATE_FULL = 0;
-    const TAX_RATE_REDUCED = 1;
-    const TAX_RATE_TAXFREE = 2;
+    public const TAX_RATE_FULL = 0;
+    public const TAX_RATE_REDUCED = 1;
+    public const TAX_RATE_TAXFREE = 2;
 
     /**
      * @var array
