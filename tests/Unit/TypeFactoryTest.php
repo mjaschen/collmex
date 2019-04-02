@@ -22,7 +22,10 @@ class TypeFactoryTest extends TestCase
         $this->typeFactory = new TypeFactory();
     }
 
-    public function testCreateCustomerTypeSuccessful(): void
+    /**
+     * @test
+     */
+    public function createCustomerTypeSuccessful(): void
     {
         $data = [
             'CMXKND',
@@ -38,7 +41,10 @@ class TypeFactoryTest extends TestCase
         self::assertInstanceOf(Customer::class, $type);
     }
 
-    public function testCreateSubscriptionTypeSuccessful(): void
+    /**
+     * @test
+     */
+    public function createSubscriptionTypeSuccessful(): void
     {
         $data = [
             'CMXABO',
@@ -58,7 +64,10 @@ class TypeFactoryTest extends TestCase
         self::assertInstanceOf(Subscription::class, $type);
     }
 
-    public function testCreateRevenueTypeWorksAsExpected(): void
+    /**
+     * @test
+     */
+    public function createRevenueTypeWorksAsExpected(): void
     {
         $data = [
             'CMXUMS',
@@ -83,7 +92,10 @@ class TypeFactoryTest extends TestCase
         self::assertInstanceOf(Revenue::class, $type);
     }
 
-    public function testInvalidType(): void
+    /**
+     * @test
+     */
+    public function invalidType(): void
     {
         $this->expectException(InvalidTypeIdentifierException::class);
 

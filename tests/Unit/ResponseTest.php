@@ -15,7 +15,10 @@ class ResponseTest extends TestCase
         m::close();
     }
 
-    public function testIsErrorWhenErrorWorksAsExpected(): void
+    /**
+     * @test
+     */
+    public function isErrorWhenErrorWorksAsExpected(): void
     {
         $responseBody = 'MESSAGE;E;11111;Error Message;1';
 
@@ -46,7 +49,10 @@ class ResponseTest extends TestCase
         self::assertTrue($response->isError());
     }
 
-    public function testIsErrorWhenNoErrorWorksAsExpected(): void
+    /**
+     * @test
+     */
+    public function isErrorWhenNoErrorWorksAsExpected(): void
     {
         $responseBody = 'MESSAGE;S;204020;Datenübertragung erfolgreich. Es wurden 1 Datensätze verarbeitet.';
 

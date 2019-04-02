@@ -17,34 +17,52 @@ class DateTest extends TestCase
         $this->validator = new \MarcusJaschen\Collmex\Type\Validator\Date();
     }
 
-    public function testValidDate(): void
+    /**
+     * @test
+     */
+    public function validDate(): void
     {
         self::assertTrue($this->validator->validate('20130916'));
     }
 
-    public function testInvalidDateTooShort(): void
+    /**
+     * @test
+     */
+    public function invalidDateTooShort(): void
     {
         self::assertFalse($this->validator->validate('2013'));
     }
 
-    public function testInvalidDateTooLong(): void
+    /**
+     * @test
+     */
+    public function invalidDateTooLong(): void
     {
         self::assertFalse($this->validator->validate('20130916100000'));
     }
 
-    public function testInvalidYear(): void
+    /**
+     * @test
+     */
+    public function invalidYear(): void
     {
         self::assertFalse($this->validator->validate('18230901'));
         self::assertFalse($this->validator->validate('21250901'));
     }
 
-    public function testInvalidMonth(): void
+    /**
+     * @test
+     */
+    public function invalidMonth(): void
     {
         self::assertFalse($this->validator->validate('20130001'));
         self::assertFalse($this->validator->validate('20131301'));
     }
 
-    public function testInvalidDay(): void
+    /**
+     * @test
+     */
+    public function invalidDay(): void
     {
         self::assertFalse($this->validator->validate('20130900'));
         self::assertFalse($this->validator->validate('20130932'));
