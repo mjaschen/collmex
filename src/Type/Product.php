@@ -129,7 +129,8 @@ class Product extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier' => 'CMXPRD', // 1
+        // 1
+        'type_identifier' => 'CMXPRD',
         'product_id' => null,
         'product_description' => null,
         'product_description_eng' => null,
@@ -138,7 +139,8 @@ class Product extends AbstractType implements TypeInterface
         'client_id' => null,
         'tax_rate' => null,
         'weight' => null,
-        'weight_unit' => null, // 10
+        // 10
+        'weight_unit' => null,
         'price_quantity' => null,
         'product_type' => null,
         'inactive' => null,
@@ -148,7 +150,8 @@ class Product extends AbstractType implements TypeInterface
         'manufacturer' => null,
         'shipping_group' => null,
         'minimum_quantity' => null,
-        'quantity' => null, // 20
+        // 20
+        'quantity' => null,
         'lot_mandatory' => null,
         'procurement' => null,
         'production_time' => null,
@@ -158,7 +161,8 @@ class Product extends AbstractType implements TypeInterface
         'costing' => null,
         'costs' => null,
         'reference_amount_cost' => null,
-        'purchase_supplier' => null, // 30
+        // 30
+        'purchase_supplier' => null,
         'purchase_tax_rate' => null,
         'product_number_supplier' => null,
         'purchase_quantity_per_package' => null,
@@ -168,7 +172,8 @@ class Product extends AbstractType implements TypeInterface
         'purchase_delivery_time' => null,
         'purchase_currency' => null,
         'reserved01' => null,
-        'reserved02' => null, // 40
+        // 40
+        'reserved02' => null,
         'website_id' => null,
         'shop_short_text' => null,
         'shop_long_text' => null,
@@ -178,7 +183,8 @@ class Product extends AbstractType implements TypeInterface
         'title' => null,
         'template_id' => null,
         'image_url' => null,
-        'base_price_quantity_product' => null, // 50
+        // 50
+        'base_price_quantity_product' => null,
         'base_price_quantity_base_unit' => null,
         'base_unit' => null,
         'requested_price' => null,
@@ -188,12 +194,14 @@ class Product extends AbstractType implements TypeInterface
         'reserved04' => null,
         'reserved05' => null,
         'product_number_manufacturer' => null,
-        'delivery_relevant' => null, // 60
+        // 60
+        'delivery_relevant' => null,
         'amazon_asin' => null,
         'ebay_item_number' => null,
         'direct_delivery' => null,
         'hs_code' => null,
-        'storage_bin' => null, // 65
+        // 65
+        'storage_bin' => null,
     ];
 
     /**

@@ -151,7 +151,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'customer_salutation' => null,
         'customer_title' => null,
         'customer_forename' => null,
-        'customer_lastname' => null, // 10
+        // 10
+        'customer_lastname' => null,
         'customer_firm' => null,
         'customer_department' => null,
         'customer_street' => null,
@@ -161,7 +162,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'customer_phone' => null,
         'customer_phone_2' => null,
         'customer_fax' => null,
-        'customer_email' => null, // 20
+        // 20
+        'customer_email' => null,
         'customer_bank_account' => null,
         'customer_bank_code' => null,
         'customer_bank_account_owner' => null,
@@ -171,7 +173,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'customer_vat_id' => null,
         'reserved' => null,
         'customer_order_id' => null,
-        'order_date' => null, // 30
+        // 30
+        'order_date' => null,
         'price_date' => null,
         'terms_of_payment' => null,
         'currency' => null,
@@ -181,7 +184,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'discount_reason' => null,
         'confirmation_text' => null,
         'final_text' => null,
-        'internal_memo' => null, // 40
+        // 40
+        'internal_memo' => null,
         'partial_invoices' => null,
         'partial_shipping' => null,
         'deleted' => null,
@@ -191,7 +195,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'agent_id' => null,
         'system_name' => null,
         'discount_final_2' => null,
-        'discount_final_2_reason' => null, // 50
+        // 50
+        'discount_final_2_reason' => null,
         'reserved_2' => null,
         'canceled_at' => null,
         'shipping_type' => null,
@@ -201,7 +206,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'delivery_conditions_additional' => null,
         'delivery_salutation' => null,
         'delivery_title' => null,
-        'delivery_forename' => null, // 60
+        // 60
+        'delivery_forename' => null,
         'delivery_lastname' => null,
         'delivery_firm' => null,
         'delivery_department' => null,
@@ -211,7 +217,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'delivery_country' => null,
         'delivery_phone' => null,
         'delivery_phone_2' => null,
-        'delivery_fax' => null, // 70
+        // 70
+        'delivery_fax' => null,
         'delivery_email' => null,
         'position_type' => null,
         'product_id' => null,
@@ -221,7 +228,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'price' => null,
         'delivery_date' => null,
         'price_quantity' => null,
-        'position_discount' => null, // 80
+        // 80
+        'position_discount' => null,
         'position_value' => null,
         'product_type' => null,
         'tax_rate' => null,
@@ -231,7 +239,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'billed_final' => null,
         'revenue' => null,
         'costs' => null,
-        'gross_profit' => null, // 90
+        // 90
+        'gross_profit' => null,
         'margin' => null,
     ];
 
