@@ -86,58 +86,70 @@ class Customer extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier' => 'CMXKND',   // 1
+        // 1
+        'type_identifier' => 'CMXKND',
         'customer_id' => null,
         'client_id' => null,
         'salutation' => null,
-        'title' => null,       // 5
+        // 5
+        'title' => null,
         'forename' => null,
         'lastname' => null,
         'firm' => null,
         'department' => null,
-        'street' => null,       // 10
+        // 10
+        'street' => null,
         'zipcode' => null,
         'city' => null,
         'annotation' => null,
         'inactive' => null,
-        'country' => null,       // 15
+        // 15
+        'country' => null,
         'phone' => null,
         'fax' => null,
         'email' => null,
         'bank_account' => null,
-        'bank_code' => null,       // 20
+        // 20
+        'bank_code' => null,
         'iban' => null,
         'bic' => null,
         'bank_name' => null,
         'tax_id' => null,
-        'vat_id' => null,       // 25
+        // 25
+        'vat_id' => null,
         'terms_of_payment' => null,
         'discount_id' => null,
         'delivery_conditions' => null,
         'delivery_conditions_additional' => null,
-        'output_medium' => null,       // 30
+        // 30
+        'output_medium' => null,
         'bank_account_owner' => null,
         'address_group_id' => null,
         'ebay_account_name' => null,
         'price_group_id' => null,
-        'currency' => null,       // 35
+        // 35
+        'currency' => null,
         'agent_id' => null,
         'cost_center' => null,
         'follow_up_date' => null,
         'delivery_block' => null,
-        'construction_service_provider' => null,       // 40
+        // 40
+        'construction_service_provider' => null,
         'customer_supplier_number' => null,
         'output_language' => null,
         'email_cc' => null,
         'phone_2' => null,
-        'mandate_reference' => null,       // 45
+        // 45
+        'mandate_reference' => null,
         'mandate_reference_sign_date' => null,
         'dunning_block' => null,
         'no_mailings' => null,
         'private_person' => null,
-        'url' => null,       // 50
+        // 50
+        'url' => null,
         'partial_delivery_allowed' => null,
-        'partial_invoice_allowed' => null,       // 52
+        // 52
+        'partial_invoice_allowed' => null,
     ];
 
     /**

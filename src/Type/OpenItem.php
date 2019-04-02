@@ -36,26 +36,31 @@ class OpenItem extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier' => 'OPEN_ITEM', // 1
+        // 1
+        'type_identifier' => 'OPEN_ITEM',
         'client_id' => null,
         'business_year' => null,
         'accounting_id' => null,
-        'position_number' => null, // 5
+        // 5
+        'position_number' => null,
         'customer_id' => null,
         'customer_name' => null,
         'supplier_id' => null,
         'supplier_name' => null,
-        'invoice_id' => null, // 10
+        // 10
+        'invoice_id' => null,
         'receipt_date' => null,
         'payment_conditions' => null,
         'due_date' => null,
         'delay' => null,
-        'dunning_level' => null, // 15
+        // 15
+        'dunning_level' => null,
         'dunning_date' => null,
         'dunning_charge' => null,
         'amount' => null,
         'payed' => null,
-        'open' => null, // 20
+        // 20
+        'open' => null,
     ];
 
     /**

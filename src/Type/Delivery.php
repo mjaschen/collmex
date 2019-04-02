@@ -85,75 +85,91 @@ class Delivery extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier' => 'CMXDLV', // 1
+        // 1
+        'type_identifier' => 'CMXDLV',
         'delivery_id' => null,
         'position' => null,
-        'kind_of_delivery' => null, // reserved
-        'client_id' => null, // 5
+        // reserved
+        'kind_of_delivery' => null,
+        // 5
+        'client_id' => null,
         'customer_id' => null,
         'order_id' => null,
         'customer_salutation' => null,
         'customer_title' => null,
-        'customer_firstname' => null, // 10
+        // 10
+        'customer_firstname' => null,
         'customer_lastname' => null,
         'customer_company' => null,
         'customer_department' => null,
         'customer_street' => null,
-        'customer_zip' => null, // 15
+        // 15
+        'customer_zip' => null,
         'customer_city' => null,
         'customer_country' => null,
         'customer_tel' => null,
         'customer_tel2' => null,
-        'customer_telefax' => null, // 20
+        // 20
+        'customer_telefax' => null,
         'customer_email' => null,
         'customer_account_number' => null,
         'customer_bank_routing_number' => null,
         'customer_different_dipositor' => null,
-        'customer_IBAN' => null, // 25
+        // 25
+        'customer_IBAN' => null,
         'customer_BIC' => null,
         'customer_bank' => null,
         'customer_business_tax_id' => null,
         'customer_private_person' => null,
-        'order_id_at_customer' => null, // 30
+        // 30
+        'order_id_at_customer' => null,
         'delivery_date' => null,
         'delivery_note' => null,
         'closing_note' => null,
         'internal_note' => null,
-        'deleted' => null, // 35
+        // 35
+        'deleted' => null,
         'completed' => null,
         'status' => null,
         'lang' => null,
         'issuer_id' => null,
-        'weight' => null, // 40
+        // 40
+        'weight' => null,
         'amount_to_be_collected' => null,
         'currency' => null,
         'tracking_code' => null,
         'mode_of_shipment' => null,
-        'delivery_specifications' => null, // 45
+        // 45
+        'delivery_specifications' => null,
         'delivery_additions' => null,
         'delivery_address_salutation' => null,
         'delivery_address_title' => null,
         'delivery_address_firstname' => null,
-        'delivery_address_lastname' => null, // 50
+        // 50
+        'delivery_address_lastname' => null,
         'delivery_address_company' => null,
         'delivery_address_department' => null,
         'delivery_address_street' => null,
         'delivery_address_zip' => null,
-        'delivery_address_city' => null, // 55
+        // 55
+        'delivery_address_city' => null,
         'delivery_address_country' => null,
         'delivery_address_tel' => null,
         'delivery_address_tel2' => null,
         'delivery_address_telefax' => null,
-        'delivery_address_email' => null, // 60
+        // 60
+        'delivery_address_email' => null,
         'position_type' => null,
         'product_id' => null,
         'product_description' => null,
         'unit' => null,
-        'quantity' => null, // 65
+        // 65
+        'quantity' => null,
         'customer_order_position' => null,
         'ean' => null,
         'handover_required' => null,
-        'last_handover' => null, // 69
+        // 69
+        'last_handover' => null,
     ];
 
     /**

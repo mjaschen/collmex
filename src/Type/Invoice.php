@@ -139,91 +139,109 @@ class Invoice extends AbstractType implements TypeInterface
         'invoice_id' => null,
         'position' => null,
         'invoice_type' => null,
-        'client_id' => null, // 5
+        // 5
+        'client_id' => null,
         'order_id' => null,
         'customer_id' => null,
         'customer_salutation' => null,
         'customer_title' => null,
-        'customer_forename' => null, // 10
+        // 10
+        'customer_forename' => null,
         'customer_lastname' => null,
         'customer_firm' => null,
         'customer_department' => null,
         'customer_street' => null,
-        'customer_zipcode' => null, // 15
+        // 15
+        'customer_zipcode' => null,
         'customer_city' => null,
         'customer_country' => null,
         'customer_phone' => null,
         'customer_phone_2' => null,
-        'customer_fax' => null, // 20
+        // 20
+        'customer_fax' => null,
         'customer_email' => null,
         'customer_bank_account' => null,
         'customer_bank_code' => null,
         'customer_bank_account_owner' => null,
-        'customer_bank_iban' => null, // 25
+        // 25
+        'customer_bank_iban' => null,
         'customer_bank_bic' => null,
         'customer_bank_name' => null,
         'customer_vat_id' => null,
         'reserved' => null,
-        'invoice_date' => null, // 30
+        // 30
+        'invoice_date' => null,
         'price_date' => null,
         'terms_of_payment' => null,
         'currency' => null,
         'price_group' => null,
-        'discount_id' => null, // 35
+        // 35
+        'discount_id' => null,
         'discount_final' => null,
         'discount_reason' => null,
         'invoice_text' => null,
         'final_text' => null,
-        'annotation' => null, // 40
+        // 40
+        'annotation' => null,
         'deleted' => null,
         'language' => null,
         'employee_id' => null,
         'agent_id' => null,
-        'system_name' => null, // 45
+        // 45
+        'system_name' => null,
         'status' => null,
         'discount_final_2' => null,
         'discount_final_2_reason' => null,
         'shipping_id' => null,
-        'shipping_costs' => null, // 50
+        // 50
+        'shipping_costs' => null,
         'cod_costs' => null,
         'time_of_delivery' => null,
         'delivery_conditions' => null,
         'delivery_conditions_additional' => null,
-        'delivery_salutation' => null, // 55
+        // 55
+        'delivery_salutation' => null,
         'delivery_title' => null,
         'delivery_forename' => null,
         'delivery_lastname' => null,
         'delivery_firm' => null,
-        'delivery_department' => null, // 60
+        // 60
+        'delivery_department' => null,
         'delivery_street' => null,
         'delivery_zipcode' => null,
         'delivery_city' => null,
         'delivery_country' => null,
-        'delivery_phone' => null, // 65
+        // 65
+        'delivery_phone' => null,
         'delivery_phone_2' => null,
         'delivery_fax' => null,
         'delivery_email' => null,
         'position_type' => null,
-        'product_id' => null, // 70
+        // 70
+        'product_id' => null,
         'product_description' => null,
         'quantity_unit' => null,
         'quantity' => null,
         'price' => null,
-        'price_quantity' => null, // 75
+        // 75
+        'price_quantity' => null,
         'position_discount' => null,
         'position_value' => null,
         'product_type' => null,
         'tax_rate' => null,
-        'foreign_tax' => null, // 80
+        // 80
+        'foreign_tax' => null,
         'customer_order_position' => null,
         'revenue_type' => null,
         'sum_over_positions' => null,
         'revenue' => null,
-        'costs' => null, // 85
+        // 85
+        'costs' => null,
         'gross_profit' => null,
         'margin' => null,
         'costs_manually' => null,
-        'ean' => null, // 89
+        // 89
+        'ean' => null,
     ];
 
     /**
