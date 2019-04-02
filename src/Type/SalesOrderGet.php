@@ -26,8 +26,14 @@ class SalesOrderGet extends AbstractType implements TypeInterface
     public const FORMAT_CSV = 0;
     public const FORMAT_ZIP = 1;
 
-    public const FILTER_ON = 1;    // useable for 'only_changed' and 'only_created_by_system'
-    public const FILTER_OFF = 0;    // useable for 'only_changed' and 'only_created_by_system'
+    /**
+     * useable for 'only_changed' and 'only_created_by_system'.
+     */
+    public const FILTER_ON = 1;
+    /**
+     * useable for 'only_changed' and 'only_created_by_system'.
+     */
+    public const FILTER_OFF = 0;
 
     public const WITH_LETTER_PAPER = 0;
     public const NO_LETTER_PAPER = 1;
@@ -45,7 +51,8 @@ class SalesOrderGet extends AbstractType implements TypeInterface
         'customer_order_id' => null,
         'format' => null,
         'only_changed' => null,
-        'system_name' => null,    // 10
+        // 10
+        'system_name' => null,
         'only_created_by_system' => null,
         'letter_paper' => null,
     ];

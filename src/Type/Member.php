@@ -72,41 +72,49 @@ class Member extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier' => 'CMXMGD',   // 1
+        // 1
+        'type_identifier' => 'CMXMGD',
         'customer_id' => null,
         'salutation' => null,
         'title' => null,
-        'forename' => null,       // 5
+        // 5
+        'forename' => null,
         'lastname' => null,
         'firm' => null,
         'department' => null,
         'street' => null,
-        'zipcode' => null,       // 10
+        // 10
+        'zipcode' => null,
         'city' => null,
         'delete' => null,
         'url' => null,
         'country' => null,
-        'phone' => null,       // 15
+        // 15
+        'phone' => null,
         'fax' => null,
         'email' => null,
         'bank_account' => null,
         'bank_code' => null,
-        'iban' => null,       // 20
+        // 20
+        'iban' => null,
         'bic' => null,
         'bank_name' => null,
         'mandate_reference' => null,
         'mandate_reference_sign_date' => null,
-        'birthday' => null,       // 25
+        // 25
+        'birthday' => null,
         'entrance_date' => null,
         'exit_date' => null,
         'annotation' => null,
         'phone2' => null,
-        'skype' => null,       // 30
+        // 30
+        'skype' => null,
         'bankaccount_owner' => null,
         'printout_medium' => null,
         'address_group' => null,
         'payment_agreement' => null,
-        'payment_via' => null,       // 35
+        // 35
+        'payment_via' => null,
         'printout_language' => null,
         'cost_center' => null,
     ];

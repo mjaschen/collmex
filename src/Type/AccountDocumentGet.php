@@ -34,17 +34,20 @@ class AccountDocumentGet extends AbstractType implements TypeInterface
         'client_id' => null,
         'business_year' => null,
         'entry_id' => null,
-        'account_id' => null, // 5
+        // 5
+        'account_id' => null,
         'cost_center' => null,
         'customer_id' => null,
         'supplier_id' => null,
         'equipment_id' => null,
-        'invoice_id' => null, // 10
+        // 10
+        'invoice_id' => null,
         'travel_id' => null,
         'text' => null,
         'receipt_date_from' => null,
         'receipt_date_to' => null,
-        'include_canceled' => null, // 15
+        // 15
+        'include_canceled' => null,
         'only_changed' => null,
         'system_name' => null,
     ];

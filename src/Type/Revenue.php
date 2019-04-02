@@ -61,30 +61,36 @@ class Revenue extends AbstractType implements TypeInterface
         'customer_id' => null,
         'client_id' => null,
         'invoice_date' => null,
-        'invoice_id' => null, // 5
+        // 5
+        'invoice_id' => null,
         'amount_netto_with_default_tax' => null,
         'amount_default_tax' => null,
         'amount_netto_with_reduced_tax' => null,
         'amount_reduced_tax' => null,
-        'amount_inner_community_revenue' => null, // 10
+        // 10
+        'amount_inner_community_revenue' => null,
         'amount_export' => null,
         'account_taxfree_revenue' => null,
         'amount_taxfree_revenue' => null,
         'currency' => null,
-        'contra_account' => null, // 15
+        // 15
+        'contra_account' => null,
         'invoice_type' => null,
         'receipt_text' => null,
         'terms_of_payment' => null,
         'account_default_tax' => null,
-        'account_reduced_tax' => null, // 20
+        // 20
+        'account_reduced_tax' => null,
         'reserved_1' => null,
         'reserved_2' => null,
         'cancelation' => null,
         'closing_invoice' => null,
-        'revenue_type' => null, // 25
+        // 25
+        'revenue_type' => null,
         'system_name' => null,
         'compensation_invoice_id' => null,
-        'cost_center' => null, // 28
+        // 28
+        'cost_center' => null,
     ];
 
     /**

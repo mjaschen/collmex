@@ -40,7 +40,6 @@ class TypeFactory
      *
      * @param array $data
      *
-     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
      * @throws InvalidTypeIdentifierException
      *
      * @return Type\AbstractType
