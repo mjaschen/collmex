@@ -18,7 +18,10 @@ class LeagueCsvParserTest extends TestCase
         $this->parser = new LeagueCsvParser(';', '"');
     }
 
-    public function testParseOneLine(): void
+    /**
+     * @test
+     */
+    public function parseOneLine(): void
     {
         $csv = 'Typkennung;Rechnung Nr;Pos';
 
@@ -35,7 +38,10 @@ class LeagueCsvParserTest extends TestCase
         self::assertSame($expected, $data);
     }
 
-    public function testParseOneLineWithNewline(): void
+    /**
+     * @test
+     */
+    public function parseOneLineWithNewline(): void
     {
         $csv = "Typkennung;Rechnung Nr;Pos\n";
 
@@ -52,7 +58,10 @@ class LeagueCsvParserTest extends TestCase
         self::assertSame($expected, $data);
     }
 
-    public function testParseMultipleLines(): void
+    /**
+     * @test
+     */
+    public function parseMultipleLines(): void
     {
         $csv = "Typkennung;Rechnung Nr;Pos\nCMXINV;100;1";
 

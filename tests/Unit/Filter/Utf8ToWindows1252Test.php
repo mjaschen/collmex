@@ -18,7 +18,10 @@ class Utf8ToWindows1252Test extends TestCase
         $this->filter = new Utf8ToWindows1252();
     }
 
-    public function testEncodeString(): void
+    /**
+     * @test
+     */
+    public function encodeString(): void
     {
         $input = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
         $expected = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
@@ -26,7 +29,10 @@ class Utf8ToWindows1252Test extends TestCase
         self::assertSame($expected, $this->filter->filterString($input));
     }
 
-    public function testEncodeArray(): void
+    /**
+     * @test
+     */
+    public function encodeArray(): void
     {
         $source = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
         $target = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
@@ -44,7 +50,10 @@ class Utf8ToWindows1252Test extends TestCase
         self::assertSame($expected, $this->filter->filterArray($input));
     }
 
-    public function testEncodeArrayRecursive(): void
+    /**
+     * @test
+     */
+    public function encodeArrayRecursive(): void
     {
         $source = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
         $target = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
