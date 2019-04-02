@@ -25,9 +25,9 @@ interface FilterInterface
     public function filterString(string $text): string;
 
     /**
-     * @param array $input
+     * @param string[] $input
      *
-     * @return array
+     * @return string[]
      */
     public function filterArray(array $input): array;
 }

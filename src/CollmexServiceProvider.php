@@ -78,7 +78,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function provides(): array
     {
