@@ -17,7 +17,10 @@ class SimpleParserTest extends TestCase
         $this->parser = new \MarcusJaschen\Collmex\Csv\SimpleParser(';', '"');
     }
 
-    public function testParseOneLine(): void
+    /**
+     * @test
+     */
+    public function parseOneLine(): void
     {
         $csv = 'Typkennung;Rechnung Nr;Pos';
 
@@ -34,7 +37,10 @@ class SimpleParserTest extends TestCase
         self::assertSame($expected, $data);
     }
 
-    public function testParseOneLineWithNewline(): void
+    /**
+     * @test
+     */
+    public function parseOneLineWithNewline(): void
     {
         $csv = "Typkennung;Rechnung Nr;Pos\n";
 
@@ -51,7 +57,10 @@ class SimpleParserTest extends TestCase
         self::assertSame($expected, $data);
     }
 
-    public function testParseMultipleLines(): void
+    /**
+     * @test
+     */
+    public function parseMultipleLines(): void
     {
         $csv = "Typkennung;Rechnung Nr;Pos\nCMXINV;100;1";
 

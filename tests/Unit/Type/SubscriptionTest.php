@@ -52,26 +52,38 @@ class SubscriptionTest extends TestCase
         self::assertInstanceOf(TypeInterface::class, $subject);
     }
 
-    public function testValidateSuccess(): void
+    /**
+     * @test
+     */
+    public function validateSuccess(): void
     {
         self::assertTrue($this->type->validate());
     }
 
-    public function testValidateFailInvalidFromDate(): void
+    /**
+     * @test
+     */
+    public function validateFailInvalidFromDate(): void
     {
         $this->type->valid_from = '21250101';
 
         self::assertFalse($this->type->validate());
     }
 
-    public function testValidateFailInvalidToDate(): void
+    /**
+     * @test
+     */
+    public function validateFailInvalidToDate(): void
     {
         $this->type->valid_to = '21250101';
 
         self::assertFalse($this->type->validate());
     }
 
-    public function testValidateFailInvalidInterval(): void
+    /**
+     * @test
+     */
+    public function validateFailInvalidInterval(): void
     {
         $this->type->interval = -1;
 

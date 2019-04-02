@@ -18,7 +18,10 @@ class SimpleGeneratorTest extends TestCase
         $this->generator = new SimpleGenerator(';', '"');
     }
 
-    public function testGenerateCsvOneLine(): void
+    /**
+     * @test
+     */
+    public function generateCsvOneLine(): void
     {
         $data = [
             [
@@ -35,7 +38,10 @@ class SimpleGeneratorTest extends TestCase
         self::assertSame($expected, $this->generator->generate($data));
     }
 
-    public function testGenerateCsvMultipleLines(): void
+    /**
+     * @test
+     */
+    public function generateCsvMultipleLines(): void
     {
         $data = [
             [
@@ -58,7 +64,10 @@ class SimpleGeneratorTest extends TestCase
         self::assertSame($expected, $this->generator->generate($data));
     }
 
-    public function testGenerateCsvOneLineWithoutOuterArray(): void
+    /**
+     * @test
+     */
+    public function generateCsvOneLineWithoutOuterArray(): void
     {
         $data = [
             'MESSAGE',
@@ -74,13 +83,15 @@ class SimpleGeneratorTest extends TestCase
     }
 
     /**
+     * @test
+     *
      * Tests if CSV generation works in a special case: text contains a
      * backslash followed by a double quote. There exists a PHP bug where
      * fputcsv() creates an invalid CSV string in this case.
      *
      * @see https://bugs.php.net/bug.php?id=43225
      */
-    public function testGenerateCsvWithSpecialCharactersWorksAsExpected(): void
+    public function generateCsvWithSpecialCharactersWorksAsExpected(): void
     {
         $data = [
             'CMXINV',
