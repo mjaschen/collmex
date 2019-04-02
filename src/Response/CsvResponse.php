@@ -30,7 +30,7 @@ class CsvResponse implements ResponseInterface
     /**
      * The response CSV parsed into an array (each CSV line an array element).
      *
-     * @var array
+     * @var string[]
      */
     protected $response;
 
@@ -224,9 +224,9 @@ class CsvResponse implements ResponseInterface
     /**
      * Converts response from Collmex API to UTF-8.
      *
-     * @param array $data
+     * @param string[] $data
      *
-     * @return array
+     * @return string[]
      */
     protected function convertEncodingFromCollmex(array $data): array
     {

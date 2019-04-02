@@ -33,9 +33,9 @@ class Utf8ToWindows1252 implements FilterInterface
     }
 
     /**
-     * @param array $input
+     * @param string[] $input
      *
-     * @return array
+     * @return string[]
      */
     public function filterArray(array $input): array
     {
