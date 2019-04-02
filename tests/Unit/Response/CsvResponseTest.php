@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace MarcusJaschen\Collmex\Tests\Unit;
+namespace MarcusJaschen\Collmex\Tests\Unit\Response;
 
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Response\CsvResponse;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
 
-class ResponseTest extends TestCase
+class CsvResponseTest extends TestCase
 {
     protected function tearDown(): void
     {
