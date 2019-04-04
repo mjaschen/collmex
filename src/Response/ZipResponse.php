@@ -96,7 +96,7 @@ class ZipResponse implements ResponseInterface
         file_put_contents($tmpFilename, $this->responseBody);
 
         $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR
-                                  . 'collmexphp_extracted_' . basename($tmpFilename);
+            . 'collmexphp_extracted_' . basename($tmpFilename);
 
         $zip = new \ZipArchive();
 

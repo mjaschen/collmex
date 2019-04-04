@@ -125,9 +125,9 @@ abstract class AbstractType implements JsonSerializable
      *
      * @param string $name The field name
      *
-     * @throws InvalidFieldNameException
-     *
      * @return mixed
+     *
+     * @throws InvalidFieldNameException
      */
     public function __get(string $name)
     {
@@ -143,6 +143,8 @@ abstract class AbstractType implements JsonSerializable
     /**
      * @param string $name The field name
      * @param mixed $value The new field value
+     *
+     * @return void
      *
      * @throws InvalidFieldNameException
      */
