@@ -58,7 +58,7 @@ class ZipResponse implements ResponseInterface
 
         $iterator = $finder
             ->files()
-            ->name("*.{$type}")
+            ->name('*.' . $type)
             ->depth(0)
             ->in($this->extractDirectory);
 

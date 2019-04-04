@@ -107,7 +107,7 @@
     <rule ref="Squiz.Scope.StaticThisUsage"/>
 
     <!-- Strings -->
-    <!--<rule ref="Squiz.Strings.DoubleQuoteUsage"/>-->
+    <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
 
     <!-- Whitespace -->
     <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>

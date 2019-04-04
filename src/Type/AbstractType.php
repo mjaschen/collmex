@@ -136,7 +136,7 @@ abstract class AbstractType implements JsonSerializable
         }
 
         throw new InvalidFieldNameException(
-            "Cannot read field value; field '{$name}' does not exist in class " . get_class($this)
+            'Cannot read field value; field "' . $name . '" does not exist in class ' . get_class($this)
         );
     }
 
@@ -159,7 +159,7 @@ abstract class AbstractType implements JsonSerializable
         }
 
         throw new InvalidFieldNameException(
-            "Cannot set field value; field '{$name}' does not exist in class " . get_class($this)
+            'Cannot set field value; field "' . $name . '" does not exist in class ' . get_class($this)
         );
     }
 
