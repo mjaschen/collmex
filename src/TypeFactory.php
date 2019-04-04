@@ -40,9 +40,9 @@ class TypeFactory
      *
      * @param array $data
      *
-     * @throws InvalidTypeIdentifierException
-     *
      * @return Type\AbstractType
+     *
+     * @throws InvalidTypeIdentifierException
      */
     public function getType(array $data): Type\AbstractType
     {
