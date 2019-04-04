@@ -95,6 +95,6 @@ class TypeFactory
                 return new StockChange($data);
         }
 
-        throw new InvalidTypeIdentifierException("Invalid Type Identifier: {$data[0]}");
+        throw new InvalidTypeIdentifierException('Invalid Type Identifier: ' . $data[0]);
     }
 }
