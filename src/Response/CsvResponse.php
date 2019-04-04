@@ -28,13 +28,6 @@ class CsvResponse implements ResponseInterface
     protected $responseRaw;
 
     /**
-     * The response CSV parsed into an array (each CSV line an array element).
-     *
-     * @var string[]
-     */
-    protected $response;
-
-    /**
      * @var array of raw response data
      */
     protected $data;
@@ -53,6 +46,7 @@ class CsvResponse implements ResponseInterface
 
     /**
      * Collmex error-code.
+     *
      * @var string|null
      */
     protected $errorCode;
