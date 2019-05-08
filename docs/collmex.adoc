@@ -148,3 +148,54 @@ if ($collmexResponse->isError()) {
     }
 }
 ----
+
+=== Transmit a Collmex customer order with multiple items
+
+[source,php]
+----
+<?php
+
+use MarcusJaschen\Collmex\Client\Curl as CurlClient;
+use MarcusJaschen\Collmex\Request;
+use MarcusJaschen\Collmex\Type\CustomerOrder;
+
+// initialize HTTP client
+$collmexClient = new CurlClient('USER', 'PASSWORD', 'CUSTOMER_ID');
+
+// create request object
+$collmexRequest = new Request($collmexClient);
+
+$customerOrderItem1 = new CustomerOrder(
+    [
+        'client_id'                      => '2',
+        'order_id'                       => null,
+        'position'                       => null,
+        'order_type'                     => null,
+        ...
+        'product_id' => '12345',
+        ...
+    ]
+);
+
+$customerOrderItem2 = clone $customerOrderItem1;
+$customerOrderItem2->product_id = '23456';
+
+$csv = $customerOrderItem1->getCsv() . $customerOrderItem2->getCsv();
+
+// send HTTP request and get response object
+$collmexResponse = $collmexRequest->send($csv);
+
+if ($collmexResponse->isError()) {
+    echo 'Collmex error: ' . $collmexResponse->getErrorMessage() . '; Code=' . $collmexResponse->getErrorCode() . PHP_EOL;
+} else {
+    $newObject = $collmexResponse->getFirstRecord();
+    echo 'New Collmex customer ID=' . $newObject->new_id . PHP_EOL;
+
+    $records = $collmexResponse->getRecords();
+
+    foreach ($records as $record) {
+        // contains one NewObject object and the Message object(s)
+        var_dump($record->getData());
+    }
+}
+----
