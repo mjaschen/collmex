@@ -33,7 +33,7 @@ class ZipResponse implements ResponseInterface
      * @param ParserInterface $responseParser
      * @param string $responseBody
      *
-     * @throws \MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException
+     * @throws InvalidZipFileException
      */
     public function __construct(ParserInterface $responseParser, string $responseBody)
     {
