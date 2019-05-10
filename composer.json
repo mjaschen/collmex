@@ -59,8 +59,20 @@
       "@ci:sniff",
       "@ci:psalm"
     ],
-    "ci:dynamic": [
-      "@ci:tests"
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Marcus Jaschen",
+        "email": "mail@marcusjaschen.de",
+        "homepage": "https://marcusjaschen.de/",
+        "role": "maintainer and developer"
+      },
+      {
+        "name": "Oliver Klee",
+        "email": "typo3-coding@oliverklee.de",
+        "homepage": "https://www.oliverklee.de/",
+        "role": "developer"
+      }
     ],
     "support": {
       "source": "https://github.com/mjaschen/collmex",
@@ -76,24 +88,14 @@
       "symfony/http-foundation": "^4.0"
     },
     "require-dev": {
-<<<<<<< HEAD
       "laravel/framework": "^5.8",
       "league/csv": "^9.1",
       "mockery/mockery": "^1.2",
-      "phpunit/phpunit": "^5.7.26",
+      "phpunit/phpunit": "^7.5",
       "vimeo/psalm": "^3.1",
       "squizlabs/php_codesniffer": "^3.4",
+      "friendsofphp/php-cs-fixer": "2.14",
       "roave/security-advisories": "dev-master"
-=======
-        "laravel/framework": "^5.8",
-        "league/csv": "^9.1",
-        "mockery/mockery": "^1.2",
-        "phpunit/phpunit": "^7.5",
-        "vimeo/psalm": "^3.1",
-        "squizlabs/php_codesniffer": "^3.4",
-        "friendsofphp/php-cs-fixer": "2.14",
-        "roave/security-advisories": "dev-master"
->>>>>>> [FEATURE] Composer script for code autoformat (#123)
     },
     "suggest": {
       "league/csv": "Enable CSV generation via the 'Csv' library by The PHP League"
@@ -115,23 +117,23 @@
       }
     },
     "scripts": {
-        "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
-        "ci:sniff": "./vendor/bin/phpcs config/ src/ tests/",
-        "ci:psalm": "./vendor/bin/psalm",
-        "ci:tests": "./vendor/bin/phpunit tests/",
-        "ci:static": [
-            "@ci:lint",
-            "@ci:sniff",
-            "@ci:psalm"
-        ],
-        "ci:dynamic": [
-            "@ci:tests"
-        ],
-        "ci": [
-            "@ci:static",
-            "@ci:dynamic"
-        ],
-        "fix:php-cs": "./vendor/bin/php-cs-fixer fix"
+      "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
+      "ci:sniff": "./vendor/bin/phpcs config/ src/ tests/",
+      "ci:psalm": "./vendor/bin/psalm",
+      "ci:tests": "./vendor/bin/phpunit tests/",
+      "ci:static": [
+        "@ci:lint",
+        "@ci:sniff",
+        "@ci:psalm"
+      ],
+      "ci:dynamic": [
+        "@ci:tests"
+      ],
+      "ci": [
+        "@ci:static",
+        "@ci:dynamic"
+      ],
+      "fix:php-cs": "./vendor/bin/php-cs-fixer fix"
     },
     "extra": {
       "laravel": {
