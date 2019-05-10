@@ -39,18 +39,51 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Revenue extends AbstractType implements TypeInterface
 {
+    /**
+     * @var int
+     */
     public const INVOICE_TYPE_STANDARD = 0;
+    /**
+     * @var int
+     */
     public const INVOICE_TYPE_CREDIT_MEMO = 1;
+    /**
+     * @var int
+     */
     public const INVOICE_TYPE_DOWN_PAYMENT = 2;
 
+    /**
+     * @var null
+     */
     public const CANCELATION_TYPE_NO_CANCELATION = null;
+    /**
+     * @var int
+     */
     public const CANCELATION_TYPE_CANCELATION = 1;
 
+    /**
+     * @var int
+     */
     public const REVENUE_TYPE_EXPORT = 10;
+    /**
+     * @var int
+     */
     public const REVENUE_TYPE_INNER_COMMUNITY = 11;
+    /**
+     * @var int
+     */
     public const REVENUE_TYPE_NO_TAX_EU = 12;
+    /**
+     * @var int
+     */
     public const REVENUE_TYPE_NO_TAX = 13;
+    /**
+     * @var int
+     */
     public const REVENUE_TYPE_TAX = 14;
+    /**
+     * @var int
+     */
     public const REVENUE_TYPE_NO_TAX_3RD_PARTY_COUNTRY = 15;
 
     /**

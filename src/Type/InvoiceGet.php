@@ -24,10 +24,22 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class InvoiceGet extends AbstractType implements TypeInterface
 {
+    /**
+     * @var int
+     */
     public const FORMAT_CSV = 0;
+    /**
+     * @var int
+     */
     public const FORMAT_ZIP = 1;
 
+    /**
+     * @var int
+     */
     public const STATIONARY_INCLUDE = 0;
+    /**
+     * @var int
+     */
     public const STATIONARY_EXCLUDE = 1;
 
     /**

@@ -23,19 +23,35 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class SalesOrderGet extends AbstractType implements TypeInterface
 {
+    /**
+     * @var int
+     */
     public const FORMAT_CSV = 0;
+    /**
+     * @var int
+     */
     public const FORMAT_ZIP = 1;
 
     /**
      * useable for 'only_changed' and 'only_created_by_system'.
+     *
+     * @var int
      */
     public const FILTER_ON = 1;
     /**
      * useable for 'only_changed' and 'only_created_by_system'.
+     *
+     * @var int
      */
     public const FILTER_OFF = 0;
 
+    /**
+     * @var int
+     */
     public const WITH_LETTER_PAPER = 0;
+    /**
+     * @var int
+     */
     public const NO_LETTER_PAPER = 1;
 
     /**
