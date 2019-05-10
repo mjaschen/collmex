@@ -15,6 +15,8 @@ abstract class AbstractClient
 {
     /**
      * The Collmex API endpoint URL template.
+     *
+     * @var string
      */
     public const EXCHANGE_URL = 'https://www.collmex.de/cgi-bin/cgi.exe?%s,0,data_exchange';
 

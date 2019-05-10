@@ -77,50 +77,152 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Product extends AbstractType implements TypeInterface
 {
+    /**
+     * @var int
+     */
     public const TAX_RATE_FULL = 0;
+    /**
+     * @var int
+     */
     public const TAX_RATE_REDUCED = 1;
+    /**
+     * @var int
+     */
     public const TAX_RATE_TAXFREE = 2;
 
+    /**
+     * @var int
+     */
     public const BUY_TAX_RATE_FULL = 0;
+    /**
+     * @var int
+     */
     public const BUY_TAX_RATE_REDUCED = 1;
+    /**
+     * @var int
+     */
     public const BUY_TAX_RATE_TAXFREE = 2;
 
+    /**
+     * @var int
+     */
     public const PRODUCT_TYPE_GOODS = 0;
+    /**
+     * @var int
+     */
     public const PRODUCT_TYPE_SERVICE = 1;
+    /**
+     * @var int
+     */
     public const PRODUCT_TYPE_MEMBERSHIP_FEE = 2;
+    /**
+     * @var int
+     */
     public const PRODUCT_TYPE_CONSTRUCTION_SERVICE = 3;
+    /**
+     * @var int
+     */
     public const PRODUCT_TYPE_GOODS_CUSTOMER_TAX = 4;
 
+    /**
+     * @var int
+     */
     public const INACTIVE_PRODUCT_ACTIVE = 0;
+    /**
+     * @var int
+     */
     public const INACTIVE_PRODUCT_INACTIVE = 1;
+    /**
+     * @var int
+     */
     public const INACTIVE_PRODUCT_DELETE = 2;
+    /**
+     * @var int
+     */
     public const INACTIVE_PRODUCT_DELETE_IF_INACTIVE = 3;
 
+    /**
+     * @var int
+     */
     public const LOT_MANDATORY = 0;
 
+    /**
+     * @var int
+     */
     public const TEXT_PLAIN = 0;
+    /**
+     * @var int
+     */
     public const TEXT_HTML = 1;
 
+    /**
+     * @var int
+     */
     public const PROCUREMENT_SHOPPING = 0;
+    /**
+     * @var int
+     */
     public const PROCUREMENT_PRODUCTION = 10;
 
+    /**
+     * @var int
+     */
     public const LABOR_COSTS_REFERENCE_AMOUNT = 1;
 
+    /**
+     * @var int
+     */
     public const COSTING_AUTOMATIC = 0;
+    /**
+     * @var int
+     */
     public const COSTING_MANUAL = 0;
 
+    /**
+     * @var int
+     */
     public const BASIC_UNIT_NO_UNIT = 0;
+    /**
+     * @var int
+     */
     public const BASIC_UNIT_KILOGRAM = 1;
+    /**
+     * @var int
+     */
     public const BASIC_UNIT_LITER = 2;
+    /**
+     * @var int
+     */
     public const BASIC_UNIT_CUBIC_METER = 3;
+    /**
+     * @var int
+     */
     public const BASIC_UNIT_METER = 4;
+    /**
+     * @var int
+     */
     public const BASIC_UNIT_SQUARE_METER = 5;
+    /**
+     * @var int
+     */
     public const BASIC_UNIT_PIECE = 6;
 
+    /**
+     * @var int
+     */
     public const DELIVERY_RELEVANCE_NO = 0;
+    /**
+     * @var int
+     */
     public const DELIVERY_RELEVANCE_YES = 1;
 
+    /**
+     * @var int
+     */
     public const DIRECT_DELIVERY_NO = 0;
+    /**
+     * @var int
+     */
     public const DIRECT_DELIVERY_YES = 1;
 
     /**
