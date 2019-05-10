@@ -11,6 +11,12 @@
             "name": "Marcus Jaschen",
             "email": "mail@marcusjaschen.de",
             "homepage": "https://marcusjaschen.de/",
+            "role": "maintainer and developer"
+        },
+        {
+            "name": "Oliver Klee",
+            "email": "typo3-coding@oliverklee.de",
+            "homepage": "https://www.oliverklee.de/",
             "role": "developer"
         }
     ],
