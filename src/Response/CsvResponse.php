@@ -80,7 +80,7 @@ class CsvResponse implements ResponseInterface
      *
      * @return void
      */
-    public function parseCsv($responseBody): void
+    private function parseCsv($responseBody): void
     {
         $this->data = $this->convertEncodingFromCollmex(
             $this->parser->parse(
@@ -206,7 +206,7 @@ class CsvResponse implements ResponseInterface
      *
      * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
      */
-    protected function createTypeRecords(): void
+    private function createTypeRecords(): void
     {
         $typeFactory = new TypeFactory();
 
@@ -222,7 +222,7 @@ class CsvResponse implements ResponseInterface
      *
      * @return string[]
      */
-    protected function convertEncodingFromCollmex(array $data): array
+    private function convertEncodingFromCollmex(array $data): array
     {
         $filter = new Windows1252ToUtf8();
 
