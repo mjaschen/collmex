@@ -90,7 +90,7 @@ class ZipResponse implements ResponseInterface
      *
      * @throws InvalidZipFileException
      */
-    protected function extractFiles(): void
+    private function extractFiles(): void
     {
         $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
         file_put_contents($tmpFilename, $this->responseBody);
