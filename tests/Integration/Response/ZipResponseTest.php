@@ -6,6 +6,7 @@ namespace MarcusJaschen\Collmex\Tests\Integration\Response;
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Response\CsvResponse;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
+use MarcusJaschen\Collmex\Response\ResponseInterface;
 use MarcusJaschen\Collmex\Response\ZipResponse;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -63,6 +64,16 @@ class ZipResponseTest extends TestCase
         $zip->close();
 
         return \file_get_contents($this->zipPath);
+    }
+
+    /**
+     * @test
+     */
+    public function implementsResponseInterface(): void
+    {
+        $subject = new ZipResponse($this->parserStub, '');
+
+        self::assertInstanceOf(ResponseInterface::class, $subject);
     }
 
     /**
