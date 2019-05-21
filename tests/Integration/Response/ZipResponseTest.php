@@ -3,12 +3,11 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Tests\Integration\Response;
 
-use MarcusJaschen\Collmex\Csv\ParserInterface;
+use MarcusJaschen\Collmex\Csv\SimpleParser;
 use MarcusJaschen\Collmex\Response\CsvResponse;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
 use MarcusJaschen\Collmex\Response\ZipResponse;
 use PHPUnit\Framework\TestCase;
-use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Finder\Finder;
 
 /**
@@ -19,9 +18,9 @@ use Symfony\Component\Finder\Finder;
 class ZipResponseTest extends TestCase
 {
     /**
-     * @var ParserInterface|ObjectProphecy
+     * @var SimpleParser
      */
-    private $parserStub = null;
+    private $parser = null;
 
     /**
      * @var string
@@ -30,7 +29,7 @@ class ZipResponseTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->parserStub = $this->prophesize(ParserInterface::class)->reveal();
+        $this->parser = new SimpleParser();
 
         $this->zipPath = \tempnam(\sys_get_temp_dir(), 'TestingZipResponse') . '.zip';
     }
@@ -73,7 +72,7 @@ class ZipResponseTest extends TestCase
     public function constructorWithEmptyZipResponseBodyNotThrowsException(): void
     {
         $responseBody = '';
-        new ZipResponse($this->parserStub, $responseBody);
+        new ZipResponse($this->parser, $responseBody);
     }
 
     /**
@@ -86,7 +85,7 @@ class ZipResponseTest extends TestCase
         $this->expectException(InvalidZipFileException::class);
 
         $responseBody = 'The cake is a lie.';
-        new ZipResponse($this->parserStub, $responseBody);
+        new ZipResponse($this->parser, $responseBody);
     }
 
     /**
@@ -95,7 +94,7 @@ class ZipResponseTest extends TestCase
     public function getFilesByTypeReturnsFinder(): void
     {
         $responseBody = '';
-        $subject = new ZipResponse($this->parserStub, $responseBody);
+        $subject = new ZipResponse($this->parser, $responseBody);
 
         $result = $subject->getFilesByType();
 
@@ -108,7 +107,7 @@ class ZipResponseTest extends TestCase
     public function getFilesByTypeForEmptyZipResponseBodyReturnsNoResults(): void
     {
         $responseBody = '';
-        $subject = new ZipResponse($this->parserStub, $responseBody);
+        $subject = new ZipResponse($this->parser, $responseBody);
 
         $result = $subject->getFilesByType();
 
@@ -122,7 +121,7 @@ class ZipResponseTest extends TestCase
     {
         $fileName = 'test.txt';
         $responseBody = $this->createZipWithFile($fileName, 'There is no spoon.');
-        $subject = new ZipResponse($this->parserStub, $responseBody);
+        $subject = new ZipResponse($this->parser, $responseBody);
 
         $result = $subject->getFilesByType('txt');
 
@@ -136,7 +135,7 @@ class ZipResponseTest extends TestCase
     {
         $fileName = 'test.txt';
         $responseBody = $this->createZipWithFile($fileName, 'There is no spoon.');
-        $subject = new ZipResponse($this->parserStub, $responseBody);
+        $subject = new ZipResponse($this->parser, $responseBody);
 
         $result = $subject->getFilesByType('png');
 
@@ -150,7 +149,7 @@ class ZipResponseTest extends TestCase
     {
         $fileName = 'test.pdf';
         $responseBody = $this->createZipWithFile($fileName, 'There is no spoon.');
-        $subject = new ZipResponse($this->parserStub, $responseBody);
+        $subject = new ZipResponse($this->parser, $responseBody);
 
         $result = $subject->getFilesByType();
 
@@ -164,7 +163,7 @@ class ZipResponseTest extends TestCase
     {
         $fileName = 'test.txt';
         $responseBody = $this->createZipWithFile($fileName, 'There is no spoon.');
-        $subject = new ZipResponse($this->parserStub, $responseBody);
+        $subject = new ZipResponse($this->parser, $responseBody);
 
         $result = $subject->getCsvResponse();
 
@@ -180,7 +179,7 @@ class ZipResponseTest extends TestCase
 
         $fileName = 'test.csv';
         $responseBody = $this->createZipWithFile($fileName, 'There is no spoon.');
-        $subject = new ZipResponse($this->parserStub, $responseBody);
+        $subject = new ZipResponse($this->parser, $responseBody);
 
         $result = $subject->getCsvResponse();
 
