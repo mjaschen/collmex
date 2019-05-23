@@ -35,16 +35,12 @@
     },
     "require-dev": {
         "laravel/framework": "^5.8",
-        "league/csv": "^9.1",
         "mockery/mockery": "^1.2",
         "phpunit/phpunit": "^7.5",
         "vimeo/psalm": "^3.1",
         "squizlabs/php_codesniffer": "^3.4",
         "friendsofphp/php-cs-fixer": "2.14",
         "roave/security-advisories": "dev-master"
-    },
-    "suggest": {
-        "league/csv": "Enable CSV generation via the 'Csv' library by The PHP League"
     },
     "autoload": {
         "psr-4": {
