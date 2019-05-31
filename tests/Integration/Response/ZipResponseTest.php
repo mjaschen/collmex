@@ -70,7 +70,7 @@ class ZipResponseTest extends TestCase
      */
     public function implementsResponseInterface(): void
     {
-        $subject = new ZipResponse($this->parserStub, '');
+        $subject = new ZipResponse($this->parser, '');
 
         self::assertInstanceOf(ResponseInterface::class, $subject);
     }
