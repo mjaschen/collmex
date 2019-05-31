@@ -91,8 +91,6 @@ class ZipResponseTest extends TestCase
      */
     public function constructorWithInvalidZipResponseBodyThrowsException(): void
     {
-        self::markTestIncomplete('This exception is not thrown yet. This is a bug.');
-
         $this->expectException(InvalidZipFileException::class);
 
         $responseBody = 'The cake is a lie.';
