@@ -11,31 +11,12 @@ namespace MarcusJaschen\Collmex\Csv;
 class SimpleGenerator implements GeneratorInterface
 {
     /**
-     * @var string
-     */
-    protected $delimiter;
-
-    /**
-     * @var string
-     */
-    protected $enclosure;
-
-    /**
-     * @param string $delimiter
-     * @param string $enclosure
-     */
-    public function __construct(string $delimiter = ';', string $enclosure = '"')
-    {
-        $this->delimiter = $delimiter;
-        $this->enclosure = $enclosure;
-    }
-
-    /**
      * Generates a CSV string from given array data.
      *
      * @param array $data
      *
      * @return string
+     *
      * @throws \RuntimeException
      */
     public function generate(array $data): string
@@ -65,7 +46,7 @@ class SimpleGenerator implements GeneratorInterface
                 }
             );
 
-            fputcsv($fileHandle, $line, $this->delimiter, $this->enclosure);
+            fputcsv($fileHandle, $line, FormatInterface::DELIMITER, FormatInterface::ENCLOSURE);
         }
 
         rewind($fileHandle);

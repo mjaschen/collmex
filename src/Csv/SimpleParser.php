@@ -13,22 +13,12 @@ class SimpleParser implements ParserInterface
     /**
      * @var string
      */
-    protected $delimiter;
+    private const DELIMITER = ';';
 
     /**
      * @var string
      */
-    protected $enclosure;
-
-    /**
-     * @param string $delimiter
-     * @param string $enclosure
-     */
-    public function __construct(string $delimiter = ';', string $enclosure = '"')
-    {
-        $this->delimiter = $delimiter;
-        $this->enclosure = $enclosure;
-    }
+    private const ENCLOSURE = '"';
 
     /**
      * @param string $csv one or multiple lines of CSV data
@@ -43,7 +33,7 @@ class SimpleParser implements ParserInterface
 
         $data = [];
 
-        while ($line = fgetcsv($tmpHandle, 0, $this->delimiter, $this->enclosure)) {
+        while ($line = fgetcsv($tmpHandle, 0, FormatInterface::DELIMITER, FormatInterface::ENCLOSURE)) {
             $data[] = $line;
         }
 
