@@ -57,7 +57,7 @@ class SimpleGenerator implements GeneratorInterface
             // string field values only)
             array_walk(
                 $line,
-                function (&$item) use ($tmpPlaceholder): void {
+                static function (&$item) use ($tmpPlaceholder): void {
                     if (!is_string($item)) {
                         return;
                     }

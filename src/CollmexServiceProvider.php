@@ -52,7 +52,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->app->singleton(
             'collmex.client',
-            function () {
+            static function () {
                 return new \MarcusJaschen\Collmex\Client\Curl(
                     config('collmex.user'),
                     config('collmex.password'),
@@ -71,7 +71,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->app->singleton(
             'collmex.request',
-            function ($app) {
+            static function ($app) {
                 return new Request($app->make('collmex.client'));
             }
         );
