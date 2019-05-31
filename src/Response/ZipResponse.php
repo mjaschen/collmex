@@ -100,8 +100,8 @@ class ZipResponse implements ResponseInterface
 
         $zip = new \ZipArchive();
 
-        if (!$zip->open($tmpFilename)) {
-            throw new InvalidZipFileException('Cannot open ZIP archive ' . $tmpFilename);
+        if ($zip->open($tmpFilename) !== true) {
+            throw new InvalidZipFileException('Cannot open ZIP archive: ' . $tmpFilename);
         }
 
         $zip->extractTo($this->extractDirectory);
