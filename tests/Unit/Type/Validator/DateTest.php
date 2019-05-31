@@ -3,18 +3,19 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Tests\Unit\Type\Validator;
 
+use MarcusJaschen\Collmex\Type\Validator\Date as DateValidator;
 use PHPUnit\Framework\TestCase;
 
 class DateTest extends TestCase
 {
     /**
-     * @var \MarcusJaschen\Collmex\Type\Validator\Date
+     * @var DateValidator
      */
     protected $validator;
 
     protected function setUp(): void
     {
-        $this->validator = new \MarcusJaschen\Collmex\Type\Validator\Date();
+        $this->validator = new DateValidator();
     }
 
     /**

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Response;
 
 use MarcusJaschen\Collmex\Csv\ParserInterface;
+use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 use MarcusJaschen\Collmex\Filter\Windows1252ToUtf8;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\TypeFactory;
@@ -160,7 +161,7 @@ class CsvResponse implements ResponseInterface
      *
      * @return AbstractType[]|null
      *
-     * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
+     * @throws InvalidTypeIdentifierException
      */
     public function getRecords(): ?array
     {
@@ -185,7 +186,7 @@ class CsvResponse implements ResponseInterface
      *
      * @return AbstractType|null
      *
-     * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
+     * @throws InvalidTypeIdentifierException
      */
     public function getFirstRecord(): ?AbstractType
     {
@@ -204,7 +205,7 @@ class CsvResponse implements ResponseInterface
      *
      * @return void
      *
-     * @throws \MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException
+     * @throws InvalidTypeIdentifierException
      */
     private function createTypeRecords(): void
     {

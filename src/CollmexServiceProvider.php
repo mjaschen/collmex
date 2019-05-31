@@ -3,12 +3,15 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex;
 
+use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
+use MarcusJaschen\Collmex\Client\Curl as CurlClient;
+
 /**
  * Laravel 5 Service Provider for Collmex PHP SDK.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
-class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
+class CollmexServiceProvider extends IlluminateServiceProvider
 {
     /**
      * @var bool
@@ -53,11 +56,7 @@ class CollmexServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->app->singleton(
             'collmex.client',
             static function () {
-                return new \MarcusJaschen\Collmex\Client\Curl(
-                    config('collmex.user'),
-                    config('collmex.password'),
-                    config('collmex.customer')
-                );
+                return new CurlClient(config('collmex.user'), config('collmex.password'), config('collmex.customer'));
             }
         );
     }
