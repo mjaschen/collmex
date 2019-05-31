@@ -3,18 +3,19 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Tests\Unit\Type\Validator;
 
+use MarcusJaschen\Collmex\Type\Validator\DateOrEmpty as DateOrEmptyValidator;
 use PHPUnit\Framework\TestCase;
 
 class DateOrEmptyTest extends TestCase
 {
     /**
-     * @var \MarcusJaschen\Collmex\Type\Validator\DateOrEmpty
+     * @var DateOrEmptyValidator
      */
     protected $validator;
 
     protected function setUp(): void
     {
-        $this->validator = new \MarcusJaschen\Collmex\Type\Validator\DateOrEmpty();
+        $this->validator = new DateOrEmptyValidator();
     }
 
     /**

@@ -41,11 +41,11 @@ abstract class AbstractType implements JsonSerializable
 
     /**
      * @param array $data type data
-     * @param \MarcusJaschen\Collmex\Csv\GeneratorInterface $generator This
+     * @param GeneratorInterface $generator This
      * argument is optional, the SimpleGenerator is used if argument is
      * omitted
      *
-     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
+     * @throws InvalidFieldNameException
      */
     public function __construct(array $data, GeneratorInterface $generator = null)
     {
@@ -183,7 +183,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @return void
      *
-     * @throws \MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException
+     * @throws InvalidFieldNameException
      */
     protected function populateData(array $data): void
     {

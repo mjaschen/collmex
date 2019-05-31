@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Type;
 
+use MarcusJaschen\Collmex\Type\Validator\DateOrEmpty as DateOrEmptyValidator;
+use MarcusJaschen\Collmex\Type\Validator\TimeInterval as TimeIntervalValidator;
+
 /**
  * Collmex Subscription Type.
  *
@@ -79,7 +82,7 @@ class Subscription extends AbstractType implements TypeInterface
      */
     public function validate(): bool
     {
-        $dateOrEmptyValidator = new \MarcusJaschen\Collmex\Type\Validator\DateOrEmpty();
+        $dateOrEmptyValidator = new DateOrEmptyValidator();
 
         if (!$dateOrEmptyValidator->validate($this->data['valid_from'])) {
             $this->validationErrors['valid_from'] = true;
@@ -88,7 +91,7 @@ class Subscription extends AbstractType implements TypeInterface
             $this->validationErrors['valid_to'] = true;
         }
 
-        $intervalValidator = new \MarcusJaschen\Collmex\Type\Validator\TimeInterval();
+        $intervalValidator = new TimeIntervalValidator();
 
         if (!$intervalValidator->validate($this->data['interval'])) {
             $this->validationErrors['interval'] = true;
