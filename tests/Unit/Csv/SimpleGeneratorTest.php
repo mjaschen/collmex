@@ -15,7 +15,7 @@ class SimpleGeneratorTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->generator = new SimpleGenerator(';', '"');
+        $this->generator = new SimpleGenerator();
     }
 
     /**

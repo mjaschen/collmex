@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Tests\Unit\Csv;
 
+use MarcusJaschen\Collmex\Csv\FormatInterface;
 use MarcusJaschen\Collmex\Csv\SimpleParser;
 use PHPUnit\Framework\TestCase;
 
@@ -46,23 +47,7 @@ class SimpleParserTest extends TestCase
     /**
      * @test
      */
-    public function parseSeparatesColumnsWithGivenSeparator(): void
-    {
-        $separator = ',';
-        $cellContents1 = 'Hello';
-        $cellContents2 = 'world';
-        $csv = $cellContents1 . $separator . $cellContents2;
-        $subject = new SimpleParser($separator, '"');
-
-        $result = $subject->parse($csv);
-
-        self::assertSame([[$cellContents1, $cellContents2]], $result);
-    }
-
-    /**
-     * @test
-     */
-    public function parseByDefaultSeparatesColumnsWithSemicolon(): void
+    public function parseSeparatesColumnsWithSemicolon(): void
     {
         $separator = ';';
         $cellContents1 = 'Hello';
@@ -77,7 +62,7 @@ class SimpleParserTest extends TestCase
     /**
      * @test
      */
-    public function parseByDefaultUsesDoubleQuotesAsEnclosure(): void
+    public function parseUsesDoubleQuotesAsEnclosure(): void
     {
         $cellContents = "Hello\nworld";
         $csv = '"' . $cellContents . '"';
@@ -92,12 +77,11 @@ class SimpleParserTest extends TestCase
      */
     public function doubleEnclosureEscapesIt(): void
     {
-        $enclosure = '!';
+        $enclosure = FormatInterface::ENCLOSURE;
         $cellContents = $enclosure . $enclosure;
         $csv = $enclosure . $cellContents . $enclosure;
-        $subject = new SimpleParser(';', $enclosure);
 
-        $result = $subject->parse($csv);
+        $result = $this->parser->parse($csv);
 
         self::assertSame([[$enclosure]], $result);
     }
