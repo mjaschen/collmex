@@ -83,7 +83,7 @@ class ZipResponse implements ResponseInterface
             return new CsvResponse($this->responseParser, $csv);
         }
 
-        throw new InvalidZipResponseException('Zip Response doesn\'t contain the required CSV segment');
+        throw new InvalidZipResponseException('Zip Response doesn\'t contain the required CSV segment', 1567429445);
     }
 
     /**
