@@ -6,6 +6,7 @@ namespace MarcusJaschen\Collmex\Tests\Integration\Response;
 use MarcusJaschen\Collmex\Csv\SimpleParser;
 use MarcusJaschen\Collmex\Response\CsvResponse;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
+use MarcusJaschen\Collmex\Response\Exception\InvalidZipResponseException;
 use MarcusJaschen\Collmex\Response\ResponseInterface;
 use MarcusJaschen\Collmex\Response\ZipResponse;
 use PHPUnit\Framework\TestCase;
@@ -168,8 +169,10 @@ class ZipResponseTest extends TestCase
     /**
      * @test
      */
-    public function getCsvResponseForZipWithoutCsvFilesReturnsNull(): void
+    public function getCsvResponseForZipWithoutCsvFilesThrowsException(): void
     {
+        $this->expectException(InvalidZipResponseException::class);
+
         $fileName = 'test.txt';
         $responseBody = $this->createZipWithFile($fileName, 'There is no spoon.');
         $subject = new ZipResponse($this->parser, $responseBody);

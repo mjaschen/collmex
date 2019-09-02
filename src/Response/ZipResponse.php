@@ -5,6 +5,7 @@ namespace MarcusJaschen\Collmex\Response;
 
 use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
+use MarcusJaschen\Collmex\Response\Exception\InvalidZipResponseException;
 use Symfony\Component\Finder\Finder;
 
 /**
@@ -68,11 +69,11 @@ class ZipResponse implements ResponseInterface
     /**
      * Returns the CsvResponse instance for the (first) included CSV file.
      *
-     * @return CsvResponse|null
+     * @return CsvResponse
      *
-     * @throws \InvalidArgumentException
+     * @throws InvalidZipResponseException
      */
-    public function getCsvResponse(): ?CsvResponse
+    public function getCsvResponse(): CsvResponse
     {
         $iterator = $this->getFilesByType('csv');
 
@@ -82,7 +83,7 @@ class ZipResponse implements ResponseInterface
             return new CsvResponse($this->responseParser, $csv);
         }
 
-        return null;
+        throw new InvalidZipResponseException('Zip Response doesn\'t contain the required CSV segment');
     }
 
     /**
