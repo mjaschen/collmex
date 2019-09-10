@@ -5,7 +5,6 @@ namespace MarcusJaschen\Collmex;
 
 use MarcusJaschen\Collmex\Client\ClientInterface;
 use MarcusJaschen\Collmex\Client\Exception\RequestFailedException;
-use MarcusJaschen\Collmex\Csv\ParserInterface;
 use MarcusJaschen\Collmex\Csv\SimpleParser;
 use MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException;
 use MarcusJaschen\Collmex\Response\CsvResponse;
@@ -25,23 +24,13 @@ class Request
     protected $client;
 
     /**
-     * @var ParserInterface
+     * @var SimpleParser
      */
     protected $responseParser;
 
-    /**
-     * @param ClientInterface $client
-     * @param ParserInterface $responseParser
-     */
-    public function __construct(ClientInterface $client, ParserInterface $responseParser = null)
+    public function __construct(ClientInterface $client)
     {
         $this->client = $client;
-
-        if ($responseParser instanceof ParserInterface) {
-            $this->responseParser = $responseParser;
-
-            return;
-        }
 
         $this->responseParser = new SimpleParser();
     }
