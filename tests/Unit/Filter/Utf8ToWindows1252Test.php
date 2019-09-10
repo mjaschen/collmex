@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Tests\Unit\Filter;
 
+use MarcusJaschen\Collmex\Filter\FilterInterface;
 use MarcusJaschen\Collmex\Filter\Utf8ToWindows1252;
 use PHPUnit\Framework\TestCase;
 
@@ -11,67 +12,70 @@ class Utf8ToWindows1252Test extends TestCase
     /**
      * @var Utf8ToWindows1252
      */
-    protected $filter;
+    protected $subject;
 
     protected function setUp(): void
     {
-        $this->filter = new Utf8ToWindows1252();
+        $this->subject = new Utf8ToWindows1252();
     }
 
     /**
      * @test
      */
-    public function encodeString(): void
+    public function implementsFilterInterface(): void
     {
-        $input = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
-        $expected = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
-
-        self::assertSame($expected, $this->filter->filterString($input));
+        self::assertInstanceOf(FilterInterface::class, $this->subject);
     }
 
     /**
      * @test
      */
-    public function encodeArray(): void
+    public function filterKeepsAsciiTextUnchanged(): void
     {
-        $source = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
-        $target = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
+        $text = 'There is no spoon.';
 
-        $input = [
-            $source,
-            $source,
-        ];
+        $result = $this->subject->filter($text);
 
-        $expected = [
-            $target,
-            $target,
-        ];
-
-        self::assertSame($expected, $this->filter->filterArray($input));
+        self::assertSame($text, $result);
     }
 
     /**
      * @test
      */
-    public function encodeArrayRecursive(): void
+    public function filterStringConvertsStringEncoding(): void
     {
-        $source = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'utf-8.txt');
-        $target = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '_fixtures' . DIRECTORY_SEPARATOR . 'cp1252.txt');
+        $input = \file_get_contents(__DIR__ . '/Fixtures/utf-8.txt');
+        $expected = \file_get_contents(__DIR__ . '/Fixtures/cp1252.txt');
 
-        $input = [
-            [
-                $source,
-            ],
-            $source,
-        ];
+        $result = $this->subject->filterString($input);
 
-        $expected = [
-            [
-                $target,
-            ],
-            $target,
-        ];
+        self::assertSame($expected, $result);
+    }
 
-        self::assertSame($expected, $this->filter->filterArray($input));
+    /**
+     * @test
+     */
+    public function filterArrayKeepsAsciiTextUnchanged(): void
+    {
+        $text = ['There is no spoon.', 'The cake is a lie.'];
+
+        $result = $this->subject->filterArray($text);
+
+        self::assertSame($text, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function filterArrayConvertsStringEncoding(): void
+    {
+        $source = \file_get_contents(__DIR__ . '/Fixtures/utf-8.txt');
+        $target = \file_get_contents(__DIR__ . '/Fixtures/cp1252.txt');
+
+        $input = [$source, $source];
+        $result = $this->subject->filterArray($input);
+
+        $expected = [$target, $target];
+        self::assertSame($expected, $result);
     }
 }
