@@ -13,18 +13,6 @@ use ForceUTF8\Encoding;
 class Windows1252ToUtf8 implements FilterInterface
 {
     /**
-     * @param string $input string or array
-     *
-     * @return string
-     *
-     * @deprecated
-     */
-    public function filter(string $input): string
-    {
-        return Encoding::toUTF8($input);
-    }
-
-    /**
      * @param string $text
      *
      * @return string
