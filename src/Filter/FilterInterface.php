@@ -11,13 +11,6 @@ namespace MarcusJaschen\Collmex\Filter;
 interface FilterInterface
 {
     /**
-     * @param string $input
-     *
-     * @return string
-     */
-    public function filter(string $input): string;
-
-    /**
      * @param string $text
      *
      * @return string
