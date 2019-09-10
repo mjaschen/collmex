@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 use JsonSerializable;
-use MarcusJaschen\Collmex\Csv\GeneratorInterface;
 use MarcusJaschen\Collmex\Csv\SimpleGenerator;
 use MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException;
 
@@ -35,35 +34,20 @@ abstract class AbstractType implements JsonSerializable
     protected $validationErrors;
 
     /**
-     * @var GeneratorInterface
+     * @var SimpleGenerator
      */
     protected $csvGenerator;
 
     /**
      * @param array $data type data
-     * @param GeneratorInterface $generator This
-     * argument is optional, the SimpleGenerator is used if argument is
-     * omitted
      *
      * @throws InvalidFieldNameException
      */
-    public function __construct(array $data, GeneratorInterface $generator = null)
+    public function __construct(array $data)
     {
+        $this->csvGenerator = new SimpleGenerator();
+
         $this->populateData($data);
-
-        if (null === $generator) {
-            $this->csvGenerator = new SimpleGenerator();
-        }
-    }
-
-    /**
-     * @param GeneratorInterface $generator
-     *
-     * @return void
-     */
-    public function setCsvGenerator(GeneratorInterface $generator): void
-    {
-        $this->csvGenerator = $generator;
     }
 
     /**
