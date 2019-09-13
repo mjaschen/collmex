@@ -30,11 +30,11 @@ class Utf8ToWindows1252Test extends TestCase
     /**
      * @test
      */
-    public function filterKeepsAsciiTextUnchanged(): void
+    public function filterStringKeepsAsciiTextUnchanged(): void
     {
         $text = 'There is no spoon.';
 
-        $result = $this->subject->filter($text);
+        $result = $this->subject->filterString($text);
 
         self::assertSame($text, $result);
     }
