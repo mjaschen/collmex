@@ -5,6 +5,48 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.0.0]
+
+**Warning: Backwards-compatibility-breaking changes**
+
+### Changed
+
+- increase the minimum required PHP version to 7.1
+- *prod* dependencies for several used libraries are raised:
+    - `"neitanod/forceutf8": "^2.0"`
+    - `"symfony/finder": "^4.0"`
+    - `"symfony/http-foundation": "^4.0"`
+- all *dev* dependencies (except for PHPUnit) are required at their current major release
+- upgrade to PHPUnit 7
+- use strict comparisons where suitable
+- use proper camelCase for all method names (`toJSON()` → `toJson()`, `getJSON()` → `getJson()`)
+- use the `strict_types=1` execution directive globally
+- use return type hints globally
+- use method argument type hints globally (where suitable)
+- introduced visibility declarations for all class constants (all constants in the *Type* classes were kept public)
+- reduce the visibility of some `Response` methods
+- Throw an exception if a Zip cannot be opened: `ZipArchive::open()` returns error codes on failure, not `false`
+- change behaviour for invalid Zip responses: If a Zip response doesn't contain the CSV part, an
+  `InvalidZipResponseException` is thrown as such a response is invalid
+  regarding to the Collmex documentation. The previous behaviour was
+  to silently accept such an invalid response and return `null`.
+- Hard-code the CSV delimiter and enclosure: As the delimiter and enclosure are not subject to change for Collmex,
+  they're hardcoded to reduce code complexity
+- update the Collmex API Base URL
+
+### Added
+
+- added @oliverklee to `composer.json` as developer
+
+### Removed
+
+- drop LeagueParser, as `SimpleParser` works well enough for CSV files with current versions of PHP
+- remove the deprecated FilterInterface::filter method, as this method has been deprecated in the past
+- drop the parser parameter from the request constructor: there is only one parser here, and there is no need for this
+  flexibility now.
+- drop the generator parameter from the AbstractType constructor: now that there is only one generator,
+  there is no need to be flexible about the kind of generator that is used.
+
 ## [0.12.0]
 
 **Warning: Backwards-compatibility-breaking changes**
@@ -44,13 +86,13 @@ principles.
 
 ### Added
 
-- add PHP 7.3 to the list of supported versions in Composer config 
+- add PHP 7.3 to the list of supported versions in Composer config
 
 ## [0.9.2]
 
 ### Fixed
 
-- typo in field name `quantitiy` → `quantity` in `Delivery` type was introduced again during a merge, it's fixed now – **Warning: breaks backwards compatibility!** 
+- typo in field name `quantitiy` → `quantity` in `Delivery` type was introduced again during a merge, it's fixed now – **Warning: breaks backwards compatibility!**
 
 ## [0.9.0]
 
@@ -66,7 +108,7 @@ principles.
 
 - fix Psalm type warnings. Thanks to @oliverklee!
 - add missing required PHP extensions to the `composer.json`. Thanks to @oliverklee!
-- field name `quantitiy` → `quantity` in `Delivery` type – **Warning: breaks backwards compatibility!** 
+- field name `quantitiy` → `quantity` in `Delivery` type – **Warning: breaks backwards compatibility!**
 
 ### Changed
 
