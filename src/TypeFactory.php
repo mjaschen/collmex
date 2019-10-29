@@ -28,6 +28,7 @@ use MarcusJaschen\Collmex\Type\StockAvailable;
 use MarcusJaschen\Collmex\Type\StockChange;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
+use MarcusJaschen\Collmex\Type\ProductionOrder;
 
 /**
  * Type Factory for Collmex Response Data.
@@ -94,6 +95,8 @@ class TypeFactory
                 return new PriceGroup($data);
             case 'STOCK_CHANGE':
                 return new StockChange($data);
+            case 'PRODUCTION_ORDER':
+                return new ProductionOrder($data);
         }
 
         throw new InvalidTypeIdentifierException('Invalid Type Identifier: ' . $data[0]);
