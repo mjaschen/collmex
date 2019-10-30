@@ -45,6 +45,8 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `PRICE_GROUPS_GET`
 - `PRODUCT_GET`
 - `PRODUCT_PRICE_GET`
+- `PRODUCTION_ORDER`
+- `PRODUCTION_ORDER_GET`
 - `PROJECT_STAFF`
 - `PROJECT_STAFF_GET`
 - `PURCHASE_ORDER_GET`
