@@ -19,6 +19,7 @@ use MarcusJaschen\Collmex\Type\NewObject;
 use MarcusJaschen\Collmex\Type\OpenItem;
 use MarcusJaschen\Collmex\Type\PriceGroup;
 use MarcusJaschen\Collmex\Type\Product;
+use MarcusJaschen\Collmex\Type\ProductionOrder;
 use MarcusJaschen\Collmex\Type\ProductPrice;
 use MarcusJaschen\Collmex\Type\ProjectStaff;
 use MarcusJaschen\Collmex\Type\PurchaseOrder;
@@ -28,7 +29,6 @@ use MarcusJaschen\Collmex\Type\StockAvailable;
 use MarcusJaschen\Collmex\Type\StockChange;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
-use MarcusJaschen\Collmex\Type\ProductionOrder;
 
 /**
  * Type Factory for Collmex Response Data.
