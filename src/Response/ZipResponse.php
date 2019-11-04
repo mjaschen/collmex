@@ -79,7 +79,7 @@ class ZipResponse implements ResponseInterface
         $iterator = $this->getFilesByType('csv');
 
         foreach ($iterator as $file) {
-            $csv = file_get_contents($file);
+            $csv = file_get_contents($file->getPathName());
 
             return new CsvResponse($this->responseParser, $csv);
         }
