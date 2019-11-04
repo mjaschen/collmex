@@ -188,8 +188,6 @@ class ZipResponseTest extends TestCase
      */
     public function getCsvResponseForZipWithCsvFilesReturnsCsvResponseWithCsvContents(): void
     {
-        self::markTestIncomplete('The tested code has a bug that needs to be fixed first.');
-
         $fileName = 'test.csv';
         $responseBody = $this->createZipWithFile($fileName, 'There is no spoon.');
         $subject = new ZipResponse($this->parser, $responseBody);
