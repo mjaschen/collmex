@@ -22,7 +22,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $approved
  * @property $finished
  * @property $header_text
- * @property $bill_of_meterial_version
+ * @property $bill_of_material_version
  * @property $reserved_01
  * @property $reserved_02
  * @property $reserved_03
@@ -50,7 +50,7 @@ class ProductionOrder extends AbstractType implements TypeInterface
         'approved' => null,
         'finished' => null,
         'header_text' => null,
-        'bill_of_meterial_version' => null,
+        'bill_of_material_version' => null,
         'reserved_01' => null,
         'reserved_02' => null,
         'reserved_03' => null,
