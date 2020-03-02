@@ -144,7 +144,7 @@ class CsvResponse implements ResponseInterface
      */
     public function getErrorLine(): int
     {
-        return $this->errorLine;
+        return (int)$this->errorLine;
     }
 
     /**

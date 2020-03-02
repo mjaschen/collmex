@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.1.2]
+
+### Fixed
+
+- add missing type casting for Collmex response error line value
+
 ## [1.1.1]
 
 ### Fixed
