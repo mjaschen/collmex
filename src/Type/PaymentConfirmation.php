@@ -19,6 +19,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $paypal_email
  * @property $paypal_transactionnumber
  * @property $cost_center
+ * @property $account_id
  */
 class PaymentConfirmation extends AbstractType implements TypeInterface
 {
@@ -35,6 +36,7 @@ class PaymentConfirmation extends AbstractType implements TypeInterface
         'paypal_email' => null,
         'paypal_transactionnumber' => null,
         'cost_center' => null,
+        'account_id' => null,
     ];
 
     /**
