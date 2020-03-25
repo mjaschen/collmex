@@ -30,16 +30,16 @@
         "ext-json": "*",
         "ext-zip": "*",
         "neitanod/forceutf8": "^2.0",
-        "symfony/finder": "^4.0",
-        "symfony/http-foundation": "^4.0"
+        "symfony/finder": "^4.0 || ^5.0",
+        "symfony/http-foundation": "^4.0 || ^5.0"
     },
     "require-dev": {
-        "laravel/framework": "^5.8",
+        "laravel/framework": "^7.2",
         "mockery/mockery": "^1.2",
         "phpunit/phpunit": "^7.5",
         "vimeo/psalm": "^3.1",
         "squizlabs/php_codesniffer": "^3.4",
-        "friendsofphp/php-cs-fixer": "2.14",
+        "friendsofphp/php-cs-fixer": "2.16.1",
         "roave/security-advisories": "dev-master"
     },
     "autoload": {
