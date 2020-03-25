@@ -100,6 +100,12 @@ class ZipResponse implements ResponseInterface
         $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR
             . 'collmexphp_extracted_' . basename($tmpFilename);
 
+        $this->ensureExtractDirectoryExists();
+
+        if ('' === $this->responseBody) {
+            return;
+        }
+
         $zip = new \ZipArchive();
 
         if ($zip->open($tmpFilename) !== true) {
@@ -108,5 +114,15 @@ class ZipResponse implements ResponseInterface
 
         $zip->extractTo($this->extractDirectory);
         $zip->close();
+    }
+
+    /**
+     * @throws \RuntimeException
+     */
+    private function ensureExtractDirectoryExists(): void
+    {
+        if (!mkdir($concurrentDirectory = $this->extractDirectory) && !is_dir($concurrentDirectory)) {
+            throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory), 1631246675);
+        }
     }
 }
