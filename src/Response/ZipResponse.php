@@ -121,8 +121,8 @@ class ZipResponse implements ResponseInterface
      */
     private function ensureExtractDirectoryExists(): void
     {
-        if (!mkdir($concurrentDirectory = $this->extractDirectory) && !is_dir($concurrentDirectory)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory), 1631246675);
+        if (!mkdir($this->extractDirectory) && !is_dir($this->extractDirectory)) {
+            throw new \RuntimeException(sprintf('Directory "%s" was not created', $this->extractDirectory), 1631246675);
         }
     }
 }
