@@ -29,6 +29,7 @@ use MarcusJaschen\Collmex\Type\StockAvailable;
 use MarcusJaschen\Collmex\Type\StockChange;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
+use MarcusJaschen\Collmex\Type\Voucher;
 
 /**
  * Type Factory for Collmex Response Data.
@@ -97,6 +98,8 @@ class TypeFactory
                 return new StockChange($data);
             case 'PRODUCTION_ORDER':
                 return new ProductionOrder($data);
+            case 'VOUCHER':
+                return new Voucher($data);
         }
 
         throw new InvalidTypeIdentifierException('Invalid Type Identifier: ' . $data[0]);
