@@ -60,6 +60,8 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `STOCK_CHANGE_GET`
 - `STOCK_GET`
 - `TRACKING_NUMBER`
+- `VOUCHER`
+- `VOUCHER_GET`
 
 ## Installation
 
