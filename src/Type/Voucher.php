@@ -27,20 +27,20 @@ class Voucher extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
-        'type_identifier'       => 'VOUCHER',
-        'voucher_id'            => null,
-        'client_id'             => null,
-        'usage'                 => null,
-        'valid_from'            => null,
-        'valid_to'              => null,
-        'discount_percentage'   => null,
-        'discount_total'        => null,
-        'voucher_desc'          => null,
-        'agent_id'              => null,
-        'min_order_value'       => null,
-        'currency'              => null
-    );
+    protected $template = [
+        'type_identifier' => 'VOUCHER',
+        'voucher_id' => null,
+        'client_id' => null,
+        'usage' => null,
+        'valid_from' => null,
+        'valid_to' => null,
+        'discount_percentage' => null,
+        'discount_total' => null,
+        'voucher_desc' => null,
+        'agent_id' => null,
+        'min_order_value' => null,
+        'currency' => null,
+    ];
 
     /**
      * Formally validates the type data in $data attribute.

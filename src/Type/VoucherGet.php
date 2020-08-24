@@ -24,17 +24,17 @@ class VoucherGet extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-    protected $template = array(
-        'type_identifier'  => 'VOUCHER_GET',
-        'voucher_id'       => null,
-        'client_id'        => null,
-        'customer_id'      => null,
-        'agent_id'         => null,
-        'voucher_desc'     => null,
-        'show_expired'     => null,
-        'only_changed'     => null,
-        'system_name'      => null
-    );
+    protected $template = [
+        'type_identifier' => 'VOUCHER_GET',
+        'voucher_id' => null,
+        'client_id' => null,
+        'customer_id' => null,
+        'agent_id' => null,
+        'voucher_desc' => null,
+        'show_expired' => null,
+        'only_changed' => null,
+        'system_name' => null,
+    ];
 
     /**
      * Formally validates the type data in $data attribute.
