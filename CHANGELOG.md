@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [unreleased]
+
+**Warning: Backwards-compatibility-breaking changes**
+
+### Fixed
+
+- **BC breaking:** typo in `ProductionOrder::$bill_of_material_version` Thanks @Argee88! 
+
 ## [1.2.1]
 
 ### Added
