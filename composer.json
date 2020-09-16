@@ -29,6 +29,7 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-zip": "*",
+        "ext-fileinfo": "*",
         "neitanod/forceutf8": "^2.0",
         "symfony/finder": "^4.0 || ^5.0",
         "symfony/http-foundation": "^4.0 || ^5.0"
