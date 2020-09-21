@@ -13,7 +13,7 @@ Please create a pull request if you have implemented a new type/feature or
 create issues for bugs/feature requests.
 
 There is (or least should be…) a *Type* class for every Collmex record type
-("Satzart"). Currently only the base types (`MESSAGE`, `LOGIN`,
+("Satzart"). Currently, only the base types (`MESSAGE`, `LOGIN`,
 `NEW_OBJECT_ID`) and a few normal record types are implemented:
 
 - `ABO_GET`
@@ -223,7 +223,7 @@ To run checks and tests, it's the easiest to use the provided Composer scripts:
 
 To run all checks and tests at once, just use `composer ci`.
 
-Of course, it's possible to use the test runners directly, e. g. for PHPUnit:
+Of course, it's possible to use the test runners directly, e.g. for PHPUnit:
 
 ```shell
 ./vendor/bin/phpunit
