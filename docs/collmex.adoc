@@ -165,10 +165,11 @@ $collmexClient = new CurlClient('USER', 'PASSWORD', 'CUSTOMER_ID');
 // create request object
 $collmexRequest = new Request($collmexClient);
 
+// Create a random negative number when importing multiple items. Otherwise Collmex creates a new order for every single product / item
 $customerOrderItem1 = new CustomerOrder(
     [
         'client_id'                      => '2',
-        'order_id'                       => null,
+        'order_id'                       => random_int( - 1000, 0 ),
         'position'                       => null,
         'order_type'                     => null,
         ...
