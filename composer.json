@@ -31,8 +31,8 @@
         "ext-zip": "*",
         "ext-fileinfo": "*",
         "neitanod/forceutf8": "^2.0",
-        "symfony/finder": "^5.0",
-        "symfony/http-foundation": "^5.0.7 || ^5.1"
+        "symfony/finder": "^3.4 || ^4.4 || ^5.1",
+        "symfony/http-foundation": "^3.4 || ^4.4 || ^5.1"
     },
     "require-dev": {
         "laravel/framework": "^7.2",
