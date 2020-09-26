@@ -1,7 +1,10 @@
 # Collmex API PHP SDK
 
-- [Collmex on TravisCI]
-- [Collmex on Packagist]
+[![Latest Stable Version](https://poser.pugx.org/mjaschen/collmex/v)](https://packagist.org/packages/mjaschen/collmex)
+[![Total Downloads](https://poser.pugx.org/mjaschen/collmex/downloads)](https://packagist.org/packages/mjaschen/collmex)
+[![Build Status](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mjaschen/collmex/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mjaschen/collmex/?branch=master)
+[![License](https://poser.pugx.org/mjaschen/collmex/license)](//packagist.org/packages/mjaschen/collmex)
 
 This library provides a wrapper for the Collmex API. It's not complete yet,
 some record types (and maybe some features) are missing.
@@ -10,7 +13,7 @@ Please create a pull request if you have implemented a new type/feature or
 create issues for bugs/feature requests.
 
 There is (or least should be…) a *Type* class for every Collmex record type
-("Satzart"). Currently only the base types (`MESSAGE`, `LOGIN`,
+("Satzart"). Currently, only the base types (`MESSAGE`, `LOGIN`,
 `NEW_OBJECT_ID`) and a few normal record types are implemented:
 
 - `ABO_GET`
@@ -220,7 +223,7 @@ To run checks and tests, it's the easiest to use the provided Composer scripts:
 
 To run all checks and tests at once, just use `composer ci`.
 
-Of course, it's possible to use the test runners directly, e. g. for PHPUnit:
+Of course, it's possible to use the test runners directly, e.g. for PHPUnit:
 
 ```shell
 ./vendor/bin/phpunit
@@ -244,8 +247,6 @@ composer fix:php-cs
 
 <https://www.collmex.de/cgi-bin/cgi.exe?1005,1,help,api>
 
-[Collmex on TravisCI]: https://travis-ci.org/mjaschen/collmex
-[Collmex on Packagist]: https://packagist.org/packages/mjaschen/collmex
 [forceutf8]: https://github.com/neitanod/forceutf8
 [PHP_CodeSniffer]: https://github.com/squizlabs/PHP_CodeSniffer
 [Psalm]: https://github.com/vimeo/psalm
