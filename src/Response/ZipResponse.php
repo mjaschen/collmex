@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Response;
@@ -78,7 +79,7 @@ class ZipResponse implements ResponseInterface
         $iterator = $this->getFilesByType('csv');
 
         foreach ($iterator as $file) {
-            $csv = file_get_contents($file);
+            $csv = file_get_contents($file->getPathName());
 
             return new CsvResponse($this->responseParser, $csv);
         }
@@ -99,6 +100,12 @@ class ZipResponse implements ResponseInterface
         $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR
             . 'collmexphp_extracted_' . basename($tmpFilename);
 
+        $this->ensureExtractDirectoryExists();
+
+        if ('' === $this->responseBody) {
+            return;
+        }
+
         $zip = new \ZipArchive();
 
         if ($zip->open($tmpFilename) !== true) {
@@ -107,5 +114,15 @@ class ZipResponse implements ResponseInterface
 
         $zip->extractTo($this->extractDirectory);
         $zip->close();
+    }
+
+    /**
+     * @throws \RuntimeException
+     */
+    private function ensureExtractDirectoryExists(): void
+    {
+        if (!mkdir($this->extractDirectory) && !is_dir($this->extractDirectory)) {
+            throw new \RuntimeException(sprintf('Directory "%s" was not created', $this->extractDirectory), 1631246675);
+        }
     }
 }

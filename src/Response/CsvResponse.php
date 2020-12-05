@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Response;
@@ -143,7 +144,7 @@ class CsvResponse implements ResponseInterface
      */
     public function getErrorLine(): int
     {
-        return $this->errorLine;
+        return (int)$this->errorLine;
     }
 
     /**
