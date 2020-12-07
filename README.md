@@ -199,6 +199,97 @@ if ($collmexResponse->isError()) {
 }
 ```
 
+### Create a record type. We create a customer order with several items.
+
+We create a new customer order and send several inquiries at the same time.
+
+```php
+<?php
+
+use MarcusJaschen\Collmex\Client\Curl as CurlClient;
+use MarcusJaschen\Collmex\RequestContainer;
+use MarcusJaschen\Collmex\Type\CustomerOrder;
+
+// initialize HTTP client
+$collmexClient = new CurlClient('USER', 'PASSWORD', 'CUSTOMER_ID');
+
+// create request object
+$collmexRequestContainer = new RequestContainer($collmexClient);
+
+// create a record type; we create a CustomerOrder with some basic fields
+$customerOrderData = [
+    'client_id'                     => '1',
+    'customer_salutation'           => 'Herr',
+    'customer_forename'             => 'Charly',
+    'customer_lastname'             => 'Cash',
+    'customer_street'               => 'Hauptstraße 12',
+    'customer_zipcode'              => '12222',
+    'customer_city'                 => 'Berlin',
+    'customer_country'              => 'DE',
+    'customer_phone'                => '+49300000000',
+    'customer_email'                => 'cash@example.org',
+    'order_date'                    => '01.01.1970',
+    'status'                        => CustomerOrder::STATUS_CONFIRMED,
+];
+
+// set several item positions
+$customerOrderItem = new CustomerOrder(
+    array_merge(
+        $customerOrderData,
+        [
+            'product_description'               => 'erster Artikel',
+            'quantity'                          => 1,
+            'price'                             => 10.5,
+            'tax_rate'                          => CustomerOrder::TAX_RATE_FULL;
+        ]
+    )
+);
+$collmexRequestContainer->add($customerOrderItem)
+
+$customerOrderItem = new CustomerOrder(
+    array_merge(
+        $customerOrderData,
+        [
+            'product_description'               => 'zweiter Artikel',
+            'quantity'                          => 10,
+            'price'                             => 37.99,
+            'tax_rate'                          => CustomerOrder::TAX_RATE_REDUCED;
+        ]
+    )
+);
+$collmexRequestContainer->add($customerOrderItem)
+
+$customerOrderItem = new CustomerOrder(
+    array_merge(
+        $customerOrderData,
+        [
+            'product_description'               => 'Artikel Nummer drei',
+            'quantity'                          => 3,
+            'price'                             => 1250,
+            'tax_rate'                          => CustomerOrder::TAX_RATE_FULL;
+        ]
+    )
+);
+$collmexRequestContainer->add($customerOrderItem)
+
+// send HTTP request and get response object
+$collmexResponse = $collmexRequestContainer->send();
+
+if ($collmexResponse->isError()) {
+    echo 'Collmex error: ' . $collmexResponse->getErrorMessage() . '; Code=' . $collmexResponse->getErrorCode() . PHP_EOL;
+} else {
+    $newObject = $collmexResponse->getFirstRecord();
+    echo 'New Collmex order ID=' . $newObject->new_id . PHP_EOL;
+
+    $records = $collmexResponse->getRecords();
+
+    foreach ($records as $record) {
+        // contains one NewObject object and the Message object(s)
+        var_dump($record->getData());
+    }
+}
+```
+
 ## Notes
 
 Collmex expects all strings encoded in code page 1252 (Windows) while the
