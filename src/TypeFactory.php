@@ -19,6 +19,7 @@ use MarcusJaschen\Collmex\Type\NewObject;
 use MarcusJaschen\Collmex\Type\OpenItem;
 use MarcusJaschen\Collmex\Type\PriceGroup;
 use MarcusJaschen\Collmex\Type\Product;
+use MarcusJaschen\Collmex\Type\ProductGroup;
 use MarcusJaschen\Collmex\Type\ProductionOrder;
 use MarcusJaschen\Collmex\Type\ProductPrice;
 use MarcusJaschen\Collmex\Type\ProjectStaff;
@@ -53,6 +54,7 @@ class TypeFactory
         'CMXUMS' => Revenue::class,
         'CMXPRD' => Product::class,
         'CMXPRI' => ProductPrice::class,
+        'PRDGRP' => ProductGroup::class,
         'PROJECT_STAFF' => ProjectStaff::class,
         'STOCK_AVAILABLE' => StockAvailable::class,
         'CMXSTK' => Stock::class,
