@@ -7,9 +7,16 @@ principles.
 
 ## [1.3.0]
 
+### Added
+
+- `MultiRequest` class for easily sending multiple records to the Collmex API. Thanks @timopaul
+- `AbstractRequest` and `RequestInterface`
+- new types `PRDGRP` and `PRODUCT_GROUPS_GET`
+
 ### Changed
 
 - `TypeFactory` now uses a mapping array instead of a huge switch/case for creating instances of response records.
+- `Request` extends the new `AbstractRequest` class
 
 ## [1.2.1]
 

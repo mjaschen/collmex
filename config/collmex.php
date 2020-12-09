@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * The credentials for Collmex
  *
- * Used by CollmexServiceProvider when running under Laravel 4.
+ * Used by CollmexServiceProvider when running under Laravel.
  */
 return [
     'user' => env('COLLMEX_USER', ''),

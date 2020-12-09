@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex;
 
-use MarcusJaschen\Collmex\AbstractRequest;
 use MarcusJaschen\Collmex\Client\Exception\RequestFailedException;
 use MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException;
 use MarcusJaschen\Collmex\Response\CsvResponse;

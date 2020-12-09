@@ -25,7 +25,7 @@
         "issues": "https://github.com/mjaschen/collmex/issues"
     },
     "require": {
-        "php": "~7.1 || ~7.2 || ~7.3",
+        "php": "~7.1 || ~7.2 || ~7.3 || ~7.4",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-zip": "*",
@@ -37,9 +37,9 @@
         "laravel/framework": "^7.2",
         "mockery/mockery": "^1.2",
         "phpunit/phpunit": "^7.5",
-        "vimeo/psalm": "^3.1",
-        "squizlabs/php_codesniffer": "^3.4",
-        "friendsofphp/php-cs-fixer": "2.16.1",
+        "vimeo/psalm": "^3.18",
+        "squizlabs/php_codesniffer": "^3.5",
+        "friendsofphp/php-cs-fixer": "^2.17.0",
         "roave/security-advisories": "dev-master"
     },
     "autoload": {

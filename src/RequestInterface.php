@@ -11,5 +11,4 @@ namespace MarcusJaschen\Collmex;
  */
 interface RequestInterface
 {
-  // 
 }
