@@ -22,7 +22,7 @@ principles.
 
 ### Added
 
-- `Voucher` and `VoucerGet` types. Thanks @flowdee!
+- `Voucher` and `VoucherGet` types. Thanks @flowdee!
 
 ## [1.2.0]
 
