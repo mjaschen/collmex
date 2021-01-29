@@ -52,7 +52,7 @@ class Address extends AbstractType implements TypeInterface {
 	/**
 	 * @var int
 	 */
-	public const ADDRESS_TYPE_CUSTOMER_SUPPLIER_MEMBER = 1;
+	public const ADDRESS_TYPE_CUSTOMER_SUPPLIER_MEMBER = 0;
 	/**
 	 * @var int
 	 */
