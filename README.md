@@ -2,8 +2,9 @@
 
 [![Latest Stable Version](https://poser.pugx.org/mjaschen/collmex/v)](https://packagist.org/packages/mjaschen/collmex)
 [![Total Downloads](https://poser.pugx.org/mjaschen/collmex/downloads)](https://packagist.org/packages/mjaschen/collmex)
+[![CI Status](https://github.com/mjaschen/collmex/workflows/Collmex%20PHP%20SDK%20Tests/badge.svg)](https://github.com/mjaschen/collmex/workflows/Collmex%20PHP%20SDK%20Tests/badge.svg)
 [![Build Status](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mjaschen/collmex/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mjaschen/collmex/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/quality-score.png)](https://scrutinizer-ci.com/g/mjaschen/collmex/)
 [![License](https://poser.pugx.org/mjaschen/collmex/license)](//packagist.org/packages/mjaschen/collmex)
 
 This library provides a wrapper for the Collmex API. It's not complete yet, some record types (and maybe some features)
