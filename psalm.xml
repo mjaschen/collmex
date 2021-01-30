@@ -19,8 +19,6 @@
         <DeprecatedProperty errorLevel="error"/>
         <DeprecatedClass errorLevel="error"/>
 
-        <!-- Don't report MissingClosureReturnType until we've dropped PHP 5.6 -->
-        <MissingClosureReturnType errorLevel="suppress"/>
         <MissingReturnType errorLevel="error"/>
         <MissingPropertyType errorLevel="error"/>
         <InvalidDocblock errorLevel="error"/>
@@ -28,10 +26,6 @@
 
         <PropertyNotSetInConstructor errorLevel="suppress"/>
         <MissingConstructor errorLevel="error"/>
-
-        <!-- Don't report MissingClosureParamType until we've dropped PHP 5.6 -->
-        <MissingClosureParamType errorLevel="suppress"/>
-        <MissingParamType errorLevel="suppress"/>
 
         <DocblockTypeContradiction errorLevel="error"/>
         <RedundantConditionGivenDocblockType errorLevel="error"/>

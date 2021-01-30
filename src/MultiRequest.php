@@ -64,7 +64,7 @@ class MultiRequest extends AbstractRequest
         return implode(
             PHP_EOL,
             array_map(
-                static function ($type) {
+                static function ($type): string {
                     return $type->getCsv();
                 },
                 $this->types
