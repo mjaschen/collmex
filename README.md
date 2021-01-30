@@ -20,6 +20,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `ACCBAL_GET`
 - `ACCDOC`
 - `ACCDOC_GET`
+- `CMXADR`
 - `BILL_OF_MATERIAL_GET`
 - `CMXABO`
 - `CMXBOM`

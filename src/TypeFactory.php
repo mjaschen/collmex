@@ -7,6 +7,7 @@ namespace MarcusJaschen\Collmex;
 use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 use MarcusJaschen\Collmex\Type\AccountBalance;
 use MarcusJaschen\Collmex\Type\AccountDocument;
+use MarcusJaschen\Collmex\Type\Address;
 use MarcusJaschen\Collmex\Type\BillOfMaterial;
 use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
@@ -49,6 +50,7 @@ class TypeFactory
         'CMXBOM' => BillOfMaterial::class,
         'CMXINV' => Invoice::class,
         'CMXMGD' => Member::class,
+        'CMXADR' => Address::class,
         'CMXKND' => Customer::class,
         'CMXORD-2' => CustomerOrder::class,
         'CMXUMS' => Revenue::class,
