@@ -5,7 +5,6 @@ on:
     branches:
       - master
       - 2.0-dev
-      - task/github-actions-ci
   pull_request:
     branches:
       - master
