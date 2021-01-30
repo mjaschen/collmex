@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.3.1]
+
+### Added
+
+- `Address` type. Thanks @Johnny99211!
+
 ## [1.3.0]
 
 ### Changed
