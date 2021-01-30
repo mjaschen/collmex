@@ -11,13 +11,32 @@ principles.
 
 ### Fixed
 
-- **BC breaking:** typo in `ProductionOrder::$bill_of_material_version` Thanks @Argee88! 
+- **BC breaking:** typo in `ProductionOrder::$bill_of_material_version` Thanks @Argee88!
+
+## [1.3.1]
+
+### Added
+
+- `Address` type. Thanks @Johnny99211!
+
+## [1.3.0]
+
+### Added
+
+- `MultiRequest` class for easily sending multiple records to the Collmex API. Thanks @timopaul
+- `AbstractRequest` and `RequestInterface`
+- new types `PRDGRP` and `PRODUCT_GROUPS_GET`
+
+### Changed
+
+- `TypeFactory` now uses a mapping array instead of a huge switch/case for creating instances of response records.
+- `Request` extends the new `AbstractRequest` class
 
 ## [1.2.1]
 
 ### Added
 
-- `Voucher` and `VoucerGet` types. Thanks @flowdee!
+- `Voucher` and `VoucherGet` types. Thanks @flowdee!
 
 ## [1.2.0]
 

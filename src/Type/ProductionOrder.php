@@ -37,7 +37,7 @@ class ProductionOrder extends AbstractType implements TypeInterface
     /**
      * Note: the field `bill_of_meterial_version` is misspelled. It will be fixed
      * in the next major release (as it's breaking backwards compatibility).
-     * A pull request is already pending: https://github.com/mjaschen/collmex/pull/195
+     * A pull request is already pending: https://github.com/mjaschen/collmex/pull/195.
      *
      * @var array
      */

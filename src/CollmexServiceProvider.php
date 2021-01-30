@@ -8,9 +8,9 @@ use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
 
 /**
- * Laravel 5 Service Provider for Collmex PHP SDK.
+ * Laravel Service Provider for Collmex PHP SDK.
  *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
+ * @author Marcus Jaschen <mail@marcusjaschen.de>
  */
 class CollmexServiceProvider extends IlluminateServiceProvider
 {
@@ -45,6 +45,7 @@ class CollmexServiceProvider extends IlluminateServiceProvider
 
         $this->registerClient();
         $this->registerRequest();
+        $this->registerMultiRequest();
     }
 
     /**
@@ -78,6 +79,21 @@ class CollmexServiceProvider extends IlluminateServiceProvider
     }
 
     /**
+     * Registers the Collmex MultiRequest object.
+     *
+     * @return void
+     */
+    protected function registerMultiRequest(): void
+    {
+        $this->app->singleton(
+            'collmex.multirequest',
+            static function ($app) {
+                return new MultiRequest($app->make('collmex.client'));
+            }
+        );
+    }
+
+    /**
      * @return string[]
      */
     public function provides(): array
@@ -85,6 +101,7 @@ class CollmexServiceProvider extends IlluminateServiceProvider
         return [
             'collmex.client',
             'collmex.request',
+            'collmex.multirequest',
         ];
     }
 }
