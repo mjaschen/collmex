@@ -48,7 +48,7 @@ class TypeFactory
         'ACC_BAL' => AccountBalance::class,
         'ACCDOC' => AccountDocument::class,
         'CMXADR' => Address::class,
-	    'ADRGRP' => AddressGroups::class,
+	'ADRGRP' => AddressGroups::class,
         'CMXABO' => Subscription::class,
         'CMXBOM' => BillOfMaterial::class,
         'CMXINV' => Invoice::class,
