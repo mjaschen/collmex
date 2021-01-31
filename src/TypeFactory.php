@@ -8,6 +8,8 @@ use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 use MarcusJaschen\Collmex\Type\AccountBalance;
 use MarcusJaschen\Collmex\Type\AccountDocument;
 use MarcusJaschen\Collmex\Type\Address;
+use MarcusJaschen\Collmex\Type\AddressGroups;
+use MarcusJaschen\Collmex\Type\AddressGroupsGet;
 use MarcusJaschen\Collmex\Type\BillOfMaterial;
 use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
@@ -45,6 +47,8 @@ class TypeFactory
         'NEW_OBJECT_ID' => NewObject::class,
         'ACC_BAL' => AccountBalance::class,
         'ACCDOC' => AccountDocument::class,
+        'CMXADR' => Address::class,
+	    'ADRGRP' => AddressGroups::class,
         'CMXABO' => Subscription::class,
         'CMXBOM' => BillOfMaterial::class,
         'CMXINV' => Invoice::class,
