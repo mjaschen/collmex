@@ -15,7 +15,7 @@ class AddressGroupsGet extends AbstractType implements TypeInterface
      * @var array
      */
     protected $template = [
-        'type_identifier' => 'ADDRESS_GROUPS_GET'
+        'type_identifier' => 'ADDRESS_GROUPS_GET',
     ];
 
     /**

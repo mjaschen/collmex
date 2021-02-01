@@ -16,11 +16,11 @@ class AddressGroups extends AbstractType implements TypeInterface
     /**
      * @var array
      */
-	protected $template = [
-		'type_identifier'  => 'ADRGRP',
-		'address_group_id' => null,
-		'description'      => null
-	];
+    protected $template = [
+        'type_identifier' => 'ADRGRP',
+        'address_group_id' => null,
+        'description' => null,
+    ];
 
     /**
      * Formally validates the type data in $data attribute.
