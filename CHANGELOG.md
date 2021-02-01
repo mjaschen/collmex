@@ -5,13 +5,11 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
-## [unreleased]
+## [1.3.2]
 
-**Warning: Backwards-compatibility-breaking changes**
+### Added
 
-### Fixed
-
-- **BC breaking:** typo in `ProductionOrder::$bill_of_material_version` Thanks @Argee88!
+- `AddressGroups` and `AddressGroupsGet` types. Thanks @Johnny99211!
 
 ## [1.3.1]
 
