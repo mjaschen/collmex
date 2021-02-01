@@ -53,7 +53,6 @@ class TypeFactory
         'CMXBOM' => BillOfMaterial::class,
         'CMXINV' => Invoice::class,
         'CMXMGD' => Member::class,
-        'CMXADR' => Address::class,
         'CMXKND' => Customer::class,
         'CMXORD-2' => CustomerOrder::class,
         'CMXUMS' => Revenue::class,
