@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.3.3]
+
+### Fixed
+
+- removed duplicate array key in `TypeFactory`
+
 ## [1.3.2]
 
 ### Added
