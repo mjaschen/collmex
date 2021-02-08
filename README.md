@@ -99,7 +99,7 @@ return [
 
 ## Compatibility
 
-The Collmex PHP SDK requires PHP >= 7.1. If you're still using an ancient PHP version, you can install older versions of
+The Collmex PHP SDK requires PHP >= 7.2. If you're still using an ancient PHP version, you can install older versions of
 the Collmex PHP SDK:
 
 - for PHP 7.0 compatibility: use the 0.12.x branch (`composer require mjaschen/collmex:~0.12`)
