@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.4.0]
+
+### Added
+
+- support for PHP 8
+
 ## [1.3.3]
 
 ### Fixed
