@@ -54,12 +54,10 @@ class Address extends AbstractType implements TypeInterface
      * @var int
      */
     public const ADDRESS_TYPE_CUSTOMER_SUPPLIER_MEMBER = 0;
-
     /**
      * @var int
      */
     public const ADDRESS_TYPE_ADDRESS_MANAGEMENT = 3;
-
     /**
      * @var int
      */
@@ -69,17 +67,14 @@ class Address extends AbstractType implements TypeInterface
      * @var int
      */
     public const INACTIVE_ACTIVE = 0;
-
     /**
      * @var int
      */
     public const INACTIVE_INACTIVE = 1;
-
     /**
      * @var int
      */
     public const INACTIVE_DELETE = 2;
-
     /**
      * @var int
      */
@@ -89,7 +84,6 @@ class Address extends AbstractType implements TypeInterface
      * @var int
      */
     public const NO_MAILING_NOT_SET = 0;
-
     /**
      * @var int
      */
