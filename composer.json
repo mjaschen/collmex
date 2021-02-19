@@ -20,29 +20,37 @@
             "role": "developer"
         }
     ],
-    "support": {
-        "source": "https://github.com/mjaschen/collmex",
-        "issues": "https://github.com/mjaschen/collmex/issues"
-    },
     "require": {
         "php": ">=7.2",
         "ext-curl": "*",
+        "ext-fileinfo": "*",
         "ext-json": "*",
         "ext-zip": "*",
-        "ext-fileinfo": "*",
         "neitanod/forceutf8": "^2.0",
         "symfony/finder": "^3.4 || ^4.4 || ^5.1",
         "symfony/http-foundation": "^3.4 || ^4.4 || ^5.1"
     },
     "require-dev": {
+        "ergebnis/composer-normalize": "^2.13",
+        "friendsofphp/php-cs-fixer": "^2.17.0",
         "laravel/framework": "^7.2",
         "mockery/mockery": "^1.3",
         "phpunit/phpunit": "^8.5",
-        "vimeo/psalm": "^4.4",
-        "squizlabs/php_codesniffer": "^3.5",
-        "friendsofphp/php-cs-fixer": "^2.17.0",
         "roave/security-advisories": "dev-master",
-        "ergebnis/composer-normalize": "^2.13"
+        "squizlabs/php_codesniffer": "^3.5",
+        "vimeo/psalm": "^4.4"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MarcusJaschen\\Collmex\\CollmexServiceProvider"
+            ]
+        }
     },
     "autoload": {
         "psr-4": {
@@ -55,35 +63,27 @@
         }
     },
     "prefer-stable": true,
-    "config": {
-        "preferred-install": {
-            "*": "dist"
-        }
-    },
     "scripts": {
+        "ci": [
+            "@ci:static",
+            "@ci:dynamic"
+        ],
+        "ci:dynamic": [
+            "@ci:tests"
+        ],
         "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
-        "ci:sniff": "./vendor/bin/phpcs config/ src/ tests/",
         "ci:psalm": "./vendor/bin/psalm",
-        "ci:tests": "./vendor/bin/phpunit tests/",
+        "ci:sniff": "./vendor/bin/phpcs config/ src/ tests/",
         "ci:static": [
             "@ci:lint",
             "@ci:sniff",
             "@ci:psalm"
         ],
-        "ci:dynamic": [
-            "@ci:tests"
-        ],
-        "ci": [
-            "@ci:static",
-            "@ci:dynamic"
-        ],
+        "ci:tests": "./vendor/bin/phpunit tests/",
         "fix:php-cs": "./vendor/bin/php-cs-fixer fix"
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "MarcusJaschen\\Collmex\\CollmexServiceProvider"
-            ]
-        }
+    "support": {
+        "issues": "https://github.com/mjaschen/collmex/issues",
+        "source": "https://github.com/mjaschen/collmex"
     }
 }
