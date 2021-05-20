@@ -24,6 +24,7 @@ use MarcusJaschen\Collmex\Type\NewObject;
 use MarcusJaschen\Collmex\Type\OpenItem;
 use MarcusJaschen\Collmex\Type\PriceGroup;
 use MarcusJaschen\Collmex\Type\Product;
+use MarcusJaschen\Collmex\Type\ProductGroup;
 use MarcusJaschen\Collmex\Type\ProductionOrder;
 use MarcusJaschen\Collmex\Type\ProductPrice;
 use MarcusJaschen\Collmex\Type\ProjectStaff;
@@ -50,19 +51,19 @@ class TypeFactory
         'ACC_BAL' => AccountBalance::class,
         'ACCDOC' => AccountDocument::class,
         'CMXADR' => Address::class,
-	'ADRGRP' => AddressGroups::class,
-	'CMXBTC' => Batch::class,
+	      'ADRGRP' => AddressGroups::class,
+        'CMXBTC' => Batch::class,
         'CMXABO' => Subscription::class,
         'CMXBOM' => BillOfMaterial::class,
         'CMXINV' => Invoice::class,
-	'INVOICE_OUTPUT' => InvoiceOutput::class,
+        'INVOICE_OUTPUT' => InvoiceOutput::class,
         'CMXMGD' => Member::class,
-        'CMXADR' => Address::class,
         'CMXKND' => Customer::class,
         'CMXORD-2' => CustomerOrder::class,
         'CMXUMS' => Revenue::class,
         'CMXPRD' => Product::class,
         'CMXPRI' => ProductPrice::class,
+        'PRDGRP' => ProductGroup::class,
         'PROJECT_STAFF' => ProjectStaff::class,
         'STOCK_AVAILABLE' => StockAvailable::class,
         'CMXSTK' => Stock::class,

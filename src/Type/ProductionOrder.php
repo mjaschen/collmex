@@ -22,7 +22,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $approved
  * @property $finished
  * @property $header_text
- * @property $bill_of_meterial_version
+ * @property $bill_of_material_version
  * @property $reserved_01
  * @property $reserved_02
  * @property $reserved_03
@@ -37,7 +37,7 @@ class ProductionOrder extends AbstractType implements TypeInterface
     /**
      * Note: the field `bill_of_meterial_version` is misspelled. It will be fixed
      * in the next major release (as it's breaking backwards compatibility).
-     * A pull request is already pending: https://github.com/mjaschen/collmex/pull/195
+     * A pull request is already pending: https://github.com/mjaschen/collmex/pull/195.
      *
      * @var array
      */
@@ -54,7 +54,7 @@ class ProductionOrder extends AbstractType implements TypeInterface
         'approved' => null,
         'finished' => null,
         'header_text' => null,
-        'bill_of_meterial_version' => null,
+        'bill_of_material_version' => null,
         'reserved_01' => null,
         'reserved_02' => null,
         'reserved_03' => null,

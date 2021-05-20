@@ -1,6 +1,7 @@
 .DS_Store
-/.php_cs.cache
 /.idea/
+/.php_cs.cache
+/.phpunit.result.cache
 /composer.lock
 /docs/collmex.html
 /vendor/
