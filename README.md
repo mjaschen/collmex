@@ -22,11 +22,14 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `ACCDOC`
 - `ACCDOC_GET`
 - `ADDRESS_GROUPS_GET`
+- `CMXADR`
 - `ADRGRP`
+- `BATCH_GET`
 - `BILL_OF_MATERIAL_GET`
 - `CMXABO`
 - `CMXADR`
 - `CMXBOM`
+- `CMXBTC`
 - `CMXDLV`
 - `CMXEPF`
 - `CMXINV`
