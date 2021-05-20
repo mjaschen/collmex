@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
 namespace MarcusJaschen\Collmex\Type;
 
@@ -15,35 +15,33 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $client_id
  * @property $stock
  * @property $type
- * @property $charge_number
+ * @property $batch_number
  * @property $value
  * @property $charge_description
  * @property $product_description
  */
-class Stock extends AbstractType implements TypeInterface
-{
-    /**
-     * @var array
-     */
-    protected $template = [
-        'type_identifier' => 'CMXSTK',
-        'product_id' => null,
-        'client_id' => null,
-        'stock' => null,
-        'type' => null,
-        'charge_number' => null,
-        'value' => null,
-        'charge_description' => null,
-        'product_description' => null,
-    ];
+class Stock extends AbstractType implements TypeInterface {
+	/**
+	 * @var array
+	 */
+	protected $template = [
+		'type_identifier'     => 'CMXSTK',
+		'product_id'          => null,
+		'client_id'           => null,
+		'stock'               => null,
+		'type'                => null,
+		'batch_number'        => null,
+		'value'               => null,
+		'charge_description'  => null,
+		'product_description' => null,
+	];
 
-    /**
-     * Formally validates the type data in $data attribute.
-     *
-     * @return bool Validation success
-     */
-    public function validate(): bool
-    {
-        return true;
-    }
+	/**
+	 * Formally validates the type data in $data attribute.
+	 *
+	 * @return bool Validation success
+	 */
+	public function validate(): bool {
+		return true;
+	}
 }
