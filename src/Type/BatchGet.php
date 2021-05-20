@@ -23,6 +23,7 @@ class BatchGet extends AbstractType implements TypeInterface {
 		'client_id'       => null,
 		'batch_number'    => null,
 		'free_text'       => null,
+		// 5
 		'changed_only'    => null,
 		'system_name'     => null
 	];
