@@ -10,6 +10,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property string $type_identifier
  * @property string $client_id
  * @property string $batch_number
+ * @property string $product_id
  * @property string $free_text
  * @property string $changed_only
  * @property string $system_name
@@ -22,8 +23,9 @@ class BatchGet extends AbstractType implements TypeInterface {
 		'type_identifier' => 'BATCH_GET',
 		'client_id'       => null,
 		'batch_number'    => null,
-		'free_text'       => null,
+		'product_id'      => null,
 		// 5
+		'free_text'       => null,
 		'changed_only'    => null,
 		'system_name'     => null
 	];
