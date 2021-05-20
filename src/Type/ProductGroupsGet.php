@@ -5,17 +5,20 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Type;
 
 /**
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
+ * Collmex Product Groups Get Type.
  *
- * @property string $type_identifier
+ * @author  Marcus Jaschen <mjaschen@gmail.com>
+ * @author  Timo Paul <mail@timopaul.biz>
+ *
+ * @property $type_identifier
  */
-class AddressGroupsGet extends AbstractType implements TypeInterface
+class ProductGroupsGet extends AbstractType implements TypeInterface
 {
     /**
      * @var array
      */
     protected $template = [
-        'type_identifier' => 'ADDRESS_GROUPS_GET',
+        'type_identifier' => 'PRODUCT_GROUPS_GET',
     ];
 
     /**

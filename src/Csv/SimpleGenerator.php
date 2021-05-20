@@ -39,6 +39,7 @@ class SimpleGenerator implements GeneratorInterface
             // string field values only)
             array_walk(
                 $line,
+                /** @psalm-suppress MissingClosureParamType */
                 static function (&$item) use ($tmpPlaceholder): void {
                     if (!is_string($item)) {
                         return;

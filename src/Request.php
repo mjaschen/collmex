@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex;
 
-use MarcusJaschen\Collmex\Client\ClientInterface;
 use MarcusJaschen\Collmex\Client\Exception\RequestFailedException;
-use MarcusJaschen\Collmex\Csv\SimpleParser;
 use MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException;
 use MarcusJaschen\Collmex\Response\CsvResponse;
 use MarcusJaschen\Collmex\Response\ResponseFactory;
@@ -17,25 +15,8 @@ use MarcusJaschen\Collmex\Response\ZipResponse;
  *
  * @author Marcus Jaschen <mail@marcusjaschen.de>
  */
-class Request
+class Request extends AbstractRequest
 {
-    /**
-     * @var ClientInterface
-     */
-    protected $client;
-
-    /**
-     * @var SimpleParser
-     */
-    protected $responseParser;
-
-    public function __construct(ClientInterface $client)
-    {
-        $this->client = $client;
-
-        $this->responseParser = new SimpleParser();
-    }
-
     /**
      * Sends an API request and returns the response object.
      *
