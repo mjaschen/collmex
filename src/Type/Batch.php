@@ -10,9 +10,8 @@ namespace MarcusJaschen\Collmex\Type;
  * @property string $type_identifier
  * @property string $client_id
  * @property string $batch_number
- * @property string $free_text
- * @property string $changed_only
- * @property string $system_name
+ * @property string $product_id
+ * @property string $description
  */
 class Batch extends AbstractType implements TypeInterface {
 	/**
@@ -22,7 +21,7 @@ class Batch extends AbstractType implements TypeInterface {
 		'type_identifier' => 'CMXBTC',
 		'client_id'       => null,
 		'batch_number'    => null,
-		'product_number'  => null,
+		'product_id'      => null,
 		// 5
 		'description'     => null
 	];
