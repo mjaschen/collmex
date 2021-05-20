@@ -21,6 +21,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `ADRGRP`
 - `ADDRESS_GROUPS_GET`
 - `CMXADR`
+- `BATCH_GET`
 - `BILL_OF_MATERIAL_GET`
 - `CMXABO`
 - `CMXBOM`
