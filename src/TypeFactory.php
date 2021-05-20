@@ -9,6 +9,7 @@ use MarcusJaschen\Collmex\Type\AccountBalance;
 use MarcusJaschen\Collmex\Type\AccountDocument;
 use MarcusJaschen\Collmex\Type\Address;
 use MarcusJaschen\Collmex\Type\AddressGroups;
+use MarcusJaschen\Collmex\Type\Batch;
 use MarcusJaschen\Collmex\Type\BillOfMaterial;
 use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
@@ -52,6 +53,7 @@ class TypeFactory
         'ADRGRP' => AddressGroups::class,
         'CMXABO' => Subscription::class,
         'CMXBOM' => BillOfMaterial::class,
+        'CMXBTC' => Batch::class,
         'CMXINV' => Invoice::class,
         'INVOICE_OUTPUT' => InvoiceOutput::class,
         'CMXMGD' => Member::class,
