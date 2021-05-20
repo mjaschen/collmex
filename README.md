@@ -24,12 +24,12 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `ADDRESS_GROUPS_GET`
 - `CMXADR`
 - `ADRGRP`
-- `CMXBTC`
 - `BATCH_GET`
 - `BILL_OF_MATERIAL_GET`
 - `CMXABO`
 - `CMXADR`
 - `CMXBOM`
+- `CMXBTC`
 - `CMXDLV`
 - `CMXEPF`
 - `CMXINV`
