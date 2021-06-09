@@ -22,6 +22,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `ACCDOC`
 - `ACCDOC_GET`
 - `ADDRESS_GROUPS_GET`
+- `API_NOTIFICATION`
 - `CMXADR`
 - `ADRGRP`
 - `CMXBTC`
