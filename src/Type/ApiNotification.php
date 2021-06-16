@@ -7,7 +7,7 @@ namespace MarcusJaschen\Collmex\Type;
 /**
  * Collmex API notification Type.
  *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
+ * @see https://www.collmex.de/c.cmx?1005,1,help,api_benachrichtigungen
  *
  * @property string $type_identifier
  * @property string $system_name
@@ -15,7 +15,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property string $url
  * @property int $inactive
  */
-class APINotification extends AbstractType implements TypeInterface {
+class ApiNotification extends AbstractType implements TypeInterface {
 
 	/**
 	 * @var int
