@@ -199,7 +199,7 @@ if ($collmexResponse->isError()) {
     echo 'Collmex error: ' . $collmexResponse->getErrorMessage() . '; Code=' . $collmexResponse->getErrorCode() . PHP_EOL;
 
     return;
-} 
+}
 
   $newObject = $collmexResponse->getFirstRecord();
   echo 'New Collmex customer ID=' . $newObject->new_id . PHP_EOL;
