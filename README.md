@@ -113,7 +113,7 @@ the Collmex PHP SDK:
 - for PHP 5.4 compatibility: use the 0.4.x branch (`composer require mjaschen/collmex:~0.4`)
 - for PHP 5.3 compatibility: use the 0.3.x branch (`composer require mjaschen/collmex:~0.3`)
 
-New features will only go into the master.
+New features will only go into the main branch and won't be backported.
 
 ## Usage/Examples
 
