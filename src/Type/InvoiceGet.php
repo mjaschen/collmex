@@ -22,6 +22,8 @@ namespace MarcusJaschen\Collmex\Type;
  * @property mixed $created_by_system_only
  * @property mixed $stationary_exclude
  * @property mixed $output_required
+ * @property mixed $order_id
+ * @property mixed $product_id
  */
 class InvoiceGet extends AbstractType implements TypeInterface
 {
@@ -60,6 +62,8 @@ class InvoiceGet extends AbstractType implements TypeInterface
         'created_by_system_only' => null,
         'stationary_exclude' => null,
         'output_required' => null,
+        'order_id' => null,
+        'product_id' => null,
     ];
 
     /**

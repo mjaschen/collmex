@@ -22,6 +22,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `ACCDOC`
 - `ACCDOC_GET`
 - `ADDRESS_GROUPS_GET`
+- `API_NOTIFICATION`
 - `CMXADR`
 - `ADRGRP`
 - `BATCH_GET`
@@ -198,7 +199,7 @@ if ($collmexResponse->isError()) {
     echo 'Collmex error: ' . $collmexResponse->getErrorMessage() . '; Code=' . $collmexResponse->getErrorCode() . PHP_EOL;
 
     return;
-} 
+}
 
   $newObject = $collmexResponse->getFirstRecord();
   echo 'New Collmex customer ID=' . $newObject->new_id . PHP_EOL;
