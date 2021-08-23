@@ -310,8 +310,11 @@ class Invoice extends AbstractType implements TypeInterface
         'gross_profit' => null,
         'margin' => null,
         'costs_manually' => null,
-        // 89
         'ean' => null,
+        // 90
+        'shipment_ids' => null,
+        'customer_order_id' => null,
+        'alternative_recipient_address_id' => null
     ];
 
     /**
