@@ -111,7 +111,7 @@ class CsvResponse implements ResponseInterface
                 $this->errorMessage = $data[3];
 
                 if (isset($data[4])) {
-                    $this->errorLine = $data[4];
+                    $this->errorLine = (int)$data[4];
                 }
 
                 return true;
@@ -144,7 +144,7 @@ class CsvResponse implements ResponseInterface
      */
     public function getErrorLine(): int
     {
-        return (int)$this->errorLine;
+        return $this->errorLine;
     }
 
     /**
