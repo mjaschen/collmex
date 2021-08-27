@@ -5,6 +5,16 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.6.0]
+
+### Added
+
+- new fields for `Invoice` type. Thanks @mkurzeja
+
+### Changed
+
+- improve type handling in `CsvResponse`
+
 ## [1.5.1]
 
 ### Added
