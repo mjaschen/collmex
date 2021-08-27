@@ -98,6 +98,9 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $margin
  * @property $costs_manually
  * @property $ean
+ * @property $shipment_ids
+ * @property $customer_order_id
+ * @property $alternative_recipient_address_id
  */
 class Invoice extends AbstractType implements TypeInterface
 {
