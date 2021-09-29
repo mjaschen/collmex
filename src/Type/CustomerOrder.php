@@ -270,8 +270,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'discount_id' => null,
         'discount_final' => null,
         'discount_reason' => null,
-        'confirmation_text' => null,
-        'final_text' => null,
+        'confirmation_text' => '(NULL)',
+        'final_text' => '(NULL)',
         // 40
         'internal_memo' => null,
         'partial_invoices' => null,
