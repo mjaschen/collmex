@@ -249,8 +249,8 @@ class Invoice extends AbstractType implements TypeInterface
         'discount_id' => null,
         'discount_final' => null,
         'discount_reason' => null,
-        'invoice_text' => null,
-        'final_text' => null,
+        'invoice_text' => '(NULL)',
+        'final_text' => '(NULL)',
         // 40
         'annotation' => null,
         'deleted' => null,
