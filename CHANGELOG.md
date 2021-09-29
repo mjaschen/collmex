@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.6.1]
+
+### Changed
+
+- set `(NULL)` as default values for some field in invoice/order classes. Thanks @Johnny99211!
+
 ## [1.6.0]
 
 ### Added
