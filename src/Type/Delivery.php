@@ -125,8 +125,8 @@ class Delivery extends AbstractType implements TypeInterface
         // 30
         'order_id_at_customer' => null,
         'delivery_date' => null,
-        'delivery_note' => null,
-        'closing_note' => null,
+        'delivery_note' => '(NULL)',
+        'closing_note' => '(NULL)',
         'internal_note' => null,
         // 35
         'deleted' => null,
