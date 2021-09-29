@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.6.2]
+
+### Changed
+
+- set `(NULL)` as default values for some field in delivery class. Thanks @Johnny99211!
+
 ## [1.6.1]
 
 ### Changed
