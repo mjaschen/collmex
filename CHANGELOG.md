@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.6.3]
+
+### Changed
+
+- update STOCK_GET to match currently supported fields
+
 ## [1.6.2]
 
 ### Changed
