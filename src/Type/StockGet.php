@@ -14,11 +14,18 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $client_id
  * @property $product_id
  * @property $product_group
- * @property $text
- * @property $type
+ * @property string $text
+ * @property int $type
+ * @property int $only_changed
+ * @property string $system_name
+ * @property string $date_effective
  */
 class StockGet extends AbstractType implements TypeInterface
 {
+    public const TYPE_FREI = 0;
+    public const TYPE_GESPERRT = 1;
+    public const TYPE_FBA_BESTAND = 2;
+
     /**
      * @var array
      */
@@ -29,6 +36,9 @@ class StockGet extends AbstractType implements TypeInterface
         'product_group' => null,
         'text' => null,
         'type' => null,
+        'only_changed' => null,
+        'system_name' => null,
+        'date_effective' => null,
     ];
 
     /**
