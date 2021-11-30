@@ -34,7 +34,7 @@ class CsvResponseTest extends TestCase
                         'E',
                         '11111',
                         'Error Message',
-                        1,
+                        '1',
                     ],
                 ]
             );

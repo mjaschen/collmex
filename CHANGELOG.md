@@ -20,6 +20,7 @@ principles.
 - rename attribute `destination_charge` to `destination_batch` in `StockChange`
 - rename attribute `destination_charge_labeling` to `destination_batch_labeling` in `StockChange`
 - rename attribute `source_charge` to `sourcebatch` in `StockChange`
+- replace *neitanod/forceutf8* with Symfony String Component and native `mb_convert_encoding()` function
 
 ## [1.6.3]
 

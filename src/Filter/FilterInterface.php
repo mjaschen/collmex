@@ -11,17 +11,10 @@ namespace MarcusJaschen\Collmex\Filter;
  */
 interface FilterInterface
 {
-    /**
-     * @param string $text
-     *
-     * @return string
-     */
     public function filterString(string $text): string;
 
     /**
-     * @param string[] $input
-     *
-     * @return string[]
+     * @param array<array-key, array<array-key, string>|string> $data
      */
-    public function filterArray(array $input): array;
+    public function filterArray(array $data): array;
 }

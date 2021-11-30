@@ -220,9 +220,9 @@ class CsvResponse implements ResponseInterface
     /**
      * Converts response from Collmex API to UTF-8.
      *
-     * @param string[] $data
+     * @param array<array-key, array<array-key, string>|string> $data
      *
-     * @return string[]
+     * @return array<array-key, array<array-key, string>|string>
      */
     private function convertEncodingFromCollmex(array $data): array
     {
