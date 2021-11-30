@@ -11,6 +11,10 @@ principles.
 
 ### Changed
 
+- removed support for PHP 7.2
+- added support for PHP 8.1
+- updated Composer version constraints for dev libraries
+- add support for Symfony 6.x libraries
 - rename attribute `charge_number` to `batch_number` in `Stock`
 - rename attribute `charge_description` to `batch_description` in `Stock`
 - rename attribute `destination_charge` to `destination_batch` in `StockChange`
