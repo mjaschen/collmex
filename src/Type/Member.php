@@ -16,7 +16,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $title
  * @property $firstname
  * @property $lastname
- * @property $firm
+ * @property $company
  * @property $department
  * @property $street
  * @property $zipcode
@@ -117,7 +117,7 @@ class Member extends AbstractType implements TypeInterface
         // 5
         'firstname' => null,
         'lastname' => null,
-        'firm' => null,
+        'company' => null,
         'department' => null,
         'street' => null,
         // 10

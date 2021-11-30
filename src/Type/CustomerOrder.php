@@ -19,7 +19,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $customer_title
  * @property $customer_firstname
  * @property $customer_lastname
- * @property $customer_firm
+ * @property $customer_company
  * @property $customer_department
  * @property $customer_street
  * @property $customer_zipcode
@@ -70,7 +70,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $delivery_title
  * @property $delivery_firstname
  * @property $delivery_lastname
- * @property $delivery_firm
+ * @property $delivery_company
  * @property $delivery_department
  * @property $delivery_street
  * @property $delivery_zipcode
@@ -241,7 +241,7 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'customer_firstname' => null,
         // 10
         'customer_lastname' => null,
-        'customer_firm' => null,
+        'customer_company' => null,
         'customer_department' => null,
         'customer_street' => null,
         'customer_zipcode' => null,
@@ -297,7 +297,7 @@ class CustomerOrder extends AbstractType implements TypeInterface
         // 60
         'delivery_firstname' => null,
         'delivery_lastname' => null,
-        'delivery_firm' => null,
+        'delivery_company' => null,
         'delivery_department' => null,
         'delivery_street' => null,
         'delivery_zipcode' => null,

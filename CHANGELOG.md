@@ -22,6 +22,9 @@ principles.
 - rename attribute `source_charge` to `sourcebatch` in `StockChange`
 - rename attribute `only_changed` to `changed_only` in `AccountDocumentGet`, `CustomerGet`,`MemberGet`, `SalesOrderGet`,`StockGet` and `VoucherGet`
 - rename attribute `forename` to `firstname` in `Customer`, `CustomerOrder`, `Invoice` and `Member`
+- rename attribute `firm` to `company` in `Customer`, `DifferentShippingAddress`, `Member`
+- rename attribute `customer_firm` to `customer_company` in `CustomerOrder`, `Invoice`
+- rename attribute `delivery_firm` to `delivery_company` in `CustomerOrder`, `Invoice`
 - replace *neitanod/forceutf8* with Symfony String Component and native `mb_convert_encoding()` function
 - rename `SimpleParser` to `Parser` (#171)
 - rename `SimpleGenerator` to `Generator` (#171)

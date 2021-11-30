@@ -19,7 +19,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $title
  * @property $firstname
  * @property $lastname
- * @property $firm
+ * @property $company
  * @property $department
  * @property $street
  * @property $zipcode
@@ -50,7 +50,7 @@ class DifferentShippingAddress extends AbstractType implements TypeInterface
         'title' => null,
         'firstname' => null,
         'lastname' => null,
-        'firm' => null,
+        'company' => null,
         'department' => null,
         'street' => null,
         'zipcode' => null,
