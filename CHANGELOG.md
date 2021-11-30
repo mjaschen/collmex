@@ -19,7 +19,7 @@ principles.
 - rename attribute `charge_description` to `batch_description` in `Stock`
 - rename attribute `destination_charge` to `destination_batch` in `StockChange`
 - rename attribute `destination_charge_labeling` to `destination_batch_labeling` in `StockChange`
-- rename attribute `source_charge` to `sourcebatch` in `StockChange`
+- rename attribute `source_charge` to `source_batch` in `StockChange`
 - rename attribute `only_changed` to `changed_only` in `AccountDocumentGet`, `CustomerGet`,`MemberGet`, `SalesOrderGet`,`StockGet` and `VoucherGet`
 - rename attribute `forename` to `firstname` in `Customer`, `CustomerOrder`, `Invoice` and `Member`
 - rename attribute `firm` to `company` in `Customer`, `DifferentShippingAddress`, `Member`

@@ -5,7 +5,7 @@
 [![CI Status](https://github.com/mjaschen/collmex/workflows/Collmex%20PHP%20SDK%20Tests/badge.svg)](https://github.com/mjaschen/collmex/workflows/Collmex%20PHP%20SDK%20Tests/badge.svg)
 [![Build Status](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mjaschen/collmex/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/quality-score.png)](https://scrutinizer-ci.com/g/mjaschen/collmex/)
-[![License](https://poser.pugx.org/mjaschen/collmex/license)](//packagist.org/packages/mjaschen/collmex)
+[![License](https://poser.pugx.org/mjaschen/collmex/license)](https://packagist.org/packages/mjaschen/collmex)
 
 This library provides a wrapper for the Collmex API. It's not complete yet, some record types (and maybe some features)
 are missing.
@@ -88,7 +88,6 @@ If you want to use the included Laravel service provider
 `CollmexServiceProvider`, add it to the `config/app.php` providers array:
 
 ```php
-<?php
 return [
 
     // ...
@@ -102,16 +101,53 @@ return [
 ];
 ```
 
+## Upgrading
+
+### Version 1.x to 2.x
+
+First step: read the [change log](https://github.com/mjaschen/collmex/blob/main/CHANGELOG.md).
+You will see the list of everything changed between versions 1 and 2. 
+
+Second step: ensure your codebase is compatible with all requirements in `composer.json`.
+
+Third step: rename attributes which are used in your codebase. Some attributes
+in the type classes have been renamed. If you use these attributes, you have
+to adjust your code as well. A simple search-and-replace is sufficient for
+this. Below you will find the complete list of renamed attributes:
+
+| Class                      | Old Name                      | New Name                     |
+|----------------------------|-------------------------------|------------------------------|
+| `Stock`                    | `charge_number`               | `batch_number`               |
+| `Stock`                    | `charge_description`          | `batch_description`          |
+| `StockChange`              | `destination_charge`          | `destination_batch`          |
+| `StockChange`              | `destination_charge_labeling` | `destination_batch_labeling` |
+| `StockChange`              | `source_charge`               | `source_batch`               |
+| `AccountDocumentGet`       | `only_changed`                | `changed_only`               |
+| `CustomerGet`              | `only_changed`                | `changed_only`               |
+| `MemberGet`                | `only_changed`                | `changed_only`               |
+| `SalesOrderGet`            | `only_changed`                | `changed_only`               |
+| `StockGet`                 | `only_changed`                | `changed_only`               |
+| `VoucherGet`               | `only_changed`                | `changed_only`               |
+| `Customer`                 | `forename`                    | `firstname`                  |
+| `CustomerOrder`            | `forename`                    | `firstname`                  |
+| `Invoice`                  | `forename`                    | `firstname`                  |
+| `Member`                   | `forename`                    | `firstname`                  |
+| `Customer`                 | `firm`                        | `company`                    |
+| `DifferentShippingAddress` | `firm`                        | `company`                    |
+| `Member`                   | `firm`                        | `company`                    |
+| `CustomerOrder`            | `customer_firm`               | `customer_company`           |
+| `Invoice`                  | `customer_firm`               | `customer_company`           |
+| `CustomerOrder`            | `delivery_firm`               | `delivery_company`           |
+| `Invoice`                  | `delivery_firm`               | `delivery_company`           |
+
 ## Compatibility
 
-The Collmex PHP SDK requires PHP >= 7.2. If you're still using an ancient PHP version, you can install older versions of
-the Collmex PHP SDK:
+The Collmex PHP SDK requires PHP >= 7.3. If you're still using an ancient PHP
+version, you can install older versions of the Collmex PHP SDK:
 
-- for PHP 7.0 compatibility: use the 0.12.x branch (`composer require mjaschen/collmex:~0.12`)
-- for PHP 5.6 compatibility: use the 0.11.x branch (`composer require mjaschen/collmex:~0.11`)
-- for PHP 5.5 compatibility: use the 0.6.x branch (`composer require mjaschen/collmex:~0.6`)
-- for PHP 5.4 compatibility: use the 0.4.x branch (`composer require mjaschen/collmex:~0.4`)
-- for PHP 5.3 compatibility: use the 0.3.x branch (`composer require mjaschen/collmex:~0.3`)
+- for PHP 7.2 compatibility: use the 1.x tags (`composer require mjaschen/collmex:^1.0`); this version will receive security updates until version 3.0 is released.
+- for PHP 7.0 compatibility: use the 0.12.x tags (`composer require mjaschen/collmex:^0.12`); this version won't receive any updates.
+- for PHP 5.6 compatibility: use the 0.11.x tags (`composer require mjaschen/collmex:^0.11`); this version won't receive any updates.
 
 New features will only go into the main branch and won't be backported.
 
@@ -122,8 +158,6 @@ New features will only go into the main branch and won't be backported.
 Load a Collmex *Customer* record:
 
 ```php
-<?php
-
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
 use MarcusJaschen\Collmex\Request;
 use MarcusJaschen\Collmex\Type\CustomerGet;
@@ -162,8 +196,6 @@ var_dump($collmexResponse->getResponseRaw());
 Create a new Collmex *Customer* record and get the Collmex customer ID from the response data:
 
 ```php
-<?php
-
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
 use MarcusJaschen\Collmex\Request;
 use MarcusJaschen\Collmex\Type\Customer;
@@ -222,8 +254,6 @@ The `MultiRequest` class provides a simple way to send multiple records to Collm
 array of valid `Type` instances) can be added to a queue and eventually sent to the Collmex API.
 
 ```php
-<?php
-
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
 use MarcusJaschen\Collmex\MultiRequest;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
