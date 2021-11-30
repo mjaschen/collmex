@@ -6,7 +6,8 @@
         "api"
     ],
     "license": "MIT",
-    "authors": [{
+    "authors": [
+        {
             "name": "Marcus Jaschen",
             "email": "mail@marcusjaschen.de",
             "homepage": "https://marcusjaschen.de/",
@@ -30,7 +31,7 @@
         "symfony/string": "^5.1 || ^6.0"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.0",
+        "ergebnis/composer-normalize": "^2.16",
         "friendsofphp/php-cs-fixer": "^2.0",
         "laravel/framework": ">=7.2",
         "mockery/mockery": "^1.4",
