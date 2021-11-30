@@ -5,6 +5,18 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.0.0] - unreleased
+
+**Warning: Backwards-compatibility-breaking changes**
+
+### Changed
+
+- rename attribute `charge_number` to `batch_number` in `Stock`
+- rename attribute `charge_description` to `batch_description` in `Stock`
+- rename attribute `destination_charge` to `destination_batch` in `StockChange`
+- rename attribute `destination_charge_labeling` to `destination_batch_labeling` in `StockChange`
+- rename attribute `source_charge` to `sourcebatch` in `StockChange`
+
 ## [1.5.0]
 
 ### Added
