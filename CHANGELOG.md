@@ -28,6 +28,10 @@ principles.
 
 - `GeneratorInterface` and `ParserInterface` no longer exist (#171)
 
+### Added
+
+- new methods `generateFromSingleLine()` and `generateFromMultipleLines()` in `Generator` (CSV generator class)
+
 ## [1.6.3]
 
 ### Changed

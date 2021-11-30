@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Csv;
 
+use RuntimeException;
+
 /**
  * CSV Generator Class.
  *
@@ -11,53 +13,85 @@ namespace MarcusJaschen\Collmex\Csv;
  */
 class Generator
 {
+    private const PLACEHOLDER_FPUTCSV_BUG = 'MJASCHEN_COLLMEX_WORKAROUND_PHP_BUG_43225';
+
     /**
-     * Generates a CSV string from given array data.
+     * Generates a CSV string from given array data; detects automatically
+     * whether the data contains a single line or multiple lines.
      *
-     * @param array $data
-     *
-     * @return string
-     *
-     * @throws \RuntimeException
+     * @throws RuntimeException
      */
     public function generate(array $data): string
     {
-        $fileHandle = fopen('php://temp', 'w');
+        if (!is_array($data[0])) {
+            return $this->generateFromSingleLine($data);
+        }
+
+        return $this->generateFromMultipleLines($data);
+    }
+
+    public function generateFromSingleLine(array $line): string
+    {
+        return $this->createCsvString(
+            /** @param resource $fileHandle */
+            function ($fileHandle) use ($line) {
+                fputcsv(
+                    $fileHandle,
+                    $this->insertSpecialPlaceholder($line),
+                    FormatInterface::DELIMITER,
+                    FormatInterface::ENCLOSURE
+                );
+            }
+        );
+    }
+
+    public function generateFromMultipleLines(array $lines): string
+    {
+        return $this->createCsvString(
+            /** @param resource $fileHandle */
+            function ($fileHandle) use ($lines) {
+                foreach ($lines as $line) {
+                    fputcsv(
+                        $fileHandle,
+                        $this->insertSpecialPlaceholder($line),
+                        FormatInterface::DELIMITER,
+                        FormatInterface::ENCLOSURE
+                    );
+                }
+            }
+        );
+    }
+
+    private function createCsvString(callable $csvCreator): string
+    {
+        $fileHandle = fopen('php://temp', 'wb');
 
         if (!$fileHandle) {
-            throw new \RuntimeException('Cannot open temp file handle (php://temp)');
+            throw new RuntimeException('Cannot open temp file handle (php://temp)', 5529946737);
         }
 
-        if (!is_array($data[0])) {
-            $data = [$data];
-        }
-
-        $tmpPlaceholder = 'MJASCHEN_COLLMEX_WORKAROUND_PHP_BUG_43225_' . time();
-        foreach ($data as $line) {
-            // workaround for PHP bug 43225: temporarily insert a placeholder
-            // between a backslash directly followed by a double-quote (for
-            // string field values only)
-            array_walk(
-                $line,
-                /** @psalm-suppress MissingClosureParamType */
-                static function (&$item) use ($tmpPlaceholder): void {
-                    if (!is_string($item)) {
-                        return;
-                    }
-                    $item = preg_replace('/(\\\\+)"/m', '$1' . $tmpPlaceholder . '"', $item);
-                }
-            );
-
-            fputcsv($fileHandle, $line, FormatInterface::DELIMITER, FormatInterface::ENCLOSURE);
-        }
+        $csvCreator($fileHandle);
 
         rewind($fileHandle);
         $csv = stream_get_contents($fileHandle);
         fclose($fileHandle);
 
         // remove the temporary placeholder from the final CSV string
-        $csv = str_replace($tmpPlaceholder, '', $csv);
+        return str_replace(self::PLACEHOLDER_FPUTCSV_BUG, '', $csv);
+    }
 
-        return $csv;
+    private function insertSpecialPlaceholder(array $csvLine): array
+    {
+        return array_map(
+        /** @psalm-suppress MissingClosureParamType */
+            static function ($item) {
+                if (!is_string($item)) {
+                    return $item;
+                }
+
+                return preg_replace('/(\\\\+)"/m', '$1' . self::PLACEHOLDER_FPUTCSV_BUG . '"', $item);
+            },
+            $csvLine
+        );
     }
 }
