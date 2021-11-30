@@ -10,6 +10,23 @@
 This library provides a wrapper for the Collmex API. It's not complete yet, some record types (and maybe some features)
 are missing.
 
+## Table of Contents
+- [Collmex API PHP SDK](#collmex-api-php-sdk)
+  - [Table of Contents](#table-of-contents)
+  - [Compatibility](#compatibility)
+  - [Installation](#installation)
+  - [Upgrading](#upgrading)
+    - [Version 1.x to 2.x](#version-1x-to-2x)
+  - [Usage/Examples](#usageexamples)
+    - [Fetch from Collmex API](#fetch-from-collmex-api)
+    - [Send Data to Collmex](#send-data-to-collmex)
+    - [Send Multiple Records at Once](#send-multiple-records-at-once)
+  - [Notes](#notes)
+  - [Development](#development)
+    - [Run code checks](#run-code-checks)
+    - [Autoformat the code](#autoformat-the-code)
+  - [Collmex API Documentation](#collmex-api-documentation)
+
 Please create a pull request if you have implemented a new type/feature or create issues for bugs/feature requests.
 
 There is (or least should be…) a *Type* class for every Collmex record type
@@ -76,6 +93,17 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `VOUCHER`
 - `VOUCHER_GET`
 
+## Compatibility
+
+The Collmex PHP SDK requires PHP >= 7.3. If you're still using an ancient PHP
+version, you can install older versions of the Collmex PHP SDK:
+
+- for PHP 7.2 compatibility: use the 1.x tags (`composer require mjaschen/collmex:^1.0`); this version will receive security updates until version 3.0 is released.
+- for PHP 7.0 compatibility: use the 0.12.x tags (`composer require mjaschen/collmex:^0.12`); this version won't receive any updates.
+- for PHP 5.6 compatibility: use the 0.11.x tags (`composer require mjaschen/collmex:^0.11`); this version won't receive any updates.
+
+New features will only go into the main branch and won't be backported.
+
 ## Installation
 
 Using Composer, just add it to your `composer.json` by running:
@@ -105,12 +133,10 @@ return [
 
 ### Version 1.x to 2.x
 
-First step: read the [change log](https://github.com/mjaschen/collmex/blob/main/CHANGELOG.md).
-You will see the list of everything changed between versions 1 and 2. 
-
-Second step: ensure your codebase is compatible with all requirements in `composer.json`.
-
-Third step: rename attributes which are used in your codebase. Some attributes
+1. Read the [change log](https://github.com/mjaschen/collmex/blob/main/CHANGELOG.md).
+You will see the list of everything changed between versions 1 and 2.
+1. Ensure your codebase is compatible with all requirements in `composer.json`.
+1. Rename attributes which are used in your codebase. Some attributes
 in the type classes have been renamed. If you use these attributes, you have
 to adjust your code as well. A simple search-and-replace is sufficient for
 this. Below you will find the complete list of renamed attributes:
@@ -139,17 +165,6 @@ this. Below you will find the complete list of renamed attributes:
 | `Invoice`                  | `customer_firm`               | `customer_company`           |
 | `CustomerOrder`            | `delivery_firm`               | `delivery_company`           |
 | `Invoice`                  | `delivery_firm`               | `delivery_company`           |
-
-## Compatibility
-
-The Collmex PHP SDK requires PHP >= 7.3. If you're still using an ancient PHP
-version, you can install older versions of the Collmex PHP SDK:
-
-- for PHP 7.2 compatibility: use the 1.x tags (`composer require mjaschen/collmex:^1.0`); this version will receive security updates until version 3.0 is released.
-- for PHP 7.0 compatibility: use the 0.12.x tags (`composer require mjaschen/collmex:^0.12`); this version won't receive any updates.
-- for PHP 5.6 compatibility: use the 0.11.x tags (`composer require mjaschen/collmex:^0.11`); this version won't receive any updates.
-
-New features will only go into the main branch and won't be backported.
 
 ## Usage/Examples
 
@@ -342,9 +357,12 @@ foreach ($records as $record) {
 
 ## Notes
 
-Collmex expects all strings encoded in code page 1252 (Windows) while the Collmex PHP SDK expects all inputs as UTF-8
-and outputs everything as UTF-8. The conversion of string encodings is done transparently with the [forceutf8]
-library before sending a request to the Collmex API and after receiving the response from the API.
+Collmex expects all strings encoded in code page 1252 (Windows) while the
+Collmex PHP SDK expects all inputs as UTF-8 and outputs everything as UTF-8.
+The conversion of string encodings is done transparently by using the
+Symfony String Component and PHP's `mb_convert_encoding()` function before
+sending a request to the Collmex API and after receiving the response from
+the API.
 
 ## Development
 
