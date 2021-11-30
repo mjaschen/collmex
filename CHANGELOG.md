@@ -7,8 +7,6 @@ principles.
 
 ## [2.0.0] - unreleased
 
-**Warning: Backwards-compatibility-breaking changes**
-
 ### Changed
 
 - removed support for PHP 7.2
@@ -36,6 +34,10 @@ principles.
 ### Added
 
 - new methods `generateFromSingleLine()` and `generateFromMultipleLines()` in `Generator` (CSV generator class)
+
+### Changed
+
+- update STOCK_GET to match currently supported fields
 
 ## [1.6.3]
 

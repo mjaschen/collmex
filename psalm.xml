@@ -9,6 +9,7 @@
     <projectFiles>
         <directory name="src" />
         <ignoreFiles>
+            <directory name="vendor" />
             <file name="src/CollmexServiceProvider.php"/>
             <directory name="vendor" />
         </ignoreFiles>
@@ -36,4 +37,6 @@
 
         <RawObjectIteration errorLevel="error"/>
     </issueHandlers>
+
 </psalm>
+

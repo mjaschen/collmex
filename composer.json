@@ -1,4 +1,4 @@
-{
+s {
     "name": "mjaschen/collmex",
     "description": "Collmex PHP SDK",
     "keywords": [
@@ -6,8 +6,7 @@
         "api"
     ],
     "license": "MIT",
-    "authors": [
-        {
+    "authors": [{
             "name": "Marcus Jaschen",
             "email": "mail@marcusjaschen.de",
             "homepage": "https://marcusjaschen.de/",
