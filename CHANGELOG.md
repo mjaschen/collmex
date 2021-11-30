@@ -21,6 +21,12 @@ principles.
 - rename attribute `destination_charge_labeling` to `destination_batch_labeling` in `StockChange`
 - rename attribute `source_charge` to `sourcebatch` in `StockChange`
 - replace *neitanod/forceutf8* with Symfony String Component and native `mb_convert_encoding()` function
+- rename `SimpleParser` to `Parser` (#171)
+- rename `SimpleGenerator` to `Generator` (#171)
+
+### Removed
+
+- `GeneratorInterface` and `ParserInterface` no longer exist (#171)
 
 ## [1.6.3]
 
