@@ -16,7 +16,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $agent_id
  * @property $voucher_desc
  * @property $show_expired
- * @property $only_changed
+ * @property $changed_only
  * @property $system_name
  */
 class VoucherGet extends AbstractType implements TypeInterface
@@ -32,7 +32,7 @@ class VoucherGet extends AbstractType implements TypeInterface
         'agent_id' => null,
         'voucher_desc' => null,
         'show_expired' => null,
-        'only_changed' => null,
+        'changed_only' => null,
         'system_name' => null,
     ];
 

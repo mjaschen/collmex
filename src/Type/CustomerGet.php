@@ -19,7 +19,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $price_group_id
  * @property $discount_id
  * @property $agent_id
- * @property $only_changed
+ * @property $changed_only
  * @property $system_name
  * @property $inactive
  */
@@ -39,7 +39,7 @@ class CustomerGet extends AbstractType implements TypeInterface
         'price_group_id' => null,
         'discount_id' => null,
         'agent_id' => null,
-        'only_changed' => null,
+        'changed_only' => null,
         'system_name' => null,
         'inactive' => null,
     ];
