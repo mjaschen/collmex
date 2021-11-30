@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Response;
 
-use MarcusJaschen\Collmex\Csv\ParserInterface;
+use MarcusJaschen\Collmex\Csv\Parser;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipResponseException;
 use Symfony\Component\Finder\Finder;
@@ -22,7 +22,7 @@ class ZipResponse implements ResponseInterface
     protected $responseBody;
 
     /**
-     * @var ParserInterface
+     * @var Parser
      */
     protected $responseParser;
 
@@ -32,12 +32,12 @@ class ZipResponse implements ResponseInterface
     protected $extractDirectory;
 
     /**
-     * @param ParserInterface $responseParser
+     * @param Parser $responseParser
      * @param string $responseBody
      *
      * @throws InvalidZipFileException
      */
-    public function __construct(ParserInterface $responseParser, string $responseBody)
+    public function __construct(Parser $responseParser, string $responseBody)
     {
         $this->responseBody = $responseBody;
         $this->responseParser = $responseParser;

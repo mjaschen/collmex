@@ -9,7 +9,7 @@ namespace MarcusJaschen\Collmex\Csv;
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
-class SimpleGenerator implements GeneratorInterface
+class Generator
 {
     /**
      * Generates a CSV string from given array data.

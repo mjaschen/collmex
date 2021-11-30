@@ -5,22 +5,22 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex\Tests\Unit\Csv;
 
 use MarcusJaschen\Collmex\Csv\FormatInterface;
-use MarcusJaschen\Collmex\Csv\SimpleParser;
+use MarcusJaschen\Collmex\Csv\Parser;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Test case.
  */
-class SimpleParserTest extends TestCase
+class ParserTest extends TestCase
 {
     /**
-     * @var SimpleParser
+     * @var Parser
      */
     protected $parser = null;
 
     protected function setUp(): void
     {
-        $this->parser = new SimpleParser();
+        $this->parser = new Parser();
     }
 
     /**

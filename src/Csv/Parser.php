@@ -9,18 +9,8 @@ namespace MarcusJaschen\Collmex\Csv;
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
-class SimpleParser implements ParserInterface
+class Parser
 {
-    /**
-     * @var string
-     */
-    private const DELIMITER = ';';
-
-    /**
-     * @var string
-     */
-    private const ENCLOSURE = '"';
-
     /**
      * @param string $csv one or multiple lines of CSV data
      *
