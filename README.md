@@ -179,7 +179,7 @@ $customer = new Customer(
     [
         'client_id' => '1',
         'salutation' => 'Herr',
-        'forename' => 'Charly',
+        'firstname' => 'Charly',
         'lastname' => 'Cash',
         'street' => 'Hauptstraße 12',
         'zipcode' => '12222',
@@ -238,7 +238,7 @@ $collmexMultiRequest = new MultiRequest($collmexClient);
 $customerOrderData = [
     'client_id' => '1',
     'customer_salutation' => 'Herr',
-    'customer_forename' => 'Charly',
+    'customer_firstname' => 'Charly',
     'customer_lastname' => 'Cash',
     'customer_street' => 'Hauptstraße 12',
     'customer_zipcode' => '12222',
