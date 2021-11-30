@@ -15,9 +15,9 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $client_id
  * @property $stock
  * @property $type
- * @property $charge_number
+ * @property $batch_number
  * @property $value
- * @property $charge_description
+ * @property $batch_description
  * @property $product_description
  */
 class Stock extends AbstractType implements TypeInterface
@@ -31,9 +31,9 @@ class Stock extends AbstractType implements TypeInterface
         'client_id' => null,
         'stock' => null,
         'type' => null,
-        'charge_number' => null,
+        'batch_number' => null,
         'value' => null,
-        'charge_description' => null,
+        'batch_description' => null,
         'product_description' => null,
     ];
 

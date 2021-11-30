@@ -18,13 +18,13 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $quantity
  * @property $destination_location_id
  * @property $destination_stock_type
- * @property $destination_charge
- * @property $destination_charge_labeling
+ * @property $destination_batch
+ * @property $destination_batch_labeling
  * @property $reserved_1
  * @property $reserved_2
  * @property $source_location_id
  * @property $source_stock_type
- * @property $source_charge
+ * @property $source_batch
  * @property $reserved_3
  * @property $reserved_4
  * @property $reserved_5
@@ -85,16 +85,16 @@ class StockChange extends AbstractType implements TypeInterface
         // 7-12: only STOCK_CHANGE_TYPE_INPUT, STOCK_CHANGE_TYPE_TRANSFER, STOCK_CHANGE_TYPE_INVENTORY
         'destination_location_id' => null,
         'destination_stock_type' => null,
-        'destination_charge' => null,
+        'destination_batch' => null,
         // 10
-        'destination_charge_labeling' => null,
+        'destination_batch_labeling' => null,
         'reserved_1' => null,
         'reserved_2' => null,
         // 13-18: only STOCK_CHANGE_TYPE_WITHDRAWAL, STOCK_CHANGE_TYPE_TRANSFER
         'source_location_id' => null,
         'source_stock_type' => null,
         // 15
-        'source_charge' => null,
+        'source_batch' => null,
         'reserved_3' => null,
         'reserved_4' => null,
         'reserved_5' => null,
