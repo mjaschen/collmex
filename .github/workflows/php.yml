@@ -3,12 +3,10 @@ name: Collmex PHP SDK Tests
 on:
   push:
     branches:
-      - main
-      - 2.0-dev
+      - "**"
   pull_request:
     branches:
       - main
-      - 2.0-dev
 
 jobs:
   build:
