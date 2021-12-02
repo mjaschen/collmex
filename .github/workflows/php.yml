@@ -24,7 +24,7 @@ jobs:
           - "stable"
           - "lowest"
 
-    name: "collmex-php-sdk build - PHP ${{ matrix.php-versions }}"
+    name: "collmex-php-sdk build - PHP ${{ matrix.php-versions }} - Composer ${{ matrix.composer-dependencies }}"
 
     steps:
       - uses: actions/checkout@v2
@@ -51,7 +51,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress --no-suggest --prefer${{ matrix.composer-dependencies }}
+        run: composer install --prefer-dist --no-progress --no-suggest --prefer-${{ matrix.composer-dependencies }}
 
       - name: Lint PHP Sources
         run: composer run-script ci:lint
