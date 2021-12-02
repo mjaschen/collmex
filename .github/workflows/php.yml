@@ -20,6 +20,9 @@ jobs:
           - "7.4"
           - "8.0"
           - "8.1"
+        composer-dependencies:
+          - "stable"
+          - "lowest"
 
     name: "collmex-php-sdk build - PHP ${{ matrix.php-versions }}"
 
@@ -42,13 +45,13 @@ jobs:
         uses: actions/cache@v2
         with:
           path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('composer.json') }}
+          key: ${{ runner.os }}-php-${{ hashFiles('composer.json') }}-${{ matrix.composer-dependencies }}
           restore-keys: |
             ${{ runner.os }}-php-
 
       - name: Install dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer install --prefer-dist --no-progress --no-suggest --prefer${{ matrix.composer-dependencies }}
 
       - name: Lint PHP Sources
         run: composer run-script ci:lint
