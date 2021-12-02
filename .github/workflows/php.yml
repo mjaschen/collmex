@@ -51,7 +51,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer install --prefer-dist --no-progress --no-suggest --prefer-${{ matrix.composer-dependencies }}
+        run: composer update --prefer-dist --no-progress --no-suggest --prefer-${{ matrix.composer-dependencies }}
 
       - name: Lint PHP Sources
         run: composer run-script ci:lint
