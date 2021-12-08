@@ -5,10 +5,27 @@
 [![CI Status](https://github.com/mjaschen/collmex/workflows/Collmex%20PHP%20SDK%20Tests/badge.svg)](https://github.com/mjaschen/collmex/workflows/Collmex%20PHP%20SDK%20Tests/badge.svg)
 [![Build Status](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mjaschen/collmex/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjaschen/collmex/badges/quality-score.png)](https://scrutinizer-ci.com/g/mjaschen/collmex/)
-[![License](https://poser.pugx.org/mjaschen/collmex/license)](//packagist.org/packages/mjaschen/collmex)
+[![License](https://poser.pugx.org/mjaschen/collmex/license)](https://packagist.org/packages/mjaschen/collmex)
 
 This library provides a wrapper for the Collmex API. It's not complete yet, some record types (and maybe some features)
 are missing.
+
+## Table of Contents
+- [Collmex API PHP SDK](#collmex-api-php-sdk)
+  - [Table of Contents](#table-of-contents)
+  - [Compatibility](#compatibility)
+  - [Installation](#installation)
+  - [Upgrading](#upgrading)
+    - [Version 1.x to 2.x](#version-1x-to-2x)
+  - [Usage/Examples](#usageexamples)
+    - [Fetch from Collmex API](#fetch-from-collmex-api)
+    - [Send Data to Collmex](#send-data-to-collmex)
+    - [Send Multiple Records at Once](#send-multiple-records-at-once)
+  - [Notes](#notes)
+  - [Development](#development)
+    - [Run code checks](#run-code-checks)
+    - [Autoformat the code](#autoformat-the-code)
+  - [Collmex API Documentation](#collmex-api-documentation)
 
 Please create a pull request if you have implemented a new type/feature or create issues for bugs/feature requests.
 
@@ -76,6 +93,17 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `VOUCHER`
 - `VOUCHER_GET`
 
+## Compatibility
+
+The Collmex PHP SDK requires PHP >= 7.3. If you're still using an ancient PHP
+version, you can install older versions of the Collmex PHP SDK:
+
+- for PHP 7.2 compatibility: use the 1.x tags (`composer require mjaschen/collmex:^1.0`); this version will receive security updates until version 3.0 is released.
+- for PHP 7.0 compatibility: use the 0.12.x tags (`composer require mjaschen/collmex:^0.12`); this version won't receive any updates.
+- for PHP 5.6 compatibility: use the 0.11.x tags (`composer require mjaschen/collmex:^0.11`); this version won't receive any updates.
+
+New features will only go into the main branch and won't be backported.
+
 ## Installation
 
 Using Composer, just add it to your `composer.json` by running:
@@ -88,7 +116,6 @@ If you want to use the included Laravel service provider
 `CollmexServiceProvider`, add it to the `config/app.php` providers array:
 
 ```php
-<?php
 return [
 
     // ...
@@ -102,18 +129,42 @@ return [
 ];
 ```
 
-## Compatibility
+## Upgrading
 
-The Collmex PHP SDK requires PHP >= 7.2. If you're still using an ancient PHP version, you can install older versions of
-the Collmex PHP SDK:
+### Version 1.x to 2.x
 
-- for PHP 7.0 compatibility: use the 0.12.x branch (`composer require mjaschen/collmex:~0.12`)
-- for PHP 5.6 compatibility: use the 0.11.x branch (`composer require mjaschen/collmex:~0.11`)
-- for PHP 5.5 compatibility: use the 0.6.x branch (`composer require mjaschen/collmex:~0.6`)
-- for PHP 5.4 compatibility: use the 0.4.x branch (`composer require mjaschen/collmex:~0.4`)
-- for PHP 5.3 compatibility: use the 0.3.x branch (`composer require mjaschen/collmex:~0.3`)
+1. Read the [change log](https://github.com/mjaschen/collmex/blob/main/CHANGELOG.md).
+You will see the list of everything changed between versions 1 and 2.
+1. Ensure your codebase is compatible with all requirements in `composer.json`.
+1. Rename attributes which are used in your codebase. Some attributes
+in the type classes have been renamed. If you use these attributes, you have
+to adjust your code as well. A simple search-and-replace is sufficient for
+this. Below you will find the complete list of renamed attributes:
 
-New features will only go into the main branch and won't be backported.
+| Class                      | Old Name                      | New Name                     |
+|----------------------------|-------------------------------|------------------------------|
+| `Stock`                    | `charge_number`               | `batch_number`               |
+| `Stock`                    | `charge_description`          | `batch_description`          |
+| `StockChange`              | `destination_charge`          | `destination_batch`          |
+| `StockChange`              | `destination_charge_labeling` | `destination_batch_labeling` |
+| `StockChange`              | `source_charge`               | `source_batch`               |
+| `AccountDocumentGet`       | `only_changed`                | `changed_only`               |
+| `CustomerGet`              | `only_changed`                | `changed_only`               |
+| `MemberGet`                | `only_changed`                | `changed_only`               |
+| `SalesOrderGet`            | `only_changed`                | `changed_only`               |
+| `StockGet`                 | `only_changed`                | `changed_only`               |
+| `VoucherGet`               | `only_changed`                | `changed_only`               |
+| `Customer`                 | `forename`                    | `firstname`                  |
+| `CustomerOrder`            | `forename`                    | `firstname`                  |
+| `Invoice`                  | `forename`                    | `firstname`                  |
+| `Member`                   | `forename`                    | `firstname`                  |
+| `Customer`                 | `firm`                        | `company`                    |
+| `DifferentShippingAddress` | `firm`                        | `company`                    |
+| `Member`                   | `firm`                        | `company`                    |
+| `CustomerOrder`            | `customer_firm`               | `customer_company`           |
+| `Invoice`                  | `customer_firm`               | `customer_company`           |
+| `CustomerOrder`            | `delivery_firm`               | `delivery_company`           |
+| `Invoice`                  | `delivery_firm`               | `delivery_company`           |
 
 ## Usage/Examples
 
@@ -122,8 +173,6 @@ New features will only go into the main branch and won't be backported.
 Load a Collmex *Customer* record:
 
 ```php
-<?php
-
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
 use MarcusJaschen\Collmex\Request;
 use MarcusJaschen\Collmex\Type\CustomerGet;
@@ -162,8 +211,6 @@ var_dump($collmexResponse->getResponseRaw());
 Create a new Collmex *Customer* record and get the Collmex customer ID from the response data:
 
 ```php
-<?php
-
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
 use MarcusJaschen\Collmex\Request;
 use MarcusJaschen\Collmex\Type\Customer;
@@ -179,7 +226,7 @@ $customer = new Customer(
     [
         'client_id' => '1',
         'salutation' => 'Herr',
-        'forename' => 'Charly',
+        'firstname' => 'Charly',
         'lastname' => 'Cash',
         'street' => 'Hauptstraße 12',
         'zipcode' => '12222',
@@ -222,8 +269,6 @@ The `MultiRequest` class provides a simple way to send multiple records to Collm
 array of valid `Type` instances) can be added to a queue and eventually sent to the Collmex API.
 
 ```php
-<?php
-
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
 use MarcusJaschen\Collmex\MultiRequest;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
@@ -238,7 +283,7 @@ $collmexMultiRequest = new MultiRequest($collmexClient);
 $customerOrderData = [
     'client_id' => '1',
     'customer_salutation' => 'Herr',
-    'customer_forename' => 'Charly',
+    'customer_firstname' => 'Charly',
     'customer_lastname' => 'Cash',
     'customer_street' => 'Hauptstraße 12',
     'customer_zipcode' => '12222',
@@ -312,9 +357,12 @@ foreach ($records as $record) {
 
 ## Notes
 
-Collmex expects all strings encoded in code page 1252 (Windows) while the Collmex PHP SDK expects all inputs as UTF-8
-and outputs everything as UTF-8. The conversion of string encodings is done transparently with the [forceutf8]
-library before sending a request to the Collmex API and after receiving the response from the API.
+Collmex expects all strings encoded in code page 1252 (Windows) while the
+Collmex PHP SDK expects all inputs as UTF-8 and outputs everything as UTF-8.
+The conversion of string encodings is done transparently by using the
+Symfony String Component and PHP's `mb_convert_encoding()` function before
+sending a request to the Collmex API and after receiving the response from
+the API.
 
 ## Development
 

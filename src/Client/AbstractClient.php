@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Client;
 
-use MarcusJaschen\Collmex\Csv\SimpleGenerator;
+use MarcusJaschen\Collmex\Csv\Generator;
 use MarcusJaschen\Collmex\Filter\Utf8ToWindows1252;
 
 /**
@@ -72,7 +72,7 @@ abstract class AbstractClient
      */
     protected function getLoginLine(): string
     {
-        $csvGenerator = new SimpleGenerator();
+        $csvGenerator = new Generator();
 
         return $csvGenerator->generate(['LOGIN', $this->user, $this->password]);
     }

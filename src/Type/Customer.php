@@ -14,9 +14,9 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $client_id
  * @property $salutation
  * @property $title
- * @property $forename
+ * @property $firstname
  * @property $lastname
- * @property $firm
+ * @property $company
  * @property $department
  * @property $street
  * @property $zipcode
@@ -130,9 +130,9 @@ class Customer extends AbstractType implements TypeInterface
         'salutation' => null,
         // 5
         'title' => null,
-        'forename' => null,
+        'firstname' => null,
         'lastname' => null,
-        'firm' => null,
+        'company' => null,
         'department' => null,
         // 10
         'street' => null,

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex;
 
 use MarcusJaschen\Collmex\Client\ClientInterface;
-use MarcusJaschen\Collmex\Csv\SimpleParser;
+use MarcusJaschen\Collmex\Csv\Parser;
 
 /**
  * Abstract Collmex Request Class.
@@ -21,7 +21,7 @@ abstract class AbstractRequest implements RequestInterface
     protected $client;
 
     /**
-     * @var SimpleParser
+     * @var Parser
      */
     protected $responseParser;
 
@@ -32,6 +32,6 @@ abstract class AbstractRequest implements RequestInterface
     {
         $this->client = $client;
 
-        $this->responseParser = new SimpleParser();
+        $this->responseParser = new Parser();
     }
 }

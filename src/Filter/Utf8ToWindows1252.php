@@ -4,32 +4,27 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Filter;
 
-use ForceUTF8\Encoding;
+use InvalidArgumentException;
+use Symfony\Component\String\UnicodeString;
 
 /**
  * Filter to convert UTF-8 to Windows 1252 encoding.
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  */
-class Utf8ToWindows1252 implements FilterInterface
+class Utf8ToWindows1252 extends AbstractFilter
 {
     /**
-     * @param string $text
-     *
-     * @return string
+     * @throws InvalidArgumentException
      */
     public function filterString(string $text): string
     {
-        return Encoding::toWin1252($text);
-    }
+        $result = mb_convert_encoding((string)(new UnicodeString($text)), 'Windows-1252', 'UTF-8');
 
-    /**
-     * @param string[] $input
-     *
-     * @return string[]
-     */
-    public function filterArray(array $input): array
-    {
-        return (array)Encoding::toWin1252($input);
+        if ($result === false) {
+            throw new InvalidArgumentException('Cannot convert string to Windows-1252', 2132076004);
+        }
+
+        return $result;
     }
 }

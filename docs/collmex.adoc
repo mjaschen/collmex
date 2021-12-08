@@ -119,7 +119,7 @@ $customer = new Customer(
     array(
         'client_id'                      => "2",
         'salutation'                     => "Herr",
-        'forename'                       => "Charly",
+        'firstname'                       => "Charly",
         'lastname'                       => "Cash",
         'street'                         => "Hauptstraße 12",
         'zipcode'                        => "12222",

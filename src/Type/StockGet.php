@@ -16,7 +16,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $product_group
  * @property string $text
  * @property int $type
- * @property int $only_changed
+ * @property int $changed_only
  * @property string $system_name
  * @property string $date_effective
  */
@@ -36,7 +36,7 @@ class StockGet extends AbstractType implements TypeInterface
         'product_group' => null,
         'text' => null,
         'type' => null,
-        'only_changed' => null,
+        'changed_only' => null,
         'system_name' => null,
         'date_effective' => null,
     ];

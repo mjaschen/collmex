@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Tests\Integration\Response;
 
-use MarcusJaschen\Collmex\Csv\SimpleParser;
+use MarcusJaschen\Collmex\Csv\Parser;
 use MarcusJaschen\Collmex\Response\CsvResponse;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipResponseException;
@@ -21,7 +21,7 @@ use Symfony\Component\Finder\Finder;
 class ZipResponseTest extends TestCase
 {
     /**
-     * @var SimpleParser
+     * @var Parser
      */
     private $parser = null;
 
@@ -32,7 +32,7 @@ class ZipResponseTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->parser = new SimpleParser();
+        $this->parser = new Parser();
 
         $this->zipPath = \tempnam(\sys_get_temp_dir(), 'TestingZipResponse') . '.zip';
     }

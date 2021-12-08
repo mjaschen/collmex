@@ -11,6 +11,7 @@
         <ignoreFiles>
             <directory name="vendor" />
             <file name="src/CollmexServiceProvider.php"/>
+            <directory name="vendor" />
         </ignoreFiles>
     </projectFiles>
 

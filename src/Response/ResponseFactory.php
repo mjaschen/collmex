@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Response;
 
-use MarcusJaschen\Collmex\Csv\ParserInterface;
+use MarcusJaschen\Collmex\Csv\Parser;
 use MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException;
 use Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException;
 use Symfony\Component\HttpFoundation\File\File;
@@ -17,15 +17,15 @@ class ResponseFactory
     protected $responseBody;
 
     /**
-     * @var ParserInterface
+     * @var Parser
      */
     protected $responseParser;
 
     /**
      * @param string $responseBody
-     * @param ParserInterface $responseParser
+     * @param Parser $responseParser
      */
-    public function __construct(string $responseBody, ParserInterface $responseParser)
+    public function __construct(string $responseBody, Parser $responseParser)
     {
         $this->responseBody = $responseBody;
         $this->responseParser = $responseParser;

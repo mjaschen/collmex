@@ -5,6 +5,40 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.0.0] - unreleased
+
+### Changed
+
+- removed support for PHP 7.2
+- added support for PHP 8.1
+- updated Composer version constraints for dev libraries
+- add support for Symfony 6.x libraries
+- rename attribute `charge_number` to `batch_number` in `Stock`
+- rename attribute `charge_description` to `batch_description` in `Stock`
+- rename attribute `destination_charge` to `destination_batch` in `StockChange`
+- rename attribute `destination_charge_labeling` to `destination_batch_labeling` in `StockChange`
+- rename attribute `source_charge` to `source_batch` in `StockChange`
+- rename attribute `only_changed` to `changed_only` in `AccountDocumentGet`, `CustomerGet`,`MemberGet`, `SalesOrderGet`,`StockGet` and `VoucherGet`
+- rename attribute `forename` to `firstname` in `Customer`, `CustomerOrder`, `Invoice` and `Member`
+- rename attribute `firm` to `company` in `Customer`, `DifferentShippingAddress`, `Member`
+- rename attribute `customer_firm` to `customer_company` in `CustomerOrder`, `Invoice`
+- rename attribute `delivery_firm` to `delivery_company` in `CustomerOrder`, `Invoice`
+- replace *neitanod/forceutf8* with Symfony String Component and native `mb_convert_encoding()` function
+- rename `SimpleParser` to `Parser` (#171)
+- rename `SimpleGenerator` to `Generator` (#171)
+
+### Removed
+
+- `GeneratorInterface` and `ParserInterface` no longer exist (#171)
+
+### Added
+
+- new methods `generateFromSingleLine()` and `generateFromMultipleLines()` in `Generator` (CSV generator class)
+
+### Changed
+
+- update STOCK_GET to match currently supported fields
+
 ## [1.6.3]
 
 ### Changed

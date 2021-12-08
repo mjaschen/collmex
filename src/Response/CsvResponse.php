@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Response;
 
-use MarcusJaschen\Collmex\Csv\ParserInterface;
+use MarcusJaschen\Collmex\Csv\Parser;
 use MarcusJaschen\Collmex\Exception\InvalidTypeIdentifierException;
 use MarcusJaschen\Collmex\Filter\Windows1252ToUtf8;
 use MarcusJaschen\Collmex\Type\AbstractType;
@@ -18,7 +18,7 @@ use MarcusJaschen\Collmex\TypeFactory;
 class CsvResponse implements ResponseInterface
 {
     /**
-     * @var ParserInterface
+     * @var Parser
      */
     protected $parser;
 
@@ -66,10 +66,10 @@ class CsvResponse implements ResponseInterface
     protected $errorLine;
 
     /**
-     * @param ParserInterface $parser
+     * @param Parser $parser
      * @param string $responseBody
      */
-    public function __construct(ParserInterface $parser, string $responseBody)
+    public function __construct(Parser $parser, string $responseBody)
     {
         $this->parser = $parser;
         $this->responseRaw = $responseBody;
@@ -220,9 +220,9 @@ class CsvResponse implements ResponseInterface
     /**
      * Converts response from Collmex API to UTF-8.
      *
-     * @param string[] $data
+     * @param array<array-key, array<array-key, string>|string> $data
      *
-     * @return string[]
+     * @return array<array-key, array<array-key, string>|string>
      */
     private function convertEncodingFromCollmex(array $data): array
     {

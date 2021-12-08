@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Tests\Unit\Csv;
 
-use MarcusJaschen\Collmex\Csv\SimpleGenerator;
+use MarcusJaschen\Collmex\Csv\Generator;
 use PHPUnit\Framework\TestCase;
 
-class SimpleGeneratorTest extends TestCase
+class GeneratorTest extends TestCase
 {
     /**
-     * @var SimpleGenerator
+     * @var Generator
      */
     protected $generator;
 
     protected function setUp(): void
     {
-        $this->generator = new SimpleGenerator();
+        $this->generator = new Generator();
     }
 
     /**
