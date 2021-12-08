@@ -1,11 +1,11 @@
 {
     "name": "mjaschen/collmex",
     "description": "Collmex PHP SDK",
+    "license": "MIT",
     "keywords": [
         "collmex",
         "api"
     ],
-    "license": "MIT",
     "authors": [
         {
             "name": "Marcus Jaschen",
@@ -20,6 +20,10 @@
             "role": "developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/mjaschen/collmex/issues",
+        "source": "https://github.com/mjaschen/collmex"
+    },
     "require": {
         "php": "^7.3 || ^8.0",
         "ext-curl": "*",
@@ -31,13 +35,25 @@
         "symfony/string": "^5.3 || ^6.0"
     },
     "require-dev": {
+        "dereuromark/composer-prefer-lowest": "^0.1.10",
         "ergebnis/composer-normalize": "^2.16",
         "friendsofphp/php-cs-fixer": "^2.0",
         "laravel/framework": ">=7.2",
         "mockery/mockery": "^1.4",
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "^3.6",
-        "vimeo/psalm": "^4.10"
+        "vimeo/psalm": "^4.15"
+    },
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "MarcusJaschen\\Collmex\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MarcusJaschen\\Collmex\\Tests\\": "tests/"
+        }
     },
     "config": {
         "preferred-install": {
@@ -51,17 +67,6 @@
             ]
         }
     },
-    "autoload": {
-        "psr-4": {
-            "MarcusJaschen\\Collmex\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "MarcusJaschen\\Collmex\\Tests\\": "tests/"
-        }
-    },
-    "prefer-stable": true,
     "scripts": {
         "ci": [
             "@ci:static",
@@ -80,9 +85,5 @@
         ],
         "ci:tests": "./vendor/bin/phpunit tests/",
         "fix:php-cs": "./vendor/bin/php-cs-fixer fix"
-    },
-    "support": {
-        "issues": "https://github.com/mjaschen/collmex/issues",
-        "source": "https://github.com/mjaschen/collmex"
     }
 }
