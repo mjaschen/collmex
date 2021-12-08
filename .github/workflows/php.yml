@@ -21,8 +21,8 @@ jobs:
           - "8.0"
           - "8.1"
         composer-dependencies:
-          - "stable"
-          - "lowest"
+          - ""
+          - "--prefer-lowest"
 
     name: "collmex-php-sdk build - PHP ${{ matrix.php-versions }} - Composer ${{ matrix.composer-dependencies }}"
 
@@ -51,7 +51,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.composer-cache.outputs.cache-hit != 'true'
-        run: composer update --prefer-dist --no-progress --no-suggest --prefer-${{ matrix.composer-dependencies }}
+        run: composer update --prefer-dist --no-progress --no-suggest --prefer-stable --prefer-dist ${{ matrix.composer-dependencies }}
 
       - name: Lint PHP Sources
         run: composer run-script ci:lint
