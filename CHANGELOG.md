@@ -26,18 +26,15 @@ principles.
 - replace *neitanod/forceutf8* with Symfony String Component and native `mb_convert_encoding()` function
 - rename `SimpleParser` to `Parser` (#171)
 - rename `SimpleGenerator` to `Generator` (#171)
-
-### Removed
-
-- `GeneratorInterface` and `ParserInterface` no longer exist (#171)
+- update STOCK_GET to match currently supported fields
 
 ### Added
 
 - new methods `generateFromSingleLine()` and `generateFromMultipleLines()` in `Generator` (CSV generator class)
 
-### Changed
+### Removed
 
-- update STOCK_GET to match currently supported fields
+- `GeneratorInterface` and `ParserInterface` no longer exist (#171)
 
 ## [1.6.3]
 
