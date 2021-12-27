@@ -16,6 +16,7 @@ use MarcusJaschen\Collmex\Type\CustomerOrder;
 use MarcusJaschen\Collmex\Type\Delivery;
 use MarcusJaschen\Collmex\Type\Invoice;
 use MarcusJaschen\Collmex\Type\InvoiceOutput;
+use MarcusJaschen\Collmex\Type\InvoicePayment;
 use MarcusJaschen\Collmex\Type\Login;
 use MarcusJaschen\Collmex\Type\Member;
 use MarcusJaschen\Collmex\Type\Message;
@@ -56,6 +57,7 @@ class TypeFactory
         'CMXBTC' => Batch::class,
         'CMXINV' => Invoice::class,
         'INVOICE_OUTPUT' => InvoiceOutput::class,
+        'INVOICE_PAYMENT' => InvoicePayment::class,
         'CMXMGD' => Member::class,
         'CMXKND' => Customer::class,
         'CMXORD-2' => CustomerOrder::class,
