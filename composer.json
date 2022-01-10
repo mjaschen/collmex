@@ -40,8 +40,8 @@
         "friendsofphp/php-cs-fixer": "^2.0",
         "laravel/framework": ">=7.2",
         "mockery/mockery": "^1.4",
-        "phpunit/phpunit": "^9.5",
-        "squizlabs/php_codesniffer": "^3.6",
+        "phpunit/phpunit": "^9.5.5",
+        "squizlabs/php_codesniffer": "^3.6.2",
         "vimeo/psalm": "^4.15"
     },
     "prefer-stable": true,
