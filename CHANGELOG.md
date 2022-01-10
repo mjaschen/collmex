@@ -5,7 +5,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
-## [2.0.0] - unreleased
+## [2.1.0]
+
+### Added
+
+- new types `INVOICE_PAYMENT`, `INVOICE_PAYMENT_GET`, `BANK_STATEMENT_GET_FROM_BANK`. Thanks pluempyx!
+
+## [2.0.0]
 
 ### Changed
 
