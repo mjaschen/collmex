@@ -42,6 +42,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `API_NOTIFICATION`
 - `CMXADR`
 - `ADRGRP`
+- `BANK_STATEMENT_GET_FROM_BANK`
 - `BATCH_GET`
 - `BILL_OF_MATERIAL_GET`
 - `CMXABO`
@@ -63,6 +64,8 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `CUSTOMER_GET`
 - `DELIVERY_GET`
 - `INVOICE_GET`
+- `INVOICE_PAYMENT`
+- `INVOICE_PAYMENT_GET`
 - `INVOICE_OUTPUT`
 - `INVOICE_OUTPUT_SET`
 - `MEMBER_GET`
