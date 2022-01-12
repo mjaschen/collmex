@@ -304,8 +304,8 @@ $customerOrderItem = new CustomerOrder(
         $customerOrderData,
         [
             'product_description' => 'erster Artikel',
-            'quantity' => 1,
-            'price' => 10.5,
+            'quantity' => '1',
+            'price' => '10,50',
             'tax_rate' => CustomerOrder::TAX_RATE_FULL,
         ]
     )
@@ -317,8 +317,8 @@ $customerOrderItem = new CustomerOrder(
         $customerOrderData,
         [
             'product_description' => 'zweiter Artikel',
-            'quantity' => 10,
-            'price' => 37.99,
+            'quantity' => '10',
+            'price' => '37,99',
             'tax_rate' => CustomerOrder::TAX_RATE_REDUCED,
         ]
     )
@@ -330,8 +330,8 @@ $customerOrderItem = new CustomerOrder(
         $customerOrderData,
         [
             'product_description' => 'Artikel Nummer drei',
-            'quantity' => 3,
-            'price' => 1250,
+            'quantity' => '3',
+            'price' => '1250,00',
             'tax_rate' => CustomerOrder::TAX_RATE_FULL,
         ]
     )
@@ -366,6 +366,9 @@ The conversion of string encodings is done transparently by using the
 Symfony String Component and PHP's `mb_convert_encoding()` function before
 sending a request to the Collmex API and after receiving the response from
 the API.
+
+### Numeric / money values
+This SDK does not convert numeric values to the string format required by the Collmex API. For more information on format requirements, see the [offical API documentation](https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_datentypen_felder). 
 
 ## Development
 
