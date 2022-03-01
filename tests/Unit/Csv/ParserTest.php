@@ -113,4 +113,22 @@ class ParserTest extends TestCase
 
         self::assertSame([[$cellContents]], $result);
     }
+
+    /**
+     * @test
+     */
+    public function parseBackslashFollowedByDoubleQuote(): void
+    {
+        $csv = 'CMXPRD;143;"Foobar \Rallye tested\"" :-)"' . "\n";
+
+        $result = $this->parser->parse($csv);
+
+        self::assertSame([['CMXPRD', '143', 'Foobar \Rallye tested\" :-)']], $result);
+
+        $csv = 'CMXPRD;143;"Foobar' . "\n" . '\Rallye tested\"" :-)"' . "\n";
+
+        $result = $this->parser->parse($csv);
+
+        self::assertSame([['CMXPRD', '143', 'Foobar' . "\n" . '\Rallye tested\" :-)']], $result);
+    }
 }
