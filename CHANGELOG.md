@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.1.1]
+
+### Fixed
+
+- workaround + test case for a bug in PHP's CSV parser, see [#238](https://github.com/mjaschen/collmex/issues/238)
+
 ## [2.1.0]
 
 ### Added
