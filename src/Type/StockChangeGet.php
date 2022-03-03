@@ -40,6 +40,10 @@ class StockChangeGet extends AbstractType implements TypeInterface
         'changed_only' => null,
         // 10
         'system_name' => null,
+        'purchase_order_id' => null,
+        'delivery_id' => null,
+        'invoice_id' => null,
+        'production_order_id' => null,
     ];
 
     /**
