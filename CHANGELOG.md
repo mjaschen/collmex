@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.2.0]
+
+### Added
+
+- add missing fields in `StockChangeGet` (Collmex type `STOCK_CHANGE_GET`) (#241)
+
 ## [2.1.1]
 
 ### Fixed
