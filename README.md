@@ -53,6 +53,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `CMXEPF`
 - `CMXINV`
 - `CMXKND`
+- `CMXLRN`
 - `CMXMGD`
 - `CMXORD-2`
 - `CMXPOD`
