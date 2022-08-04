@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.3.0]
+
+### Added
+
+- new type `CMXLRN` (“Lieferantenrechnung”, “Supplier's Invoice”)
+
 ## [2.2.0]
 
 ### Added
