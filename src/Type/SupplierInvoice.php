@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Type;
 
-class SupplierInvoice implements TypeInterface
+class SupplierInvoice extends AbstractType implements TypeInterface
 {
     /**
      * @var null
