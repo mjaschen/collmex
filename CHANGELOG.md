@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.3.1]
+
+### Fixed
+
+- Inheritance for `SupplierInvoice`. Thanks @janakan22!
+
 ## [2.3.0]
 
 ### Added
