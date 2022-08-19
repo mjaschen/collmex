@@ -36,7 +36,7 @@
     },
     "require-dev": {
         "dereuromark/composer-prefer-lowest": "^0.1.10",
-        "ergebnis/composer-normalize": "^2.28",
+        "ergebnis/composer-normalize": "^2.20.0",
         "friendsofphp/php-cs-fixer": "^2.0",
         "laravel/framework": ">=7.2",
         "mockery/mockery": "^1.5",
