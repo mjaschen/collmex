@@ -104,7 +104,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $delivery_block
  * @property $customer_no_mailings
  * @property $total_gross
- * @property $offer_id
+ * @property $quotation_id
  * @property $payment_reference
  */
 class CustomerOrder extends AbstractType implements TypeInterface
@@ -341,7 +341,7 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'customer_no_mailings' => null,
         // 95
         'total_gross' => null,
-        'offer_id' => null,
+        'quotation_id' => null,
         'payment_reference' => null,
     ];
 
