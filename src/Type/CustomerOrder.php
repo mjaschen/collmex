@@ -100,6 +100,12 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $costs
  * @property $gross_profit
  * @property $margin
+ * @property $costs_manual
+ * @property $delivery_block
+ * @property $customer_no_mailings
+ * @property $total_gross
+ * @property $offer_id
+ * @property $payment_reference
  */
 class CustomerOrder extends AbstractType implements TypeInterface
 {
