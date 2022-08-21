@@ -330,6 +330,13 @@ class CustomerOrder extends AbstractType implements TypeInterface
         // 90
         'gross_profit' => null,
         'margin' => null,
+        'costs_manual' => null,
+        'delivery_block' => null,
+        'customer_no_mailings' => null,
+        // 95
+        'total_gross' => null,
+        'offer_id' => null,
+        'payment_reference' => null,
     ];
 
     /**
