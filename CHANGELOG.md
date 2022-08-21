@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.4.0]
+
+### Added
+
+- new type `CMXQTN` (Quotation)
+- new fields to `CMXORD-2`
+
 ## [2.3.1]
 
 ### Fixed

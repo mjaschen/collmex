@@ -60,6 +60,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `CMXPRD`
 - `CMXPRI`
 - `CMXPRI_CHANGE`
+- `CMXQTN`
 - `CMXSTK`
 - `CMXUMS`
 - `CUSTOMER_GET`
