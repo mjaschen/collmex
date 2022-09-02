@@ -317,7 +317,7 @@ class Invoice extends AbstractType implements TypeInterface
         // 90
         'shipment_ids' => null,
         'customer_order_id' => null,
-        'alternative_recipient_address_id' => null
+        'alternative_recipient_address_id' => null,
     ];
 
     /**
