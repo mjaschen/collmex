@@ -10,24 +10,6 @@
 This library provides a wrapper for the Collmex API. It's not complete yet, some record types (and maybe some features)
 are missing.
 
-## Table of Contents
-- [Collmex API PHP SDK](#collmex-api-php-sdk)
-  - [Table of Contents](#table-of-contents)
-  - [Compatibility](#compatibility)
-  - [Installation](#installation)
-  - [Upgrading](#upgrading)
-    - [Version 1.x to 2.x](#version-1x-to-2x)
-  - [Usage/Examples](#usageexamples)
-    - [Fetch from Collmex API](#fetch-from-collmex-api)
-    - [Send Data to Collmex](#send-data-to-collmex)
-    - [Send Multiple Records at Once](#send-multiple-records-at-once)
-  - [Notes](#notes)
-    - [Numeric / money values](#numeric--money-values)
-  - [Development](#development)
-    - [Run code checks](#run-code-checks)
-    - [Autoformat the code](#autoformat-the-code)
-  - [Collmex API Documentation](#collmex-api-documentation)
-
 Please create a pull request if you have implemented a new type/feature or create issues for bugs/feature requests.
 
 There is (or least should be…) a *Type* class for every Collmex record type
