@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.4.1]
+
+### Added
+
+- two new fields to `Product` type. Thanks, @lakdev!
+
 ## [2.4.0]
 
 ### Added
