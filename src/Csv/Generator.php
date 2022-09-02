@@ -34,7 +34,7 @@ class Generator
     {
         return $this->createCsvString(
             /** @param resource $fileHandle */
-            function ($fileHandle) use ($line) {
+            function ($fileHandle) use ($line): void {
                 fputcsv(
                     $fileHandle,
                     $this->insertSpecialPlaceholder($line),
@@ -49,7 +49,7 @@ class Generator
     {
         return $this->createCsvString(
             /** @param resource $fileHandle */
-            function ($fileHandle) use ($lines) {
+            function ($fileHandle) use ($lines): void {
                 foreach ($lines as $line) {
                     fputcsv(
                         $fileHandle,
