@@ -22,6 +22,7 @@ are missing.
     - [Send Data to Collmex](#send-data-to-collmex)
     - [Send Multiple Records at Once](#send-multiple-records-at-once)
   - [Notes](#notes)
+    - [Numeric / money values](#numeric--money-values)
   - [Development](#development)
     - [Run code checks](#run-code-checks)
     - [Autoformat the code](#autoformat-the-code)
@@ -370,7 +371,24 @@ sending a request to the Collmex API and after receiving the response from
 the API.
 
 ### Numeric / money values
-This SDK does not convert numeric values to the string format required by the Collmex API. For more information on format requirements, see the [offical API documentation](https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_datentypen_felder). 
+
+This SDK does not convert numeric values to the string format required by
+the Collmex API by default.
+
+For more information on format requirements, see the [offical API documentation](https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_datentypen_felder).
+
+The library provides helpers for simple conversion from several types to
+the Collmex money format:
+
+| type                                     | example value                                | call                      | result (string) |
+|------------------------------------------|----------------------------------------------|---------------------------|-----------------|
+| *float*                                  | `19.99`                                      | `Money::fromFloat(19.99)` | `19,99` |
+| *integer* (cents)                        | `1999`                                       | `Money::fromCents(1999)` | `19,99` |
+| [Money for PHP](https://www.moneyphp.org/en/stable/) | `$money = new \Money\Money(1999, $currency)` | `Money::fromMoney($money)` | `19,99` |
+
+Fully qualified class name for the helper: `\MarcusJaschen\Collmex\CollmexField\Money`.
+
+See the unit tests for [more examples](tests/Unit/CollmexField/MoneyTest.php).
 
 ## Development
 
