@@ -42,7 +42,8 @@
         "mockery/mockery": "^1.5",
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "^3.7",
-        "vimeo/psalm": "^4.26"
+        "vimeo/psalm": "^4.26",
+        "moneyphp/money": "^4.0"
     },
     "prefer-stable": true,
     "autoload": {
