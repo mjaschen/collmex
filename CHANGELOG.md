@@ -9,7 +9,7 @@ principles.
 
 ### Added
 
-- helpers for converting several money formats (float, int, `\Money\Money`) into Collmex's money format, see “Notes” section in README for more details.
+- helpers for converting several money formats (float, int, `\Money\Money`) into Collmex's money format, see [“Notes” section in README](https://github.com/mjaschen/collmex#numeric--money-values) for more details.
 
 ## [2.4.1]
 

@@ -362,11 +362,11 @@ For more information on format requirements, see the [offical API documentation]
 The library provides helpers for simple conversion from several types to
 the Collmex money format:
 
-| type                                     | example value                                | call                      | result (string) |
-|------------------------------------------|----------------------------------------------|---------------------------|-----------------|
-| *float*                                  | `19.99`                                      | `Money::fromFloat(19.99)` | `19,99` |
-| *integer* (cents)                        | `1999`                                       | `Money::fromCents(1999)` | `19,99` |
-| [Money for PHP](https://www.moneyphp.org/en/stable/) | `$money = new \Money\Money(1999, $currency)` | `Money::fromMoney($money)` | `19,99` |
+| type                                     | example value                                  | call                      | result (string) |
+|------------------------------------------|------------------------------------------------|---------------------------|-----------------|
+| *float*                                  | `19.99`                                        | `Money::fromFloat(19.99)` | `19,99` |
+| *integer* (cents)                        | `1999`                                         | `Money::fromCents(1999)` | `19,99` |
+| [Money for PHP](https://www.moneyphp.org/en/stable/) | `$money = \Money\Money::EUR(1999)` | `Money::fromMoney($money)` | `19,99` |
 
 Fully qualified class name for the helper: `\MarcusJaschen\Collmex\CollmexField\Money`.
 
