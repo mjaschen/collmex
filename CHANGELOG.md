@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.5.0]
+
+### Added
+
+- helpers for converting several money formats (float, int, `\Money\Money`) into Collmex's money format, see “Notes” section in [README](README.md) for more details.
+
 ## [2.4.1]
 
 ### Added
