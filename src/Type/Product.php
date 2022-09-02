@@ -232,6 +232,7 @@ class Product extends AbstractType implements TypeInterface
      * @var int
      */
     public const STOCK_MANAGEMENT_YES = 0;
+
     /**
      * @var int
      */
