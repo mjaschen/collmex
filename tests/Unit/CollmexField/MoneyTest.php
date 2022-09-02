@@ -35,5 +35,9 @@ class MoneyTest extends TestCase
         $this->assertEquals('20,00', Money::fromMoney(new \Money\Money(2000, new Currency('EUR'))));
         $this->assertEquals('0,85', Money::fromMoney(new \Money\Money(85, new Currency('EUR'))));
         $this->assertEquals('0,31', Money::fromMoney(new \Money\Money(31, new Currency('EUR'))));
+        $this->assertEquals('19,99', Money::fromMoney(\Money\Money::EUR(1999)));
+        $this->assertEquals('20,00', Money::fromMoney(\Money\Money::EUR(2000)));
+        $this->assertEquals('0,85', Money::fromMoney(\Money\Money::EUR(85)));
+        $this->assertEquals('0,31', Money::fromMoney(\Money\Money::EUR(31)));
     }
 }
