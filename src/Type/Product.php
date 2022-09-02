@@ -75,6 +75,8 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $direct_delivery
  * @property $hs_code
  * @property $storage_bin
+ * @property $no_stock_management
+ * @property $country_of_origin
  */
 class Product extends AbstractType implements TypeInterface
 {
@@ -227,6 +229,15 @@ class Product extends AbstractType implements TypeInterface
     public const DIRECT_DELIVERY_YES = 1;
 
     /**
+     * @var int
+     */
+    public const STOCK_MANAGEMENT_YES = 0;
+    /**
+     * @var int
+     */
+    public const STOCK_MANAGEMENT_NO = 1;
+
+    /**
      * Type data template.
      *
      * @var array
@@ -305,6 +316,8 @@ class Product extends AbstractType implements TypeInterface
         'hs_code' => null,
         // 65
         'storage_bin' => null,
+        'no_stock_management' => null,
+        'country_of_origin' => null,
     ];
 
     /**
@@ -314,7 +327,6 @@ class Product extends AbstractType implements TypeInterface
      */
     public function validate(): bool
     {
-        // TODO: Implement validate() method.
         return true;
     }
 }
