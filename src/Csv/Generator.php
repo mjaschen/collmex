@@ -83,7 +83,7 @@ class Generator
     private function insertSpecialPlaceholder(array $csvLine): array
     {
         return array_map(
-        /** @psalm-suppress MissingClosureParamType */
+            /** @psalm-suppress MissingClosureParamType */
             static function ($item) {
                 if (!is_string($item)) {
                     return $item;
