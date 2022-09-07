@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MarcusJaschen\Collmex\Type;
 
 /**
@@ -49,13 +51,20 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Supplier extends AbstractType implements TypeInterface
 {
+    public const INACTIVE_STATE_ACTIVE = 0;
+    public const INACTIVE_STATE_INACTIVE = 1;
+    public const INACTIVE_STATE_DELETE = 2;
+    public const INACTIVE_STATE_DELETE_IF_UNUSED = 3;
+
+    public const LANGUAGE_GERMAN = 0;
+    public const LANGUAGE_ENGLISH = 1;
+
     /**
      * Type data template.
      *
      * @var array
      */
     protected $template = [
-        // 1
         'type_identifier' => 'CMXLIF',
         'supplier_id' => null,
         'client_id' => null,
