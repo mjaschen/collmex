@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.5.1]
+
+### Added
+
+- new type `Supplier`. Thanks, @lakdev!
+
 ## [2.5.0]
 
 ### Added
