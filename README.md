@@ -47,6 +47,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `CMXQTN`
 - `CMXSTK`
 - `CMXUMS`
+- `CMXVAG`
 - `CUSTOMER_GET`
 - `DELIVERY_GET`
 - `INVOICE_GET`
