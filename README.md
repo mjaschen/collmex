@@ -45,6 +45,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `CMXPRI`
 - `CMXPRI_CHANGE`
 - `CMXQTN`
+- `CMXSBI`
 - `CMXSTK`
 - `CMXUMS`
 - `CMXVAG`

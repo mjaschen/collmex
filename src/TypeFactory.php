@@ -35,6 +35,7 @@ use MarcusJaschen\Collmex\Type\StockAvailable;
 use MarcusJaschen\Collmex\Type\StockChange;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\Supplier;
+use MarcusJaschen\Collmex\Type\SupplierCredit;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
 use MarcusJaschen\Collmex\Type\Voucher;
 
@@ -61,6 +62,7 @@ class TypeFactory
         'INVOICE_PAYMENT' => InvoicePayment::class,
         'CMXMGD' => Member::class,
         'CMXLIF' => Supplier::class,
+        'CMXSBI' => SupplierCredit::class,
         'CMXKND' => Customer::class,
         'CMXORD-2' => CustomerOrder::class,
         'CMXUMS' => Revenue::class,
