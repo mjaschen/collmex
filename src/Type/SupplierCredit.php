@@ -145,6 +145,7 @@ class SupplierCredit extends AbstractType implements TypeInterface
         'supplier_department' => null,
         'supplier_street' => null,
         'supplier_zipcode' => null,
+        // 15
         'supplier_city' => null,
         'supplier_country' => null,
         'supplier_phone' => null,
@@ -156,17 +157,18 @@ class SupplierCredit extends AbstractType implements TypeInterface
         'supplier_bank_code' => null,
         'supplier_bank_account_owner' => null,
         'supplier_bank_iban' => null,
+        // 25
         'supplier_bank_bic' => null,
         'supplier_bank_name' => null,
         'supplier_vat_id' => null,
         'supplier_tax_id' => null,
-        'supplier_private' => null,
+        'supplier_private_person' => null,
         // 30
         'credit_date' => null,
         'terms_of_payment' => null,
         'currency' => null,
-        'credit_text' => '(NULL)',
-        'final_text' => '(NULL)',
+        'credit_text' => null,
+        'final_text' => null,
         // 35
         'internal_memo' => null,
         'deleted' => null,
@@ -174,7 +176,7 @@ class SupplierCredit extends AbstractType implements TypeInterface
         'employee_id' => null,
         'status' => null,
         // 40
-        'reserved' => null,
+        'reserved_1' => null,
         'reserved_2' => null,
         'reserved_3' => null,
         'position_type' => null,
