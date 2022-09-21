@@ -11,7 +11,9 @@ class DateTest extends TestCase
 {
     public function testConvertDateTimeToCollmexFormat(): void
     {
-        $this->assertEquals('20220921', Date::fromDateTime(new \DateTime('2022-09-21T00:00:00', new \DateTimeZone('Europe/Berlin'))));
+        $dateTime = new \DateTime('2022-09-21T00:00:00', new \DateTimeZone('Europe/Berlin'));
+
+        $this->assertEquals('20220921', Date::fromDateTime($dateTime));
     }
 
     public function testConvertIsoFormatToDateTime(): void
