@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.6.0]
+
+### Added
+
+- helper for converting between `DateTime` and Collmex date format
+
 ## [2.5.3]
 
 ### Added
