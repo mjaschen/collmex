@@ -21,68 +21,7 @@ There is (or least should be…) a *Type* class for every Collmex record type
 - `ACCBAL_GET`
 - `ACCDOC`
 - `ACCDOC_GET`
-- `ADDRESS_GROUPS_GET`
-- `API_NOTIFICATION`
-- `CMXADR`
-- `ADRGRP`
-- `BANK_STATEMENT_GET_FROM_BANK`
-- `BATCH_GET`
-- `BILL_OF_MATERIAL_GET`
-- `CMXABO`
-- `CMXADR`
-- `CMXBOM`
-- `CMXBTC`
-- `CMXDLV`
-- `CMXEPF`
-- `CMXINV`
-- `CMXKND`
-- `CMXLIF`
-- `CMXLRN`
-- `CMXMGD`
-- `CMXORD-2`
-- `CMXPOD`
-- `CMXPRD`
-- `CMXPRI`
-- `CMXPRI_CHANGE`
-- `CMXQTN`
-- `CMXSBI`
-- `CMXSTK`
-- `CMXUMS`
-- `CMXVAG`
-- `CUSTOMER_GET`
-- `DELIVERY_GET`
-- `INVOICE_GET`
-- `INVOICE_PAYMENT`
-- `INVOICE_PAYMENT_GET`
-- `INVOICE_OUTPUT`
-- `INVOICE_OUTPUT_SET`
-- `MEMBER_GET`
-- `OPEN_ITEM`
-- `OPEN_ITEMS_GET`
-- `PAYMENT_CONFIRMATION`
-- `PRICE_GROUP`
-- `PRICE_GROUPS_GET`
-- `PRDGRP`
-- `PRODUCT_GET`
-- `PRODUCT_GROUPS_GET`
-- `PRODUCT_PRICE_GET`
-- `PRODUCTION_ORDER`
-- `PRODUCTION_ORDER_GET`
-- `PROJECT_STAFF`
-- `PROJECT_STAFF_GET`
-- `PURCHASE_ORDER_GET`
-- `SALES_ORDER_GET`
-- `SHIPMENT_CONFIRM`
-- `SHIPMENT_NOTIFICATION_SEND`
-- `SHIPMENT_ORDERS_GET`
-- `STOCK_AVAILABLE`
-- `STOCK_AVAILABLE_GET`
-- `STOCK_CHANGE`
-- `STOCK_CHANGE_GET`
-- `STOCK_GET`
-- `TRACKING_NUMBER`
-- `VOUCHER`
-- `VOUCHER_GET`
+- ... [full list »](#list-of-supported-types)
 
 ## Compatibility
 
@@ -374,6 +313,113 @@ the Collmex money format:
 Fully qualified class name for the helper: `\MarcusJaschen\Collmex\CollmexField\Money`.
 
 See the unit tests for [more examples](tests/Unit/CollmexField/MoneyTest.php).
+
+### Date Values
+
+Collmex unterstands two different formats for dates:
+
+- ISO style: `YYYYMMDD`
+- German style: `DD.MM.YYYY`
+
+The library provides a helper to convert `DateTime` (which covers *Carbon* instances as well) from and to the Collmex date format:
+
+```php
+use MarcusJaschen\Collmex\CollmexField\Date;
+
+echo Date::toDateTime('20220921')->format('Y-m-d')
+echo Date::toDateTime('12.08.2022')->format('Y-m-d')
+```
+
+This will output
+
+```
+2022-09-01
+2022-08-12
+```
+
+To convert a `DateTime` instance to Collmex format:
+
+```php
+use MarcusJaschen\Collmex\CollmexField\Date;
+
+echo Date::fromDateTime(new \DateTime('2022-09-21T00:00:00', new \DateTimeZone('Europe/Berlin')))
+```
+
+This will output
+
+```
+20220921
+```
+
+## List of Supported Types
+
+- `ABO_GET`
+- `ACC_BAL`
+- `ACCBAL_GET`
+- `ACCDOC`
+- `ACCDOC_GET`
+- `ADDRESS_GROUPS_GET`
+- `API_NOTIFICATION`
+- `CMXADR`
+- `ADRGRP`
+- `BANK_STATEMENT_GET_FROM_BANK`
+- `BATCH_GET`
+- `BILL_OF_MATERIAL_GET`
+- `CMXABO`
+- `CMXADR`
+- `CMXBOM`
+- `CMXBTC`
+- `CMXDLV`
+- `CMXEPF`
+- `CMXINV`
+- `CMXKND`
+- `CMXLIF`
+- `CMXLRN`
+- `CMXMGD`
+- `CMXORD-2`
+- `CMXPOD`
+- `CMXPRD`
+- `CMXPRI`
+- `CMXPRI_CHANGE`
+- `CMXQTN`
+- `CMXSBI`
+- `CMXSTK`
+- `CMXUMS`
+- `CMXVAG`
+- `CUSTOMER_GET`
+- `DELIVERY_GET`
+- `INVOICE_GET`
+- `INVOICE_PAYMENT`
+- `INVOICE_PAYMENT_GET`
+- `INVOICE_OUTPUT`
+- `INVOICE_OUTPUT_SET`
+- `MEMBER_GET`
+- `OPEN_ITEM`
+- `OPEN_ITEMS_GET`
+- `PAYMENT_CONFIRMATION`
+- `PRICE_GROUP`
+- `PRICE_GROUPS_GET`
+- `PRDGRP`
+- `PRODUCT_GET`
+- `PRODUCT_GROUPS_GET`
+- `PRODUCT_PRICE_GET`
+- `PRODUCTION_ORDER`
+- `PRODUCTION_ORDER_GET`
+- `PROJECT_STAFF`
+- `PROJECT_STAFF_GET`
+- `PURCHASE_ORDER_GET`
+- `SALES_ORDER_GET`
+- `SHIPMENT_CONFIRM`
+- `SHIPMENT_NOTIFICATION_SEND`
+- `SHIPMENT_ORDERS_GET`
+- `STOCK_AVAILABLE`
+- `STOCK_AVAILABLE_GET`
+- `STOCK_CHANGE`
+- `STOCK_CHANGE_GET`
+- `STOCK_GET`
+- `TRACKING_NUMBER`
+- `VOUCHER`
+- `VOUCHER_GET`
 
 ## Development
 
