@@ -9,7 +9,7 @@ principles.
 
 ### Added
 
-- helper for converting between `DateTime` and Collmex date format
+- helper for converting between `DateTime` and Collmex date format, see [“Notes” section in README](https://github.com/mjaschen/collmex#date-values) for more details.
 
 ## [2.5.3]
 
