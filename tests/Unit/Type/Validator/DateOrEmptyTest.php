@@ -59,22 +59,4 @@ class DateOrEmptyTest extends TestCase
         self::assertFalse($this->validator->validate('18230901'));
         self::assertFalse($this->validator->validate('21250901'));
     }
-
-    /**
-     * @test
-     */
-    public function invalidMonth(): void
-    {
-        self::assertFalse($this->validator->validate('20130001'));
-        self::assertFalse($this->validator->validate('20131301'));
-    }
-
-    /**
-     * @test
-     */
-    public function invalidDay(): void
-    {
-        self::assertFalse($this->validator->validate('20130900'));
-        self::assertFalse($this->validator->validate('20130932'));
-    }
 }
