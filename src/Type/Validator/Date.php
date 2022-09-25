@@ -23,12 +23,19 @@ class Date implements ValidatorInterface
      */
     public function validate($value, array $options = []): bool
     {
-        if (strlen($value) !== 8) {
+        if (strlen($value) === 8) {
+            $date = \DateTime::createFromFormat('Ymd', $value);
+        }
+
+        if (strlen($value) === 10) {
+            $date = \DateTime::createFromFormat('d.m.Y', $value);
+        }
+
+        if (!isset($date) || !($date instanceof \DateTime)) {
             return false;
         }
 
-        // 1900-01-01 to 2099-12-31 should be enough for everyone!
-        if (!preg_match('/(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])/', $value)) {
+        if ((int)$date->format('Y') < 1900 || (int)$date->format('Y') > 2100) {
             return false;
         }
 

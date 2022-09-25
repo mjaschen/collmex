@@ -25,6 +25,7 @@ class DateTest extends TestCase
     public function validDate(): void
     {
         self::assertTrue($this->validator->validate('20130916'));
+        self::assertTrue($this->validator->validate('16.09.2022'));
     }
 
     /**
@@ -41,6 +42,7 @@ class DateTest extends TestCase
     public function invalidDateTooLong(): void
     {
         self::assertFalse($this->validator->validate('20130916100000'));
+        self::assertFalse($this->validator->validate('16.09.2022 10:00:00'));
     }
 
     /**
@@ -50,23 +52,7 @@ class DateTest extends TestCase
     {
         self::assertFalse($this->validator->validate('18230901'));
         self::assertFalse($this->validator->validate('21250901'));
-    }
-
-    /**
-     * @test
-     */
-    public function invalidMonth(): void
-    {
-        self::assertFalse($this->validator->validate('20130001'));
-        self::assertFalse($this->validator->validate('20131301'));
-    }
-
-    /**
-     * @test
-     */
-    public function invalidDay(): void
-    {
-        self::assertFalse($this->validator->validate('20130900'));
-        self::assertFalse($this->validator->validate('20130932'));
+        self::assertFalse($this->validator->validate('01.09.1832'));
+        self::assertFalse($this->validator->validate('01.09.2125'));
     }
 }
