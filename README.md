@@ -337,7 +337,7 @@ This will output
 2022-08-12
 ```
 
-To convert a `DateTime` instance to Collmex format:
+To convert a `DateTime` instance to Collmex format (ISO style):
 
 ```php
 use MarcusJaschen\Collmex\CollmexField\Date;
