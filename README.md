@@ -333,7 +333,7 @@ echo Date::toDateTime('12.08.2022')->format('Y-m-d')
 This will output
 
 ```
-2022-09-01
+2022-09-21
 2022-08-12
 ```
 
