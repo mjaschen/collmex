@@ -32,7 +32,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $iban
  * @property $bic
  * @property $bank_name
- * @property $tax_id
+ * @property $reserved_1
  * @property $vat_id
  * @property $terms_of_payment
  * @property $discount_id
@@ -61,6 +61,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $url
  * @property $partial_delivery_allowed
  * @property $partial_invoice_allowed
+ * @property $created_at
  */
 class Customer extends AbstractType implements TypeInterface
 {
@@ -151,7 +152,7 @@ class Customer extends AbstractType implements TypeInterface
         'iban' => null,
         'bic' => null,
         'bank_name' => null,
-        'tax_id' => null,
+        'reserved_1' => null,
         // 25
         'vat_id' => null,
         'terms_of_payment' => null,
@@ -185,8 +186,8 @@ class Customer extends AbstractType implements TypeInterface
         // 50
         'url' => null,
         'partial_delivery_allowed' => null,
-        // 52
         'partial_invoice_allowed' => null,
+        'created_at' => null,
     ];
 
     /**

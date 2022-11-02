@@ -48,7 +48,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $language
  * @property $employee_id
  * @property $status
- * @property $reserved
+ * @property $reserved_1
  * @property $reserved_2
  * @property $reserved_3
  * @property $position_type
