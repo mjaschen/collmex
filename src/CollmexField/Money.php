@@ -20,9 +20,15 @@ class Money
      *
      * value given: 0.305
      * Collmex format: 0,31
+     *
+     * @throws \InvalidArgumentException
      */
     public static function fromFloat(float $amount, int $roundMode = PHP_ROUND_HALF_UP): string
     {
+        if ($roundMode < 1 || $roundMode > 4) {
+            throw new \InvalidArgumentException('Invalid round mode provided: ' . $roundMode . ' (allowed: 1..4)');
+        }
+
         return number_format(round($amount, 2, $roundMode), 2, ',', '');
     }
 
