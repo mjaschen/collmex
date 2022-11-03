@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.7.0]
+
+### Changed
+
+- update field names in `Customer`, `Supplier`, `SupplierCredit`: rename `tax_id` to `reserved_1`, added `created_at`, `private_person` to reflect changes on Collmex side. Thanks @lakdev
+
 ## [2.6.0]
 
 ### Added
