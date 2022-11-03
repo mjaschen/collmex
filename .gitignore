@@ -5,3 +5,5 @@
 /composer.lock
 /docs/collmex.html
 /vendor/
+
+.php_cs.cache
