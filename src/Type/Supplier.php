@@ -49,6 +49,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $receipt_text
  * @property $cost_center
  * @property $private_person
+ * @property $url
  */
 class Supplier extends AbstractType implements TypeInterface
 {
@@ -114,6 +115,7 @@ class Supplier extends AbstractType implements TypeInterface
         'cost_center' => null,
         // 40
         'private_person' => null,
+        'url' => null,
     ];
 
     /**
