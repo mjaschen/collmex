@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.7.1]
+
+### Added
+
+- Field `url` in `Supplier`. Thanks, @lakdev
+
 ## [2.7.0]
 
 ### Changed
