@@ -5,6 +5,16 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.7.3]
+
+### Added
+
+- `CMXEPF` can be created with `TypeFactory`. Thanks @florianliebig
+
+### Changed
+
+- entries in `TypeFactory` sorted alphabetically
+
 ## [2.7.2]
 
 ### Added
