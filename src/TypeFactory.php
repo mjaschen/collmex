@@ -14,6 +14,7 @@ use MarcusJaschen\Collmex\Type\BillOfMaterial;
 use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
 use MarcusJaschen\Collmex\Type\Delivery;
+use MarcusJaschen\Collmex\Type\DifferentShippingAddress;
 use MarcusJaschen\Collmex\Type\Invoice;
 use MarcusJaschen\Collmex\Type\InvoiceOutput;
 use MarcusJaschen\Collmex\Type\InvoicePayment;
@@ -80,6 +81,7 @@ class TypeFactory
         'STOCK_CHANGE' => StockChange::class,
         'PRODUCTION_ORDER' => ProductionOrder::class,
         'VOUCHER' => Voucher::class,
+        'CMXEPF' => DifferentShippingAddress::class,
     ];
 
     /**
