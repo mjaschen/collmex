@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.8.0]
+
+### Added
+
+- new type `EMPLOYEE`
+- new type `EMPLOYEE_GET`
+
 ## [2.7.3]
 
 ### Added
