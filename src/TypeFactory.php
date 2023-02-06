@@ -15,6 +15,7 @@ use MarcusJaschen\Collmex\Type\Customer;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
 use MarcusJaschen\Collmex\Type\Delivery;
 use MarcusJaschen\Collmex\Type\DifferentShippingAddress;
+use MarcusJaschen\Collmex\Type\Employee;
 use MarcusJaschen\Collmex\Type\Invoice;
 use MarcusJaschen\Collmex\Type\InvoiceOutput;
 use MarcusJaschen\Collmex\Type\InvoicePayment;
@@ -61,6 +62,7 @@ class TypeFactory
         'CMXBOM' => BillOfMaterial::class,
         'CMXBTC' => Batch::class,
         'CMXDLV' => Delivery::class,
+        'EMPLOYEE' => Employee::class,
         'CMXEPF' => DifferentShippingAddress::class,
         'CMXINV' => Invoice::class,
         'CMXKND' => Customer::class,
