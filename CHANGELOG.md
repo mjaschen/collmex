@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.8.2]
+
+### Added
+
+- new type `VENDOR_GET`
+
 ## [2.8.0]
 
 ### Added
