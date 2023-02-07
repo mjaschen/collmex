@@ -418,6 +418,7 @@ This will output
 - `STOCK_CHANGE_GET`
 - `STOCK_GET`
 - `TRACKING_NUMBER`
+- `VENDOR_GET`
 - `VOUCHER`
 - `VOUCHER_GET`
 
