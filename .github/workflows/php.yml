@@ -28,7 +28,7 @@ jobs:
     name: "collmex-php-sdk build - PHP ${{ matrix.php-version }} - Composer ${{ matrix.composer-dependencies }}"
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
