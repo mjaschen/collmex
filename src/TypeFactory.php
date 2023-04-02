@@ -38,6 +38,7 @@ use MarcusJaschen\Collmex\Type\StockChange;
 use MarcusJaschen\Collmex\Type\Subscription;
 use MarcusJaschen\Collmex\Type\Supplier;
 use MarcusJaschen\Collmex\Type\SupplierCredit;
+use MarcusJaschen\Collmex\Type\TermsOfPayment;
 use MarcusJaschen\Collmex\Type\TrackingNumber;
 use MarcusJaschen\Collmex\Type\Voucher;
 
@@ -74,6 +75,7 @@ class TypeFactory
         'CMXPRI' => ProductPrice::class,
         'CMXSBI' => SupplierCredit::class,
         'CMXSTK' => Stock::class,
+        'CMXTOP' => TermsOfPayment::class,
         'CMXUMS' => Revenue::class,
         'INVOICE_OUTPUT' => InvoiceOutput::class,
         'INVOICE_PAYMENT' => InvoicePayment::class,
