@@ -4,3 +4,10 @@ languages:
   PHP: true
   Python: false
 exclude_paths: ["tests"]
+plugins:
+  markdownlint:
+    enabled: true
+  phpcodesniffer:
+    enabled: true
+    config:
+      standard: "phpcs.xml.dist"
