@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.10.0]
+
+### Changed
+
+- refactoring `Date` validator
+- simplify error checking in `CsvResponse`
+
 ## [2.9.0]
 
 ### Added
