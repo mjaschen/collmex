@@ -10,11 +10,6 @@ use MarcusJaschen\Collmex\Filter\Windows1252ToUtf8;
 use MarcusJaschen\Collmex\Type\AbstractType;
 use MarcusJaschen\Collmex\TypeFactory;
 
-/**
- * Collmex API Response.
- *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
- */
 class CsvResponse implements ResponseInterface
 {
     /**
@@ -38,13 +33,6 @@ class CsvResponse implements ResponseInterface
      * @var AbstractType[]|null
      */
     protected $records;
-
-    /**
-     * Whether the response contains an error message or not.
-     *
-     * @var bool|null
-     */
-    protected $isError;
 
     /**
      * Collmex error-code.
@@ -98,15 +86,8 @@ class CsvResponse implements ResponseInterface
      */
     public function isError(): bool
     {
-        // do not process the response data (again) if an error was
-        // already detected
-        if (null !== $this->isError) {
-            return $this->isError;
-        }
-
         foreach ($this->data as $data) {
             if ($data[0] === 'MESSAGE' && $data[1] === 'E') {
-                $this->isError = true;
                 $this->errorCode = $data[2];
                 $this->errorMessage = $data[3];
 
@@ -117,8 +98,6 @@ class CsvResponse implements ResponseInterface
                 return true;
             }
         }
-
-        $this->isError = false;
 
         return false;
     }
