@@ -4,15 +4,10 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Type\Validator;
 
-/**
- * Date Validator.
- *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
- */
 class Date implements ValidatorInterface
 {
     /**
-     * Validates a date value.
+     * Validates if date value complies with Collmex' requirements.
      *
      * Collmex date representation: `YYYYMMDD`
      *
@@ -23,22 +18,25 @@ class Date implements ValidatorInterface
      */
     public function validate($value, array $options = []): bool
     {
-        if (strlen($value) === 8) {
-            $date = \DateTime::createFromFormat('Ymd', $value);
-        }
-
-        if (strlen($value) === 10) {
-            $date = \DateTime::createFromFormat('d.m.Y', $value);
-        }
-
-        if (!isset($date) || !($date instanceof \DateTime)) {
+        try {
+            $date = $this->createDateInstance($value);
+        } catch (\InvalidArgumentException $exception) {
             return false;
         }
 
-        if ((int)$date->format('Y') < 1900 || (int)$date->format('Y') > 2100) {
-            return false;
+        return (int)$date->format('Y') > 1900 && (int)$date->format('Y') < 2100;
+    }
+
+    private function createDateInstance($value): \DateTime
+    {
+        if (strlen((string)$value) === 8) {
+            return \DateTime::createFromFormat('Ymd', $value);
         }
 
-        return true;
+        if (strlen((string)$value) === 10) {
+            return \DateTime::createFromFormat('d.m.Y', $value);
+        }
+
+        throw new \InvalidArgumentException('Invalid date format: ' . $value, 3203218841);
     }
 }
