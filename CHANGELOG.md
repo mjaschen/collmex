@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.11.0]
+
+### Added
+
+- dependency on `symfony/mime` component
+
 ## [2.10.0]
 
 ### Changed
