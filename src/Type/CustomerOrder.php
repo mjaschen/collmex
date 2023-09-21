@@ -291,7 +291,7 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'discount_final_2' => null,
         // 50
         'discount_final_2_reason' => null,
-        'reserved_2' => null,
+        'voucher' => null,
         'canceled_at' => null,
         'shipping_type' => null,
         'shipping_costs' => null,
@@ -343,6 +343,8 @@ class CustomerOrder extends AbstractType implements TypeInterface
         'total_gross' => null,
         'quotation_id' => null,
         'payment_reference' => null,
+        'different_recipient' => null,
+        'relevant_for_delivery' => null,
     ];
 
     /**
