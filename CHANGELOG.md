@@ -5,6 +5,16 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [2.12.0]
+
+### Added
+
+- new fields in `CustomerOrder`
+
+### Changed
+
+- rename `reserved_2` field in `CustomerOrder`. This is not considered as a breaking change as the field was not used before. 
+
 ## [2.11.0]
 
 ### Added
