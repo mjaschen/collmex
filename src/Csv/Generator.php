@@ -6,11 +6,6 @@ namespace MarcusJaschen\Collmex\Csv;
 
 use RuntimeException;
 
-/**
- * CSV Generator Class.
- *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
- */
 class Generator
 {
     private const PLACEHOLDER_FPUTCSV_BUG = 'MJASCHEN_COLLMEX_WORKAROUND_PHP_BUG_43225';
@@ -67,7 +62,7 @@ class Generator
         $fileHandle = fopen('php://temp', 'wb');
 
         if (!$fileHandle) {
-            throw new RuntimeException('Cannot open temp file handle (php://temp)', 5529946737);
+            throw new RuntimeException('Cannot open temp file handle (php://temp)', 5_529_946_737);
         }
 
         $csvCreator($fileHandle);

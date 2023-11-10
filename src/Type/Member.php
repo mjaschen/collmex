@@ -53,55 +53,55 @@ class Member extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const STATUS_ACTIVE = 0;
+    final public const STATUS_ACTIVE = 0;
     /**
      * @var int
      */
-    public const STATUS_INACTIVE = 1;
+    final public const STATUS_INACTIVE = 1;
 
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_PRINT = 0;
+    final public const OUTPUT_MEDIUM_PRINT = 0;
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_EMAIL = 1;
+    final public const OUTPUT_MEDIUM_EMAIL = 1;
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_FAX = 2;
+    final public const OUTPUT_MEDIUM_FAX = 2;
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_MAIL = 3;
+    final public const OUTPUT_MEDIUM_MAIL = 3;
 
     /**
      * @var int
      */
-    public const NO_DELIVERY_BLOCK = 0;
+    final public const NO_DELIVERY_BLOCK = 0;
     /**
      * @var int
      */
-    public const DELIVERY_BLOCK = 1;
+    final public const DELIVERY_BLOCK = 1;
 
     /**
      * @var int
      */
-    public const NO_CONSTRUCTION_SERVICE_PROVIDER = 0;
+    final public const NO_CONSTRUCTION_SERVICE_PROVIDER = 0;
     /**
      * @var int
      */
-    public const CONSTRUCTION_SERVICE_PROVIDER = 1;
+    final public const CONSTRUCTION_SERVICE_PROVIDER = 1;
 
     /**
      * @var int
      */
-    public const LANGUAGE_GERMAN = 0;
+    final public const LANGUAGE_GERMAN = 0;
     /**
      * @var int
      */
-    public const LANGUAGE_ENGLISH = 1;
+    final public const LANGUAGE_ENGLISH = 1;
 
     /**
      * Type data template.

@@ -53,47 +53,47 @@ class Address extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const ADDRESS_TYPE_CUSTOMER_SUPPLIER_MEMBER = 0;
+    final public const ADDRESS_TYPE_CUSTOMER_SUPPLIER_MEMBER = 0;
 
     /**
      * @var int
      */
-    public const ADDRESS_TYPE_ADDRESS_MANAGEMENT = 3;
+    final public const ADDRESS_TYPE_ADDRESS_MANAGEMENT = 3;
 
     /**
      * @var int
      */
-    public const ADDRESS_TYPE_CONTACT = 4;
+    final public const ADDRESS_TYPE_CONTACT = 4;
 
     /**
      * @var int
      */
-    public const INACTIVE_ACTIVE = 0;
+    final public const INACTIVE_ACTIVE = 0;
 
     /**
      * @var int
      */
-    public const INACTIVE_INACTIVE = 1;
+    final public const INACTIVE_INACTIVE = 1;
 
     /**
      * @var int
      */
-    public const INACTIVE_DELETE = 2;
+    final public const INACTIVE_DELETE = 2;
 
     /**
      * @var int
      */
-    public const INACTIVE_DELETE_UNUSED = 3;
+    final public const INACTIVE_DELETE_UNUSED = 3;
 
     /**
      * @var int
      */
-    public const NO_MAILING_NOT_SET = 0;
+    final public const NO_MAILING_NOT_SET = 0;
 
     /**
      * @var int
      */
-    public const NO_MAILING_NO_MAILING = 1;
+    final public const NO_MAILING_NO_MAILING = 1;
 
     /**
      * Type data template.

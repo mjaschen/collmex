@@ -9,11 +9,11 @@ class SupplierInvoice extends AbstractType implements TypeInterface
     /**
      * @var null
      */
-    public const CANCELATION_TYPE_NO_CANCELATION = null;
+    final public const CANCELATION_TYPE_NO_CANCELATION = null;
     /**
      * @var int
      */
-    public const CANCELATION_TYPE_CANCELATION = 1;
+    final public const CANCELATION_TYPE_CANCELATION = 1;
 
     /**
      * @var array

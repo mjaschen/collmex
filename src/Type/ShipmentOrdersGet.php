@@ -26,43 +26,43 @@ class ShipmentOrdersGet extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_UNIVERSAL_CSV = 1;
+    final public const SHIPMENT_HANDOVER_ID_UNIVERSAL_CSV = 1;
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_DHL_ONLINE_FRANKING = 2;
+    final public const SHIPMENT_HANDOVER_ID_DHL_ONLINE_FRANKING = 2;
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_DHL_INTRASHIP = 3;
+    final public const SHIPMENT_HANDOVER_ID_DHL_INTRASHIP = 3;
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_FULFILLMENT_SERVICE_PROVIDER = 4;
+    final public const SHIPMENT_HANDOVER_ID_FULFILLMENT_SERVICE_PROVIDER = 4;
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_YOUR_GLS = 5;
+    final public const SHIPMENT_HANDOVER_ID_YOUR_GLS = 5;
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_HERMES = 6;
+    final public const SHIPMENT_HANDOVER_ID_HERMES = 6;
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_AMAZON_FBA = 7;
+    final public const SHIPMENT_HANDOVER_ID_AMAZON_FBA = 7;
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_GERMAN_POST_INTERNET_STAMP = 8;
+    final public const SHIPMENT_HANDOVER_ID_GERMAN_POST_INTERNET_STAMP = 8;
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_MY_DPD_BUSINESS = 9;
+    final public const SHIPMENT_HANDOVER_ID_MY_DPD_BUSINESS = 9;
     /**
      * @var int
      */
-    public const SHIPMENT_HANDOVER_ID_DHL_BUSINESS_CLIENT_PORTAL = 10;
+    final public const SHIPMENT_HANDOVER_ID_DHL_BUSINESS_CLIENT_PORTAL = 10;
 
     /**
      * @var array

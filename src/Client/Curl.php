@@ -4,26 +4,15 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Client;
 
+use CurlHandle;
 use MarcusJaschen\Collmex\Client\Exception\RequestFailedException;
 
-/**
- * curl Client Class.
- *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
- */
 class Curl extends AbstractClient implements ClientInterface
 {
-    /**
-     * @var resource
-     */
-    protected $curl;
+    protected CurlHandle $curl;
 
     /**
      * Executes the actual HTTP request and creates the Response object.
-     *
-     * @param $body
-     *
-     * @return string The response body
      *
      * @throws RequestFailedException
      */
@@ -52,25 +41,16 @@ class Curl extends AbstractClient implements ClientInterface
         return (string)$response;
     }
 
-    /**
-     * Creates curl ressource.
-     *
-     * @return void
-     */
     protected function initCurl(): void
     {
         $this->curl = curl_init($this->exchangeUrl);
+
         curl_setopt($this->curl, CURLOPT_POST, true);
         curl_setopt($this->curl, CURLOPT_HTTPHEADER, ['Content-Type: text/csv']);
         curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
     }
 
-    /**
-     * Closes curl ressource.
-     *
-     * @return void
-     */
     protected function destroyCurl(): void
     {
         if (!empty($this->curl)) {
@@ -80,10 +60,6 @@ class Curl extends AbstractClient implements ClientInterface
 
     /**
      * Prepend the login credentials to the request body.
-     *
-     * @param string $body
-     *
-     * @return string
      */
     protected function buildRequestBody(string $body): string
     {

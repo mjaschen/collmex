@@ -7,56 +7,17 @@ namespace MarcusJaschen\Collmex\Client;
 use MarcusJaschen\Collmex\Csv\Generator;
 use MarcusJaschen\Collmex\Filter\Utf8ToWindows1252;
 
-/**
- * Abstract Client Class.
- *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
- */
 abstract class AbstractClient
 {
-    /**
-     * The Collmex API endpoint URL template.
-     *
-     * @var string
-     */
-    public const EXCHANGE_URL = 'https://www.collmex.de/c.cmx?%s,0,data_exchange';
+    final public const EXCHANGE_URL = 'https://www.collmex.de/c.cmx?%s,0,data_exchange';
 
-    /**
-     * The Collmex API endpoint URL.
-     *
-     * @var string
-     */
-    protected $exchangeUrl;
+    protected string $exchangeUrl;
 
-    /**
-     * @var string
-     */
-    protected $user;
-
-    /**
-     * @var string
-     */
-    protected $password;
-
-    /**
-     * @param string $user
-     * @param string $password
-     * @param string $customer
-     */
-    public function __construct(string $user, string $password, string $customer)
+    public function __construct(protected string $user, protected string $password, string $customer)
     {
-        $this->user = $user;
-        $this->password = $password;
         $this->exchangeUrl = sprintf(static::EXCHANGE_URL, $customer);
     }
 
-    /**
-     * Converts the text to Windows Codepage 1252 encoding.
-     *
-     * @param string $text
-     *
-     * @return string
-     */
     protected function convertEncodingForCollmex(string $text): string
     {
         $filter = new Utf8ToWindows1252();
@@ -67,8 +28,6 @@ abstract class AbstractClient
     /**
      * Creates the first line of the request body - it contains the
      * authentication credentials.
-     *
-     * @return string
      */
     protected function getLoginLine(): string
     {

@@ -6,9 +6,6 @@ namespace MarcusJaschen\Collmex\Filter;
 
 abstract class AbstractFilter implements FilterInterface
 {
-    /**
-     * @inheritdoc
-     */
     public function filterArray(array $data): array
     {
         foreach ($data as $key => $value) {

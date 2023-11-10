@@ -22,9 +22,9 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class StockGet extends AbstractType implements TypeInterface
 {
-    public const TYPE_FREI = 0;
-    public const TYPE_GESPERRT = 1;
-    public const TYPE_FBA_BESTAND = 2;
+    final public const TYPE_FREI = 0;
+    final public const TYPE_GESPERRT = 1;
+    final public const TYPE_FBA_BESTAND = 2;
 
     /**
      * @var array

@@ -9,48 +9,21 @@ use MarcusJaschen\Collmex\Response\Exception\InvalidZipFileException;
 use MarcusJaschen\Collmex\Response\Exception\InvalidZipResponseException;
 use Symfony\Component\Finder\Finder;
 
-/**
- * Collmex ZIP Response Class.
- *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
- */
 class ZipResponse implements ResponseInterface
 {
-    /**
-     * @var string
-     */
-    protected $responseBody;
+    protected string $extractDirectory;
 
     /**
-     * @var Parser
-     */
-    protected $responseParser;
-
-    /**
-     * @var string
-     */
-    protected $extractDirectory;
-
-    /**
-     * @param Parser $responseParser
-     * @param string $responseBody
      *
      * @throws InvalidZipFileException
      */
-    public function __construct(Parser $responseParser, string $responseBody)
+    public function __construct(protected Parser $responseParser, protected string $responseBody)
     {
-        $this->responseBody = $responseBody;
-        $this->responseParser = $responseParser;
-
         $this->extractFiles();
     }
 
     /**
      * Returns an iterator of files matching the given file extension filter.
-     *
-     * @param string $type
-     *
-     * @return Finder
      *
      * @throws \InvalidArgumentException
      */
@@ -58,19 +31,15 @@ class ZipResponse implements ResponseInterface
     {
         $finder = new Finder();
 
-        $iterator = $finder
+        return $finder
             ->files()
             ->name('*.' . $type)
             ->depth(0)
             ->in($this->extractDirectory);
-
-        return $iterator;
     }
 
     /**
      * Returns the CsvResponse instance for the (first) included CSV file.
-     *
-     * @return CsvResponse
      *
      * @throws InvalidZipResponseException
      */
@@ -84,12 +53,10 @@ class ZipResponse implements ResponseInterface
             return new CsvResponse($this->responseParser, $csv);
         }
 
-        throw new InvalidZipResponseException('Zip Response doesn\'t contain the required CSV segment', 1567429445);
+        throw new InvalidZipResponseException('Zip Response doesn\'t contain the required CSV segment', 1_567_429_445);
     }
 
     /**
-     * @return void
-     *
      * @throws InvalidZipFileException
      */
     private function extractFiles(): void
@@ -102,7 +69,7 @@ class ZipResponse implements ResponseInterface
 
         $this->ensureExtractDirectoryExists();
 
-        if ('' === $this->responseBody) {
+        if ($this->responseBody === '') {
             return;
         }
 
@@ -122,7 +89,10 @@ class ZipResponse implements ResponseInterface
     private function ensureExtractDirectoryExists(): void
     {
         if (!mkdir($this->extractDirectory) && !is_dir($this->extractDirectory)) {
-            throw new \RuntimeException(sprintf('Directory "%s" was not created', $this->extractDirectory), 1631246675);
+            throw new \RuntimeException(
+                sprintf('Directory "%s" was not created', $this->extractDirectory),
+                1_631_246_675
+            );
         }
     }
 }
