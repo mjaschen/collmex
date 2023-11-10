@@ -5,12 +5,11 @@ declare(strict_types=1);
 namespace MarcusJaschen\Collmex;
 
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
+use MarcusJaschen\Collmex\Client\ClientInterface;
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
 
 /**
  * Laravel Service Provider for Collmex PHP SDK.
- *
- * @author Marcus Jaschen <mail@marcusjaschen.de>
  */
 class CollmexServiceProvider extends IlluminateServiceProvider
 {
@@ -19,11 +18,6 @@ class CollmexServiceProvider extends IlluminateServiceProvider
      */
     protected $defer = true;
 
-    /**
-     * Registers the package.
-     *
-     * @return void
-     */
     public function boot(): void
     {
         $this->publishes(
@@ -34,11 +28,6 @@ class CollmexServiceProvider extends IlluminateServiceProvider
         );
     }
 
-    /**
-     * Register the service provider.
-     *
-     * @return void
-     */
     public function register(): void
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/collmex.php', 'collmex');
@@ -48,49 +37,38 @@ class CollmexServiceProvider extends IlluminateServiceProvider
         $this->registerMultiRequest();
     }
 
-    /**
-     * Registers the HTTP client.
-     *
-     * @return void
-     */
     protected function registerClient(): void
     {
         $this->app->singleton(
             'collmex.client',
-            static function () {
-                return new CurlClient(config('collmex.user'), config('collmex.password'), config('collmex.customer'));
-            }
+            static fn() => new CurlClient(
+                config('collmex.user'),
+                config('collmex.password'),
+                config('collmex.customer'),
+            )
         );
+
+        $this->app->singleton(ClientInterface::class, 'collmex.client');
     }
 
-    /**
-     * Registers the Collmex Request object.
-     *
-     * @return void
-     */
     protected function registerRequest(): void
     {
         $this->app->singleton(
             'collmex.request',
-            static function ($app) {
-                return new Request($app->make('collmex.client'));
-            }
+            static fn($app) => new Request($app->make(ClientInterface::class))
         );
+
+        $this->app->singleton(Request::class, 'collmex.request');
     }
 
-    /**
-     * Registers the Collmex MultiRequest object.
-     *
-     * @return void
-     */
     protected function registerMultiRequest(): void
     {
         $this->app->singleton(
             'collmex.multirequest',
-            static function ($app) {
-                return new MultiRequest($app->make('collmex.client'));
-            }
+            static fn($app) => new MultiRequest($app->make(ClientInterface::class))
         );
+
+        $this->app->singleton(MultiRequest::class, 'collmex.multirequest');
     }
 
     /**
@@ -102,6 +80,9 @@ class CollmexServiceProvider extends IlluminateServiceProvider
             'collmex.client',
             'collmex.request',
             'collmex.multirequest',
+            ClientInterface::class,
+            Request::class,
+            MultiRequest::class,
         ];
     }
 }

@@ -28,35 +28,35 @@ class Subscription extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const INTERVAL_YEAR = 0;
+    final public const INTERVAL_YEAR = 0;
     /**
      * @var int
      */
-    public const INTERVAL_HALF_YEAR = 1;
+    final public const INTERVAL_HALF_YEAR = 1;
     /**
      * @var int
      */
-    public const INTERVAL_QUARTER = 2;
+    final public const INTERVAL_QUARTER = 2;
     /**
      * @var int
      */
-    public const INTERVAL_MONTH = 3;
+    final public const INTERVAL_MONTH = 3;
     /**
      * @var int
      */
-    public const INTERVAL_YEAR_PREPAID = 4;
+    final public const INTERVAL_YEAR_PREPAID = 4;
     /**
      * @var int
      */
-    public const INTERVAL_HALF_YEAR_PREPAID = 5;
+    final public const INTERVAL_HALF_YEAR_PREPAID = 5;
     /**
      * @var int
      */
-    public const INTERVAL_QUARTER_PREPAID = 6;
+    final public const INTERVAL_QUARTER_PREPAID = 6;
     /**
      * @var int
      */
-    public const INTERVAL_MONTH_PREPAID = 7;
+    final public const INTERVAL_MONTH_PREPAID = 7;
 
     /**
      * Type data template.

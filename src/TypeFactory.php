@@ -43,9 +43,7 @@ use MarcusJaschen\Collmex\Type\TrackingNumber;
 use MarcusJaschen\Collmex\Type\Voucher;
 
 /**
- * Type Factory for Collmex Response Data.
- *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
+ * Type Factory for Collmex response data: Builds the type object for the given data.
  */
 class TypeFactory
 {
@@ -91,12 +89,6 @@ class TypeFactory
     ];
 
     /**
-     * Builds the type object for the given data.
-     *
-     * @param array $data
-     *
-     * @return Type\AbstractType
-     *
      * @throws InvalidTypeIdentifierException
      */
     public function getType(array $data): Type\AbstractType
@@ -106,7 +98,7 @@ class TypeFactory
         if (!isset(self::RECORD_TYPE_CLASS_MAP[$recordTypeIdentifier])) {
             throw new InvalidTypeIdentifierException(
                 'Invalid/Unsupported Record Type Identifier: ' . $recordTypeIdentifier,
-                8186126281
+                8_186_126_281
             );
         }
 
@@ -116,6 +108,6 @@ class TypeFactory
             return new $class($data);
         }
 
-        throw new InvalidTypeIdentifierException('Undefined Class: ' . $class, 4512716533);
+        throw new InvalidTypeIdentifierException('Undefined Class: ' . $class, 4_512_716_533);
     }
 }

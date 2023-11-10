@@ -107,100 +107,100 @@ class Invoice extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const INVOICE_TYPE_INVOICE = 0;
+    final public const INVOICE_TYPE_INVOICE = 0;
     /**
      * @var int
      */
-    public const INVOICE_TYPE_CREDIT_MEMO = 1;
+    final public const INVOICE_TYPE_CREDIT_MEMO = 1;
     /**
      * @var int
      */
-    public const INVOICE_TYPE_DOWN_PAYMENT = 2;
+    final public const INVOICE_TYPE_DOWN_PAYMENT = 2;
     /**
      * @var int
      */
-    public const INVOICE_TYPE_CASH_SALE = 3;
+    final public const INVOICE_TYPE_CASH_SALE = 3;
     /**
      * @var int
      */
-    public const INVOICE_TYPE_CREDIT_FOR_RETURNS = 4;
+    final public const INVOICE_TYPE_CREDIT_FOR_RETURNS = 4;
     /**
      * @var int
      */
-    public const INVOICE_TYPE_PRO_FORMA_INVOICE = 5;
+    final public const INVOICE_TYPE_PRO_FORMA_INVOICE = 5;
 
     /**
      * @var int
      */
-    public const NOT_DELETED = 0;
+    final public const NOT_DELETED = 0;
     /**
      * @var int
      */
-    public const DELETED = 1;
+    final public const DELETED = 1;
 
     /**
      * @var int
      */
-    public const LANGUAGE_GERMAN = 0;
+    final public const LANGUAGE_GERMAN = 0;
     /**
      * @var int
      */
-    public const LANGUAGE_ENGLISH = 1;
+    final public const LANGUAGE_ENGLISH = 1;
 
     /**
      * @var int
      */
-    public const STATUS_NEW = 0;
+    final public const STATUS_NEW = 0;
     /**
      * @var int
      */
-    public const STATUS_TO_BOOK = 10;
+    final public const STATUS_TO_BOOK = 10;
     /**
      * @var int
      */
-    public const STATUS_OPEN = 20;
+    final public const STATUS_OPEN = 20;
     /**
      * @var int
      */
-    public const STATUS_REMINDED = 30;
+    final public const STATUS_REMINDED = 30;
     /**
      * @var int
      */
-    public const STATUS_DONE = 40;
+    final public const STATUS_DONE = 40;
     /**
      * @var int
      */
-    public const STATUS_DELETED = 100;
+    final public const STATUS_DELETED = 100;
 
     /**
      * @var int
      */
-    public const POSITION_NORMAL = 0;
+    final public const POSITION_NORMAL = 0;
     /**
      * @var int
      */
-    public const POSITION_SUM = 1;
+    final public const POSITION_SUM = 1;
     /**
      * @var int
      */
-    public const POSITION_TEXT = 2;
+    final public const POSITION_TEXT = 2;
     /**
      * @var int
      */
-    public const POSITION_FREE = 3;
+    final public const POSITION_FREE = 3;
 
     /**
      * @var int
      */
-    public const TAX_RATE_FULL = 0;
+    final public const TAX_RATE_FULL = 0;
     /**
      * @var int
      */
-    public const TAX_RATE_REDUCED = 1;
+    final public const TAX_RATE_REDUCED = 1;
     /**
      * @var int
      */
-    public const TAX_RATE_TAXFREE = 2;
+    final public const TAX_RATE_TAXFREE = 2;
 
     /**
      * Type data template.

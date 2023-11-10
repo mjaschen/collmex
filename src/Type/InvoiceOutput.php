@@ -26,62 +26,62 @@ class InvoiceOutput extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_PRINT = 0;
+    final public const OUTPUT_MEDIUM_PRINT = 0;
 
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_EMAIL = 1;
+    final public const OUTPUT_MEDIUM_EMAIL = 1;
 
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_FAX = 2;
+    final public const OUTPUT_MEDIUM_FAX = 2;
 
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_MAIL = 3;
+    final public const OUTPUT_MEDIUM_MAIL = 3;
 
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_EMAIL_SIGNED = 4;
+    final public const OUTPUT_MEDIUM_EMAIL_SIGNED = 4;
 
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_NO_OUTPUT = 100;
+    final public const OUTPUT_MEDIUM_NO_OUTPUT = 100;
 
     /**
      * @var int
      */
-    public const ALSO_DELETED_NO_DELETED = 0;
+    final public const ALSO_DELETED_NO_DELETED = 0;
 
     /**
      * @var int
      */
-    public const ALSO_DELETED_DELETED = 1;
+    final public const ALSO_DELETED_DELETED = 1;
 
     /**
      * @var int
      */
-    public const DONT_BOOK_BOOK = 0;
+    final public const DONT_BOOK_BOOK = 0;
 
     /**
      * @var int
      */
-    public const DONT_BOOK_NO_BOOK = 1;
+    final public const DONT_BOOK_NO_BOOK = 1;
 
     /**
      * @var int
      */
-    public const OUTPUT_REQUIRED_REQUIRED = 1;
+    final public const OUTPUT_REQUIRED_REQUIRED = 1;
 
     /**
      * @var int
      */
-    public const OUTPUT_REQUIRED_NOT_REQUIRED = 0;
+    final public const OUTPUT_REQUIRED_NOT_REQUIRED = 0;
 
     /**
      * @var array

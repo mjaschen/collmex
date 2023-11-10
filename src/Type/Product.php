@@ -83,160 +83,160 @@ class Product extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const TAX_RATE_FULL = 0;
+    final public const TAX_RATE_FULL = 0;
     /**
      * @var int
      */
-    public const TAX_RATE_REDUCED = 1;
+    final public const TAX_RATE_REDUCED = 1;
     /**
      * @var int
      */
-    public const TAX_RATE_TAXFREE = 2;
+    final public const TAX_RATE_TAXFREE = 2;
 
     /**
      * @var int
      */
-    public const BUY_TAX_RATE_FULL = 0;
+    final public const BUY_TAX_RATE_FULL = 0;
     /**
      * @var int
      */
-    public const BUY_TAX_RATE_REDUCED = 1;
+    final public const BUY_TAX_RATE_REDUCED = 1;
     /**
      * @var int
      */
-    public const BUY_TAX_RATE_TAXFREE = 2;
+    final public const BUY_TAX_RATE_TAXFREE = 2;
 
     /**
      * @var int
      */
-    public const PRODUCT_TYPE_GOODS = 0;
+    final public const PRODUCT_TYPE_GOODS = 0;
     /**
      * @var int
      */
-    public const PRODUCT_TYPE_SERVICE = 1;
+    final public const PRODUCT_TYPE_SERVICE = 1;
     /**
      * @var int
      */
-    public const PRODUCT_TYPE_MEMBERSHIP_FEE = 2;
+    final public const PRODUCT_TYPE_MEMBERSHIP_FEE = 2;
     /**
      * @var int
      */
-    public const PRODUCT_TYPE_CONSTRUCTION_SERVICE = 3;
+    final public const PRODUCT_TYPE_CONSTRUCTION_SERVICE = 3;
     /**
      * @var int
      */
-    public const PRODUCT_TYPE_GOODS_CUSTOMER_TAX = 4;
+    final public const PRODUCT_TYPE_GOODS_CUSTOMER_TAX = 4;
 
     /**
      * @var int
      */
-    public const INACTIVE_PRODUCT_ACTIVE = 0;
+    final public const INACTIVE_PRODUCT_ACTIVE = 0;
     /**
      * @var int
      */
-    public const INACTIVE_PRODUCT_INACTIVE = 1;
+    final public const INACTIVE_PRODUCT_INACTIVE = 1;
     /**
      * @var int
      */
-    public const INACTIVE_PRODUCT_DELETE = 2;
+    final public const INACTIVE_PRODUCT_DELETE = 2;
     /**
      * @var int
      */
-    public const INACTIVE_PRODUCT_DELETE_IF_INACTIVE = 3;
+    final public const INACTIVE_PRODUCT_DELETE_IF_INACTIVE = 3;
 
     /**
      * @var int
      */
-    public const LOT_MANDATORY = 0;
+    final public const LOT_MANDATORY = 0;
 
     /**
      * @var int
      */
-    public const TEXT_PLAIN = 0;
+    final public const TEXT_PLAIN = 0;
     /**
      * @var int
      */
-    public const TEXT_HTML = 1;
+    final public const TEXT_HTML = 1;
 
     /**
      * @var int
      */
-    public const PROCUREMENT_SHOPPING = 0;
+    final public const PROCUREMENT_SHOPPING = 0;
     /**
      * @var int
      */
-    public const PROCUREMENT_PRODUCTION = 10;
+    final public const PROCUREMENT_PRODUCTION = 10;
 
     /**
      * @var int
      */
-    public const LABOR_COSTS_REFERENCE_AMOUNT = 1;
+    final public const LABOR_COSTS_REFERENCE_AMOUNT = 1;
 
     /**
      * @var int
      */
-    public const COSTING_AUTOMATIC = 0;
+    final public const COSTING_AUTOMATIC = 0;
     /**
      * @var int
      */
-    public const COSTING_MANUAL = 0;
+    final public const COSTING_MANUAL = 0;
 
     /**
      * @var int
      */
-    public const BASIC_UNIT_NO_UNIT = 0;
+    final public const BASIC_UNIT_NO_UNIT = 0;
     /**
      * @var int
      */
-    public const BASIC_UNIT_KILOGRAM = 1;
+    final public const BASIC_UNIT_KILOGRAM = 1;
     /**
      * @var int
      */
-    public const BASIC_UNIT_LITER = 2;
+    final public const BASIC_UNIT_LITER = 2;
     /**
      * @var int
      */
-    public const BASIC_UNIT_CUBIC_METER = 3;
+    final public const BASIC_UNIT_CUBIC_METER = 3;
     /**
      * @var int
      */
-    public const BASIC_UNIT_METER = 4;
+    final public const BASIC_UNIT_METER = 4;
     /**
      * @var int
      */
-    public const BASIC_UNIT_SQUARE_METER = 5;
+    final public const BASIC_UNIT_SQUARE_METER = 5;
     /**
      * @var int
      */
-    public const BASIC_UNIT_PIECE = 6;
+    final public const BASIC_UNIT_PIECE = 6;
 
     /**
      * @var int
      */
-    public const DELIVERY_RELEVANCE_NO = 0;
+    final public const DELIVERY_RELEVANCE_NO = 0;
     /**
      * @var int
      */
-    public const DELIVERY_RELEVANCE_YES = 1;
+    final public const DELIVERY_RELEVANCE_YES = 1;
 
     /**
      * @var int
      */
-    public const DIRECT_DELIVERY_NO = 0;
+    final public const DIRECT_DELIVERY_NO = 0;
     /**
      * @var int
      */
-    public const DIRECT_DELIVERY_YES = 1;
+    final public const DIRECT_DELIVERY_YES = 1;
 
     /**
      * @var int
      */
-    public const STOCK_MANAGEMENT_YES = 0;
+    final public const STOCK_MANAGEMENT_YES = 0;
 
     /**
      * @var int
      */
-    public const STOCK_MANAGEMENT_NO = 1;
+    final public const STOCK_MANAGEMENT_NO = 1;
 
     /**
      * Type data template.

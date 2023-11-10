@@ -4,11 +4,6 @@ declare(strict_types=1);
 
 namespace MarcusJaschen\Collmex\Csv;
 
-/**
- * CSV Parser Implementation using PHP's built-in CSV handling capabilities.
- *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
- */
 class Parser
 {
     private const PLACEHOLDER_FGETCSV_BUG = 'MJASCHEN_COLLMEX_WORKAROUND_PHP_FGETCSV_BUG';
@@ -26,10 +21,6 @@ class Parser
      * @see Generator
      * @see \MarcusJaschen\Collmex\Tests\Unit\Csv\ParserTest::parseBackslashFollowedByDoubleQuote()
      * @see https://github.com/mjaschen/collmex/issues/238
-     *
-     * @param string $csv one or multiple lines of CSV data
-     *
-     * @return array
      */
     public function parse(string $csv): array
     {

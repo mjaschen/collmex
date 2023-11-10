@@ -13,76 +13,35 @@ use MarcusJaschen\Collmex\TypeFactory;
 class CsvResponse implements ResponseInterface
 {
     /**
-     * @var Parser
-     */
-    protected $parser;
-
-    /**
-     * The unparsed response CSV string.
+     * Array containing lines of raw response data.
      *
-     * @var string
+     * @var string[]
      */
-    protected $responseRaw;
-
-    /**
-     * @var array of raw response data
-     */
-    protected $data;
+    protected array $data;
 
     /**
      * @var AbstractType[]|null
      */
-    protected $records;
+    protected array|null $records = null;
 
-    /**
-     * Collmex error-code.
-     *
-     * @var string|null
-     */
-    protected $errorCode;
+    protected string|null $errorCode = null;
 
-    /**
-     * @var string|null
-     */
-    protected $errorMessage;
+    protected string|null $errorMessage = null;
 
     /**
      * Line of request CSV where the error occurred.
-     *
-     * @var int
      */
-    protected $errorLine;
+    protected int|null $errorLine = null;
 
-    /**
-     * @param Parser $parser
-     * @param string $responseBody
-     */
-    public function __construct(Parser $parser, string $responseBody)
-    {
-        $this->parser = $parser;
-        $this->responseRaw = $responseBody;
-
-        $this->parseCsv($responseBody);
-    }
-
-    /**
-     * @param string $responseBody
-     *
-     * @return void
-     */
-    private function parseCsv($responseBody): void
+    public function __construct(protected Parser $parser, protected string $responseRaw)
     {
         $this->data = $this->convertEncodingFromCollmex(
-            $this->parser->parse(
-                $responseBody
-            )
+            $this->parser->parse($responseRaw)
         );
     }
 
     /**
      * Checks if the API request returned an error.
-     *
-     * @return bool
      */
     public function isError(): bool
     {
@@ -102,34 +61,23 @@ class CsvResponse implements ResponseInterface
         return false;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getErrorMessage(): ?string
+    public function getErrorMessage(): string|null
     {
         return $this->errorMessage;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getErrorCode(): ?string
+    public function getErrorCode(): string|null
     {
         return $this->errorCode;
     }
 
-    /**
-     * @return int
-     */
-    public function getErrorLine(): int
+    public function getErrorLine(): int|null
     {
         return $this->errorLine;
     }
 
     /**
      * Returns the unparsed contents of the Collmex response (CSV string).
-     *
-     * @return string
      */
     public function getResponseRaw(): string
     {
@@ -143,7 +91,7 @@ class CsvResponse implements ResponseInterface
      *
      * @throws InvalidTypeIdentifierException
      */
-    public function getRecords(): ?array
+    public function getRecords(): array|null
     {
         if ($this->isError()) {
             return null;
@@ -168,7 +116,7 @@ class CsvResponse implements ResponseInterface
      *
      * @throws InvalidTypeIdentifierException
      */
-    public function getFirstRecord(): ?AbstractType
+    public function getFirstRecord(): AbstractType|null
     {
         $records = $this->getRecords();
 
@@ -182,8 +130,6 @@ class CsvResponse implements ResponseInterface
     /**
      * Populates the $records attribute with Type objects, created
      * from $data attribute.
-     *
-     * @return void
      *
      * @throws InvalidTypeIdentifierException
      */

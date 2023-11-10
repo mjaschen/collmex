@@ -112,125 +112,125 @@ class CustomerOrder extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const PARTIAL_INVOICES_ALLOWED = 1;
+    final public const PARTIAL_INVOICES_ALLOWED = 1;
     /**
      * @var int
      */
-    public const PARTIAL_INVOICES_NOT_ALLOWED = 0;
+    final public const PARTIAL_INVOICES_NOT_ALLOWED = 0;
 
     /**
      * @var int
      */
-    public const PARTIAL_SHIPPING_ALLOWED = 1;
+    final public const PARTIAL_SHIPPING_ALLOWED = 1;
     /**
      * @var int
      */
-    public const PARTIAL_SHIPPING_NOT_ALLOWED = 0;
+    final public const PARTIAL_SHIPPING_NOT_ALLOWED = 0;
 
     /**
      * @var int
      */
-    public const NOT_DELETED = 0;
+    final public const NOT_DELETED = 0;
     /**
      * @var int
      */
-    public const DELETED = 1;
+    final public const DELETED = 1;
 
     /**
      * @var int
      */
-    public const STATUS_NEW = 0;
+    final public const STATUS_NEW = 0;
     /**
      * @var int
      */
-    public const STATUS_CONFIRMED = 10;
+    final public const STATUS_CONFIRMED = 10;
     /**
      * @var int
      */
-    public const STATUS_PARTIALLY_PAYED = 20;
+    final public const STATUS_PARTIALLY_PAYED = 20;
     /**
      * @var int
      */
-    public const STATUS_PAYMENT_CONFIRMED = 25;
+    final public const STATUS_PAYMENT_CONFIRMED = 25;
     /**
      * @var int
      */
-    public const STATUS_PAYED = 30;
+    final public const STATUS_PAYED = 30;
     /**
      * @var int
      */
-    public const STATUS_PARTIALLY_SHIPPED = 40;
+    final public const STATUS_PARTIALLY_SHIPPED = 40;
     /**
      * @var int
      */
-    public const STATUS_SHIPPED = 50;
+    final public const STATUS_SHIPPED = 50;
     /**
      * @var int
      */
-    public const STATUS_PARTIAL_DISCOUNT = 60;
+    final public const STATUS_PARTIAL_DISCOUNT = 60;
     /**
      * @var int
      */
-    public const STATUS_DISCOUNT = 70;
+    final public const STATUS_DISCOUNT = 70;
     /**
      * @var int
      */
-    public const STATUS_PARTIALLY_BILLED = 80;
+    final public const STATUS_PARTIALLY_BILLED = 80;
     /**
      * @var int
      */
-    public const STATUS_BILLED = 90;
+    final public const STATUS_BILLED = 90;
     /**
      * @var int
      */
-    public const STATUS_DONE = 100;
+    final public const STATUS_DONE = 100;
     /**
      * @var int
      */
-    public const STATUS_CANCELED = 1000;
+    final public const STATUS_CANCELED = 1000;
     /**
      * @var int
      */
-    public const STATUS_DELETED = 1010;
+    final public const STATUS_DELETED = 1010;
 
     /**
      * @var int
      */
-    public const LANGUAGE_GERMAN = 0;
+    final public const LANGUAGE_GERMAN = 0;
     /**
      * @var int
      */
-    public const LANGUAGE_ENGLISH = 1;
+    final public const LANGUAGE_ENGLISH = 1;
 
     /**
      * @var int
      */
-    public const POSITION_NORMAL = 0;
+    final public const POSITION_NORMAL = 0;
     /**
      * @var int
      */
-    public const POSITION_SUM = 1;
+    final public const POSITION_SUM = 1;
     /**
      * @var int
      */
-    public const POSITION_TEXT = 2;
+    final public const POSITION_TEXT = 2;
     /**
      * @var int
      */
-    public const POSITION_FREE = 3;
+    final public const POSITION_FREE = 3;
 
     /**
      * @var int
      */
-    public const TAX_RATE_FULL = 0;
+    final public const TAX_RATE_FULL = 0;
     /**
      * @var int
      */
-    public const TAX_RATE_REDUCED = 1;
+    final public const TAX_RATE_REDUCED = 1;
     /**
      * @var int
      */
-    public const TAX_RATE_TAXFREE = 2;
+    final public const TAX_RATE_TAXFREE = 2;
 
     /**
      * @var array

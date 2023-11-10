@@ -18,27 +18,27 @@ class InvoiceOutputSet extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_PRINT = 0;
+    final public const OUTPUT_MEDIUM_PRINT = 0;
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_EMAIL = 1;
+    final public const OUTPUT_MEDIUM_EMAIL = 1;
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_FAX = 2;
+    final public const OUTPUT_MEDIUM_FAX = 2;
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_MAIL = 3;
+    final public const OUTPUT_MEDIUM_MAIL = 3;
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_EMAIL_SIGNED = 4;
+    final public const OUTPUT_MEDIUM_EMAIL_SIGNED = 4;
     /**
      * @var int
      */
-    public const OUTPUT_MEDIUM_NO_OUTPUT = 100;
+    final public const OUTPUT_MEDIUM_NO_OUTPUT = 100;
 
     /**
      * @var array

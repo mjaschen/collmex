@@ -25,11 +25,11 @@ class ProductGet extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const ONLY_WITH_PRICE = 1;
+    final public const ONLY_WITH_PRICE = 1;
     /**
      * @var int
      */
-    public const NOTONLY_WITH_PRICE = 0;
+    final public const NOTONLY_WITH_PRICE = 0;
 
     /**
      * @var array

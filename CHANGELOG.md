@@ -5,6 +5,26 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.0.0]
+
+**Warning: Backwards-compatibility-breaking changes**
+
+### Added
+
+- support for PHP 8.3
+
+### Removed
+
+- support for PHP 7
+- support for PHP 8.0
+- support for old Symfony components (4.x, 5.x)
+
+### Changed
+
+- `Request::send()` and `MultiRequest::send()` are type-hinted to return
+  a `ResponseInterface` instead of a concrete implementation (i.e.
+  `CsvResponse` or `ZipResonse`).  
+
 ## [2.12.0]
 
 ### Added

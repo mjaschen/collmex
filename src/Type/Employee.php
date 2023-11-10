@@ -31,8 +31,8 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Employee extends AbstractType implements TypeInterface
 {
-    public const TYPE_EMPLOYEE = 0;
-    public const TYPE_ENTREPRENEUR = 1;
+    final public const TYPE_EMPLOYEE = 0;
+    final public const TYPE_ENTREPRENEUR = 1;
 
     /**
      * @var array

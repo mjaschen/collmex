@@ -11,30 +11,12 @@ use Symfony\Component\HttpFoundation\File\File;
 
 class ResponseFactory
 {
-    /**
-     * @var string
-     */
-    protected $responseBody;
-
-    /**
-     * @var Parser
-     */
-    protected $responseParser;
-
-    /**
-     * @param string $responseBody
-     * @param Parser $responseParser
-     */
-    public function __construct(string $responseBody, Parser $responseParser)
+    public function __construct(protected string $responseBody, protected Parser $responseParser)
     {
-        $this->responseBody = $responseBody;
-        $this->responseParser = $responseParser;
     }
 
     /**
      * Returns the class name which handles the response ('CsvResponse' or 'ZipResponse').
-     *
-     * @return ZipResponse|CsvResponse
      *
      * @throws InvalidResponseMimeTypeException
      */
@@ -56,11 +38,9 @@ class ResponseFactory
     /**
      * Determines MIME type of response body.
      *
-     * @return string|null
-     *
      * @throws FileNotFoundException
      */
-    protected function getResponseMimeType(): ?string
+    protected function getResponseMimeType(): string|null
     {
         $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
         file_put_contents($tmpFilename, $this->responseBody);

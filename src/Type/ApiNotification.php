@@ -20,62 +20,62 @@ class ApiNotification extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const EVENT_BOOKING_EXECUTED = 1;
+    final public const EVENT_BOOKING_EXECUTED = 1;
 
     /**
      * @var int
      */
-    public const EVENT_AVAILABLE_STOCK_CHANGED = 2;
+    final public const EVENT_AVAILABLE_STOCK_CHANGED = 2;
 
     /**
      * @var int
      */
-    public const EVENT_CUSTOMER_ORDER_CHANGED = 3;
+    final public const EVENT_CUSTOMER_ORDER_CHANGED = 3;
 
     /**
      * @var int
      */
-    public const EVENT_DELIVERY_CHANGED = 4;
+    final public const EVENT_DELIVERY_CHANGED = 4;
 
     /**
      * @var int
      */
-    public const EVENT_INVOICE_CHANGED = 5;
+    final public const EVENT_INVOICE_CHANGED = 5;
 
     /**
      * @var int
      */
-    public const EVENT_QUOTATION_CHANGED = 6;
+    final public const EVENT_QUOTATION_CHANGED = 6;
 
     /**
      * @var int
      */
-    public const EVENT_STOCK_CHANGED = 7;
+    final public const EVENT_STOCK_CHANGED = 7;
 
     /**
      * @var int
      */
-    public const EVENT_PRODUCT_CHANGED = 8;
+    final public const EVENT_PRODUCT_CHANGED = 8;
 
     /**
      * @var int
      */
-    public const EVENT_CUSTOMER_SUPPLIER_ADDRESS_MEMBER_CHANGED = 9;
+    final public const EVENT_CUSTOMER_SUPPLIER_ADDRESS_MEMBER_CHANGED = 9;
 
     /**
      * @var int
      */
-    public const INACTIVE_ACTIVE = 0;
+    final public const INACTIVE_ACTIVE = 0;
 
     /**
      * @var int
      */
-    public const INACTIVE_INACTIVE = 1;
+    final public const INACTIVE_INACTIVE = 1;
 
     /**
      * @var int
      */
-    public const INACTIVE_DELETE = 2;
+    final public const INACTIVE_DELETE = 2;
 
     /**
      * @var array

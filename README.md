@@ -23,14 +23,29 @@ There is (or least should be…) a *Type* class for every Collmex record type
 
 ## Compatibility
 
-The Collmex PHP SDK requires PHP >= 7.3. If you're still using an ancient PHP
-version, you can install older versions of the Collmex PHP SDK:
+The Collmex PHP SDK requires PHP >= 8.1. It's possible to install an older
+version of the Collmex PHP SDK, if you're still using a no longer supported
+PHP version:
 
-- for PHP 7.2 compatibility: use the 1.x tags (`composer require mjaschen/collmex:^1.0`); this version will receive security updates until version 3.0 is released.
+- for PHP 7.3, 7.4 and 8.0 compatibility: use the 2.x tags (`composer require mjaschen/collmex:^2.0`); this version will receive security updates until version 4.0 is released.
+- for PHP 7.2 compatibility: use the 1.x tags (`composer require mjaschen/collmex:^1.0`); this version won't receive any updates.
 - for PHP 7.0 compatibility: use the 0.12.x tags (`composer require mjaschen/collmex:^0.12`); this version won't receive any updates.
 - for PHP 5.6 compatibility: use the 0.11.x tags (`composer require mjaschen/collmex:^0.11`); this version won't receive any updates.
 
 New features will only go into the main branch and won't be backported.
+
+| PHP Version | Collmex PHP SDK Version | Support Status   |
+|-------------|-------------------------|------------------|
+| 8.3         | 3.x                     | ✅ active         |
+| 8.2         | 3.x                     | ✅ active         |
+| 8.1         | 3.x                     | ✅ active         |
+| 8.0         | 2.x                     | ⚠️ security only |
+| 7.4         | 2.x                     | ⚠️ security only |
+| 7.3         | 2.x                     | ⚠️ security only |
+| 7.2         | 1.x                     | ❌ end of life    |
+| 7.1         | 1.x                     | ❌ end of life    |
+| 7.0         | 1.x                     | ❌ end of life    |
+| 5.6         | 0.11.x                  | ❌ end of life    |
 
 ## Installation
 
@@ -59,15 +74,30 @@ return [
 
 ## Upgrading
 
+### Version 2.x to 3.x
+
+1. Read the [change log](https://github.com/mjaschen/collmex/blob/main/CHANGELOG.md).
+   You will see the list of everything changed between versions 1 and 2.
+2. Ensure your codebase is compatible with all requirements in `composer.json`.
+3. Update your `composer.json` to require version 3.x of the Collmex PHP SDK:
+
+  ```json
+  {
+    "require": {
+      "mjaschen/collmex": "^3.0"
+    }
+  }
+  ```
+
 ### Version 1.x to 2.x
 
 1. Read the [change log](https://github.com/mjaschen/collmex/blob/main/CHANGELOG.md).
-You will see the list of everything changed between versions 1 and 2.
-1. Ensure your codebase is compatible with all requirements in `composer.json`.
-1. Rename attributes which are used in your codebase. Some attributes
-in the type classes have been renamed. If you use these attributes, you have
-to adjust your code as well. A simple search-and-replace is sufficient for
-this. Below you will find the complete list of renamed attributes:
+   You will see the list of everything changed between versions 1 and 2.
+2. Ensure your codebase is compatible with all requirements in `composer.json`.
+3. Rename attributes which are used in your codebase. Some attributes
+   in the type classes have been renamed. If you use these attributes, you have
+   to adjust your code as well. A simple search-and-replace is sufficient for
+   this. Below you will find the complete list of renamed attributes:
 
 | Class                      | Old Name                      | New Name                     |
 |----------------------------|-------------------------------|------------------------------|

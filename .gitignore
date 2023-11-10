@@ -8,3 +8,4 @@
 /composer.lock
 /docs/collmex.html
 /vendor/
+.phpunit.cache

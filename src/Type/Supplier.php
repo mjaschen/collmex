@@ -53,13 +53,13 @@ namespace MarcusJaschen\Collmex\Type;
  */
 class Supplier extends AbstractType implements TypeInterface
 {
-    public const INACTIVE_STATE_ACTIVE = 0;
-    public const INACTIVE_STATE_INACTIVE = 1;
-    public const INACTIVE_STATE_DELETE = 2;
-    public const INACTIVE_STATE_DELETE_IF_UNUSED = 3;
+    final public const INACTIVE_STATE_ACTIVE = 0;
+    final public const INACTIVE_STATE_INACTIVE = 1;
+    final public const INACTIVE_STATE_DELETE = 2;
+    final public const INACTIVE_STATE_DELETE_IF_UNUSED = 3;
 
-    public const LANGUAGE_GERMAN = 0;
-    public const LANGUAGE_ENGLISH = 1;
+    final public const LANGUAGE_GERMAN = 0;
+    final public const LANGUAGE_ENGLISH = 1;
 
     /**
      * Type data template.

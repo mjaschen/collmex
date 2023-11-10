@@ -25,26 +25,27 @@
         "source": "https://github.com/mjaschen/collmex"
     },
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^8.1",
         "ext-curl": "*",
         "ext-fileinfo": "*",
         "ext-json": "*",
         "ext-zip": "*",
-        "symfony/finder": "^4.4 || ^5.4 || ^6.0",
-        "symfony/http-foundation": "^4.4 || ^5.4 || ^6.0",
-        "symfony/mime": "^4.4 || ^5.4 || ^6.0",
-        "symfony/string": "^5.4 || ^6.0"
+        "symfony/finder": "^6.0",
+        "symfony/http-foundation": "^6.0",
+        "symfony/mime": "^6.0",
+        "symfony/string": "^6.0"
     },
     "require-dev": {
         "dereuromark/composer-prefer-lowest": "^0.1.10",
-        "ergebnis/composer-normalize": "^2.20.0",
+        "ergebnis/composer-normalize": "^2.0",
         "friendsofphp/php-cs-fixer": "^3.0",
         "laravel/framework": ">=7.2",
-        "mockery/mockery": "^1.5",
-        "moneyphp/money": "^3.3.2 || ^4.0",
-        "phpunit/phpunit": "^9.5.5",
+        "mockery/mockery": "^1.6",
+        "moneyphp/money": "^4.0",
+        "phpunit/phpunit": "^10.0",
+        "rector/rector": "^0.18.6",
         "squizlabs/php_codesniffer": "^3.7",
-        "vimeo/psalm": "^4.26"
+        "vimeo/psalm": "^5.0"
     },
     "prefer-stable": true,
     "autoload": {

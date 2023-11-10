@@ -27,33 +27,33 @@ class SalesOrderGet extends AbstractType implements TypeInterface
     /**
      * @var int
      */
-    public const FORMAT_CSV = 0;
+    final public const FORMAT_CSV = 0;
     /**
      * @var int
      */
-    public const FORMAT_ZIP = 1;
+    final public const FORMAT_ZIP = 1;
 
     /**
      * useable for 'changed_only' and 'only_created_by_system'.
      *
      * @var int
      */
-    public const FILTER_ON = 1;
+    final public const FILTER_ON = 1;
     /**
      * useable for 'changed_only' and 'only_created_by_system'.
      *
      * @var int
      */
-    public const FILTER_OFF = 0;
+    final public const FILTER_OFF = 0;
 
     /**
      * @var int
      */
-    public const WITH_LETTER_PAPER = 0;
+    final public const WITH_LETTER_PAPER = 0;
     /**
      * @var int
      */
-    public const NO_LETTER_PAPER = 1;
+    final public const NO_LETTER_PAPER = 1;
 
     /**
      * @var array

@@ -20,15 +20,9 @@ use Symfony\Component\Finder\Finder;
  */
 class ZipResponseTest extends TestCase
 {
-    /**
-     * @var Parser
-     */
-    private $parser = null;
+    private ?\MarcusJaschen\Collmex\Csv\Parser $parser = null;
 
-    /**
-     * @var string
-     */
-    private $zipPath = '';
+    private string $zipPath = '';
 
     protected function setUp(): void
     {
@@ -47,8 +41,6 @@ class ZipResponseTest extends TestCase
     /**
      * Creates a ZIP file that contains a file with the given file name and contents.
      *
-     * @param string $fileName
-     * @param string $contents
      *
      * @return string the ZIP file contents
      *
@@ -59,7 +51,7 @@ class ZipResponseTest extends TestCase
         $zip = new \ZipArchive();
         $openStatus = $zip->open($this->zipPath, \ZipArchive::CREATE | \ZipArchive::EXCL);
         if (!$openStatus) {
-            throw new \RuntimeException('Could not open ZIP.', 1557497112);
+            throw new \RuntimeException('Could not open ZIP.', 1_557_497_112);
         }
         $zip->addFromString($fileName, $contents);
         $zip->close();

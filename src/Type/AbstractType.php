@@ -94,7 +94,7 @@ abstract class AbstractType implements JsonSerializable
      */
     public function toJson(): string
     {
-        return json_encode($this->data);
+        return json_encode($this->data, JSON_THROW_ON_ERROR);
     }
 
     /**
@@ -121,7 +121,7 @@ abstract class AbstractType implements JsonSerializable
         }
 
         throw new InvalidFieldNameException(
-            'Cannot read field value; field "' . $name . '" does not exist in class ' . get_class($this)
+            'Cannot read field value; field "' . $name . '" does not exist in class ' . static::class
         );
     }
 
@@ -133,7 +133,7 @@ abstract class AbstractType implements JsonSerializable
      *
      * @throws InvalidFieldNameException
      */
-    public function __set(string $name, $value): void
+    public function __set(string $name, mixed $value): void
     {
         if ($name === 'type_identifier') {
             throw new InvalidFieldNameException('Cannot overwrite type identifier');
@@ -146,7 +146,7 @@ abstract class AbstractType implements JsonSerializable
         }
 
         throw new InvalidFieldNameException(
-            'Cannot set field value; field "' . $name . '" does not exist in class ' . get_class($this)
+            'Cannot set field value; field "' . $name . '" does not exist in class ' . static::class
         );
     }
 
@@ -193,10 +193,8 @@ abstract class AbstractType implements JsonSerializable
      * Checks if all provided field names are valid: each given field name
      * must exist in $this->template.
      *
-     * @param array $data
      *
      * @return void
-     *
      * @throws InvalidFieldNameException
      */
     private function assertValidFieldNames(array $data): void

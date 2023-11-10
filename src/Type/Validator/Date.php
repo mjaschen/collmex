@@ -20,7 +20,7 @@ class Date implements ValidatorInterface
     {
         try {
             $date = $this->createDateInstance($value);
-        } catch (\InvalidArgumentException $exception) {
+        } catch (\InvalidArgumentException) {
             return false;
         }
 
@@ -37,6 +37,6 @@ class Date implements ValidatorInterface
             return \DateTime::createFromFormat('d.m.Y', $value);
         }
 
-        throw new \InvalidArgumentException('Invalid date format: ' . $value, 3203218841);
+        throw new \InvalidArgumentException('Invalid date format: ' . $value, 3_203_218_841);
     }
 }

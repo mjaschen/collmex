@@ -49,7 +49,7 @@ class DateTest extends TestCase
     public function testConvertInvalidFormatToDateTime(): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->expectExceptionCode(3746303620);
+        $this->expectExceptionCode(3_746_303_620);
 
         Date::toDateTime('09/21/2022');
     }

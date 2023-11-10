@@ -6,28 +6,18 @@ namespace MarcusJaschen\Collmex;
 
 use MarcusJaschen\Collmex\Client\Exception\RequestFailedException;
 use MarcusJaschen\Collmex\Exception\InvalidResponseMimeTypeException;
-use MarcusJaschen\Collmex\Response\CsvResponse;
 use MarcusJaschen\Collmex\Response\ResponseFactory;
-use MarcusJaschen\Collmex\Response\ZipResponse;
+use MarcusJaschen\Collmex\Response\ResponseInterface;
 
-/**
- * Collmex API Request.
- *
- * @author Marcus Jaschen <mail@marcusjaschen.de>
- */
 class Request extends AbstractRequest
 {
     /**
      * Sends an API request and returns the response object.
      *
-     * @param string $body The request body
-     *
-     * @return ZipResponse|CsvResponse
-     *
      * @throws InvalidResponseMimeTypeException
      * @throws RequestFailedException
      */
-    public function send(string $body)
+    public function send(string $body): ResponseInterface
     {
         $response = $this->client->request($body);
 
