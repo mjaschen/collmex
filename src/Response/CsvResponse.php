@@ -15,7 +15,7 @@ class CsvResponse implements ResponseInterface
     /**
      * Array containing lines of raw response data.
      *
-     * @var string[]
+     * @var array<array-key, array<array-key, string>|string>
      */
     protected array $data;
 
@@ -101,7 +101,7 @@ class CsvResponse implements ResponseInterface
             return null;
         }
 
-        if (null === $this->records) {
+        if ($this->records === null) {
             $this->createTypeRecords();
         }
 
@@ -147,7 +147,7 @@ class CsvResponse implements ResponseInterface
      *
      * @param array<array-key, array<array-key, string>|string> $data
      *
-     * @return array<array-key, array<array-key, string>|string>
+     * @return string[]
      */
     private function convertEncodingFromCollmex(array $data): array
     {

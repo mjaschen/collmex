@@ -89,6 +89,7 @@ class TypeFactory
     ];
 
     /**
+     * @param array<int, string> $data
      * @throws InvalidTypeIdentifierException
      */
     public function getType(array $data): Type\AbstractType
