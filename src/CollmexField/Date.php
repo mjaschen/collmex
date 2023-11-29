@@ -34,40 +34,50 @@ class Date
 
         // ISO format YYYYMMDD
         if (preg_match('/^(\d{8})$/', $value) === 1) {
-            try {
-                return new DateTime(
-                    substr($value, 0, 4) . '-'
-                    . substr($value, 4, 2) . '-'
-                    . substr($value, 6),
-                    $timeZone
-                );
-            } catch (\Exception $exception) {
-                throw new InvalidArgumentException(
-                    'Cannot create DateTime object - invalid date string: ' . $value,
-                    3_667_838_412,
-                    $exception
-                );
-            }
+            return self::createDateTimeFromIsoFormat($value, $timeZone);
         }
 
         // German format DD.MM.YYYY
         if (preg_match('/^(\d{2}\.\d{2}\.\d{4})$/', $value) === 1) {
-            try {
-                return new DateTime(
-                    substr($value, 6) . '-'
-                    . substr($value, 3, 2) . '-'
-                    . substr($value, 0, 2),
-                    $timeZone
-                );
-            } catch (\Exception $exception) {
-                throw new InvalidArgumentException(
-                    'Cannot create DateTime object - invalid date string: ' . $value,
-                    2_033_421_948,
-                    $exception
-                );
-            }
+            return self::createDateTimeFromGermanFormat($value, $timeZone);
         }
 
         throw new InvalidArgumentException('Invalid date value: ' . $value, 3_746_303_620);
+    }
+
+    private static function createDateTimeFromIsoFormat(string $value, DateTimeZone $timeZone): DateTime
+    {
+        try {
+            return new DateTime(
+                substr($value, 0, 4) . '-'
+                . substr($value, 4, 2) . '-'
+                . substr($value, 6),
+                $timeZone
+            );
+        } catch (\Exception $exception) {
+            throw new InvalidArgumentException(
+                'Cannot create DateTime object - invalid date string: ' . $value,
+                3_667_838_412,
+                $exception
+            );
+        }
+    }
+
+    public static function createDateTimeFromGermanFormat(string $value, ?DateTimeZone $timeZone): DateTime
+    {
+        try {
+            return new DateTime(
+                substr($value, 6) . '-'
+                . substr($value, 3, 2) . '-'
+                . substr($value, 0, 2),
+                $timeZone
+            );
+        } catch (\Exception $exception) {
+            throw new InvalidArgumentException(
+                'Cannot create DateTime object - invalid date string: ' . $value,
+                2_033_421_948,
+                $exception
+            );
+        }
     }
 }
