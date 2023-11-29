@@ -77,7 +77,7 @@ return [
 ### Version 2.x to 3.x
 
 1. Read the [change log](https://github.com/mjaschen/collmex/blob/main/CHANGELOG.md).
-   You will see the list of everything changed between versions 1 and 2.
+   You will see the list of everything changed between versions 2 and 3.
 2. Ensure your codebase is compatible with all requirements in `composer.json`.
 3. Update your `composer.json` to require version 3.x of the Collmex PHP SDK:
 
