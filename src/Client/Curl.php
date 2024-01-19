@@ -53,9 +53,7 @@ class Curl extends AbstractClient implements ClientInterface
 
     protected function destroyCurl(): void
     {
-        if (!empty($this->curl)) {
-            curl_close($this->curl);
-        }
+        curl_close($this->curl);
     }
 
     /**
