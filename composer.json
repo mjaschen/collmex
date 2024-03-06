@@ -43,7 +43,7 @@
         "mockery/mockery": "^1.6",
         "moneyphp/money": "^4.0",
         "phpunit/phpunit": "^10.0",
-        "rector/rector": "^0.19.2",
+        "rector/rector": "^1.0.2",
         "squizlabs/php_codesniffer": "^3.7",
         "vimeo/psalm": "^5.0"
     },
