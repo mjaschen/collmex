@@ -32,7 +32,8 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
-          coverage: none
+          ini-file: development
+          coverage: xdebug
           tools: pecl
           extensions: curl,fileinfo,zip
 
