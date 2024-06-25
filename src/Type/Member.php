@@ -7,8 +7,9 @@ namespace MarcusJaschen\Collmex\Type;
 /**
  * Collmex Member Type.
  *
- * @author    Sebastian Gunreben
+ * @author   Sebastian Gunreben
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
+ * @author   Matthieu-P. Schapranow
  *
  * @property $type_identifier
  * @property $customer_id
@@ -47,6 +48,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $payment_via
  * @property $printout_language
  * @property $cost_center
+ * @property $no_mailings
  */
 class Member extends AbstractType implements TypeInterface
 {
@@ -154,6 +156,7 @@ class Member extends AbstractType implements TypeInterface
         'payment_via' => null,
         'printout_language' => null,
         'cost_center' => null,
+        'no_mailings' => null,
     ];
 
     /**
