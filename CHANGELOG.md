@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.1.0]
+
+### Added
+
+- new field to `Member` type, thanks @theSCHAPPY
+- new fields to `MemberGet` type, thanks @theSCHAPPY
+
 ## [3.0.0]
 
 **Warning: Backwards-compatibility-breaking changes**
