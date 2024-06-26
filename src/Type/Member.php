@@ -7,9 +7,7 @@ namespace MarcusJaschen\Collmex\Type;
 /**
  * Collmex Member Type.
  *
- * @author   Sebastian Gunreben
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
- * @author   Matthieu-P. Schapranow
+ * @see https://www.collmex.de/handbuch_verein.html#daten_importieren_mitglieder
  *
  * @property $type_identifier
  * @property $customer_id
