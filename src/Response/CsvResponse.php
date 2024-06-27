@@ -46,6 +46,9 @@ class CsvResponse implements ResponseInterface
     public function isError(): bool
     {
         foreach ($this->data as $data) {
+            if (!is_array($data)) {
+                continue;
+            }
             if (!$this->isErrorLine($data)) {
                 continue;
             }
