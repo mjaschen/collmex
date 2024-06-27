@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.2.0]
+
+### Added
+
+- Ensure compatibility with all currently supported Symfony versions (#304)
+
 ## [3.1.0]
 
 ### Added

@@ -30,10 +30,10 @@
         "ext-fileinfo": "*",
         "ext-json": "*",
         "ext-zip": "*",
-        "symfony/finder": "^6.0",
-        "symfony/http-foundation": "^6.0",
-        "symfony/mime": "^6.0",
-        "symfony/string": "^6.0"
+        "symfony/finder": "^5.4 || ^6.4 || ^7.0",
+        "symfony/http-foundation": "^5.4 || ^6.4 || ^7.0",
+        "symfony/mime": "^5.4 || ^6.4 || ^7.0",
+        "symfony/string": "^5.4 || ^6.4 || ^7.0"
     },
     "require-dev": {
         "dereuromark/composer-prefer-lowest": "^0.1.10",
