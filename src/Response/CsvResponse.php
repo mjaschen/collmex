@@ -46,16 +46,18 @@ class CsvResponse implements ResponseInterface
     public function isError(): bool
     {
         foreach ($this->data as $data) {
-            if ($data[0] === 'MESSAGE' && $data[1] === 'E') {
-                $this->errorCode = $data[2];
-                $this->errorMessage = $data[3];
-
-                if (isset($data[4])) {
-                    $this->errorLine = (int)$data[4];
-                }
-
-                return true;
+            if (!$this->isErrorLine($data)) {
+                continue;
             }
+
+            $this->errorCode = $data[2];
+            $this->errorMessage = $data[3];
+
+            if (isset($data[4])) {
+                $this->errorLine = (int)$data[4];
+            }
+
+            return true;
         }
 
         return false;
@@ -154,5 +156,10 @@ class CsvResponse implements ResponseInterface
         $filter = new Windows1252ToUtf8();
 
         return $filter->filterArray($data);
+    }
+
+    private function isErrorLine(array $lineData): bool
+    {
+        return $lineData[0] === 'MESSAGE' && $lineData[1] === 'E';
     }
 }
