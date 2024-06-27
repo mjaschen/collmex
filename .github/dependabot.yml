@@ -19,5 +19,7 @@ updates:
       day: wednesday
       time: "09:00"
       timezone: "Europe/Berlin"
+    ignore:
+      - dependency-name: "symfony/*"
     open-pull-requests-limit: 10
     target-branch: main
