@@ -35,6 +35,14 @@ class InvoiceGet extends AbstractType implements TypeInterface
      * @var int
      */
     final public const FORMAT_ZIP = 1;
+    /**
+     * @var int
+     */
+    final public const FORMAT_ZIP_XML_ONLY = 2;
+    /**
+     * @var int
+     */
+    final public const FORMAT_ZIP_XML_AND_PDF = 3;
 
     /**
      * @var int
