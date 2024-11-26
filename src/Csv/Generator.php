@@ -34,7 +34,8 @@ class Generator
                     $fileHandle,
                     $this->insertSpecialPlaceholder($line),
                     FormatInterface::DELIMITER,
-                    FormatInterface::ENCLOSURE
+                    FormatInterface::ENCLOSURE,
+                    '',
                 );
             }
         );
@@ -50,7 +51,8 @@ class Generator
                         $fileHandle,
                         $this->insertSpecialPlaceholder($line),
                         FormatInterface::DELIMITER,
-                        FormatInterface::ENCLOSURE
+                        FormatInterface::ENCLOSURE,
+                        '',
                     );
                 }
             }
