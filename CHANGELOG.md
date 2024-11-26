@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.3.0]
+
+### Added
+
+- Support for new formats when fetching invoices (XML, XML+PDF), thanks @sreimers
+
 ## [3.2.0]
 
 ### Added
