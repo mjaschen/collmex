@@ -30,7 +30,7 @@ class Parser
 
         $data = [];
 
-        while ($csvLine = fgetcsv($tmpHandle, 0, FormatInterface::DELIMITER, FormatInterface::ENCLOSURE)) {
+        while ($csvLine = fgetcsv($tmpHandle, 0, FormatInterface::DELIMITER, FormatInterface::ENCLOSURE, '')) {
             $data[] = array_map(
                 static function ($item) {
                     if (!is_string($item)) {
