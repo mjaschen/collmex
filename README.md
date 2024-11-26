@@ -128,7 +128,7 @@ return [
 
 ### Fetch from Collmex API
 
-Load a Collmex *Customer* record:
+#### Load a Collmex *Customer* record:
 
 ```php
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
@@ -163,6 +163,34 @@ foreach ($records as $record) {
 // show unparsed response contents:
 var_dump($collmexResponse->getResponseRaw());
 ```
+
+#### Fetch a PDF Invoice from Collmex
+
+```php
+use MarcusJaschen\Collmex\Client\Curl as CurlClient;
+use MarcusJaschen\Collmex\Request;
+use MarcusJaschen\Collmex\Type\InvoiceGet;
+
+$collmexRequest = new Request(new CurlClient('USER', 'PASSWORD', 'CUSTOMER_ID'));
+$getInvoice = new InvoiceGet(['invoice_id' => '1', 'format' => InvoiceGet::FORMAT_ZIP]);
+
+try {
+    $collmexResponse = $collmexRequest->send($getInvoice->getCsv());
+} catch (\Exception) {
+    // Error Handling ...
+}
+
+/** @var \Symfony\Component\Finder\Finder $files */
+$files = $collmexResponse->getFilesByType(type: 'pdf');
+
+/** @var SplFileInfo $file */
+foreach ($files as $file) {
+    $pdfContent = file_get_contents($file->getPathname());
+    // save, mail, display, etc.
+    break;
+}
+```
+
 
 ### Send Data to Collmex
 
