@@ -34,18 +34,19 @@ PHP version:
 
 New features will only go into the main branch and won't be backported.
 
-| PHP Version | Collmex PHP SDK Version | Support Status   |
-|-------------|-------------------------|------------------|
-| 8.3         | 3.x                     | ✅ active         |
-| 8.2         | 3.x                     | ✅ active         |
-| 8.1         | 3.x                     | ✅ active         |
-| 8.0         | 2.x                     | ⚠️ security only |
-| 7.4         | 2.x                     | ⚠️ security only |
-| 7.3         | 2.x                     | ⚠️ security only |
-| 7.2         | 1.x                     | ❌ end of life    |
-| 7.1         | 1.x                     | ❌ end of life    |
-| 7.0         | 1.x                     | ❌ end of life    |
-| 5.6         | 0.11.x                  | ❌ end of life    |
+| PHP Version | Collmex PHP SDK Version | Support Status       |
+| ----------- | ----------------------- | -------------------- |
+| 8.4         | 3.x                     | ✅ active (untested) |
+| 8.3         | 3.x                     | ✅ active            |
+| 8.2         | 3.x                     | ✅ active            |
+| 8.1         | 3.x                     | ✅ active            |
+| 8.0         | 2.x                     | ⚠️ security only   |
+| 7.4         | 2.x                     | ⚠️ security only   |
+| 7.3         | 2.x                     | ⚠️ security only   |
+| 7.2         | 1.x                     | ❌ end of life       |
+| 7.1         | 1.x                     | ❌ end of life       |
+| 7.0         | 1.x                     | ❌ end of life       |
+| 5.6         | 0.11.x                  | ❌ end of life       |
 
 ## Installation
 
@@ -100,7 +101,7 @@ return [
    this. Below you will find the complete list of renamed attributes:
 
 | Class                      | Old Name                      | New Name                     |
-|----------------------------|-------------------------------|------------------------------|
+| -------------------------- | ----------------------------- | ---------------------------- |
 | `Stock`                    | `charge_number`               | `batch_number`               |
 | `Stock`                    | `charge_description`          | `batch_description`          |
 | `StockChange`              | `destination_charge`          | `destination_batch`          |
@@ -360,11 +361,11 @@ For more information on format requirements, see the [offical API documentation]
 The library provides helpers for simple conversion from several types to
 the Collmex money format:
 
-| type                                     | example value                                  | call                      | result (string) |
-|------------------------------------------|------------------------------------------------|---------------------------|-----------------|
-| *float*                                  | `19.99`                                        | `Money::fromFloat(19.99)` | `19,99` |
-| *integer* (cents)                        | `1999`                                         | `Money::fromCents(1999)` | `19,99` |
-| [Money for PHP](https://www.moneyphp.org/en/stable/) | `$money = \Money\Money::EUR(1999)` | `Money::fromMoney($money)` | `19,99` |
+| type                                                 | example value                      | call                       | result (string) |
+| ---------------------------------------------------- | ---------------------------------- | -------------------------- | --------------- |
+| *float*                                              | `19.99`                            | `Money::fromFloat(19.99)`  | `19,99`         |
+| *integer* (cents)                                    | `1999`                             | `Money::fromCents(1999)`   | `19,99`         |
+| [Money for PHP](https://www.moneyphp.org/en/stable/) | `$money = \Money\Money::EUR(1999)` | `Money::fromMoney($money)` | `19,99`         |
 
 Fully qualified class name for the helper: `\MarcusJaschen\Collmex\CollmexField\Money`.
 
