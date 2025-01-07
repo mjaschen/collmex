@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.4.0]
+
+### Added
+
+- missing fields to `Invoice` type: `customer_reference` and `read_only` (#311)
+
 ## [3.3.0]
 
 ### Added
