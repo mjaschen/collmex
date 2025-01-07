@@ -101,6 +101,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $shipment_ids
  * @property $customer_order_id
  * @property $alternative_recipient_address_id
+ * @property int $read_only
  */
 class Invoice extends AbstractType implements TypeInterface
 {
@@ -318,6 +319,8 @@ class Invoice extends AbstractType implements TypeInterface
         'shipment_ids' => null,
         'customer_order_id' => null,
         'alternative_recipient_address_id' => null,
+        'customer_reference' => null,
+        'read_only' => null,
     ];
 
     /**
