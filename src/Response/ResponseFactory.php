@@ -39,10 +39,16 @@ class ResponseFactory
      * Determines MIME type of response body.
      *
      * @throws FileNotFoundException
+     * @throws \RuntimeException
      */
     protected function getResponseMimeType(): string|null
     {
         $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
+
+        if ($tmpFilename === false) {
+            throw new \RuntimeException('Cannot create a tmp file for MIME type detection', 5276268253);
+        }
+
         file_put_contents($tmpFilename, $this->responseBody);
 
         $file = new File($tmpFilename);

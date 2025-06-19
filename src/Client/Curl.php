@@ -42,9 +42,18 @@ class Curl extends AbstractClient implements ClientInterface
         return (string)$response;
     }
 
+    /**
+     * @throws \RuntimeException
+     */
     protected function initCurl(): void
     {
-        $this->curl = curl_init($this->exchangeUrl);
+        $curlHandle = curl_init($this->exchangeUrl);
+
+        if ($curlHandle === false) {
+            throw new \RuntimeException('Cannot create a curl handle', 9007569411);
+        }
+
+        $this->curl = $curlHandle;
 
         curl_setopt($this->curl, CURLOPT_POST, true);
         curl_setopt($this->curl, CURLOPT_HTTPHEADER, ['Content-Type: text/csv']);
