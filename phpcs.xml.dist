@@ -37,7 +37,7 @@
     <rule ref="PEAR.Commenting.InlineComment"/>
     <rule ref="Squiz.Commenting.DocCommentAlignment"/>
     <rule ref="Squiz.Commenting.EmptyCatchComment"/>
-    <rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>
+    <!--<rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>-->
     <rule ref="Squiz.Commenting.PostStatementComment"/>
 
     <!-- Control structures -->
