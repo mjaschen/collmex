@@ -34,19 +34,19 @@ PHP version:
 
 New features will only go into the main branch and won't be backported.
 
-| PHP Version | Collmex PHP SDK Version | Support Status       |
-| ----------- | ----------------------- | -------------------- |
-| 8.4         | 3.x                     | ✅ active (untested) |
-| 8.3         | 3.x                     | ✅ active            |
-| 8.2         | 3.x                     | ✅ active            |
-| 8.1         | 3.x                     | ✅ active            |
-| 8.0         | 2.x                     | ⚠️ security only   |
-| 7.4         | 2.x                     | ⚠️ security only   |
-| 7.3         | 2.x                     | ⚠️ security only   |
-| 7.2         | 1.x                     | ❌ end of life       |
-| 7.1         | 1.x                     | ❌ end of life       |
-| 7.0         | 1.x                     | ❌ end of life       |
-| 5.6         | 0.11.x                  | ❌ end of life       |
+| PHP Version | Collmex PHP SDK Version | Support Status   |
+|-------------|-------------------------|------------------|
+| 8.4         | 3.x                     | ✅ active         |
+| 8.3         | 3.x                     | ✅ active         |
+| 8.2         | 3.x                     | ✅ active         |
+| 8.1         | 3.x                     | ✅ active         |
+| 8.0         | 2.x                     | ⚠️ security only |
+| 7.4         | 2.x                     | ⚠️ security only |
+| 7.3         | 2.x                     | ⚠️ security only |
+| 7.2         | 1.x                     | ❌ end of life    |
+| 7.1         | 1.x                     | ❌ end of life    |
+| 7.0         | 1.x                     | ❌ end of life    |
+| 5.6         | 0.11.x                  | ❌ end of life    |
 
 ## Installation
 
