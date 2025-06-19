@@ -106,8 +106,10 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $total_gross
  * @property $quotation_id
  * @property $payment_reference
- * @property $alternative_delivery_recipient "Abw. Empfänger - die Adressnummer des abweichenden Empfängers."
- * @property $relevant_for_delivery "Lieferrelevant - Optional. Lieferrelevant-Kennzeichen für die Position. Leer = Standardwert je nach Positionstyp, 0 = nicht lieferrelevant, 1 = lieferrelevant."
+ * @property $alternative_delivery_recipient Abw. Empfänger - die Adressnummer des abweichenden Empfängers.
+ * @property $relevant_for_delivery Lieferrelevant - optional. Lieferrelevant-Kennzeichen für die Position.
+ *                                  Leer = Standardwert je nach Positionstyp, 0 = nicht lieferrelevant,
+ *                                  1 = lieferrelevant.
  */
 class CustomerOrder extends AbstractType implements TypeInterface
 {
