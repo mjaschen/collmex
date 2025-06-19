@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [1.6.4]
+
+### Added
+
+- new fields to `CustomerOrder`
+
 ## [1.6.3]
 
 ### Changed
