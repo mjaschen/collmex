@@ -100,6 +100,16 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $costs
  * @property $gross_profit
  * @property $margin
+ * @property $costs_manual
+ * @property $delivery_block
+ * @property $customer_no_mailings
+ * @property $total_gross
+ * @property $quotation_id
+ * @property $payment_reference
+ * @property $alternative_delivery_recipient Abw. Empfänger - die Adressnummer des abweichenden Empfängers.
+ * @property $relevant_for_delivery Lieferrelevant - optional. Lieferrelevant-Kennzeichen für die Position.
+ *                                  Leer = Standardwert je nach Positionstyp, 0 = nicht lieferrelevant,
+ *                                  1 = lieferrelevant.
  */
 class CustomerOrder extends AbstractType implements TypeInterface
 {
@@ -330,6 +340,15 @@ class CustomerOrder extends AbstractType implements TypeInterface
         // 90
         'gross_profit' => null,
         'margin' => null,
+        'costs_manual' => null,
+        'delivery_block' => null,
+        'customer_no_mailings' => null,
+        // 95
+        'total_gross' => null,
+        'quotation_id' => null,
+        'payment_reference' => null,
+        'different_recipient' => null,
+        'relevant_for_delivery' => null,
     ];
 
     /**
