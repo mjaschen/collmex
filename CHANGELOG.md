@@ -5,6 +5,21 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.5.0]
+
+### Added
+
+- Error handling/checking for `false` return value in curl client, CSV generator, CSV parser,
+  response factory and Zip response type. Instead of failing somewhere down the road,
+  exceptions are raised as soon as a `false` return value is detected from PHP internal
+  functions. See the commit diff for details.
+- PHP 8.4 in CI test matrix.
+
+### Changed
+
+- Upgraded Psalm from version 5 to version 6 in dev dependencies.
+- Mockery pinned to at least 1.6.11 for PHP 8.4 compatibility.
+
 ## [3.4.1]
 
 ### Added
