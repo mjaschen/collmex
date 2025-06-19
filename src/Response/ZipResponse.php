@@ -42,6 +42,7 @@ class ZipResponse implements ResponseInterface
      * Returns the CsvResponse instance for the (first) included CSV file.
      *
      * @throws InvalidZipResponseException
+     * @throws \RuntimeException
      */
     public function getCsvResponse(): CsvResponse
     {
@@ -50,18 +51,28 @@ class ZipResponse implements ResponseInterface
         foreach ($iterator as $file) {
             $csv = file_get_contents($file->getPathName());
 
+            if ($csv === false) {
+                throw new \RuntimeException('Failed to read csv file: ' . $file->getPathName(), 1493429078);
+            }
+
             return new CsvResponse($this->responseParser, $csv);
         }
 
-        throw new InvalidZipResponseException('Zip Response doesn\'t contain the required CSV segment', 1_567_429_445);
+        throw new InvalidZipResponseException('Zip Response doesn\'t contain the required CSV segment', 1567429445);
     }
 
     /**
      * @throws InvalidZipFileException
+     * @throws \RuntimeException
      */
     private function extractFiles(): void
     {
         $tmpFilename = tempnam(sys_get_temp_dir(), 'collmexphp_');
+
+        if ($tmpFilename === false) {
+            throw new \RuntimeException('Failed to create temporary file for extracting Zip response', 9058757607);
+        }
+
         file_put_contents($tmpFilename, $this->responseBody);
 
         $this->extractDirectory = dirname($tmpFilename) . DIRECTORY_SEPARATOR

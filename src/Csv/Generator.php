@@ -59,6 +59,9 @@ class Generator
         );
     }
 
+    /**
+     * @throws \RuntimeException
+     */
     private function createCsvString(callable $csvCreator): string
     {
         $fileHandle = fopen('php://temp', 'wb');
@@ -72,6 +75,10 @@ class Generator
         rewind($fileHandle);
         $csv = stream_get_contents($fileHandle);
         fclose($fileHandle);
+
+        if ($csv === false) {
+            throw new \RuntimeException('Cannot get stream contents (php://temp)', 5693338927);
+        }
 
         // remove the temporary placeholder from the final CSV string
         return str_replace(self::PLACEHOLDER_FPUTCSV_BUG, '', $csv);

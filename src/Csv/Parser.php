@@ -21,10 +21,17 @@ class Parser
      * @see Generator
      * @see \MarcusJaschen\Collmex\Tests\Unit\Csv\ParserTest::parseBackslashFollowedByDoubleQuote()
      * @see https://github.com/mjaschen/collmex/issues/238
+     *
+     * @throws \RuntimeException
      */
     public function parse(string $csv): array
     {
         $tmpHandle = tmpfile();
+
+        if ($tmpHandle === false) {
+            throw new \RuntimeException('Cannot create a tmp file handle', 6655841399);
+        }
+
         fwrite($tmpHandle, str_replace('\\""', self::PLACEHOLDER_FGETCSV_BUG . '""', $csv));
         rewind($tmpHandle);
 
