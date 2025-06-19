@@ -66,6 +66,7 @@ class SupplierAgreement extends AbstractType implements TypeInterface
         'price_quantity' => null,
     ];
 
+    #[\Override]
     public function validate(): bool
     {
         return true;
