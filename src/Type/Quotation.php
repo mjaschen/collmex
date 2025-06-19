@@ -113,6 +113,7 @@ class Quotation extends AbstractType implements TypeInterface
         'costs_manual',
     ];
 
+    #[\Override]
     public function validate(): bool
     {
         return true;

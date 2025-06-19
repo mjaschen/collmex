@@ -16,6 +16,7 @@ class Date implements ValidatorInterface
      *
      * @return bool Validation success
      */
+    #[\Override]
     public function validate($value, array $options = []): bool
     {
         try {

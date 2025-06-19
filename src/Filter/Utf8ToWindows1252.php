@@ -12,6 +12,7 @@ class Utf8ToWindows1252 extends AbstractFilter
     /**
      * @throws InvalidArgumentException
      */
+    #[\Override]
     public function filterString(string $text): string
     {
         $result = mb_convert_encoding((string)(new UnicodeString($text)), 'Windows-1252', 'UTF-8');

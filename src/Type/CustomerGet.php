@@ -49,6 +49,7 @@ class CustomerGet extends AbstractType implements TypeInterface
      *
      * @return bool Validation success
      */
+    #[\Override]
     public function validate(): bool
     {
         return true;

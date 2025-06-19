@@ -21,6 +21,7 @@ class DateOrEmpty extends Date implements ValidatorInterface
      *
      * @return bool Validation success
      */
+    #[\Override]
     public function validate($value, array $options = []): bool
     {
         if (empty($value)) {

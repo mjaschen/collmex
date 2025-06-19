@@ -81,6 +81,7 @@ class Subscription extends AbstractType implements TypeInterface
      *
      * @return bool Validation success
      */
+    #[\Override]
     public function validate(): bool
     {
         $dateOrEmptyValidator = new DateOrEmptyValidator();

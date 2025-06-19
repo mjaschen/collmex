@@ -16,6 +16,7 @@ class Curl extends AbstractClient implements ClientInterface
      *
      * @throws RequestFailedException
      */
+    #[\Override]
     public function request(string $body): string
     {
         $this->initCurl();
