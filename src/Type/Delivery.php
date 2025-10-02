@@ -169,8 +169,11 @@ class Delivery extends AbstractType implements TypeInterface
         'customer_order_position' => null,
         'ean' => null,
         'handover_required' => null,
-        // 69
         'last_handover' => null,
+        // 70
+        'batches' => null,
+        'batches_descriptions' => null,
+        'commodity_code' => null,
     ];
 
     /**
