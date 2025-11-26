@@ -42,9 +42,10 @@
         "mockery/mockery": "^1.6.11",
         "moneyphp/money": "^4.0",
         "phpunit/phpunit": "^10.5",
-        "rector/rector": "^1.0.3",
+        "rector/rector": "^2.0",
         "squizlabs/php_codesniffer": "^3.7",
-        "vimeo/psalm": "^6.12"
+        "phpstan/phpstan": "^2.0",
+        "illuminate/support": "^10.0"
     },
     "prefer-stable": true,
     "autoload": {
@@ -81,12 +82,12 @@
             "@ci:tests"
         ],
         "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
-        "ci:psalm": "./vendor/bin/psalm",
+        "ci:phpstan": "./vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit=1G",
         "ci:sniff": "./vendor/bin/phpcs config/ src/ tests/",
         "ci:static": [
             "@ci:lint",
             "@ci:sniff",
-            "@ci:psalm"
+            "@ci:phpstan"
         ],
         "ci:tests": "./vendor/bin/phpunit tests/",
         "fix:php-cs": "./vendor/bin/php-cs-fixer fix"
