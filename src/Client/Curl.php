@@ -37,8 +37,6 @@ class Curl extends AbstractClient implements ClientInterface
             );
         }
 
-        $this->destroyCurl();
-
         return (string)$response;
     }
 
@@ -59,11 +57,6 @@ class Curl extends AbstractClient implements ClientInterface
         curl_setopt($this->curl, CURLOPT_HTTPHEADER, ['Content-Type: text/csv']);
         curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($this->curl, CURLOPT_RETURNTRANSFER, true);
-    }
-
-    protected function destroyCurl(): void
-    {
-        curl_close($this->curl);
     }
 
     /**
