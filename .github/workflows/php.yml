@@ -60,7 +60,6 @@ jobs:
         run: composer run-script ci:sniff
 
       - name: Static Analysis
-      - name: Static Analysis
         run: composer run-script ci:phpstan
 
       - name: Unit Tests
