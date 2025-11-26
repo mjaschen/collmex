@@ -22,7 +22,8 @@ class CollmexServiceProvider extends IlluminateServiceProvider
     {
         $this->publishes(
             [
-                __DIR__ . '/../config/collmex.php' => config_path('collmex.php'), // @phpstan-ignore-line
+                // @phpstan-ignore-next-line
+                __DIR__ . '/../config/collmex.php' => config_path('collmex.php'),
             ],
             'config'
         );
@@ -42,9 +43,12 @@ class CollmexServiceProvider extends IlluminateServiceProvider
         $this->app->singleton(
             'collmex.client',
             static fn() => new CurlClient(
-                config('collmex.user'), // @phpstan-ignore-line
-                config('collmex.password'), // @phpstan-ignore-line
-                config('collmex.customer'), // @phpstan-ignore-line
+                // @phpstan-ignore-next-line
+                config('collmex.user'),
+                // @phpstan-ignore-next-line
+                config('collmex.password'),
+                // @phpstan-ignore-next-line
+                config('collmex.customer'),
             )
         );
 
