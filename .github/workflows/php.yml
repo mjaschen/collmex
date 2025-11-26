@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -61,7 +60,8 @@ jobs:
         run: composer run-script ci:sniff
 
       - name: Static Analysis
-        run: composer run-script ci:psalm
+      - name: Static Analysis
+        run: composer run-script ci:phpstan
 
       - name: Unit Tests
         run: composer run-script ci:tests
