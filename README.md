@@ -5,10 +5,11 @@
 [![CI Status](https://github.com/mjaschen/collmex/workflows/Collmex%20PHP%20SDK%20Tests/badge.svg)](https://github.com/mjaschen/collmex/actions)
 [![License](https://poser.pugx.org/mjaschen/collmex/license)](https://packagist.org/packages/mjaschen/collmex)
 
-This library provides a wrapper for the Collmex API. It's not complete yet, some record types (and maybe some features)
-are missing.
+This library provides a wrapper for the Collmex API. It's not complete yet, some
+record types (and maybe some features) are missing.
 
-Please create a pull request if you have implemented a new type/feature or create issues for bugs/feature requests.
+Please create a pull request if you have implemented a new type/feature or
+create issues for bugs/feature requests.
 
 There is (or least should be…) a *Type* class for every Collmex record type
 ("Satzart"). Currently, only the base types (`MESSAGE`, `LOGIN`,
@@ -24,18 +25,24 @@ There is (or least should be…) a *Type* class for every Collmex record type
 ## Compatibility
 
 The Collmex PHP SDK requires PHP >= 8.1. It's possible to install an older
-version of the Collmex PHP SDK, if you're still using a no longer supported
-PHP version:
+version of the Collmex PHP SDK if you're still using an unsupported PHP
+version:
 
-- for PHP 7.3, 7.4 and 8.0 compatibility: use the 2.x tags (`composer require mjaschen/collmex:^2.0`); this version will receive security updates until version 4.0 is released.
-- for PHP 7.2 compatibility: use the 1.x tags (`composer require mjaschen/collmex:^1.0`); this version won't receive any updates.
-- for PHP 7.0 compatibility: use the 0.12.x tags (`composer require mjaschen/collmex:^0.12`); this version won't receive any updates.
-- for PHP 5.6 compatibility: use the 0.11.x tags (`composer require mjaschen/collmex:^0.11`); this version won't receive any updates.
+- for PHP 7.3, 7.4 and 8.0 compatibility: use the 2.x tags (`composer require
+  mjaschen/collmex:^2.0`); this version will receive security updates until
+  version 4.0 is released.
+- for PHP 7.2 compatibility: use the 1.x tags (`composer require
+  mjaschen/collmex:^1.0`); this version won't receive any updates.
+- for PHP 7.0 compatibility: use the 0.12.x tags (`composer require
+  mjaschen/collmex:^0.12`); this version won't receive any updates.
+- for PHP 5.6 compatibility: use the 0.11.x tags (`composer require
+  mjaschen/collmex:^0.11`); this version won't receive any updates.
 
 New features will only go into the main branch and won't be backported.
 
 | PHP Version | Collmex PHP SDK Version | Support Status   |
 |-------------|-------------------------|------------------|
+| 8.5         | 3.x                     | ✅ active         |
 | 8.4         | 3.x                     | ✅ active         |
 | 8.3         | 3.x                     | ✅ active         |
 | 8.2         | 3.x                     | ✅ active         |
@@ -195,7 +202,8 @@ foreach ($files as $file) {
 
 ### Send Data to Collmex
 
-Create a new Collmex *Customer* record and get the Collmex customer ID from the response data:
+Create a new Collmex *Customer* record and get the Collmex customer ID from the
+response data:
 
 ```php
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
@@ -250,10 +258,12 @@ if ($collmexResponse->isError()) {
 
 The Collmex API accepts requests containing multiple records.
 
-For example, a customer order with three line-items is sent as three CSV records/lines within a single request.
+For example, a customer order with three line-items is sent as three CSV
+records/lines within a single request.
 
-The `MultiRequest` class provides a simple way to send multiple records to Collmex at once. Any valid `Type` (or an
-array of valid `Type` instances) can be added to a queue and eventually sent to the Collmex API.
+The `MultiRequest` class provides a simple way to send multiple records to
+Collmex at once. Any valid `Type` (or an array of valid `Type` instances) can be
+added to a queue and eventually sent to the Collmex API.
 
 ```php
 use MarcusJaschen\Collmex\Client\Curl as CurlClient;
@@ -356,7 +366,7 @@ the API.
 This SDK does not convert numeric values to the string format required by
 the Collmex API by default.
 
-For more information on format requirements, see the [offical API documentation](https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_datentypen_felder).
+For more information on format requirements, see the [offical API documentation][cmx-api].
 
 The library provides helpers for simple conversion from several types to
 the Collmex money format:
@@ -378,7 +388,8 @@ Collmex unterstands two different formats for dates:
 - ISO style: `YYYYMMDD`
 - German style: `DD.MM.YYYY`
 
-The library provides a helper to convert `DateTime` (which covers *Carbon* instances as well) from and to the Collmex date format:
+The library provides a helper to convert `DateTime` (which covers *Carbon*
+instances as well) from and to the Collmex date format:
 
 ```php
 use MarcusJaschen\Collmex\CollmexField\Date;
@@ -488,11 +499,9 @@ This will output
 To run checks and tests, it's the easiest to use the provided Composer scripts:
 
 - lint PHP files for syntax errors: `composer ci:lint`
-- run static analysis with [Psalm] and report errors: `composer ci:psalm`
+- run static analysis with [phpstan] and report errors: `composer ci:phpstan`
 - run unit tests with PHPUnit: `composer ci:tests`
-- check the code style with
-  [PHP_CodeSniffer]:
-  `composer ci:sniff`
+- check the code style with [PHP_CodeSniffer]: `composer ci:sniff`
 
 To run all checks and tests at once, just use `composer ci`.
 
@@ -502,10 +511,10 @@ Of course, it's possible to use the test runners directly, e.g. for PHPUnit:
 ./vendor/bin/phpunit
 ```
 
-Psalm:
+phpstan:
 
 ```shell
-./vendor/bin/psalm
+./vendor/bin/phpstan
 ```
 
 ### Autoformat the code
@@ -520,8 +529,6 @@ composer fix:php-cs
 
 <https://www.collmex.de/cgi-bin/cgi.exe?1005,1,help,api>
 
-[forceutf8]: https://github.com/neitanod/forceutf8
-
 [PHP_CodeSniffer]: https://github.com/squizlabs/PHP_CodeSniffer
-
-[Psalm]: https://github.com/vimeo/psalm
+[phpstan]: https://phpstan.org
+[cmx-api]: https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_datentypen_felder

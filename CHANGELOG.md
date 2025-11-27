@@ -5,6 +5,22 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.6.0]
+
+### Added
+
+- Support for PHP 8.5 in Github workflow.
+
+### Changed
+
+- (dev) Migrate from Psalm to phpstan.
+- (dev) Update PHP_Codesniffer 3 -> 4.
+- (dev) Update Rector 1 -> 2.
+
+### Removed
+
+- Call of `curl_close()`. This function is no-op and deprecated as of PHP 8.5.
+
 ## [3.5.1]
 
 ### Added

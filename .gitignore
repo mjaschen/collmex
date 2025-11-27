@@ -9,3 +9,4 @@
 /docs/collmex.html
 /vendor/
 .phpunit.cache
+.phpactor.json
