@@ -79,6 +79,11 @@ abstract class AbstractType implements JsonSerializable
         return $this->data;
     }
 
+    public function with(array $data): static
+    {
+        return new static(array_merge($this->data, $data));
+    }
+
     /**
      * @return string
      */
