@@ -28,11 +28,13 @@ class AbstractTypeWithTest extends TestCase
         self::assertInstanceOf(CustomerOrder::class, $lineItem);
         self::assertNotSame($baseOrder, $lineItem);
 
-        self::assertSame('1', $lineItem->client_id);
-        self::assertSame('Charly', $lineItem->customer_firstname);
-        self::assertSame('Cash', $lineItem->customer_lastname);
-        self::assertSame('erster Artikel', $lineItem->product_description);
-        self::assertSame('1', $lineItem->quantity);
+        $data = $lineItem->getData();
+
+        self::assertSame('1', $data['client_id']);
+        self::assertSame('Charly', $data['customer_firstname']);
+        self::assertSame('Cash', $data['customer_lastname']);
+        self::assertSame('erster Artikel', $data['product_description']);
+        self::assertSame('1', $data['quantity']);
     }
 
     /**
@@ -55,10 +57,12 @@ class AbstractTypeWithTest extends TestCase
         self::assertInstanceOf(CustomerOrder::class, $lineItem);
         self::assertNotSame($baseOrder, $lineItem);
 
-        self::assertSame('1', $lineItem->client_id);
-        self::assertSame('Charles', $lineItem->customer_firstname);
-        self::assertSame('Cash', $lineItem->customer_lastname);
-        self::assertSame('erster Artikel', $lineItem->product_description);
-        self::assertSame('1', $lineItem->quantity);
+        $data = $lineItem->getData();
+
+        self::assertSame('1', $data['client_id']);
+        self::assertSame('Charles', $data['customer_firstname']);
+        self::assertSame('Cash', $data['customer_lastname']);
+        self::assertSame('erster Artikel', $data['product_description']);
+        self::assertSame('1', $data['quantity']);
     }
 }

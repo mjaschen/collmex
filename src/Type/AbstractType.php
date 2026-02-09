@@ -9,9 +9,7 @@ use MarcusJaschen\Collmex\Csv\Generator;
 use MarcusJaschen\Collmex\Type\Exception\InvalidFieldNameException;
 
 /**
- * Abstract Collmex Type Class.
- *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
+ * @phpstan-consistent-constructor
  */
 abstract class AbstractType implements JsonSerializable
 {
