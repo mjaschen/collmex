@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.7.0]
+
+### Added
+
+- New method `with()` allows creating a new type instance by merging an existing instance with a data array.
+
 ## [3.6.0]
 
 ### Added
