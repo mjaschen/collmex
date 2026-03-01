@@ -19,6 +19,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $system_name
  * @property $website_id
  * @property $with_price_only
+ * @property string|null $text
  */
 class ProductGet extends AbstractType implements TypeInterface
 {
@@ -44,6 +45,7 @@ class ProductGet extends AbstractType implements TypeInterface
         'system_name' => null,
         'website_id' => null,
         'with_price_only' => null,
+        'text' => null,
     ];
 
     /**
