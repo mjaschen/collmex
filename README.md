@@ -454,6 +454,7 @@ This will output
 - `CMXSTK`
 - `CMXUMS`
 - `CMXVAG`
+- `CREATE_DUE_INVOICES`
 - `CUSTOMER_GET`
 - `DELIVERY_GET`
 - `EMPLOYEE`
