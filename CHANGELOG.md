@@ -5,7 +5,15 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.9.0]
+
+### Added
+
+- New type `CreateDueInvoices`
+
 ## [3.8.0]
+
+### Added
 
 - new fields to `PRODUCT_GET`: `text`
 
