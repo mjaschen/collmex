@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.8.0]
+
+- new fields to `PRODUCT_GET`: `text`
+
 ## [3.7.0]
 
 ### Added
