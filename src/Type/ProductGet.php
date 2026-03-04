@@ -7,9 +7,6 @@ namespace MarcusJaschen\Collmex\Type;
 /**
  * Collmex Product Get Type.
  *
- * @author  Jewel Ahmed <tojibon@gmail.com>
- * @author  Marcus Jaschen <mjaschen@gmail.com>
- *
  * @property $type_identifier
  * @property $client_id
  * @property $product_id
