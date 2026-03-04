@@ -3761,55 +3761,55 @@ parameters:
 			path: src/Type/Product.php
 
 		-
-			message: '#^PHPDoc tag @property has invalid value \(\$changed_only\)\: Unexpected token "\$changed_only", expected type at offset 277 on line 12$#'
+			message: '#^PHPDoc tag @property has invalid value \(\$changed_only\)\: Unexpected token "\$changed_only", expected type at offset 182 on line 9$#'
 			identifier: phpDoc.parseError
 			count: 1
 			path: src/Type/ProductGet.php
 
 		-
-			message: '#^PHPDoc tag @property has invalid value \(\$client_id\)\: Unexpected token "\$client_id", expected type at offset 174 on line 8$#'
+			message: '#^PHPDoc tag @property has invalid value \(\$client_id\)\: Unexpected token "\$client_id", expected type at offset 79 on line 5$#'
 			identifier: phpDoc.parseError
 			count: 1
 			path: src/Type/ProductGet.php
 
 		-
-			message: '#^PHPDoc tag @property has invalid value \(\$price_group\)\: Unexpected token "\$price_group", expected type at offset 251 on line 11$#'
+			message: '#^PHPDoc tag @property has invalid value \(\$price_group\)\: Unexpected token "\$price_group", expected type at offset 156 on line 8$#'
 			identifier: phpDoc.parseError
 			count: 1
 			path: src/Type/ProductGet.php
 
 		-
-			message: '#^PHPDoc tag @property has invalid value \(\$product_group\)\: Unexpected token "\$product_group", expected type at offset 223 on line 10$#'
+			message: '#^PHPDoc tag @property has invalid value \(\$product_group\)\: Unexpected token "\$product_group", expected type at offset 128 on line 7$#'
 			identifier: phpDoc.parseError
 			count: 1
 			path: src/Type/ProductGet.php
 
 		-
-			message: '#^PHPDoc tag @property has invalid value \(\$product_id\)\: Unexpected token "\$product_id", expected type at offset 198 on line 9$#'
+			message: '#^PHPDoc tag @property has invalid value \(\$product_id\)\: Unexpected token "\$product_id", expected type at offset 103 on line 6$#'
 			identifier: phpDoc.parseError
 			count: 1
 			path: src/Type/ProductGet.php
 
 		-
-			message: '#^PHPDoc tag @property has invalid value \(\$system_name\)\: Unexpected token "\$system_name", expected type at offset 304 on line 13$#'
+			message: '#^PHPDoc tag @property has invalid value \(\$system_name\)\: Unexpected token "\$system_name", expected type at offset 209 on line 10$#'
 			identifier: phpDoc.parseError
 			count: 1
 			path: src/Type/ProductGet.php
 
 		-
-			message: '#^PHPDoc tag @property has invalid value \(\$type_identifier\)\: Unexpected token "\$type_identifier", expected type at offset 144 on line 7$#'
+			message: '#^PHPDoc tag @property has invalid value \(\$type_identifier\)\: Unexpected token "\$type_identifier", expected type at offset 49 on line 4$#'
 			identifier: phpDoc.parseError
 			count: 1
 			path: src/Type/ProductGet.php
 
 		-
-			message: '#^PHPDoc tag @property has invalid value \(\$website_id\)\: Unexpected token "\$website_id", expected type at offset 330 on line 14$#'
+			message: '#^PHPDoc tag @property has invalid value \(\$website_id\)\: Unexpected token "\$website_id", expected type at offset 235 on line 11$#'
 			identifier: phpDoc.parseError
 			count: 1
 			path: src/Type/ProductGet.php
 
 		-
-			message: '#^PHPDoc tag @property has invalid value \(\$with_price_only\)\: Unexpected token "\$with_price_only", expected type at offset 355 on line 15$#'
+			message: '#^PHPDoc tag @property has invalid value \(\$with_price_only\)\: Unexpected token "\$with_price_only", expected type at offset 260 on line 12$#'
 			identifier: phpDoc.parseError
 			count: 1
 			path: src/Type/ProductGet.php
