@@ -530,6 +530,6 @@ composer fix:php-cs
 
 <https://www.collmex.de/cgi-bin/cgi.exe?1005,1,help,api>
 
-[PHP_CodeSniffer]: https://github.com/squizlabs/PHP_CodeSniffer
+[PHP_CodeSniffer]: https://github.com/PHPCSStandards/PHP_CodeSniffer
 [phpstan]: https://phpstan.org
 [cmx-api]: https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_datentypen_felder
