@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [Unreleased]
+
+### Added
+
+- new type `CustomerAgreement` (`CMXCAG`)
+- new type `CustomerAgreementGet` (`CUSTOMER_AGREEMENT_GET`)
+
 ## [3.9.0]
 
 ### Added
