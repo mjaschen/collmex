@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [Unreleased]
+
+### Added
+
+- new field to `VOUCHER`: `redemption_count`
+
 ## [3.9.0]
 
 ### Added
