@@ -12,6 +12,7 @@ use MarcusJaschen\Collmex\Type\AddressGroups;
 use MarcusJaschen\Collmex\Type\Batch;
 use MarcusJaschen\Collmex\Type\BillOfMaterial;
 use MarcusJaschen\Collmex\Type\Customer;
+use MarcusJaschen\Collmex\Type\CustomerAgreement;
 use MarcusJaschen\Collmex\Type\CustomerOrder;
 use MarcusJaschen\Collmex\Type\Delivery;
 use MarcusJaschen\Collmex\Type\DifferentShippingAddress;
@@ -60,6 +61,7 @@ class TypeFactory
         'CMXADR' => Address::class,
         'CMXBOM' => BillOfMaterial::class,
         'CMXBTC' => Batch::class,
+        'CMXCAG' => CustomerAgreement::class,
         'CMXDLV' => Delivery::class,
         'EMPLOYEE' => Employee::class,
         'CMXEPF' => DifferentShippingAddress::class,
