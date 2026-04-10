@@ -7,18 +7,18 @@ namespace MarcusJaschen\Collmex\Type;
 /**
  * Collmex Customer Agreement Type (CMXCAG).
  *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
+ * @see https://www.collmex.de/c.cmx?1005,1,help,daten_importieren_kundenvereinbarung
  *
- * @property $type_identifier
- * @property $client_id
- * @property $customer_id
- * @property $product_id
- * @property $position
- * @property $valid_from
- * @property $valid_to
- * @property $price
- * @property $currency
- * @property $deleted
+ * @property string $type_identifier
+ * @property numeric $client_id
+ * @property numeric $customer_id
+ * @property string $product_id
+ * @property numeric $position
+ * @property string|int $valid_from
+ * @property string|int $valid_to
+ * @property string|int $price
+ * @property string $currency
+ * @property numeric $deleted
  */
 class CustomerAgreement extends AbstractType implements TypeInterface
 {

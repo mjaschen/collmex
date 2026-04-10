@@ -437,6 +437,7 @@ This will output
 - `CMXADR`
 - `CMXBOM`
 - `CMXBTC`
+- `CMXCAG`
 - `CMXDLV`
 - `CMXEPF`
 - `CMXINV`
@@ -455,6 +456,7 @@ This will output
 - `CMXUMS`
 - `CMXVAG`
 - `CREATE_DUE_INVOICES`
+- `CUSTOMER_AGREEMENT_GET`
 - `CUSTOMER_GET`
 - `DELIVERY_GET`
 - `EMPLOYEE`

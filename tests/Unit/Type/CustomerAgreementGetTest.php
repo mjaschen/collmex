@@ -40,13 +40,20 @@ class CustomerAgreementGetTest extends TestCase
             'client_id' => '1',
             'customer_id' => '12345',
             'changed_only' => '1',
-            'system_name' => 'SentaNG',
+            'system_name' => 'AcmeFoo',
         ]);
 
         $csv = $subject->getCsv();
+        $csvFields = str_getcsv($csv, ';', '"', '');
 
-        self::assertStringContainsString('CUSTOMER_AGREEMENT_GET', $csv);
-        self::assertStringContainsString('12345', $csv);
-        self::assertStringContainsString('SentaNG', $csv);
+        self::assertCount(8, $csvFields);
+        self::assertSame('CUSTOMER_AGREEMENT_GET', $csvFields[0]);
+        self::assertSame('1', $csvFields[1]);
+        self::assertSame('12345', $csvFields[2]);
+        self::assertSame('', $csvFields[3]);
+        self::assertSame('', $csvFields[4]);
+        self::assertSame('', $csvFields[5]);
+        self::assertSame('1', $csvFields[6]);
+        self::assertSame('AcmeFoo', $csvFields[7]);
     }
 }
