@@ -75,9 +75,18 @@ class CustomerAgreementTest extends TestCase
 
         $csv = $subject->getCsv();
 
-        self::assertStringContainsString('CMXCAG', $csv);
-        self::assertStringContainsString('12345', $csv);
-        self::assertStringContainsString('PAC01001', $csv);
-        self::assertStringContainsString('8,50', $csv);
+        $csvFields = str_getcsv($csv, ';', '"', '');
+
+        self::assertCount(10, $csvFields);
+        self::assertSame('CMXCAG', $csvFields[0]);
+        self::assertSame('1', $csvFields[1]);
+        self::assertSame('12345', $csvFields[2]);
+        self::assertSame('PAC01001', $csvFields[3]);
+        self::assertSame('', $csvFields[4]);
+        self::assertSame('20250101', $csvFields[5]);
+        self::assertSame('99991231', $csvFields[6]);
+        self::assertSame('8,50', $csvFields[7]);
+        self::assertSame('EUR', $csvFields[8]);
+        self::assertSame('1', $csvFields[9]);
     }
 }

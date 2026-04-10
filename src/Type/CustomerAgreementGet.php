@@ -7,16 +7,16 @@ namespace MarcusJaschen\Collmex\Type;
 /**
  * Collmex Customer Agreement Get Type.
  *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
+ * @see https://www.collmex.de/c.cmx?1005,1,help,api_Kundenvereinbarungen
  *
- * @property $type_identifier
- * @property $client_id
- * @property $customer_id
- * @property $product_id
- * @property $validity_date
- * @property $inactive
- * @property $changed_only
- * @property $system_name
+ * @property string $type_identifier
+ * @property numeric $client_id
+ * @property numeric $customer_id
+ * @property string $product_id
+ * @property string|int $validity_date
+ * @property numeric $inactive
+ * @property numeric $changed_only
+ * @property string $system_name
  */
 class CustomerAgreementGet extends AbstractType implements TypeInterface
 {
