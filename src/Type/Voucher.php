@@ -7,21 +7,21 @@ namespace MarcusJaschen\Collmex\Type;
 /**
  * Voucher Type.
  *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
+ * @see https://www.collmex.de/c.cmx?1005,1,help,api_Gutscheine
  *
- * @property $type_identifier
- * @property $voucher_id
- * @property $client_id
- * @property $usage
- * @property $valid_from
- * @property $valid_to
- * @property $discount_percentage
- * @property $discount_total
- * @property $voucher_desc
- * @property $agent_id
- * @property $min_order_value
- * @property $currency
- * @property $redemption_count
+ * @property string $type_identifier
+ * @property int $voucher_id
+ * @property int $client_id
+ * @property int $usage
+ * @property string|int $valid_from
+ * @property string|int $valid_to
+ * @property numeric $discount_percentage
+ * @property string|int $discount_total
+ * @property string $voucher_desc
+ * @property int $agent_id
+ * @property string|int $min_order_value
+ * @property string $currency
+ * @property int $redemption_count
  */
 class Voucher extends AbstractType implements TypeInterface
 {
