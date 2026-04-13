@@ -21,6 +21,7 @@ namespace MarcusJaschen\Collmex\Type;
  * @property $agent_id
  * @property $min_order_value
  * @property $currency
+ * @property $redemption_count
  */
 class Voucher extends AbstractType implements TypeInterface
 {
@@ -40,6 +41,7 @@ class Voucher extends AbstractType implements TypeInterface
         'agent_id' => null,
         'min_order_value' => null,
         'currency' => null,
+        'redemption_count' => null,
     ];
 
     /**

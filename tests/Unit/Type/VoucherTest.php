@@ -30,4 +30,30 @@ class VoucherTest extends TestCase
 
         self::assertInstanceOf(TypeInterface::class, $subject);
     }
+
+    /**
+     * @test
+     */
+    public function populatesRedemptionCountFromCsvData(): void
+    {
+        $data = [
+            'VOUCHER',
+            '123-456',
+            '1',
+            '0',
+            '20250101',
+            '20261231',
+            '0',
+            '50,00',
+            'Test',
+            '',
+            '',
+            'EUR',
+            '3',
+        ];
+
+        $subject = new Voucher($data);
+
+        self::assertSame('3', $subject->redemption_count);
+    }
 }
