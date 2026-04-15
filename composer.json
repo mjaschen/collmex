@@ -45,7 +45,9 @@
         "rector/rector": "^2.0",
         "squizlabs/php_codesniffer": "^4.0",
         "phpstan/phpstan": "^2.0",
-        "illuminate/support": "^10.0"
+        "illuminate/support": "^10.0",
+        "fakerphp/faker": "^1.24",
+        "vlucas/phpdotenv": "^5.6"
     },
     "prefer-stable": true,
     "autoload": {
@@ -55,7 +57,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "MarcusJaschen\\Collmex\\Tests\\": "tests/"
+            "MarcusJaschen\\Collmex\\Tests\\Unit\\": "tests/Unit/",
+            "MarcusJaschen\\Collmex\\Tests\\Integration\\": "tests-integration/Integration/"
         }
     },
     "config": {
@@ -81,15 +84,16 @@
         "ci:dynamic": [
             "@ci:tests"
         ],
-        "ci:lint": "find config src tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
-        "ci:phpstan": "./vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit=1G",
-        "ci:sniff": "./vendor/bin/phpcs config/ src/ tests/",
+        "ci:lint": "find config src tests tests-integration -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
+        "ci:phpstan": "./vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit=1G config/ src/ tests/ tests-integration/",
+        "ci:sniff": "./vendor/bin/phpcs config/ src/ tests/ tests-integration/",
         "ci:static": [
             "@ci:lint",
             "@ci:sniff",
             "@ci:phpstan"
         ],
-        "ci:tests": "./vendor/bin/phpunit tests/",
+        "ci:tests": "./vendor/bin/phpunit",
+        "ci:tests-integration": "./vendor/bin/phpunit --configuration phpunit-integration.xml",
         "fix:php-cs": "./vendor/bin/php-cs-fixer fix"
     }
 }

@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.12.0]
+
+### Added
+
+- new field to `CUSTOMER`: `invoice_format`
+
 ## [3.11.0]
 
 ### Added

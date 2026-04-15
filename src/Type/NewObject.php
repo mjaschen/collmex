@@ -9,10 +9,10 @@ namespace MarcusJaschen\Collmex\Type;
  *
  * @author   Marcus Jaschen <mail@marcusjaschen.de>
  *
- * @property $type_identifier
- * @property $new_id
- * @property $temporary_id
- * @property $line
+ * @property string $type_identifier
+ * @property string|int $new_id
+ * @property int $temporary_id
+ * @property int $line
  */
 class NewObject extends AbstractType implements TypeInterface
 {

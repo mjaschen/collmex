@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MarcusJaschen\Collmex\Tests\Integration\Response;
+namespace MarcusJaschen\Collmex\Tests\Response;
 
 use MarcusJaschen\Collmex\Csv\Parser;
 use MarcusJaschen\Collmex\Response\CsvResponse;

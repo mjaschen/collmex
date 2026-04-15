@@ -1,4 +1,5 @@
 .DS_Store
+.env
 /.idea/
 /.php_cs.cache
 /.php-cs-fixer.cache
