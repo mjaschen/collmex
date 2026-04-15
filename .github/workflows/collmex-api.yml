@@ -1,4 +1,4 @@
-name: Collmex PHP SDK Tests
+name: Collmex API Integration Tests
 
 on:
     push:
@@ -7,24 +7,18 @@ on:
     pull_request:
         branches:
             - main
+    workflow_dispatch:
 
 jobs:
-    build:
+    integration-test:
         runs-on: ubuntu-latest
 
         strategy:
             matrix:
                 php-version:
-                    - "8.1"
-                    - "8.2"
-                    - "8.3"
                     - "8.4"
-                    - "8.5"
-                composer-dependencies:
-                    - ""
-                    - "--prefer-lowest"
 
-        name: "collmex-php-sdk build - PHP ${{ matrix.php-version }} - Composer ${{ matrix.composer-dependencies }}"
+        name: "Collmex API Integration - PHP ${{ matrix.php-version }}"
 
         steps:
             -   uses: actions/checkout@v6
@@ -37,7 +31,7 @@ jobs:
                     ini-file: development
                     coverage: xdebug
                     tools: pecl
-                    extensions: curl,fileinfo,zip,bcmath
+                    extensions: curl,fileinfo,json,zip,bcmath
 
             -   name: Setup PHP (self-hosted)
                 if: ${{ env.GITEA_ACTIONS == 'true' }}
@@ -47,7 +41,7 @@ jobs:
                     ini-file: development
                     coverage: xdebug
                     tools: pecl
-                    extensions: curl,fileinfo,zip,bcmath
+                    extensions: curl,fileinfo,json,zip,bcmath
                 env:
                     runner: self-hosted
 
@@ -62,23 +56,17 @@ jobs:
                 uses: actions/cache@v5
                 with:
                     path: ${{ steps.composer-cache-dir.outputs.dir }}
-                    key: ${{ runner.os }}-composer-cache-${{ matrix.php-version }}-${{ matrix.composer-dependencies }}-${{ hashFiles('composer.json', 'composer.lock') }}
+                    key: ${{ runner.os }}-composer-cache-${{ matrix.php-version }}-${{ hashFiles('composer.json', 'composer.lock') }}
                     restore-keys: |
-                        ${{ runner.os }}-composer-cache-${{ matrix.php-version }}-${{ matrix.composer-dependencies }}-
                         ${{ runner.os }}-composer-cache-${{ matrix.php-version }}-
                         ${{ runner.os }}-composer-cache-
 
             -   name: Install dependencies
-                run: composer update --no-progress --prefer-stable --prefer-dist ${{ matrix.composer-dependencies }}
+                run: composer update --no-progress --prefer-stable --prefer-dist
 
-            -   name: Lint PHP Sources
-                run: composer run-script ci:lint
-
-            -   name: PHP Code Sniffer
-                run: composer run-script ci:sniff
-
-            -   name: Static Analysis
-                run: composer run-script ci:phpstan
-
-            -   name: Unit Tests
-                run: composer run-script ci:tests
+            -   name: Run Integration Tests
+                env:
+                    COLLMEX_USER: ${{ secrets.COLLMEX_USER }}
+                    COLLMEX_PASSWORD: ${{ secrets.COLLMEX_PASSWORD }}
+                    COLLMEX_CUSTOMER: ${{ secrets.COLLMEX_CUSTOMER }}
+                run: composer run-script ci:tests-integration

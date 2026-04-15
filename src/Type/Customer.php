@@ -7,61 +7,60 @@ namespace MarcusJaschen\Collmex\Type;
 /**
  * Collmex Customer Type.
  *
- * @author   Marcus Jaschen <mail@marcusjaschen.de>
- *
- * @property $type_identifier
- * @property $customer_id
- * @property $client_id
- * @property $salutation
- * @property $title
- * @property $firstname
- * @property $lastname
- * @property $company
- * @property $department
- * @property $street
- * @property $zipcode
- * @property $city
- * @property $annotation
- * @property $inactive
- * @property $country
- * @property $phone
- * @property $fax
- * @property $email
- * @property $bank_account
- * @property $bank_code
- * @property $iban
- * @property $bic
- * @property $bank_name
- * @property $reserved_1
- * @property $vat_id
- * @property $terms_of_payment
- * @property $discount_id
- * @property $delivery_conditions
- * @property $delivery_conditions_additional
- * @property $output_medium
- * @property $bank_account_owner
- * @property $address_group_id
- * @property $ebay_account_name
- * @property $price_group_id
- * @property $currency
- * @property $agent_id
- * @property $cost_center
- * @property $follow_up_date
- * @property $delivery_block
- * @property $construction_service_provider
- * @property $customer_supplier_number
- * @property $output_language
- * @property $email_cc
- * @property $phone_2
- * @property $mandate_reference
- * @property $mandate_reference_sign_date
- * @property $dunning_block
- * @property $no_mailings
- * @property $private_person
- * @property $url
- * @property $partial_delivery_allowed
- * @property $partial_invoice_allowed
- * @property $created_at
+ * @property string $type_identifier
+ * @property int $customer_id
+ * @property int $client_id
+ * @property string $salutation
+ * @property string $title
+ * @property string $firstname
+ * @property string $lastname
+ * @property string $company
+ * @property string $department
+ * @property string $street
+ * @property string $zipcode
+ * @property string $city
+ * @property string $annotation
+ * @property int $inactive
+ * @property string $country
+ * @property string $phone
+ * @property string $fax
+ * @property string $email
+ * @property string $bank_account
+ * @property string $bank_code
+ * @property string $iban
+ * @property string $bic
+ * @property string $bank_name
+ * @property mixed $reserved_1
+ * @property string $vat_id
+ * @property int $terms_of_payment
+ * @property int $discount_id
+ * @property string $delivery_conditions
+ * @property string $delivery_conditions_additional
+ * @property int $output_medium
+ * @property string $bank_account_owner
+ * @property string|int $address_group_id
+ * @property string $ebay_account_name
+ * @property int $price_group_id
+ * @property string $currency
+ * @property int $agent_id
+ * @property string $cost_center
+ * @property string|int $follow_up_date
+ * @property int $delivery_block
+ * @property int $construction_service_provider
+ * @property string $customer_supplier_number
+ * @property int $output_language
+ * @property string $email_cc
+ * @property string $phone_2
+ * @property string $mandate_reference
+ * @property string|int $mandate_reference_sign_date
+ * @property int $dunning_block
+ * @property int $no_mailings
+ * @property int $private_person
+ * @property string $url
+ * @property int $partial_delivery_allowed
+ * @property int $partial_invoice_allowed
+ * @property string|int $created_at
+ * @property int $invoice_format
  */
 class Customer extends AbstractType implements TypeInterface
 {
