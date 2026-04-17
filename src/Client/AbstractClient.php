@@ -13,13 +13,24 @@ abstract class AbstractClient
 
     protected string $exchangeUrl;
 
-    public function __construct(protected string $user, protected string $password, string $customer)
-    {
+    protected bool $useUtf8 = false;
+
+    public function __construct(
+        protected string $user,
+        protected string $password,
+        string $customer,
+        bool $useUtf8 = false,
+    ) {
         $this->exchangeUrl = sprintf(static::EXCHANGE_URL, $customer);
+        $this->useUtf8 = $useUtf8;
     }
 
     protected function convertEncodingForCollmex(string $text): string
     {
+        if ($this->useUtf8) {
+            return $text;
+        }
+
         $filter = new Utf8ToWindows1252();
 
         return $filter->filterString($text);
@@ -33,6 +44,12 @@ abstract class AbstractClient
     {
         $csvGenerator = new Generator();
 
-        return $csvGenerator->generate(['LOGIN', $this->user, $this->password]);
+        $fields = ['LOGIN', $this->user, $this->password];
+
+        if ($this->useUtf8) {
+            $fields[] = '1';
+        }
+
+        return $csvGenerator->generate($fields);
     }
 }
