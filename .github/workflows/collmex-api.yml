@@ -21,7 +21,7 @@ jobs:
         name: "Collmex API Integration - PHP ${{ matrix.php-version }}"
 
         steps:
-            -   uses: actions/checkout@v6
+            -   uses: actions/checkout@v7
 
             -   name: Setup PHP
                 if: ${{ env.GITEA_ACTIONS != 'true' }}
