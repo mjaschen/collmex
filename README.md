@@ -354,12 +354,47 @@ foreach ($records as $record) {
 
 ## Notes
 
+### String encoding
+
 Collmex expects all strings encoded in code page 1252 (Windows) while the
 Collmex PHP SDK expects all inputs as UTF-8 and outputs everything as UTF-8.
 The conversion of string encodings is done transparently by using the
 Symfony String Component and PHP's `mb_convert_encoding()` function before
 sending a request to the Collmex API and after receiving the response from
 the API.
+
+#### UTF-8 mode
+
+Since May 2023, the Collmex API accepts UTF-8 encoded data when the LOGIN
+record contains a flag in the 4th field. To use this mode, pass `useUtf8: true`
+to the client constructor:
+
+```php
+$client = new \MarcusJaschen\Collmex\Client\Curl(
+    $user,
+    $password,
+    $customerId,
+    useUtf8: true,
+);
+```
+
+In this mode, the SDK skips the client-side encoding conversion and sends
+data as UTF-8 directly. Collmex converts to ISO-8859-1 server-side, replacing
+non-representable characters with `?`.
+
+#### Transliteration filter
+
+For characters outside the Windows-1252 range (e.g. `ā`, `ł`, `ø`), the
+default `mb_convert_encoding()` may produce garbled output. The alternative
+`Utf8ToWindows1252Translit` filter uses `iconv` with `//TRANSLIT` to
+approximate these characters instead (e.g. `ā` → `a`):
+
+```php
+use MarcusJaschen\Collmex\Filter\Utf8ToWindows1252Translit;
+
+$filter = new Utf8ToWindows1252Translit();
+$result = $filter->filterString('Kristiāna'); // "Kristiana"
+```
 
 ### Numeric / money values
 
