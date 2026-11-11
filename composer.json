@@ -45,7 +45,7 @@
         "rector/rector": "^2.0",
         "squizlabs/php_codesniffer": "^4.0",
         "phpstan/phpstan": "^2.0",
-        "illuminate/support": "^10.0",
+        "illuminate/support": "^13.42",
         "fakerphp/faker": "^1.24",
         "vlucas/phpdotenv": "^5.6"
     },
