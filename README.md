@@ -42,6 +42,7 @@ New features will only go into the main branch and won't be backported.
 
 | PHP Version | Collmex PHP SDK Version | Support Status   |
 |-------------|-------------------------|------------------|
+| 8.6         | 3.13.1+                 | ✅ active         |
 | 8.5         | 3.x                     | ✅ active         |
 | 8.4         | 3.x                     | ✅ active         |
 | 8.3         | 3.x                     | ✅ active         |
