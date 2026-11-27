@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/)
 principles.
 
+## [3.13.1]
+
+### Added
+
+- Support for PHP 8.6 in the CI test matrix.
+
 ## [3.13.0]
 
 ### Added
