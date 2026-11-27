@@ -6,16 +6,10 @@ namespace MarcusJaschen\Collmex\Tests\Unit\Response;
 
 use MarcusJaschen\Collmex\Csv\Parser;
 use MarcusJaschen\Collmex\Response\CsvResponse;
-use Mockery as m;
 use PHPUnit\Framework\TestCase;
 
 class CsvResponseTest extends TestCase
 {
-    protected function tearDown(): void
-    {
-        m::close();
-    }
-
     /**
      * @test
      */
@@ -23,11 +17,11 @@ class CsvResponseTest extends TestCase
     {
         $responseBody = 'MESSAGE;E;11111;Error Message;1';
 
-        $parser = m::mock(Parser::class);
+        $parser = $this->createMock(Parser::class);
         $parser
-            ->shouldReceive('parse')
-            ->once()
-            ->andReturn(
+            ->expects(self::once())
+            ->method('parse')
+            ->willReturn(
                 [
                     [
                         'MESSAGE',
@@ -57,11 +51,11 @@ class CsvResponseTest extends TestCase
     {
         $responseBody = 'MESSAGE;S;204020;Datenübertragung erfolgreich. Es wurden 1 Datensätze verarbeitet.';
 
-        $parser = m::mock(Parser::class);
+        $parser = $this->createMock(Parser::class);
         $parser
-            ->shouldReceive('parse')
-            ->once()
-            ->andReturn(
+            ->expects(self::once())
+            ->method('parse')
+            ->willReturn(
                 [
                     [
                         'MESSAGE',

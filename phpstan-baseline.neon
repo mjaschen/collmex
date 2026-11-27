@@ -5908,11 +5908,6 @@ parameters:
 			count: 1
 			path: src/Type/VoucherGet.php
 
-		-
-			message: '#^Call to an undefined method Mockery\\ExpectationInterface\|Mockery\\HigherOrderMessage\:\:once\(\)\.$#'
-			identifier: method.notFound
-			count: 2
-			path: tests/Unit/Response/CsvResponseTest.php
 
 		-
 			message: '#^Access to an undefined property MarcusJaschen\\Collmex\\Type\\Subscription\:\:\$interval\.$#'
